@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://podabed.org/blog/2014/08/30/cm/</loc>
+    <lastmod>2014-08-30T17:14:21+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://podabed.org/blog/2014/07/05/chto-znachit-%3C%3Cpodobied%3E%3E/</loc>
     <lastmod>2014-07-05T17:58:28+08:00</lastmod>
     <priority>0.8</priority>
@@ -65,21 +71,21 @@
   
   <url>
     <loc>http://podabed.org/</loc>
-    <lastmod>2014-08-30T17:00:56+08:00</lastmod>
+    <lastmod>2014-08-30T17:19:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://podabed.org/blog/archives/</loc>
-    <lastmod>2014-08-30T17:00:56+08:00</lastmod>
+    <lastmod>2014-08-30T17:19:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://podabed.org/about/</loc>
-    <lastmod>2014-08-30T17:00:56+08:00</lastmod>
+    <lastmod>2014-08-30T17:19:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
