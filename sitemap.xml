@@ -77,21 +77,21 @@
   
   <url>
     <loc>http://podabed.org/</loc>
-    <lastmod>2014-09-04T07:37:16+08:00</lastmod>
+    <lastmod>2014-09-04T07:43:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://podabed.org/blog/archives/</loc>
-    <lastmod>2014-09-04T07:37:16+08:00</lastmod>
+    <lastmod>2014-09-04T07:43:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://podabed.org/about/</loc>
-    <lastmod>2014-09-04T07:37:16+08:00</lastmod>
+    <lastmod>2014-09-04T07:43:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
