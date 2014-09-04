@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://podabed.org/blog/2014/09/05/uvielichieniie-chliena/</loc>
+    <lastmod>2014-09-05T07:42:30+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://podabed.org/blog/2014/09/04/troinoie-dublirovaniie-ili-paranoiia/</loc>
     <lastmod>2014-09-04T07:23:48+08:00</lastmod>
     <priority>0.8</priority>
@@ -77,21 +83,21 @@
   
   <url>
     <loc>http://podabed.org/</loc>
-    <lastmod>2014-09-04T07:43:25+08:00</lastmod>
+    <lastmod>2014-09-05T07:44:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://podabed.org/blog/archives/</loc>
-    <lastmod>2014-09-04T07:43:25+08:00</lastmod>
+    <lastmod>2014-09-05T07:44:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://podabed.org/about/</loc>
-    <lastmod>2014-09-04T07:43:25+08:00</lastmod>
+    <lastmod>2014-09-05T07:44:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
