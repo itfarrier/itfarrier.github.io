@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Category: I2p | О хуйне]]></title>
+  <link href="http://podabed.org/blog/categories/i2p/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2014-09-27T19:42:06+08:00</updated>
+  <id>http://podabed.org/</id>
+  <author>
+    <name><![CDATA[Дмитрий Подабед]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[О провайдерах]]></title>
+    <link href="http://podabed.org/blog/2014/02/21/o-provaidierakh/"/>
+    <updated>2014-02-21T22:36:54+08:00</updated>
+    <id>http://podabed.org/blog/2014/02/21/o-provaidierakh</id>
+    <content type="html"><![CDATA[<p>Думаю, у всех провайдеров есть примерно такое:</p>
+
+<p>«4.3.2. Временно, в период часов наибольшей нагрузки на Сеть, ограничивать полосу пропускания трафика для сервисов, использующих ресурсы Сети для доступа к пиринговым файлообменным сетям (в т. ч. с использованием технологии распределенного распространения файлов BitTorrent и пр.), загрузки файлов большого объема, а также доступа к потоковым мультимедиа-ресурсам (в т. ч. аудио- и видеостриминга), если использование этих сервисов существенно увеличивает объем трафика и снижает полосу пропускания трафика для других сервисов.»</p>
+
+<p>Т. е., они хотят, чтобы я использовал все сумасшедшие мегабайты и мегабиты скорости для почты и фэйсбучиков. Хуй вам! TOR и I2P «спасут гиганта мысли». Пока не начнут резать и их.</p>
+]]></content>
+  </entry>
+  
+</feed>

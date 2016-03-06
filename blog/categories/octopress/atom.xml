@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Category: Octopress | О хуйне]]></title>
+  <link href="http://podabed.org/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2014-09-27T19:42:06+08:00</updated>
+  <id>http://podabed.org/</id>
+  <author>
+    <name><![CDATA[Дмитрий Подабед]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Первый]]></title>
+    <link href="http://podabed.org/blog/2013/12/16/piervyi/"/>
+    <updated>2013-12-16T13:36:01+08:00</updated>
+    <id>http://podabed.org/blog/2013/12/16/piervyi</id>
+    <content type="html"><![CDATA[<p>Захотелось мне вести личный <del>говно</del>блог. С чего же начать? С блогохостингов, конечно! Но это не для джедаев. Я же хочу СВОЙ блог, на СВОЁМ домене. Отмёл. Дальше, естественно, <a href="https://wordpress. org">Wordpress</a>. Погонял это всё дело при свете «<acronym title="LAMP = Linux, Apache, MySQL, PHP">лампы</acronym>»: подобрал тему, всякие плагинчики. Осталось выбрать хостинг. И тут я понял, что платить за свою блажь нихуя не по карману. Начал искать бесплатный способ.</p>
+
+<p>Способы пришли в голову такие: бесплатный стронний хостинг или на своей машине. Бесплатные хостинги отпугнули мою паранойю. На своей машине удалённо «зажигать <acronym title="LAMP = Linux, Apache, MySQL, PHP">лампу</acronym>» показалось слишком сложным. В интернетах обнаружил, что можно использовать <a href="https://github.com">GitHub</a> как хостинг. И поскакал&hellip; Нагуглился генератор статических сайтов <a href="http://jekyllrb.com">Jekyll</a>. Попробовал. Красиво, бесплатно, но как-то сложно. Гуглим дальше&hellip; Нашлись <a href="http://octopress.org">Octopress</a>, <a href="http://ruhoh.com">Ruhoh</a>, <a href="http://zespia.tw/hexo">Hexo</a> как заточенные под блоговедение генераторы. Начал пробовать.</p>
+
+<p><a href="http://ruhoh.com">Ruhoh</a> тоже показался сложным — мало нескучных <del>обоев</del> тем. <a href="http://zespia.tw/hexo">Hexo</a> — возникли проблемы с <a href="http://nodejs.org">node. js</a> на моей ОС (скорее всего проблемы с /dev/hands). В итоге остался <a href="http://octopress.org">Octopress</a>. Куча плагинов «из коробки» и приятная на вид тема, большой выбор сторонних плагинов и тем.</p>
+
+<p>В итоге: бесплатный хостинг на <a href="https://github.com">GitHub</a> (и все плюшки такого крупного проекта), красивый <abbr title="HyperText Markup Language, version 5">HTML5</abbr> + <abbr title="Cascading Style Sheets, version 3">CSS3</abbr> сайт, быстрый и надёжный из-за практически полной «статичности».</p>
+]]></content>
+  </entry>
+  
+</feed>
