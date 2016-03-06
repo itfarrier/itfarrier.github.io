@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Category: провайдер | podabed.org]]></title>
+  <link href="http://127.0.0.1:4000/blog/categories/provaidier/atom.xml" rel="self"/>
+  <link href="http://127.0.0.1:4000/"/>
+  <updated>2016-03-06T15:30:20+07:00</updated>
+  <id>http://127.0.0.1:4000/</id>
+  <author>
+    <name><![CDATA[Дмитрий Подабед]]></name>
+    <email><![CDATA[dmitrij@podabed.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Опять про них]]></title>
+    <link href="http://127.0.0.1:4000/2014/02/27/opiat-pro-nikh"/>
+    <updated>2014-02-27T08:51:58+08:00</updated>
+    <id>http://127.0.0.1:4000/2014/02/27/opiat-pro-nikh</id>
+    <content type="html"><![CDATA[<p>Мегафон отрапортовал: «<a href="http://habrahabr.ru/company/megafon/blog/213991">Самая быстрая в мире сеть передачи данных от «МегаФона</a>». Заебись, чо! Но посмотрим в тарифы: <a href="http://megafon.ru/internet"><a href="http://megafon.ru/internet">http://megafon.ru/internet</a></a>. И вот радость пропала, лицо закрылось рукой&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

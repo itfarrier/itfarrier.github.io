@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Category: Cyanogenmod | podabed.org]]></title>
+  <link href="http://127.0.0.1:4000/blog/categories/cyanogenmod/atom.xml" rel="self"/>
+  <link href="http://127.0.0.1:4000/"/>
+  <updated>2016-03-06T15:30:20+07:00</updated>
+  <id>http://127.0.0.1:4000/</id>
+  <author>
+    <name><![CDATA[Дмитрий Подабед]]></name>
+    <email><![CDATA[dmitrij@podabed.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CM]]></title>
+    <link href="http://127.0.0.1:4000/2014/08/30/cm"/>
+    <updated>2014-08-30T17:14:21+08:00</updated>
+    <id>http://127.0.0.1:4000/2014/08/30/cm</id>
+    <content type="html"><![CDATA[<p>Да, я счастливый пользователь CM-11. Да, на моём древнем говне 4.4.4 «ведроид». И да, даже в CM не хватает некоторых плюшек. Но в AOSP или стоке их ещё меньше.</p>
+]]></content>
+  </entry>
+  
+</feed>
