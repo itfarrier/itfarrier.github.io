@@ -1,0 +1,19 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+<!doctype html>
+<html>
+  {% include head.html %}
+  <body>
+    <header>
+      <nav>
+        <h3>
+          <a href="{{ root_url }}/">Блог</a>
+          <a href="{{ root_url }}/blog/archives">Архивы</a>
+          <a href="{{ root_url }}/about">О</a>
+          <a href="{{ root_url }}/contacts">Контакты</a>
+        </h3>
+      </nav>
+    </header>
+    {{ content | expand_urls: root_url }}
+    {% include footer.html %}
+  </body>
+</html>

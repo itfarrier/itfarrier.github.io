@@ -1,0 +1,11 @@
+<section>
+  <header>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d.%m.%Y" }}</time>
+    <h1><a href="{{ root_url }}{{ page.url }}">{{ page.title }}</a></h1>
+  </header>
+  <article>
+    {{ content | excerpt }}
+    {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+    {% if excerpted == 'true' %} <a href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a> {% endif %}
+  </article>
+</section>
