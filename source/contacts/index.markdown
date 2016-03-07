@@ -2,8 +2,6 @@
 layout: page
 title: "Контакты"
 date: 2016-03-05 17:18
-comments: false
-sharing: false
 ---
 <a href="mailto://dmitrij@podabed.org">
     Email
