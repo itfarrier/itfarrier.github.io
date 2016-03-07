@@ -3,7 +3,7 @@
 	<title><![CDATA[podabed.org]]></title>
 	<link href="http://127.0.0.1:4000/atom.xml" rel="self"/>
 	<link href="http://127.0.0.1:4000/"/>
-	<updated>2016-03-06T15:46:29+07:00</updated>
+	<updated>2016-03-07T19:09:16+07:00</updated>
 	<id>http://127.0.0.1:4000/</id>
 	<author>
 		<name><![CDATA[Дмитрий Подабед]]></name>
@@ -43,24 +43,6 @@
 				
 			]]>
 			<![CDATA[<p><img src="http://127.0.0.1:4000/images/nam_pohuj.jpg"></p>
-]]>
-		</content>
-	</entry>
-	
-	<entry>
-		
-			<title type="html"><![CDATA[Кругом говно!]]></title>
-		
-		<link href="http://127.0.0.1:4000/2014/09/26/krughom-ghovno"/>
-		<updated>2014-09-26T10:31:59+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/09/26/krughom-ghovno</id>
-		<content type="html">
-			<![CDATA[
-				
-					<p></p>
-				
-			]]>
-			<![CDATA[<p><img src="http://127.0.0.1:4000/images/true.jpg"></p>
 ]]>
 		</content>
 	</entry>
