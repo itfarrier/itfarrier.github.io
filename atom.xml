@@ -3,13 +3,31 @@
 	<title><![CDATA[podabed.org]]></title>
 	<link href="http://127.0.0.1:4000/atom.xml" rel="self"/>
 	<link href="http://127.0.0.1:4000/"/>
-	<updated>2016-03-07T19:16:49+07:00</updated>
+	<updated>2016-03-08T11:39:06+07:00</updated>
 	<id>http://127.0.0.1:4000/</id>
 	<author>
 		<name><![CDATA[Дмитрий Подабед]]></name>
 		<email><![CDATA[dmitrij@podabed.org]]></email>
 	</author>
 	<generator uri="http://octopress.org/">Octopress</generator>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Реклама в интернете]]></title>
+		
+		<link href="http://127.0.0.1:4000/2016/03/08/rieklama-v-intiernietie"/>
+		<updated>2016-03-08T11:32:50+07:00</updated>
+		<id>http://127.0.0.1:4000/2016/03/08/rieklama-v-intiernietie</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Решил сократить количество подписок в блокировщике рекламы. Начал по очереди отключать и удивляться появляющейся рекламе. Она оказалась везде: в шапке сайта, в подвале, в сайдах, между постами и в постах. Включил всё обратно: пусть лчуше страница загружается чуть медленнее, чем наблюдать весь этот пиздец. Каждый раз, как вижу браузер без блокировщика, удивляюсь, как люди пользуются так интернетом? Там же столько дерьма в глаза льют.</p>
+]]>
+		</content>
+	</entry>
 	
 	<entry>
 		
