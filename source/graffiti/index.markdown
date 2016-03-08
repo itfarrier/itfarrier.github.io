@@ -24,3 +24,5 @@ date: 2016-03-07 17:00
 {% img /images/nakatilnya.jpg %}
 {% img /images/ksyusha-i-love-you-belyash.jpg %}
 {% img /images/esli-gorelka-hlopaet-ohladi-eyo.jpg %}
+{% img /images/lenis-i-veselis.jpg %}
+{% img /images/ne-vasha-territoriya.jpg %}
