@@ -26,3 +26,4 @@ date: 2016-03-07 17:00
 {% img /images/esli-gorelka-hlopaet-ohladi-eyo.jpg %}
 {% img /images/lenis-i-veselis.jpg %}
 {% img /images/ne-vasha-territoriya.jpg %}
+{% img /images/baby-brejte-nogi-i-dyrki.jpg %}
