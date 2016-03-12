@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://127.0.0.1:4000/2016/03/12/tinkoff</loc>
+<lastmod>2016-03-12T09:56:01+07:00</lastmod>
+</url>
+<url>
 <loc>http://127.0.0.1:4000/2016/03/08/rieklama-v-intiernietie</loc>
 <lastmod>2016-03-08T11:32:50+07:00</lastmod>
 </url>
@@ -357,6 +361,30 @@
 </url>
 <url>
 <loc>http://127.0.0.1:4000/blog/categories/intierniet/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/tinkoff/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/tinkov/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/tin'kov/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/tin'koff/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/opyt/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/loial'nost'/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/bank/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/siervis/</loc>
 </url>
 <url>
 <loc>http://127.0.0.1:4000/2/</loc>
