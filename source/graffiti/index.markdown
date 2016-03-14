@@ -28,3 +28,4 @@ date: 2016-03-07 17:00
 {% img /images/ne-vasha-territoriya.jpg %}
 {% img /images/baby-brejte-nogi-i-dyrki.jpg %}
 {% img /images/vlasti-net.jpg %}
+{% img /images/medal.jpg %}
