@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://127.0.0.1:4000/2016/03/16/relatos-salvajes</loc>
+<lastmod>2016-03-16T20:56:05+07:00</lastmod>
+</url>
+<url>
 <loc>http://127.0.0.1:4000/2016/03/16/paradoks</loc>
 <lastmod>2016-03-16T15:29:28+07:00</lastmod>
 </url>
@@ -408,6 +412,30 @@
 </url>
 <url>
 <loc>http://127.0.0.1:4000/blog/categories/paradoks/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/dikiie-istorii/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/relatos-salvajes/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/wild-tales/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/kinonovielly/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/sbornik-korotkomietrazhnykh-fil'mov/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/iarost'/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/ghniev/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/vozmiezdiie/</loc>
 </url>
 <url>
 <loc>http://127.0.0.1:4000/2/</loc>
