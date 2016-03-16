@@ -3,13 +3,33 @@
 	<title><![CDATA[podabed.org]]></title>
 	<link href="http://127.0.0.1:4000/atom.xml" rel="self"/>
 	<link href="http://127.0.0.1:4000/"/>
-	<updated>2016-03-16T15:21:32+07:00</updated>
+	<updated>2016-03-16T15:33:04+07:00</updated>
 	<id>http://127.0.0.1:4000/</id>
 	<author>
 		<name><![CDATA[Дмитрий Подабед]]></name>
 		<email><![CDATA[dmitrij@podabed.org]]></email>
 	</author>
 	<generator uri="http://octopress.org/">Octopress</generator>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Парадокс]]></title>
+		
+		<link href="http://127.0.0.1:4000/2016/03/16/paradoks"/>
+		<updated>2016-03-16T15:29:28+07:00</updated>
+		<id>http://127.0.0.1:4000/2016/03/16/paradoks</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Как замечательно сказала одна женщина:</p>
+
+<blockquote><p>Ты просил ответить, я и спросила.</p></blockquote>
+]]>
+		</content>
+	</entry>
 	
 	<entry>
 		
