@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Category: Wileyfox Swift | podabed.org]]></title>
+  <link href="http://127.0.0.1:4000/blog/categories/wileyfox-swift/atom.xml" rel="self"/>
+  <link href="http://127.0.0.1:4000/"/>
+  <updated>2016-03-16T15:21:32+07:00</updated>
+  <id>http://127.0.0.1:4000/</id>
+  <author>
+    <name><![CDATA[Дмитрий Подабед]]></name>
+    <email><![CDATA[dmitrij@podabed.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Wileyfox Swift]]></title>
+    <link href="http://127.0.0.1:4000/2016/03/16/wileyfox-swift"/>
+    <updated>2016-03-16T14:56:51+07:00</updated>
+    <id>http://127.0.0.1:4000/2016/03/16/wileyfox-swift</id>
+    <content type="html"><![CDATA[<p>Много где была джинса, как он хорош. Таки это правда, за 89 баксов действительно заебись. Но меня выбесила Cyanogen OS. Вот вроде бы основана на CM, но говна там как в любой стоковой прошивке. Один хуй пришлось пердолиться: разблокировать загрузчик, менять рекавери, менять прошивку на CM. Минус поменьше - отсутствие физических кнопок Back, Home, Menu. Их отображение отнимает довольно солидный кусок, а если их убрать, то нужно каждый раз делать свайп, чтобы они появились. Ебанутое решение, убрать их.</p>
+]]></content>
+  </entry>
+  
+</feed>

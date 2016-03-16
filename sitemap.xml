@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://127.0.0.1:4000/2016/03/16/wileyfox-swift</loc>
+<lastmod>2016-03-16T14:56:51+07:00</lastmod>
+</url>
+<url>
 <loc>http://127.0.0.1:4000/2016/03/12/tinkoff</loc>
 <lastmod>2016-03-12T09:56:01+07:00</lastmod>
 </url>
@@ -385,6 +389,12 @@
 </url>
 <url>
 <loc>http://127.0.0.1:4000/blog/categories/siervis/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/smartfon/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/wileyfox-swift/</loc>
 </url>
 <url>
 <loc>http://127.0.0.1:4000/2/</loc>
