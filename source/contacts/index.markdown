@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Контакты"
-date: 2016-03-05 17:18
 ---
 <a href="mailto://dmitrij@podabed.org">
     Email

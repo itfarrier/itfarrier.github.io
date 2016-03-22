@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Граффити"
-date: 2016-03-07 17:00
 ---
 Мне очень нравятся граффити. Особенно надписи. Здесь я их собираю.
 {% img /images/vsyo-chto-mne-ne-nravitsya-govno.jpg %}

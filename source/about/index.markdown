@@ -1,8 +1,6 @@
 ---
 layout: page
 title: О
-comments: false
-sharing: false
 ---
 <abbr title="Content Management System">CMS</abbr> — «<a href="http://octopress.org">Octopress</a>».
 
