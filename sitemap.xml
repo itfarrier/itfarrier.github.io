@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://127.0.0.1:4000/2016/03/28/chiornaia-polosa</loc>
+<lastmod>2016-03-28T07:26:12+07:00</lastmod>
+</url>
+<url>
 <loc>http://127.0.0.1:4000/2016/03/16/relatos-salvajes</loc>
 <lastmod>2016-03-16T20:56:05+07:00</lastmod>
 </url>
@@ -87,13 +91,13 @@
 <loc>http://127.0.0.1:4000/blog/archives/</loc>
 </url>
 <url>
-<loc>http://127.0.0.1:4000/graffiti/</loc>
+<loc>http://127.0.0.1:4000/about/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/inscriptions/</loc>
 </url>
 <url>
 <loc>http://127.0.0.1:4000/contacts/</loc>
-</url>
-<url>
-<loc>http://127.0.0.1:4000/about/</loc>
 </url>
 <url>
 <loc>http://127.0.0.1:4000/books/</loc>
@@ -439,5 +443,20 @@
 </url>
 <url>
 <loc>http://127.0.0.1:4000/blog/categories/vozmiezdiie/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/chiornaia-polosa/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/kontsiert/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/kits/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/keddi-pakhniet-dieriev'iami/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/kpd/</loc>
 </url>
 </urlset>
