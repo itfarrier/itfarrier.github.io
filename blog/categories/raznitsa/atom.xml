@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Category: разница | podabed.org]]></title>
+  <link href="http://127.0.0.1:4000/blog/categories/raznitsa/atom.xml" rel="self"/>
+  <link href="http://127.0.0.1:4000/"/>
+  <updated>2016-04-01T08:12:31+07:00</updated>
+  <id>http://127.0.0.1:4000/</id>
+  <author>
+    <name><![CDATA[Дмитрий Подабед]]></name>
+    <email><![CDATA[dmitrij@podabed.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Отличия]]></title>
+    <link href="http://127.0.0.1:4000/2016/04/01/otlichiia"/>
+    <updated>2016-04-01T07:59:11+07:00</updated>
+    <id>http://127.0.0.1:4000/2016/04/01/otlichiia</id>
+    <content type="html"><![CDATA[<p>Поговорил с нею. Голос тихий, вкрадчивый, почти неслышный&hellip; Но когда она поёт, голос настолько другой, как-будто другого человека: громкий, довольно высокий, с нотами плача, иногда срывающийся. Насколько, всё-таки, повседневный голос у поющих иногда отличается от певческого.</p>
+]]></content>
+  </entry>
+  
+</feed>

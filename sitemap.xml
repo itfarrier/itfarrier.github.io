@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://127.0.0.1:4000/2016/04/01/otlichiia</loc>
+<lastmod>2016-04-01T07:59:11+07:00</lastmod>
+</url>
+<url>
 <loc>http://127.0.0.1:4000/2016/03/28/chiornaia-polosa</loc>
 <lastmod>2016-03-28T07:26:12+07:00</lastmod>
 </url>
@@ -458,5 +462,20 @@
 </url>
 <url>
 <loc>http://127.0.0.1:4000/blog/categories/kpd/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/vpiechatlieniie/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/raznitsa/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/blog/categories/gholos/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/2/</loc>
+</url>
+<url>
+<loc>http://127.0.0.1:4000/3/</loc>
 </url>
 </urlset>
