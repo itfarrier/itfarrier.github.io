@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title><![CDATA[podabed.org]]></title>
-	<link href="http://127.0.0.1:4000/atom.xml" rel="self"/>
-	<link href="http://127.0.0.1:4000/"/>
-	<updated>2016-04-01T08:13:43+07:00</updated>
-	<id>http://127.0.0.1:4000/</id>
+	<link href="http://podabed.org/atom.xml" rel="self"/>
+	<link href="http://podabed.org/"/>
+	<updated>2016-04-05T18:11:07+07:00</updated>
+	<id>http://podabed.org/</id>
 	<author>
 		<name><![CDATA[Дмитрий Подабед]]></name>
 		<email><![CDATA[dmitrij@podabed.org]]></email>
@@ -15,9 +15,9 @@
 		
 			<title type="html"><![CDATA[Отличия]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/04/01/otlichiia"/>
+		<link href="http://podabed.org/2016/04/01/otlichiia"/>
 		<updated>2016-04-01T07:59:11+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/04/01/otlichiia</id>
+		<id>http://podabed.org/2016/04/01/otlichiia</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -33,16 +33,16 @@
 		
 			<title type="html"><![CDATA[Чёрная полоса]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/03/28/chiornaia-polosa"/>
+		<link href="http://podabed.org/2016/03/28/chiornaia-polosa"/>
 		<updated>2016-03-28T07:26:12+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/03/28/chiornaia-polosa</id>
+		<id>http://podabed.org/2016/03/28/chiornaia-polosa</id>
 		<content type="html">
 			<![CDATA[
 				
 					<p></p>
 				
 			]]>
-			<![CDATA[<p><img src="http://127.0.0.1:4000/images/salyut-vesna-kic-27-03-16.jpg">
+			<![CDATA[<p><img src="http://podabed.org/images/salyut-vesna-kic-27-03-16.jpg">
 Пришёл в КИЦ&hellip; и не нашёл, блядь, вход (искал минут 5, пришлось обойти здание вокруг). Обычно вход спереди, но тут он оказался с обратной стороны. Чепуха какая-то&hellip;</p>
 
 <p>Начался концерт с чтения стихов. Это было как <a href="https://en.wikipedia.org/wiki/No._5,_1948">№5</a>. Наборы слов, где смысл видят лишь люди с высшей степенью Дзэна. Для примера процитирую такого <a href="https://vk.com/wall-115786413_39">человека</a>:</p>
@@ -59,7 +59,7 @@
 <p>Хотя мне понравилось и запомнилось про женщин и огонь самого первого поэта, которого объявили как (вроде бы) &ldquo;фэшн-гуру&rdquo;. :) После всех поэтов наконец-то вышли те, ради кого я пошёл на концерт - Кэдди пахнет деревьями.</p>
 
 <p>КПД дали жару, конечно. Если на поэтах зал аплодировал ради приличия, то для них &ldquo;на все деньги&rdquo;. Молодцы. Кстати, как и на лекции у <a href="https://vk.com/a_shevelev">Андрея</a>, опять басиста было слышно больше всех. :D По случаю приобрёл его книгу:
-<img src="http://127.0.0.1:4000/images/vyvihi.jpg"></p>
+<img src="http://podabed.org/images/vyvihi.jpg"></p>
 
 <p>Особо надо сказать про звук. Почти в начале концерта одна из поэтов уронила микрофон и позже он умер во время исполнения песни группой КПД. Ещё на сцене лежал провод к одному из микрофонов, и когда его кто-нибудь из музыкантов задевал, сразу же это становилось известно всем в зале. Звукорежиссёр косячил так, будто он это отрепетировал! То писк на весь зал, то голоса слишком громкие, то слишком тихие, то дикое эхо, то какие-то наводки&hellip; Пиздец, в общем.</p>
 
@@ -74,9 +74,9 @@
 		
 			<title type="html"><![CDATA[Relatos salvajes]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/03/16/relatos-salvajes"/>
+		<link href="http://podabed.org/2016/03/16/relatos-salvajes"/>
 		<updated>2016-03-16T20:56:05+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/03/16/relatos-salvajes</id>
+		<id>http://podabed.org/2016/03/16/relatos-salvajes</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -96,9 +96,9 @@
 		
 			<title type="html"><![CDATA[Парадокс]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/03/16/paradoks"/>
+		<link href="http://podabed.org/2016/03/16/paradoks"/>
 		<updated>2016-03-16T15:29:28+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/03/16/paradoks</id>
+		<id>http://podabed.org/2016/03/16/paradoks</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -116,9 +116,9 @@
 		
 			<title type="html"><![CDATA[Wileyfox Swift]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/03/16/wileyfox-swift"/>
+		<link href="http://podabed.org/2016/03/16/wileyfox-swift"/>
 		<updated>2016-03-16T14:56:51+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/03/16/wileyfox-swift</id>
+		<id>http://podabed.org/2016/03/16/wileyfox-swift</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -134,16 +134,16 @@
 		
 			<title type="html"><![CDATA[Tinkoff]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/03/12/tinkoff"/>
+		<link href="http://podabed.org/2016/03/12/tinkoff"/>
 		<updated>2016-03-12T09:56:01+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/03/12/tinkoff</id>
+		<id>http://podabed.org/2016/03/12/tinkoff</id>
 		<content type="html">
 			<![CDATA[
 				
 					<p></p>
 				
 			]]>
-			<![CDATA[<p><img src="http://127.0.0.1:4000/images/tinkoff.jpg">
+			<![CDATA[<p><img src="http://podabed.org/images/tinkoff.jpg">
 Клиентом банка от <del>пивовара</del> Тинькова являюсь очень давно. Но есть нюанс. Пользуюсь я дебетовой картой, никаких кредитов и кредитных карт. И user experience у меня почти только положительный.</p>
 
 <p>Из последнего. Я по <del>неосторожности</del> тупости заблокировал основную карту. После этого её остаётся только перевыпустить, а, согласно договору, перевыпуск по инициативе или вине клиента только за 290 рублей. Мне перевыпустили бесплатно. Вот вам и сервис. В России. Остальные плюсы известны и уже давно озвучены разными людьми.</p>
@@ -157,9 +157,9 @@
 		
 			<title type="html"><![CDATA[Реклама в интернете]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/03/08/rieklama-v-intiernietie"/>
+		<link href="http://podabed.org/2016/03/08/rieklama-v-intiernietie"/>
 		<updated>2016-03-08T11:32:50+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/03/08/rieklama-v-intiernietie</id>
+		<id>http://podabed.org/2016/03/08/rieklama-v-intiernietie</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -175,9 +175,9 @@
 		
 			<title type="html"><![CDATA[Доменные имена в кризис]]></title>
 		
-		<link href="http://127.0.0.1:4000/2016/03/06/domiennyie-imiena-v-krizis"/>
+		<link href="http://podabed.org/2016/03/06/domiennyie-imiena-v-krizis"/>
 		<updated>2016-03-06T14:16:38+07:00</updated>
-		<id>http://127.0.0.1:4000/2016/03/06/domiennyie-imiena-v-krizis</id>
+		<id>http://podabed.org/2016/03/06/domiennyie-imiena-v-krizis</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -193,16 +193,16 @@
 		
 			<title type="html"><![CDATA[Почти так...]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/09/27/pochti-tak-dot-dot-dot"/>
+		<link href="http://podabed.org/2014/09/27/pochti-tak-dot-dot-dot"/>
 		<updated>2014-09-27T19:38:51+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/09/27/pochti-tak-dot-dot-dot</id>
+		<id>http://podabed.org/2014/09/27/pochti-tak-dot-dot-dot</id>
 		<content type="html">
 			<![CDATA[
 				
 					<p></p>
 				
 			]]>
-			<![CDATA[<p><img src="http://127.0.0.1:4000/images/nam_pohuj.jpg"></p>
+			<![CDATA[<p><img src="http://podabed.org/images/nam_pohuj.jpg"></p>
 ]]>
 		</content>
 	</entry>
@@ -211,9 +211,9 @@
 		
 			<title type="html"><![CDATA[Увеличение члена]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/09/05/uvielichieniie-chliena"/>
+		<link href="http://podabed.org/2014/09/05/uvielichieniie-chliena"/>
 		<updated>2014-09-05T07:42:30+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/09/05/uvielichieniie-chliena</id>
+		<id>http://podabed.org/2014/09/05/uvielichieniie-chliena</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -237,9 +237,9 @@
 		
 			<title type="html"><![CDATA[Тройное дублирование или паранойя]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/09/04/troinoie-dublirovaniie-ili-paranoiia"/>
+		<link href="http://podabed.org/2014/09/04/troinoie-dublirovaniie-ili-paranoiia"/>
 		<updated>2014-09-04T07:23:48+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/09/04/troinoie-dublirovaniie-ili-paranoiia</id>
+		<id>http://podabed.org/2014/09/04/troinoie-dublirovaniie-ili-paranoiia</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -257,9 +257,9 @@
 		
 			<title type="html"><![CDATA[CM]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/08/30/cm"/>
+		<link href="http://podabed.org/2014/08/30/cm"/>
 		<updated>2014-08-30T17:14:21+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/08/30/cm</id>
+		<id>http://podabed.org/2014/08/30/cm</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -275,9 +275,9 @@
 		
 			<title type="html"><![CDATA[Что значит «Подобед»?]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/07/05/chto-znachit-%3C%3Cpodobied%3E%3E"/>
+		<link href="http://podabed.org/2014/07/05/chto-znachit-%3C%3Cpodobied%3E%3E"/>
 		<updated>2014-07-05T17:58:28+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/07/05/chto-znachit-<<podobied>></id>
+		<id>http://podabed.org/2014/07/05/chto-znachit-<<podobied>></id>
 		<content type="html">
 			<![CDATA[
 				
@@ -301,9 +301,9 @@
 		
 			<title type="html"><![CDATA[Linux как основная система]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/04/29/linux-kak-osnovnaia-sistiema"/>
+		<link href="http://podabed.org/2014/04/29/linux-kak-osnovnaia-sistiema"/>
 		<updated>2014-04-29T08:58:09+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/04/29/linux-kak-osnovnaia-sistiema</id>
+		<id>http://podabed.org/2014/04/29/linux-kak-osnovnaia-sistiema</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -337,9 +337,9 @@
 		
 			<title type="html"><![CDATA[Почему каждый должен быть параноиком]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom"/>
+		<link href="http://podabed.org/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom"/>
 		<updated>2014-03-31T10:07:43+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom</id>
+		<id>http://podabed.org/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -372,9 +372,9 @@
 		
 			<title type="html"><![CDATA[О пользе <del>о</del>двощей]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/03/18/o-pol'zie-dvoshchiei"/>
+		<link href="http://podabed.org/2014/03/18/o-pol'zie-dvoshchiei"/>
 		<updated>2014-03-18T17:41:09+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/03/18/o-pol'zie-dvoshchiei</id>
+		<id>http://podabed.org/2014/03/18/o-pol'zie-dvoshchiei</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -452,9 +452,9 @@
 		
 			<title type="html"><![CDATA[ВНЕЗАПНО!]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/03/18/vniezapno"/>
+		<link href="http://podabed.org/2014/03/18/vniezapno"/>
 		<updated>2014-03-18T10:09:12+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/03/18/vniezapno</id>
+		<id>http://podabed.org/2014/03/18/vniezapno</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -470,9 +470,9 @@
 		
 			<title type="html"><![CDATA[Я — быдла]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/03/13/ia-bydla"/>
+		<link href="http://podabed.org/2014/03/13/ia-bydla"/>
 		<updated>2014-03-13T23:33:47+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/03/13/ia-bydla</id>
+		<id>http://podabed.org/2014/03/13/ia-bydla</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -490,9 +490,9 @@
 		
 			<title type="html"><![CDATA[О лицензионной продукции]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/03/12/o-litsienzionnoi-produktsii"/>
+		<link href="http://podabed.org/2014/03/12/o-litsienzionnoi-produktsii"/>
 		<updated>2014-03-12T11:14:27+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/03/12/o-litsienzionnoi-produktsii</id>
+		<id>http://podabed.org/2014/03/12/o-litsienzionnoi-produktsii</id>
 		<content type="html">
 			<![CDATA[
 				
@@ -507,7 +507,7 @@
 
 
 <p>Вообще, я <del>ступил на тёмную сторону</del> начал пользоваться лицензионными продуктами с покупки ноутбука с лицензионной Windows (Святый Боже, Святый Крепкий, Святый Безсмертный, помилуй нас). Плюсов от этого я даже не увидел. Вообще, справедливости ради, скажу, что Microsoft нихуя не user-friendly в сфере лицензирования своих продуктов. Например, я приобрёл Windows 8 по акции от самих мелкософт. Я так думал&hellip; Оказалось, что я приобрёл ОБНОВЛЕНИЕ Windows 7 на Windows 8. Т. е. мой ключ не действует на установку Windows 8 того же языка и редакции с MSDN-образа. Так сказала техподдержка. Тогда мне пришлось установить MSDN Windows 7, а потом обновить её до Windows 8. Такая ситуация сразу же вызывает в памяти это:
-<img src="http://127.0.0.1:4000/images/whypeoplelivepirates.jpg">
+<img src="http://podabed.org/images/whypeoplelivepirates.jpg">
 На мой взгляд, после такого любой должен послать микрософт НАХУЙ. Что я и сделал. Сейчас пользуюсь Ubuntu и всё заебись, даже лучше, чем было. Но лучше разложу всё «по полочкам».</p>
 
 <h2>Этика</h2>
@@ -538,9 +538,9 @@
 		
 			<title type="html"><![CDATA[Опять про них]]></title>
 		
-		<link href="http://127.0.0.1:4000/2014/02/27/opiat-pro-nikh"/>
+		<link href="http://podabed.org/2014/02/27/opiat-pro-nikh"/>
 		<updated>2014-02-27T08:51:58+08:00</updated>
-		<id>http://127.0.0.1:4000/2014/02/27/opiat-pro-nikh</id>
+		<id>http://podabed.org/2014/02/27/opiat-pro-nikh</id>
 		<content type="html">
 			<![CDATA[
 				

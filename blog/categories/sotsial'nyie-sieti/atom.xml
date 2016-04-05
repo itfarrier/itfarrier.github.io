@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: социальные сети | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/sotsial'nyie-sieti/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/sotsial'nyie-sieti/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[Почему каждый должен быть параноиком]]></title>
-    <link href="http://127.0.0.1:4000/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom"/>
+    <link href="http://podabed.org/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom"/>
     <updated>2014-03-31T10:07:43+08:00</updated>
-    <id>http://127.0.0.1:4000/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom</id>
+    <id>http://podabed.org/2014/03/31/pochiemu-kazhdyi-dolzhien-byt'-paranoikom</id>
     <content type="html"><![CDATA[<p>Я не доверяю социальным сетям и другим онлайн сервисам. Но всё-таки ими пользуюсь, ограничивая себя в их использовании. Удобно, как не крути. Как-нибудь почитайте правила пользования и условия приватности личных данных вашего любимого сервиса. Обнаружите много интересного.
 Вот ИЗБРАННОЕ из правил «вконтаче». Самые «сладкие» места я выделил <b>ЖИРНЫМ</b>.</p>
 

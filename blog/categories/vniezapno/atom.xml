@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: ВНЕЗАПНО | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/vniezapno/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/vniezapno/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[ВНЕЗАПНО!]]></title>
-    <link href="http://127.0.0.1:4000/2014/03/18/vniezapno"/>
+    <link href="http://podabed.org/2014/03/18/vniezapno"/>
     <updated>2014-03-18T10:09:12+08:00</updated>
-    <id>http://127.0.0.1:4000/2014/03/18/vniezapno</id>
+    <id>http://podabed.org/2014/03/18/vniezapno</id>
     <content type="html"><![CDATA[<blockquote><p>«Да, я уже влюблён в тебя!»</p></blockquote>
 ]]></content>
   </entry>

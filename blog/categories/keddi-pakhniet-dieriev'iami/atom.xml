@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: Кэдди пахнет деревьями | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/keddi-pakhniet-dieriev'iami/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/keddi-pakhniet-dieriev'iami/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[Чёрная полоса]]></title>
-    <link href="http://127.0.0.1:4000/2016/03/28/chiornaia-polosa"/>
+    <link href="http://podabed.org/2016/03/28/chiornaia-polosa"/>
     <updated>2016-03-28T07:26:12+07:00</updated>
-    <id>http://127.0.0.1:4000/2016/03/28/chiornaia-polosa</id>
+    <id>http://podabed.org/2016/03/28/chiornaia-polosa</id>
     <content type="html"><![CDATA[<p><img src="/images/salyut-vesna-kic-27-03-16.jpg">
 Пришёл в КИЦ&hellip; и не нашёл, блядь, вход (искал минут 5, пришлось обойти здание вокруг). Обычно вход спереди, но тут он оказался с обратной стороны. Чепуха какая-то&hellip;</p>
 

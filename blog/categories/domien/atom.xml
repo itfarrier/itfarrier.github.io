@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: домен | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/domien/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/domien/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[Доменные имена в кризис]]></title>
-    <link href="http://127.0.0.1:4000/2016/03/06/domiennyie-imiena-v-krizis"/>
+    <link href="http://podabed.org/2016/03/06/domiennyie-imiena-v-krizis"/>
     <updated>2016-03-06T14:16:38+07:00</updated>
-    <id>http://127.0.0.1:4000/2016/03/06/domiennyie-imiena-v-krizis</id>
+    <id>http://podabed.org/2016/03/06/domiennyie-imiena-v-krizis</id>
     <content type="html"><![CDATA[<p>Ёбаный кризис. Ёбаный курс. Жалких 11,99 баксов превратились в почти 900 рублей. Пришлось гуглить. Как ни странно, всего за один запрос нашёл 2,99 доллара. Слава Гуглу!</p>
 ]]></content>
   </entry>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: I2p | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/i2p/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/i2p/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[О провайдерах]]></title>
-    <link href="http://127.0.0.1:4000/2014/02/21/o-provaidierakh"/>
+    <link href="http://podabed.org/2014/02/21/o-provaidierakh"/>
     <updated>2014-02-21T22:36:54+08:00</updated>
-    <id>http://127.0.0.1:4000/2014/02/21/o-provaidierakh</id>
+    <id>http://podabed.org/2014/02/21/o-provaidierakh</id>
     <content type="html"><![CDATA[<p>Думаю, у всех провайдеров есть примерно такое:</p>
 
 <p>«4.3.2. Временно, в период часов наибольшей нагрузки на Сеть, ограничивать полосу пропускания трафика для сервисов, использующих ресурсы Сети для доступа к пиринговым файлообменным сетям (в т. ч. с использованием технологии распределенного распространения файлов BitTorrent и пр.), загрузки файлов большого объема, а также доступа к потоковым мультимедиа-ресурсам (в т. ч. аудио- и видеостриминга), если использование этих сервисов существенно увеличивает объем трафика и снижает полосу пропускания трафика для других сервисов.»</p>

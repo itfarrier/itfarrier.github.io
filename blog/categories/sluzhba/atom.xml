@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: служба | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/sluzhba/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/sluzhba/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[Почти так...]]></title>
-    <link href="http://127.0.0.1:4000/2014/09/27/pochti-tak-dot-dot-dot"/>
+    <link href="http://podabed.org/2014/09/27/pochti-tak-dot-dot-dot"/>
     <updated>2014-09-27T19:38:51+08:00</updated>
-    <id>http://127.0.0.1:4000/2014/09/27/pochti-tak-dot-dot-dot</id>
+    <id>http://podabed.org/2014/09/27/pochti-tak-dot-dot-dot</id>
     <content type="html"><![CDATA[<p><img src="/images/nam_pohuj.jpg"></p>
 ]]></content>
   </entry>

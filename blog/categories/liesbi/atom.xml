@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: лесби | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/liesbi/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/liesbi/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[Я — быдла]]></title>
-    <link href="http://127.0.0.1:4000/2014/03/13/ia-bydla"/>
+    <link href="http://podabed.org/2014/03/13/ia-bydla"/>
     <updated>2014-03-13T23:33:47+08:00</updated>
-    <id>http://127.0.0.1:4000/2014/03/13/ia-bydla</id>
+    <id>http://podabed.org/2014/03/13/ia-bydla</id>
     <content type="html"><![CDATA[<p>Посетил тут случайно премьеру фильма «Жизнь Адель». Так женщин было НАМНОГО больше, чем мужчин. И присутствовали они в основном попарно. Быдло во мне тут же сказало:</p>
 
 <blockquote><p>«Да, они тут все лесбиянки!»</p></blockquote>

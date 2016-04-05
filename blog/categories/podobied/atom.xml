@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: Подобед | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/podobied/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/podobied/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[Что значит «Подобед»?]]></title>
-    <link href="http://127.0.0.1:4000/2014/07/05/chto-znachit-%3C%3Cpodobied%3E%3E"/>
+    <link href="http://podabed.org/2014/07/05/chto-znachit-%3C%3Cpodobied%3E%3E"/>
     <updated>2014-07-05T17:58:28+08:00</updated>
-    <id>http://127.0.0.1:4000/2014/07/05/chto-znachit-<<podobied>></id>
+    <id>http://podabed.org/2014/07/05/chto-znachit-<<podobied>></id>
     <content type="html"><![CDATA[<p>Спиздил с интернетов.</p>
 
 <p>Основой фамилии Подобед послужило мирское имя Подобед. Фамилия Подобед образована от аналогичного мирского имени, которое восходит к нарицательному «подобед» — «время перед обедом, полдень». Вероятно, Подобедом родители нарекли ребёнка, родившегося в это время суток. Наречение сына таким именем не является случайным. Дело в том, что полдник в мировоззрении славян был наделён символическим смыслом.</p>

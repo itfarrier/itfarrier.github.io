@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Category: Wild Tales | podabed.org]]></title>
-  <link href="http://127.0.0.1:4000/blog/categories/wild-tales/atom.xml" rel="self"/>
-  <link href="http://127.0.0.1:4000/"/>
-  <updated>2016-04-01T08:13:43+07:00</updated>
-  <id>http://127.0.0.1:4000/</id>
+  <link href="http://podabed.org/blog/categories/wild-tales/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-04-05T18:11:07+07:00</updated>
+  <id>http://podabed.org/</id>
   <author>
     <name><![CDATA[Дмитрий Подабед]]></name>
     <email><![CDATA[dmitrij@podabed.org]]></email>
@@ -14,9 +14,9 @@
   
   <entry>
     <title type="html"><![CDATA[Relatos Salvajes]]></title>
-    <link href="http://127.0.0.1:4000/2016/03/16/relatos-salvajes"/>
+    <link href="http://podabed.org/2016/03/16/relatos-salvajes"/>
     <updated>2016-03-16T20:56:05+07:00</updated>
-    <id>http://127.0.0.1:4000/2016/03/16/relatos-salvajes</id>
+    <id>http://podabed.org/2016/03/16/relatos-salvajes</id>
     <content type="html"><![CDATA[<p>Давно меня так кино не цепляло. Так, что аж решил написать.</p>
 
 <p>Сюжет и другие подробности лучше смотреть в <a href="https://en.wikipedia.org/wiki/Wild_Tales_(film)">Википедии</a>. Сразу пришли на ум «Ворошиловский стрелок» Говорухина, «1210» Гончукова и «Законопослушный гражданин» с Батлером. Вообще, главная мысль всех новелл — поступки человека, доведённого до крайности. Плюсом, на мой взгляд, в этом альманахе является не <del>146</del>100%-ная трагичность всех новелл: есть счастливая, есть весёлая, есть фантастическая. В весёлой, мне показалось, автор даже сравнил героев с баранами (привет, «Modern times»), так у них всё глупо началось, развивалось и закончилось.</p>
