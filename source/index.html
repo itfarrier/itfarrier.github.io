@@ -9,7 +9,7 @@ layout: default
 <nav>
   {% if paginator.next_page %}
     <div class="pagination-item">
-      <a href="{{paginator.next_page}}">Вперёд в прошлое</a>
+      <a href="{{paginator.next_page_path}}">Вперёд в прошлое</a>
     </div>
   {% else %}
     <span class="pagination-item">Вперёд в прошлое</span>
@@ -21,7 +21,7 @@ layout: default
     </div>
   {% else %}
     <div class="pagination-item">
-      <a href="{{paginator.previous_page}}">Назад в будущее</a>
+      <a href="{{paginator.previous_page_path}}">Назад в будущее</a>
     </div>
   {% endif %}
   {% else %}
