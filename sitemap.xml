@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://podabed.org/2016/04/17/novyi-dizain-vkontaktie</loc>
+<lastmod>2016-04-17T10:47:53+07:00</lastmod>
+</url>
+<url>
 <loc>http://podabed.org/2016/04/09/number-niemuzieika</loc>
 <lastmod>2016-04-09T18:32:38+07:00</lastmod>
 </url>
@@ -481,5 +485,14 @@
 </url>
 <url>
 <loc>http://podabed.org/blog/categories/keddi-pakhniet-dieriev'iami/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/vkontaktie/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/novyi-dizain/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/dizain/</loc>
 </url>
 </urlset>
