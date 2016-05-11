@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://podabed.org/2016/05/11/donorstvo</loc>
+<lastmod>2016-05-11T17:54:48+07:00</lastmod>
+</url>
+<url>
 <loc>http://podabed.org/2016/05/07/instagram-khuinia</loc>
 <lastmod>2016-05-07T11:26:23+07:00</lastmod>
 </url>
@@ -111,10 +115,10 @@
 <loc>http://podabed.org/blog/archives/</loc>
 </url>
 <url>
-<loc>http://podabed.org/inscriptions/</loc>
+<loc>http://podabed.org/about/</loc>
 </url>
 <url>
-<loc>http://podabed.org/about/</loc>
+<loc>http://podabed.org/inscriptions/</loc>
 </url>
 <url>
 <loc>http://podabed.org/contacts/</loc>
@@ -526,5 +530,11 @@
 </url>
 <url>
 <loc>http://podabed.org/blog/categories/instagram/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/donorstvo/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/krov'/</loc>
 </url>
 </urlset>
