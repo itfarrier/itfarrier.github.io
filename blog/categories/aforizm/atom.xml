@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Category: афоризм | podabed.org]]></title>
+  <link href="http://podabed.org/blog/categories/aforizm/atom.xml" rel="self"/>
+  <link href="http://podabed.org/"/>
+  <updated>2016-05-29T00:54:54+07:00</updated>
+  <id>http://podabed.org/</id>
+  <author>
+    <name><![CDATA[Дмитрий Подабед]]></name>
+    <email><![CDATA[dmitrij@podabed.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Бард-ринг]]></title>
+    <link href="http://podabed.org/2016/05/28/bard-ringh"/>
+    <updated>2016-05-28T21:20:58+07:00</updated>
+    <id>http://podabed.org/2016/05/28/bard-ringh</id>
+    <content type="html"><![CDATA[<p><img src="/images/2016-05-28-bard-ringh/IMG_20160529_004850.jpg"></p>
+
+<p>Побывал вчера на&nbsp;<nobr>бард-ринге</nobr> в&nbsp;&laquo;Пилоте&raquo;. Плевался потом весь вечер. Один &laquo;хитрый нехороший человек&raquo; мне в&nbsp;ответ на&nbsp;моё недовольство сказал:</p>
+
+<blockquote><p>Это&nbsp;же барды! Они не&nbsp;должны уметь петь.</p></blockquote>
+
+<p>Собственно, исчерпывающая характеристика.</p>
+]]></content>
+  </entry>
+  
+</feed>
