@@ -3,13 +3,60 @@
 	<title><![CDATA[podabed.org]]></title>
 	<link href="http://podabed.org/atom.xml" rel="self"/>
 	<link href="http://podabed.org/"/>
-	<updated>2016-05-31T11:45:40+07:00</updated>
+	<updated>2016-06-10T11:21:46+07:00</updated>
 	<id>http://podabed.org/</id>
 	<author>
 		<name><![CDATA[Дмитрий Подабед]]></name>
 		<email><![CDATA[dmitrij@podabed.org]]></email>
 	</author>
 	<generator uri="http://octopress.org/">Octopress</generator>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Общение]]></title>
+		
+		<link href="http://podabed.org/2016/06/10/obshchieniie"/>
+		<updated>2016-06-10T10:59:04+07:00</updated>
+		<id>http://podabed.org/2016/06/10/obshchieniie</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>1</p>
+
+<blockquote><p>2, можно я&nbsp;тебе сегодня порассказываю про постреализм, а&nbsp;то&nbsp;я&nbsp;первый раз про него читаю, мысли какие то&nbsp;будто неоформленные? х)</p></blockquote>
+
+<p>2</p>
+
+<blockquote><p>НЕТ<br>
+НИ&nbsp;ЗА&nbsp;ЧТО</p></blockquote>
+
+<p>1</p>
+
+<blockquote><p>&#128553;</p></blockquote>
+
+<p>2</p>
+
+<blockquote><p>&#128548;<br>
+ЕЩЁ ЧЕГО УДУМАЛА<br>
+ИШЬ ТЫ</p></blockquote>
+
+<p>1</p>
+
+<blockquote><p>Я&nbsp;БОЛЬШЕ НЕ&nbsp;БУДУ</p></blockquote>
+
+<p>2</p>
+
+<blockquote><p>А&nbsp;БОЛЬШЕ И&nbsp;НЕ&nbsp;НАДО</p></blockquote>
+
+<p>Вы&nbsp;наблюдали &laquo;сферический в&nbsp;вакууме&raquo; образец дружеского общения.</p>
+
+<p>Вообще, мне кажется, если друзья не общаются подобным образом, то это не дружба, а хуйня на постном масле.</p>
+]]>
+		</content>
+	</entry>
 	
 	<entry>
 		
@@ -446,24 +493,6 @@
 			<![CDATA[<p>Искал метод сделать на своём смарте автоматический бэкап через CWM и в итоге наткнулся на <a href="https://play.google.com/store/apps/details?id=com.h3r3t1c.onnandbup">Online Nandroid Backup * ROOT</a>. На форумах пишут про опасности живых бэкапов файловой системы, но мой аппарат в списке официально поддерживаемых, да, и протестировал я несколько живых бэкапов, восстановился с них без каких-либо проблем.</p>
 
 <p>В итоге у меня теперь бэкап по расписанию через <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup">Titanium Backup ★ root</a>, <a href="https://play.google.com/store/apps/details?id=com.h3r3t1c.onnandbup">Online Nandroid Backup * ROOT</a> и стандартный гугловский. Это ли не <del>пиздец</del> паранойя?</p>
-]]>
-		</content>
-	</entry>
-	
-	<entry>
-		
-			<title type="html"><![CDATA[CM]]></title>
-		
-		<link href="http://podabed.org/2014/08/30/cm"/>
-		<updated>2014-08-30T17:14:21+08:00</updated>
-		<id>http://podabed.org/2014/08/30/cm</id>
-		<content type="html">
-			<![CDATA[
-				
-					<p></p>
-				
-			]]>
-			<![CDATA[<p>Да, я счастливый пользователь CM-11. Да, на моём древнем говне 4.4.4 «ведроид». И да, даже в CM не хватает некоторых плюшек. Но в AOSP или стоке их ещё меньше.</p>
 ]]>
 		</content>
 	</entry>
