@@ -3,13 +3,39 @@
 	<title><![CDATA[podabed.org]]></title>
 	<link href="http://podabed.org/atom.xml" rel="self"/>
 	<link href="http://podabed.org/"/>
-	<updated>2016-06-10T11:21:46+07:00</updated>
+	<updated>2016-06-15T17:29:08+07:00</updated>
 	<id>http://podabed.org/</id>
 	<author>
 		<name><![CDATA[Дмитрий Подабед]]></name>
 		<email><![CDATA[dmitrij@podabed.org]]></email>
 	</author>
 	<generator uri="http://octopress.org/">Octopress</generator>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[Просветление]]></title>
+		
+		<link href="http://podabed.org/2016/06/14/prosvietlieniie"/>
+		<updated>2016-06-14T22:11:27+07:00</updated>
+		<id>http://podabed.org/2016/06/14/prosvietlieniie</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Пересел с&nbsp;Ubuntu на&nbsp;Archlinux (давно), с&nbsp;KDE на&nbsp;Enlightenment (уже второй раз).</p>
+
+<p>ПРОСВЕТЛЕНИЕ!</p>
+
+<p>В&nbsp;Арче мне гораздо комфортнее. Не&nbsp;нужно следить за&nbsp;релизами, всё свежее и&nbsp;стабильное, прорва софта (естественно, речь в&nbsp;том числе про AUR). А&nbsp;уж&nbsp;с&nbsp;помощью YAOURTа сборка софта из&nbsp;исходников не&nbsp;сложнее обычной установки пакета в&nbsp;терминале. В&nbsp;Убунту и&nbsp;Дебиан такой роскоши нет (или есть, но&nbsp;скрыта от&nbsp;глаз посторонних). Единственный минус, это всё тот&nbsp;же плюс, дрочка на&nbsp;новое. Например, в&nbsp;Арче нет KDE 4. Его просто выбросили из&nbsp;реп. В&nbsp;AURе его тоже нету (а&nbsp;сам я&nbsp;не&nbsp;так крут, чтобы сделать PKGBUILD). Потому пришлось пересесть на&nbsp;Enlightenment, ну, не&nbsp;нравятся мне <nobr>5-е</nobr> &laquo;кеды&raquo;.</p>
+
+<p>Enlightenment очень хорош. Из&nbsp;коробки всё &laquo;фунтициклирует&raquo; как в&nbsp;лучших домах. И&nbsp;есть режим тайлинга, что удобно почти всегда. Единственное, нет &laquo;целостности&raquo; внешнего вида программ (хотя, виндузятники жрут, что навалили и&nbsp;не&nbsp;выёбываются).</p>
+
+<p>Но&nbsp;винда всё равно оставлена на&nbsp;всякие экстренные случаи. Естественно, 7.</p>
+]]>
+		</content>
+	</entry>
 	
 	<entry>
 		
@@ -473,26 +499,6 @@
 <p>Как только умудрился подцепить?.. Так-то у меня не микропенис, честно-честно.</p>
 
 <p>P_E-N_I_S&ndash; E N-L..A R-G E..M_E_N..T &ndash;P-I-L_L_S</p>
-]]>
-		</content>
-	</entry>
-	
-	<entry>
-		
-			<title type="html"><![CDATA[Тройное дублирование или паранойя]]></title>
-		
-		<link href="http://podabed.org/2014/09/04/troinoie-dublirovaniie-ili-paranoiia"/>
-		<updated>2014-09-04T07:23:48+08:00</updated>
-		<id>http://podabed.org/2014/09/04/troinoie-dublirovaniie-ili-paranoiia</id>
-		<content type="html">
-			<![CDATA[
-				
-					<p></p>
-				
-			]]>
-			<![CDATA[<p>Искал метод сделать на своём смарте автоматический бэкап через CWM и в итоге наткнулся на <a href="https://play.google.com/store/apps/details?id=com.h3r3t1c.onnandbup">Online Nandroid Backup * ROOT</a>. На форумах пишут про опасности живых бэкапов файловой системы, но мой аппарат в списке официально поддерживаемых, да, и протестировал я несколько живых бэкапов, восстановился с них без каких-либо проблем.</p>
-
-<p>В итоге у меня теперь бэкап по расписанию через <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup">Titanium Backup ★ root</a>, <a href="https://play.google.com/store/apps/details?id=com.h3r3t1c.onnandbup">Online Nandroid Backup * ROOT</a> и стандартный гугловский. Это ли не <del>пиздец</del> паранойя?</p>
 ]]>
 		</content>
 	</entry>

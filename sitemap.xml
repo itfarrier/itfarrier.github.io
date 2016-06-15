@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://podabed.org/2016/06/14/prosvietlieniie</loc>
+<lastmod>2016-06-14T22:11:27+07:00</lastmod>
+</url>
+<url>
 <loc>http://podabed.org/2016/06/10/obshchieniie</loc>
 <lastmod>2016-06-10T10:59:04+07:00</lastmod>
 </url>
@@ -561,5 +565,11 @@
 </url>
 <url>
 <loc>http://podabed.org/blog/categories/druzhba/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/arch/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/enlightenment/</loc>
 </url>
 </urlset>
