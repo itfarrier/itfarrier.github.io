@@ -3,13 +3,31 @@
 	<title><![CDATA[podabed.org]]></title>
 	<link href="http://podabed.org/atom.xml" rel="self"/>
 	<link href="http://podabed.org/"/>
-	<updated>2016-07-17T20:54:40+07:00</updated>
+	<updated>2016-08-09T22:51:11+07:00</updated>
 	<id>http://podabed.org/</id>
 	<author>
 		<name><![CDATA[Дмитрий Подабед]]></name>
 		<email><![CDATA[dmitrij@podabed.org]]></email>
 	</author>
 	<generator uri="http://octopress.org/">Octopress</generator>
+	
+	<entry>
+		
+			<title type="html"><![CDATA[youtube-dl]]></title>
+		
+		<link href="http://podabed.org/2016/08/09/youtube-dl"/>
+		<updated>2016-08-09T22:43:51+07:00</updated>
+		<id>http://podabed.org/2016/08/09/youtube-dl</id>
+		<content type="html">
+			<![CDATA[
+				
+					<p></p>
+				
+			]]>
+			<![CDATA[<p>Не&nbsp;прошло и&nbsp;5 лет как я&nbsp;пересел с&nbsp;Download Master на&nbsp;<nobr>youtube-dl</nobr>. Этот хороший менеджер закачек я&nbsp;использовал только лишь для скачивания видео с&nbsp;ютуба. Прощай, Download Master, ты&nbsp;хорош, но&hellip; Всё.</p>
+]]>
+		</content>
+	</entry>
 	
 	<entry>
 		
@@ -487,24 +505,6 @@
 				
 			]]>
 			<![CDATA[<p>Решил сократить количество подписок в блокировщике рекламы. Начал по очереди отключать и удивляться появляющейся рекламе. Она оказалась везде: в шапке сайта, в подвале, в сайдах, между постами и в постах. Включил всё обратно: пусть лучше страница загружается чуть медленнее, чем наблюдать весь этот пиздец. Каждый раз, как вижу браузер без блокировщика, удивляюсь, как люди пользуются так интернетом? Там же столько дерьма в глаза льют.</p>
-]]>
-		</content>
-	</entry>
-	
-	<entry>
-		
-			<title type="html"><![CDATA[Доменные имена в кризис]]></title>
-		
-		<link href="http://podabed.org/2016/03/06/domiennyie-imiena-v-krizis"/>
-		<updated>2016-03-06T14:16:38+07:00</updated>
-		<id>http://podabed.org/2016/03/06/domiennyie-imiena-v-krizis</id>
-		<content type="html">
-			<![CDATA[
-				
-					<p></p>
-				
-			]]>
-			<![CDATA[<p>Ёбаный кризис. Ёбаный курс. Жалких 11,99 баксов превратились в почти 900 рублей. Пришлось гуглить. Как ни странно, всего за один запрос нашёл 2,99 доллара. Слава Гуглу!</p>
 ]]>
 		</content>
 	</entry>
