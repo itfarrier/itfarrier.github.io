@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://podabed.org/2016/08/19/nie-ozhidal</loc>
+<lastmod>2016-08-19T16:42:20+07:00</lastmod>
+</url>
+<url>
 <loc>http://podabed.org/2016/08/09/youtube-dl</loc>
 <lastmod>2016-08-09T22:43:51+07:00</lastmod>
 </url>
@@ -619,5 +623,11 @@
 </url>
 <url>
 <loc>http://podabed.org/blog/categories/download-master/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/avtostop/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/novokuznietsk/</loc>
 </url>
 </urlset>
