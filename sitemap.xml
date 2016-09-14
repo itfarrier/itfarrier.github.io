@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://podabed.org/2016/09/14/troitsa-ili-dien'-trietii</loc>
+<lastmod>2016-09-14T22:12:49+07:00</lastmod>
+</url>
+<url>
 <loc>http://podabed.org/2016/09/13/molchaniie-ili-dien'-vtoroi</loc>
 <lastmod>2016-09-13T09:38:54+07:00</lastmod>
 </url>
@@ -162,19 +166,19 @@
 <loc>http://podabed.org/inscriptions/</loc>
 </url>
 <url>
-<loc>http://podabed.org/contacts/</loc>
-</url>
-<url>
-<loc>http://podabed.org/about/</loc>
-</url>
-<url>
 <loc>http://podabed.org/video/</loc>
+</url>
+<url>
+<loc>http://podabed.org/wishlist/</loc>
+</url>
+<url>
+<loc>http://podabed.org/contacts/</loc>
 </url>
 <url>
 <loc>http://podabed.org/books/</loc>
 </url>
 <url>
-<loc>http://podabed.org/wishlist/</loc>
+<loc>http://podabed.org/about/</loc>
 </url>
 <url>
 <loc>http://podabed.org/blog/categories/sait/</loc>
@@ -646,5 +650,8 @@
 </url>
 <url>
 <loc>http://podabed.org/blog/categories/putieshiestviie/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/troitsa/</loc>
 </url>
 </urlset>
