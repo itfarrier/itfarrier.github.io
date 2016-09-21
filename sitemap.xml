@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://podabed.org/2016/09/21/pierievod</loc>
+<lastmod>2016-09-21T13:55:05+07:00</lastmod>
+</url>
+<url>
 <loc>http://podabed.org/2016/09/14/troitsa-ili-dien'-trietii</loc>
 <lastmod>2016-09-14T22:12:49+07:00</lastmod>
 </url>
@@ -653,5 +657,17 @@
 </url>
 <url>
 <loc>http://podabed.org/blog/categories/troitsa/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/diedushka/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/starushka/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/chieriez-doroghu/</loc>
+</url>
+<url>
+<loc>http://podabed.org/blog/categories/khoroshimi-dielami-proslavit'sia-niel'zia/</loc>
 </url>
 </urlset>
