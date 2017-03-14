@@ -1,1 +1,0 @@
-var disqus_config=function(){this.page.url=page.path;this.page.identifier=PAGE_IDENTIFIER};(function(){var e=document,t=e.createElement("script");t.src="https://podabedorg.disqus.com/embed.js";t.setAttribute("data-timestamp",+new Date);(e.head||e.body).appendChild(t)})();
