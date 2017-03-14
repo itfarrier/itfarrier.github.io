@@ -1,0 +1,1 @@
+$(window).bind("scroll",function(o){myScroll()});function myScroll(){var o=$(window).scrollTop();$("header .header").css("box-shadow: 0 0 1rem;")}
