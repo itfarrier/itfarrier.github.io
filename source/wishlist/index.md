@@ -20,10 +20,14 @@ date: 2017-02-22 08:44:26
 - &laquo;Более лучший&raquo; звук;
 - Парилка (<a href="https://www.fasttech.com/products/0/10018663/3861801-authentic-wismec-reuleaux-rx200-200w-tc-vw-apv">мод</a>, <a href="https://www.fasttech.com/products/0/10007916/1696702-stillare-storm-styled-rebuildable-dripping">дрипка</a>, <a href="https://www.fasttech.com/products/0/10007916/1696702-stillare-storm-styled-rebuildable-dripping"><nobr>дрип-тип</nobr></a>);
 - Граммофон;
-- УШМ;
+- <del>УШМ</del>;
 - Ремонт;
-- ПК;
+- <del>ПК</del>;
 - Проектор;
 - Посудомоечная машина;
 - ГАЗ 21;
 - ГАЗ 24.
+
+Выполнено:
+- УШМ;
+- ПК.
