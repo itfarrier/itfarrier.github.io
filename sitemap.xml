@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://podabed.org/about/index.html</loc>
+    
+    <lastmod>2017-03-14T11:00:44.138Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://podabed.org/wishlist/index.html</loc>
+    
+    <lastmod>2017-03-14T10:57:54.990Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://podabed.org/blog/13-03-2017-vosstanovlenie/</loc>
     
     <lastmod>2017-03-13T07:55:06.167Z</lastmod>
@@ -310,23 +324,9 @@
   </url>
   
   <url>
-    <loc>http://podabed.org/wishlist/index.html</loc>
-    
-    <lastmod>2017-02-22T01:47:08.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://podabed.org/video/index.html</loc>
     
     <lastmod>2017-02-22T01:46:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://podabed.org/about/index.html</loc>
-    
-    <lastmod>2017-02-22T01:45:12.000Z</lastmod>
     
   </url>
   
