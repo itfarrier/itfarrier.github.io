@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Wileyfox Swift"
-date: 2016-03-16 14:56:51 +0700
 comments: true
+date: 2016-03-16 14:56:51
 categories:
+- IT
+tags:
 - смартфон
 - Wileyfox Swift
 ---

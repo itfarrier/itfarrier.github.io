@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Донорство"
-date: 2016-05-11 17:54:48 +0700
 comments: true
+date: 2016-05-11 17:54:48
 categories:
+- мысли вслух
+tags:
 - донорство
 - кровь
 ---

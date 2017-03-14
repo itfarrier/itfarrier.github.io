@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Увеличение члена"
-date: 2014-09-05 07:42:30 +0800
 comments: true
+date: 2014-09-05 07:42:30
 categories:
+- мысли вслух
+tags:
 - член
 - спам
 ---

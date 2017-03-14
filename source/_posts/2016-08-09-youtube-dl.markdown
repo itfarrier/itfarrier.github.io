@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "youtube-dl"
-date: 2016-08-09 22:43:51 +0700
 comments: true
+date: 2016-08-09 22:43:51
 categories:
+- IT
+tags:
 - YouTube
 - youtube-dl
 - Download Master

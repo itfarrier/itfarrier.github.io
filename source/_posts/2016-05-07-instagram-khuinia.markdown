@@ -1,9 +1,11 @@
 ---
-layout: post
 title: "Instagram — хуйня!"
-date: 2016-05-07 11:26:23 +0700
 comments: true
+date: 2016-05-07 11:26:23
 categories:
+- IT
+- негодование
+tags:
 - всё заебало пиздец нахуй блядь
 - хуйня
 - бомбарда

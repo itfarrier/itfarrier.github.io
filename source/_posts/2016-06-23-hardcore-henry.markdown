@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Hardcore Henry"
-date: 2016-06-23 12:44:41 +0700
 comments: true
+date: 2016-06-23 12:44:41
 categories:
+- кино
+tags:
 - Hardcore Henry
 ---
 Вот и&nbsp;посмотрел то, что так долго ждал. Если коротко, то&nbsp;заебись всё, кроме сюжета.

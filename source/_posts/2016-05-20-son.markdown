@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Сон"
-date: 2016-05-20 17:19:01 +0700
 comments: true
+date: 2016-05-20 17:19:01
 categories:
+- мысли вслух
+tags:
 - сон
 - арт-хаус
 - пиздец

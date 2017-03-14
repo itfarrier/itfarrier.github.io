@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Linux как основная система"
-date: 2014-04-29 08:58:09 +0800
 comments: true
+date: 2014-04-29 08:58:09
 categories:
+- IT
+tags:
 - Linux
 - Debian
 - open source

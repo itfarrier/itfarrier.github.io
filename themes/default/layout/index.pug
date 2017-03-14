@@ -1,0 +1,12 @@
+extends _partial/layout.pug
+
+block content
+  each post in site.posts.sort("date", -1).toArray()
+    if post.link
+      a(class="post-title" href=url_for(post.link))
+        time(class="post-title__time" datetime=date_xml(post.date))=date(post.date)
+        span(class="post-title__title")=post.title || "Без названия"
+    else
+      a(class="post-title" href=url_for(post.path))
+        time(class="post-title__time" datetime=date_xml(post.date))=date(post.date)
+        span(class="post-title__title")=post.title || "Без названия"

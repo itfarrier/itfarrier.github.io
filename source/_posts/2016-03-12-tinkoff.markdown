@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Tinkoff"
-date: 2016-03-12 09:56:01 +0700
 comments: true
+date: 2016-03-12 09:56:01
 categories:
+- негодование
+tags:
 - tinkoff
 - tinkov
 - тиньков

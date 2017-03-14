@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Доменные имена в кризис"
-date: 2016-03-06 14:16:38 +0700
 comments: true
+date: 2016-03-06 14:16:38
 categories:
+- IT
+tags:
 - домен
 - доменное имя
 - кризис

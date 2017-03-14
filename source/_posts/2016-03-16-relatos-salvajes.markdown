@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Relatos salvajes"
-date: 2016-03-16 20:56:05 +0700
 comments: true
+date: 2016-03-16 20:56:05
 categories:
+- кино
+tags:
 - Дикие истории
 - Relatos salvajes
 - Wild Tales

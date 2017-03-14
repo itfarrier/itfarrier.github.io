@@ -1,10 +1,10 @@
 ---
-layout: post
 title: "Первый"
-date: 2013-12-16 13:36:01 +0800
 comments: true
+date: 2013-12-16 13:36:01
 categories:
 - сайт
+tags:
 - CMS
 - Octopress
 - Jekyll

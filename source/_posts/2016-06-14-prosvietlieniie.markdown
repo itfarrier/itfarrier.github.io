@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "Просветление"
-date: 2016-06-14 22:11:27 +0700
 comments: true
+date: 2016-06-14 22:11:27
 categories:
+- IT
+tags:
 - Arch
 - Ubuntu
 - Enlightenment

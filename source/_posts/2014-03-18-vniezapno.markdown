@@ -1,9 +1,10 @@
 ---
-layout: post
 title: "ВНЕЗАПНО!"
-date: 2014-03-18 10:09:12 +0800
 comments: true
+date: 2014-03-18 10:09:12
 categories:
+- цитата
+tags:
 - любовь
 - ВНЕЗАПНО
 ---
