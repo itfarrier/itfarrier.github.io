@@ -1,25 +1,62 @@
 {
-  "name": "hexo-site",
-  "version": "0.0.0",
-  "private": true,
-  "hexo": {
-    "version": "3.2.2"
-  },
+  "contributors": [
+    {
+      "email": "dmitrij@podabed.org",
+      "name": "Dmitrij Podabed",
+      "url": "https://podabed.org"
+    }
+  ],
+  "name": "podabed.org",
+  "description": "blog",
+  "version": "2.0.0",
   "dependencies": {
-    "hexo": "^3.2.0",
-    "hexo-all-minifier": "^0.0.14",
-    "hexo-autoprefixer": "^1.0.0",
-    "hexo-browsersync": "^0.2.0",
-    "hexo-generator-feed": "^1.2.0",
-    "hexo-generator-index": "^0.2.0",
-    "hexo-generator-sitemap": "^1.1.2",
-    "hexo-renderer-ejs": "^0.2.0",
-    "hexo-renderer-marked": "^0.2.10",
-    "hexo-renderer-pug": "^0.0.5",
-    "hexo-renderer-sass": "^0.3.1",
-    "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.2.0",
-    "jquery": "^3.1.1",
-    "normalize.css": "^5.0.0"
+    "gatsby": "^2.0.31",
+    "gatsby-image": "^2.0.17",
+    "gatsby-plugin-manifest": "^2.0.6",
+    "gatsby-plugin-offline": "^2.0.9",
+    "gatsby-plugin-postcss": "^2.0.0",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.8",
+    "gatsby-plugin-typescript": "^2.0.0",
+    "gatsby-source-filesystem": "^2.0.5",
+    "gatsby-transformer-sharp": "^2.1.5",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "GPL-3.0",
+  "main": "./src/components/Layout",
+  "scripts": {
+    "build": "gatsby build --verbose",
+    "clean": "rm -rf ./.cache/* && rm -rf ./public/*",
+    "deploy": "yarn run clean && git push origin source && yarn run build && cp CNAME public/ && gh-pages -b master -d public",
+    "deployTest": "yarn run clean && git push test && yarn run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
+    "start": "yarn run clean && gatsby develop --verbose",
+    "startProd": "yarn run clean && yarn run build && gatsby serve --verbose"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.3",
+    "@types/intl": "^1.2.0",
+    "@types/node": "^10.12.0",
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "@types/react-helmet": "^5.0.7",
+    "@types/react-intl": "^2.3.11",
+    "gh-pages": "^2.0.1",
+    "prettier": "^1.14.3",
+    "stylelint": "^9.6.0",
+    "stylelint-config-idiomatic-order": "^6.1.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }
