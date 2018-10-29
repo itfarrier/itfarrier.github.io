@@ -3,9 +3,9 @@ import Helmet from 'react-helmet';
 
 import Header from '../header';
 
-import { ILayout } from '../../interfaces';
+import { IPage } from '../../interfaces';
 
-const Layout: React.SFC<ILayout> = ({ children, data }) => (
+const Layout: React.SFC<IPage> = ({ children, data }) => (
   <>
     <Helmet
       title={data.site.siteMetadata.title}

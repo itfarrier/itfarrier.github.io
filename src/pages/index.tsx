@@ -1,15 +1,58 @@
-import { Link } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const IndexPage: React.SFC = () => (
+import { IPage } from '../interfaces';
+
+const IndexPage: React.SFC<IPage> = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/about">Go to page 2</Link>
+    <Link to="/about">About</Link>
+    {edges.map(({ node: { excerpt, fields: { slug }, frontmatter: { date, title } } }) => (
+      <div key={slug}>
+        <h3>
+          <Link to={slug}>{title}</Link>
+        </h3>
+        <small>{date}</small>
+        <p dangerouslySetInnerHTML={{ __html: excerpt }} />
+      </div>
+    ))}
   </Layout>
 );
 
-export default IndexPage;
+export default () => {
+  const render = (data) => <IndexPage data={data} />;
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+          allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+            edges {
+              node {
+                excerpt
+                fields {
+                  slug
+                }
+                frontmatter {
+                  date(formatString: "DD MMMM, YYYY")
+                  title
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={render}
+    />
+  );
+};
