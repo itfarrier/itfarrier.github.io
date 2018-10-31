@@ -5,13 +5,12 @@ import Layout from '../components/Layout';
 
 import { IPage } from '../interfaces';
 
-const IndexPage: React.SFC<IPage> = ({
+const Index: React.SFC<IPage> = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => (
   <Layout>
-    <Link to="/about">About</Link>
     {edges.map(({ node: { excerpt, fields: { slug }, frontmatter: { date, title } } }) => (
       <div key={slug}>
         <h3>
@@ -24,8 +23,8 @@ const IndexPage: React.SFC<IPage> = ({
   </Layout>
 );
 
-export default () => {
-  const render = (data) => <IndexPage data={data} />;
+export default ({ children }) => {
+  const render = (data) => <Index children={children} data={data} />;
 
   return (
     <StaticQuery

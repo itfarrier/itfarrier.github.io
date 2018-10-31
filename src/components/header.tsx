@@ -3,14 +3,17 @@ import * as React from 'react';
 
 import { IHeader } from '../interfaces';
 
-const Header: React.SFC<IHeader> = ({ siteTitle }) => (
-  <div>
-    <div>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
-  </div>
+const Header: React.SFC<IHeader> = () => (
+  <header>
+    <menu>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+    </menu>
+  </header>
 );
 
 export default Header;

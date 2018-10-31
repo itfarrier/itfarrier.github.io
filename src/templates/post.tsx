@@ -1,50 +1,54 @@
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
 
-const BlogPostTemplate: React.SFC = (props) => {
-  const post = props.data.markdownRemark;
-  const siteTitle = props.data.site.siteMetadata.title;
-  const siteDescription = post.excerpt;
-  const { previous, next } = props.pageContext;
+const BlogPostTemplate: React.SFC = ({
+  data: {
+    markdownRemark: {
+      excerpt,
+      frontmatter,
+      frontmatter: { date },
+      html,
+    },
+    site: {
+      siteMetadata: { title },
+    },
+  },
+  pageContext: { next, previous },
+}) => (
+  <Layout>
+    <Helmet
+      htmlAttributes={{ lang: 'en' }}
+      meta={[{ name: 'description', content: excerpt }]}
+      title={`${frontmatter.title} | ${title}`}
+    />
+    <h1>{frontmatter.title}</h1>
+    <p>{date}</p>
+    <div dangerouslySetInnerHTML={{ __html: html }} />
+    <hr />
+    <ul>
+      <li>
+        {previous && (
+          <Link to={previous.fields.slug} rel="prev">
+            ← {previous.frontmatter.title}
+          </Link>
+        )}
+      </li>
+      <li>
+        {next && (
+          <Link to={next.fields.slug} rel="next">
+            {next.frontmatter.title} →
+          </Link>
+        )}
+      </li>
+    </ul>
+  </Layout>
+);
 
-  return (
-    <Layout>
-      <Helmet
-        htmlAttributes={{ lang: 'en' }}
-        meta={[{ name: 'description', content: siteDescription }]}
-        title={`${post.frontmatter.title} | ${siteTitle}`}
-      />
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <hr />
-      <ul>
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
-    </Layout>
-  );
-};
-
-export default BlogPostTemplate;
-
-export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+export const BlogPostTemplateQuery = graphql`
+  query($slug: String!) {
     site {
       siteMetadata {
         title
@@ -61,3 +65,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default BlogPostTemplate;
