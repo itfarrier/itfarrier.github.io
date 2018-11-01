@@ -4,7 +4,9 @@ import Helmet from 'react-helmet';
 
 import Layout from '../components/Layout';
 
-const BlogPostTemplate: React.SFC = ({
+import { IPage } from '../interfaces';
+
+const BlogPostTemplate: React.SFC<IPage> = ({
   data: {
     markdownRemark: {
       excerpt,
@@ -28,22 +30,24 @@ const BlogPostTemplate: React.SFC = ({
     <p>{date}</p>
     <div dangerouslySetInnerHTML={{ __html: html }} />
     <hr />
-    <ul>
-      <li>
+    {(next || previous) && (
+      <ul>
         {previous && (
-          <Link to={previous.fields.slug} rel="prev">
-            ← {previous.frontmatter.title}
-          </Link>
+          <li>
+            <Link to={previous.fields.slug} rel="prev">
+              ← {previous.frontmatter.title}
+            </Link>
+          </li>
         )}
-      </li>
-      <li>
         {next && (
-          <Link to={next.fields.slug} rel="next">
-            {next.frontmatter.title} →
-          </Link>
+          <li>
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          </li>
         )}
-      </li>
-    </ul>
+      </ul>
+    )}
   </Layout>
 );
 
