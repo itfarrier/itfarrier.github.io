@@ -5,10 +5,17 @@ import Header from '../header';
 
 import { IPage } from '../../interfaces';
 
-const Layout: React.SFC<IPage> = ({ children, data }) => (
+const Layout: React.SFC<IPage> = ({
+  children,
+  data: {
+    site: {
+      siteMetadata: { title },
+    },
+  },
+}) => (
   <>
     <Helmet
-      title={data.site.siteMetadata.title}
+      title={title}
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -16,7 +23,7 @@ const Layout: React.SFC<IPage> = ({ children, data }) => (
     >
       <html lang="en" />
     </Helmet>
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header siteTitle={title} />
     <main>{children}</main>
   </>
 );

@@ -12,13 +12,15 @@ const Index: React.SFC<IPage> = ({
 }) => (
   <Layout>
     {edges.map(({ node: { excerpt, fields: { slug }, frontmatter: { date, title } } }) => (
-      <div key={slug}>
-        <h3>
-          <Link to={slug}>{title}</Link>
-        </h3>
-        <small>{date}</small>
-        <p dangerouslySetInnerHTML={{ __html: excerpt }} />
-      </div>
+      <article key={slug}>
+        <header>
+          <h3>
+            <Link to={slug}>{title}</Link>
+          </h3>
+        </header>
+        <time dateTime={date}>{date}</time>
+        <section dangerouslySetInnerHTML={{ __html: excerpt }} />
+      </article>
     ))}
   </Layout>
 );

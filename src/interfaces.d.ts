@@ -11,7 +11,7 @@ export interface IData {
 export interface IPage {
   children: object;
   data: IData;
-  pageContext: {
+  pageContext?: {
     next: INextPrevious;
     previous: INextPrevious;
   };
@@ -29,6 +29,9 @@ export interface IHeader {
 
 export interface IMarkdownRemark {
   excerpt: string;
+  fields: {
+    slug: string;
+  };
   frontmatter: IFrontmatter;
   html: string;
 }

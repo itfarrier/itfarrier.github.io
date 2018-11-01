@@ -10,6 +10,15 @@ const Header: React.SFC<IHeader> = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
+        <Link to="/books">Books</Link>
+      </li>
+      <li>
+        <Link to="/video">Video</Link>
+      </li>
+      <li>
+        <Link to="/wishlist">Wishlist</Link>
+      </li>
+      <li>
         <Link to="/about">About</Link>
       </li>
     </menu>
