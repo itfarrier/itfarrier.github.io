@@ -1,4 +1,5 @@
 export interface IData {
+  allFile: { edges: Array<{ node: { childImageSharp: IChildImageSharp } }> };
   allMarkdownRemark: {
     edges: Array<{
       node: IMarkdownRemark;
@@ -36,6 +37,9 @@ export interface IMarkdownRemark {
   html: string;
 }
 
+export interface IChildImageSharp {
+  fluid: object;
+}
 export interface IFrontmatter {
   date: string;
   title: string;

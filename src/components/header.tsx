@@ -13,6 +13,9 @@ const Header: React.SFC<IHeader> = () => (
         <Link to="/books">Books</Link>
       </li>
       <li>
+        <Link to="/inscriptions">Inscriptions</Link>
+      </li>
+      <li>
         <Link to="/video">Video</Link>
       </li>
       <li>
