@@ -11,7 +11,7 @@ const Inscriptions: React.SFC<IPage> = ({
     allFile: { edges },
   },
 }) => {
-  const images = edges.map(({ id, node: { childImageSharp: { fluid } } }) => (
+  const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => (
     <Img fluid={fluid} key={id} />
   ));
 
@@ -42,6 +42,7 @@ export default ({ children }) => {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
+                id
               }
             }
           }

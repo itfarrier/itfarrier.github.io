@@ -27,21 +27,23 @@ const BlogPostTemplate: React.SFC<IPage> = ({
       title={`${frontmatter.title} | ${title}`}
     />
     <article>
-      <header><h1>{frontmatter.title}</h1></header>
+      <header>
+        <h1>{frontmatter.title}</h1>
+      </header>
       <time dateTime={date}>{date}</time>
       <section dangerouslySetInnerHTML={{ __html: html }} />
       {(next || previous) && (
         <ul>
           {previous && (
             <li>
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={`/blog${previous.fields.slug}`} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             </li>
           )}
           {next && (
             <li>
-              <Link to={next.fields.slug} rel="next">
+              <Link to={`/blog${next.fields.slug}`} rel="next">
                 {next.frontmatter.title} →
               </Link>
             </li>

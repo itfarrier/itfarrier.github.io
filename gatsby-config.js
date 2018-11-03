@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'podabed.org',
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -15,8 +15,8 @@ module.exports = {
     },
     {
       options: {
-        name: 'posts',
-        path: `${__dirname}/src/pages/posts`,
+        name: 'blog',
+        path: `${__dirname}/src/pages/blog`,
       },
       resolve: 'gatsby-source-filesystem',
     },
@@ -39,11 +39,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'podabed.org',
+        short_name: 'podabed',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#fff',
+        theme_color: '#fff',
         display: 'minimal-ui',
         // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },

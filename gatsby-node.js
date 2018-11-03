@@ -60,7 +60,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
               previous,
               slug: slug,
             },
-            path: slug,
+            path: `/blog${slug}`,
           });
         });
       }),

@@ -3,6 +3,8 @@ import Helmet from 'react-helmet';
 
 import Header from '../header';
 
+import './Layout.module.css';
+
 import { IPage } from '../../interfaces';
 
 const Layout: React.SFC<IPage> = ({

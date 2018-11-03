@@ -6,9 +6,6 @@
       "url": "https://podabed.org"
     }
   ],
-  "name": "podabed.org",
-  "description": "blog",
-  "version": "2.0.0",
   "dependencies": {
     "gatsby": "^2.0.38",
     "gatsby-image": "^2.0.19",
@@ -26,19 +23,7 @@
     "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "GPL-3.0",
-  "main": "./src/components/Layout",
-  "scripts": {
-    "build": "gatsby build --verbose",
-    "clean": "rm -rf ./.cache/* && rm -rf ./public/*",
-    "deploy": "yarn run clean && git push origin source && yarn run build && cp CNAME public/ && gh-pages -b master -d public",
-    "deployTest": "yarn run clean && git push test && yarn run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
-    "start": "yarn run clean && gatsby develop --verbose",
-    "startProd": "yarn run clean && yarn run build && gatsby serve --verbose"
-  },
+  "description": "Personal site",
   "devDependencies": {
     "@types/graphql": "^14.0.3",
     "@types/intl": "^1.2.0",
@@ -47,8 +32,13 @@
     "@types/react-dom": "^16.0.9",
     "@types/react-helmet": "^5.0.7",
     "@types/react-intl": "^2.3.11",
+    "css-declaration-sorter": "^4.0.1",
+    "cssnano": "^4.1.7",
+    "cssnano-preset-advanced": "^4.0.5",
     "eslint": "^5.8.0",
     "gh-pages": "^2.0.1",
+    "normalize.css": "^8.0.0",
+    "postcss-preset-env": "^6.3.0",
     "prettier": "^1.14.3",
     "stylelint": "^9.7.1",
     "stylelint-config-idiomatic-order": "^6.1.0",
@@ -58,8 +48,26 @@
     "tslint-react": "^3.6.0",
     "typescript": "^3.1.6"
   },
+  "keywords": [
+    "cv",
+    "gatsby",
+    "personal site",
+    "portfolio"
+  ],
+  "license": "GPL-3.0",
+  "main": "./src/components/Layout",
+  "name": "podabed.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  }
+    "url": "https://github.com/podabed/podabed.github.io.git"
+  },
+  "scripts": {
+    "build": "gatsby build --verbose",
+    "clean": "rm -rf ./.cache/* && rm -rf ./public/*",
+    "deploy": "yarn run clean && git push origin source && yarn run build && cp CNAME public/ && gh-pages -b master -d public",
+    "deployTest": "yarn run clean && git push test && yarn run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
+    "start": "yarn run clean && gatsby develop --verbose",
+    "startProd": "yarn run clean && yarn run build && gatsby serve --verbose"
+  },
+  "version": "2.0.0"
 }
