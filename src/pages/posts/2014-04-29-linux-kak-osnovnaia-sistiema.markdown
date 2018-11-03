@@ -1,15 +1,16 @@
 ---
-title: "Linux как основная система"
+title: 'Linux как основная система'
 comments: true
 date: 2014-04-29 08:58:09
 categories:
-- IT
+  - IT
 tags:
-- Linux
-- Debian
-- open source
-- ОС
+  - Linux
+  - Debian
+  - open source
+  - ОС
 ---
+
 Почти как полгода полностью перешёл на Linux.
 
 Мои плюсы:

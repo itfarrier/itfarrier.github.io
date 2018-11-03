@@ -1,14 +1,15 @@
 ---
-title: "Просветление"
+title: 'Просветление'
 comments: true
 date: 2016-06-14 22:11:27
 categories:
-- IT
+  - IT
 tags:
-- Arch
-- Ubuntu
-- Enlightenment
+  - Arch
+  - Ubuntu
+  - Enlightenment
 ---
+
 Пересел с&nbsp;Ubuntu на&nbsp;Archlinux (давно), с&nbsp;KDE на&nbsp;Enlightenment (уже второй раз).
 
 ПРОСВЕТЛЕНИЕ!

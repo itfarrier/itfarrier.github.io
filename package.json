@@ -10,7 +10,7 @@
   "description": "blog",
   "version": "2.0.0",
   "dependencies": {
-    "gatsby": "^2.0.37",
+    "gatsby": "^2.0.38",
     "gatsby-image": "^2.0.19",
     "gatsby-plugin-manifest": "^2.0.7",
     "gatsby-plugin-offline": "^2.0.11",

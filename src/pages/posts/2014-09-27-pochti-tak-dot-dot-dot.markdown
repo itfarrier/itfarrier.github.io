@@ -1,13 +1,14 @@
 ---
-title: "Почти так..."
+title: 'Почти так...'
 comments: true
 date: 2014-09-27 19:38:51
 categories:
-- изображение
+  - изображение
 tags:
-- граффити
-- армия
-- напомнило
-- служба
+  - граффити
+  - армия
+  - напомнило
+  - служба
 ---
-{% img /images/nam_pohuj.jpg %}
+
+![НАМ ПОХУЙ!](../../assets/images/uncategorized/nam_pohuj.jpg)

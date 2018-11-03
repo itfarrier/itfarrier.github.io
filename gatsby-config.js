@@ -20,7 +20,21 @@ module.exports = {
       },
       resolve: 'gatsby-source-filesystem',
     },
-    'gatsby-transformer-remark',
+    {
+      options: {
+        plugins: [
+          {
+            options: {
+              maxWidth: 7680,
+              showCaptions: true,
+              withWebp: true,
+            },
+            resolve: 'gatsby-remark-images',
+          },
+        ],
+      },
+      resolve: 'gatsby-transformer-remark',
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
