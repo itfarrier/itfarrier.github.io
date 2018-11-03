@@ -1,0 +1,15 @@
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  text-transform: lowercase;
+}
+
+.item {
+  margin: 1em;
+}
+
+.activeItem {
+  text-decoration: none;
+}

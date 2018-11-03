@@ -45,3 +45,12 @@ export interface IFrontmatter {
   date: string;
   title: string;
 }
+
+interface ICSSModule {
+  [className: string]: string;
+}
+
+declare module '*.module.css' {
+  const cssModule: ICSSModule;
+  export = cssModule;
+}

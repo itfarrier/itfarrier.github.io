@@ -22,7 +22,6 @@ const BlogPostTemplate: React.SFC<IPage> = ({
 }) => (
   <Layout>
     <Helmet
-      htmlAttributes={{ lang: 'en' }}
       meta={[{ name: 'description', content: excerpt }]}
       title={`${frontmatter.title} | ${title}`}
     />
