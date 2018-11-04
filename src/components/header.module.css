@@ -1,15 +1,26 @@
+@import url('../common.module.css');
+
 .menu {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0;
+  font-family: monospace;
+  font-size: 1.5em;
   list-style: none;
   text-transform: lowercase;
 }
 
-.item {
-  margin: 1em;
+.menuElement {
+  margin: 0.75em 1.25em 0.75em 0.75em;
 }
 
-.activeItem {
+.link {
+  background: var(--white);
+  color: var(--black);
   text-decoration: none;
+}
+
+.activeLink {
+  font-weight: bold;
 }

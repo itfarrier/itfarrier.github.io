@@ -1,0 +1,21 @@
+@import url('~normalize.css');
+
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
+:root[theme='dark'] {
+  --white: #000;
+  --black: #fff;
+}
+
+html {
+  background: var(--white);
+  color: var(--black);
+}
+
+::selection {
+  background: var(--black);
+  color: var(--white);
+}

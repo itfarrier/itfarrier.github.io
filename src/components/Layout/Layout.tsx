@@ -5,9 +5,9 @@ import Header from '../header';
 
 import './Layout.module.css';
 
-import { IPage } from '../../interfaces';
+import { ILayout, IPage } from '../../interfaces';
 
-class Layout extends React.Component<IPage> {
+class Layout extends React.Component<ILayout, { isDark: boolean }> {
   constructor(props) {
     super(props);
 
@@ -32,16 +32,14 @@ class Layout extends React.Component<IPage> {
     return (
       <>
         <Helmet
+          htmlAttributes={{ lang: 'en', theme: themeChanger }}
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
           ]}
           title={title}
-        >
-          <html lang="en" theme={themeChanger} />
-        </Helmet>
-        <input type="checkbox" value={isDark} onChange={this.toggleTheme} />
-        <Header siteTitle={title} />
+        />
+        <Header themeIsDark={isDark} toggleTheme={this.toggleTheme} />
         <main>{children}</main>
       </>
     );
