@@ -1,5 +1,7 @@
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-i18next';
 import * as React from 'react';
+
+import Switcher from './switcher';
 
 import styles from './header.module.css';
 
@@ -52,6 +54,7 @@ const Header: React.SFC<IHeader> = (props, context) => {
           </li>
         </ul>
       </nav>
+      <Switcher />
     </header>
   );
 };

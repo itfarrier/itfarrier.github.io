@@ -1,10 +1,12 @@
 import { graphql, StaticQuery } from 'gatsby';
+import { Head } from 'gatsby-plugin-i18next';
 import * as React from 'react';
+import { translate } from 'react-i18next';
 
 import Layout from './Layout';
 
-export default ({ children }) => {
-  const render = (data) => <Layout children={children} data={data} />;
+export default translate()(({ children, t }) => {
+  const render = (data) => <Layout children={children} data={data} t={t} />;
 
   return (
     <StaticQuery
@@ -20,4 +22,4 @@ export default ({ children }) => {
       render={render}
     />
   );
-};
+});
