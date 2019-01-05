@@ -48,21 +48,6 @@ module.exports = {
         // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/locales`,
-        name: 'locale',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-i18next',
-      options: {
-        availableLngs: ['en', 'ru'],
-        debug: true,
-        fallbackLng: 'en',
-      },
-    },
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
   ],
