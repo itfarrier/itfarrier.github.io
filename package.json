@@ -7,8 +7,8 @@
     }
   ],
   "dependencies": {
-    "gatsby": "^2.0.89",
-    "gatsby-image": "^2.0.25",
+    "gatsby": "^2.0.91",
+    "gatsby-image": "^2.0.26",
     "gatsby-plugin-i18n": "^0.4.2",
     "gatsby-plugin-manifest": "^2.0.13",
     "gatsby-plugin-offline": "^2.0.21",
@@ -47,7 +47,7 @@
     "stylelint": "^9.9.0",
     "stylelint-config-idiomatic-order": "^6.2.0",
     "stylelint-config-recommended": "^2.1.0",
-    "tslint": "^5.12.0",
+    "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.2"
