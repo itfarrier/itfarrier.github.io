@@ -5,6 +5,6 @@ import Layout from '../components/Layout';
 
 import { IPage } from '../interfaces';
 
-const Index: React.SFC<IPage> = () => <Layout />;
+const Index: React.FC<IPage> = () => <Layout />;
 
 export default Index;

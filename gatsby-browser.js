@@ -1,5 +1,5 @@
 import React from 'react';
 
-import { ThemeProvider } from './src/context/ThemeContext';
+import { ContextProvider } from './src/components/Context';
 
-export const wrapRootElement = ({ element }) => <ThemeProvider>{element}</ThemeProvider>;
+export const wrapRootElement = ({ element }) => <ContextProvider>{element}</ContextProvider>;

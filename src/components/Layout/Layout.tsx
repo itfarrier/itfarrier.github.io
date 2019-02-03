@@ -5,7 +5,9 @@ import Header from '../header';
 
 import './Layout.module.css';
 
-const Layout = ({
+import { ILayout } from '../../interfaces';
+
+const Layout: React.FC<ILayout> = ({
   children,
   data: {
     site: {

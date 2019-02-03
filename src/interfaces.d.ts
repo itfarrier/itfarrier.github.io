@@ -1,5 +1,3 @@
-import { ChangeEvent } from 'react';
-
 export interface IData {
   allFile: { edges: Array<{ node: { childImageSharp: IChildImageSharp; id: string } }> };
   allMarkdownRemark: {
@@ -26,11 +24,6 @@ export interface INextPrevious {
   };
   frontmatter: IFrontmatter;
 }
-export interface IHeader {
-  data: IData;
-  themeIsDark: boolean;
-  toggleTheme: (event: ChangeEvent<HTMLInputElement>) => void;
-}
 
 export interface IMarkdownRemark {
   excerpt: string;
@@ -53,7 +46,8 @@ export interface IFrontmatter {
 export interface ILayout {
   data: IData;
 }
-interface ICSSModule {
+
+export interface ICSSModule {
   [className: string]: string;
 }
 
