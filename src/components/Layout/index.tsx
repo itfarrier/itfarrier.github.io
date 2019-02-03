@@ -4,7 +4,7 @@ import * as React from 'react';
 import Layout from './Layout';
 
 export default ({ children }) => {
-  const render = (data) => <Layout children={children} data={data} />;
+  const render = (data) => <Layout children={children} data={data}  />;
 
   return (
     <StaticQuery
