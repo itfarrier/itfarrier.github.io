@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 
 import { IPage } from '../interfaces';
 
-const Blog: React.SFC<IPage> = ({
+const Blog: React.FC<IPage> = ({
   data: {
     allMarkdownRemark: { edges },
   },

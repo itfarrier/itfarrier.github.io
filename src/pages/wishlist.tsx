@@ -2,13 +2,13 @@ import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const Wishlist: React.SFC = () => (
+const Wishlist: React.FC = () => (
   <Layout>
     <article>
       <header>
         <h1>
-          Чтобы не&nbsp;забывать, следить за&nbsp;приоритетами и&nbsp;знать, что хочу на&nbsp;самом
-          деле, а&nbsp;что сиюминутно.
+          Чтобы не&nbsp;забывать, следить за&nbsp;приоритетами и&nbsp;знать, что хочу на&nbsp;самом деле, а&nbsp;что
+          сиюминутно.
         </h1>
       </header>
       <section>
@@ -17,8 +17,7 @@ const Wishlist: React.SFC = () => (
         </header>
         <ul>
           <li>
-            Достойный заработок на&nbsp;любимой (на&nbsp;любимой, а&nbsp;не&nbsp;той, что
-            из&nbsp;необходимости) работе;
+            Достойный заработок на&nbsp;любимой (на&nbsp;любимой, а&nbsp;не&nbsp;той, что из&nbsp;необходимости) работе;
           </li>
           <li>Рюкзак;</li>
           <li>Спальник;</li>
@@ -38,25 +37,25 @@ const Wishlist: React.SFC = () => (
           <li>
             Парилка (
             <a
-              href="https://www.fasttech.com/products/0/10018663/3861801-authentic-wismec-reuleaux-rx200-200w-tc-vw-apv"
-              target="_blank"
-              rel="external"
+              href='https://www.fasttech.com/products/0/10018663/3861801-authentic-wismec-reuleaux-rx200-200w-tc-vw-apv'
+              target='_blank'
+              rel='external'
             >
               мод
             </a>
             ,{' '}
             <a
-              href="https://www.fasttech.com/products/0/10007916/1696702-stillare-storm-styled-rebuildable-dripping"
-              target="_blank"
-              rel="external"
+              href='https://www.fasttech.com/products/0/10007916/1696702-stillare-storm-styled-rebuildable-dripping'
+              target='_blank'
+              rel='external'
             >
               дрипка
             </a>
             ,{' '}
             <a
-              href="https://www.fasttech.com/products/0/10007916/1696702-stillare-storm-styled-rebuildable-dripping"
-              target="_blank"
-              rel="external"
+              href='https://www.fasttech.com/products/0/10007916/1696702-stillare-storm-styled-rebuildable-dripping'
+              target='_blank'
+              rel='external'
             >
               <nobr>дрип-тип</nobr>
             </a>

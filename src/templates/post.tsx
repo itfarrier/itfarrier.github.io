@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 
 import { IPage } from '../interfaces';
 
-const BlogPostTemplate: React.SFC<IPage> = ({
+const BlogPostTemplate: React.FC<IPage> = ({
   data: {
     markdownRemark: {
       excerpt,
@@ -21,10 +21,7 @@ const BlogPostTemplate: React.SFC<IPage> = ({
   pageContext: { next, previous },
 }) => (
   <Layout>
-    <Helmet
-      meta={[{ name: 'description', content: excerpt }]}
-      title={`${frontmatter.title} | ${title}`}
-    />
+    <Helmet meta={[{ name: 'description', content: excerpt }]} title={`${frontmatter.title} | ${title}`} />
     <article>
       <header>
         <h1>{frontmatter.title}</h1>
@@ -35,14 +32,14 @@ const BlogPostTemplate: React.SFC<IPage> = ({
         <ul>
           {previous && (
             <li>
-              <Link to={`/blog${previous.fields.slug}`} rel="prev">
+              <Link to={`/blog${previous.fields.slug}`} rel='prev'>
                 ← {previous.frontmatter.title}
               </Link>
             </li>
           )}
           {next && (
             <li>
-              <Link to={`/blog${next.fields.slug}`} rel="next">
+              <Link to={`/blog${next.fields.slug}`} rel='next'>
                 {next.frontmatter.title} →
               </Link>
             </li>

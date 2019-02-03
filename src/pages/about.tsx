@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const About: React.SFC = () => (
+const About: React.FC = () => (
   <Layout>
     <article>
       <header>

@@ -6,14 +6,12 @@ import Layout from '../components/Layout';
 
 import { IPage } from '../interfaces';
 
-const Inscriptions: React.SFC<IPage> = ({
+const Inscriptions: React.FC<IPage> = ({
   data: {
     allFile: { edges },
   },
 }) => {
-  const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => (
-    <Img fluid={fluid} key={id} />
-  ));
+  const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => <Img fluid={fluid} key={id} />);
 
   return (
     <Layout>
