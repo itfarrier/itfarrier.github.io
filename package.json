@@ -7,7 +7,7 @@
     }
   ],
   "dependencies": {
-    "gatsby": "^2.0.111",
+    "gatsby": "^2.0.112",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^2.0.17",
@@ -18,7 +18,7 @@
     "gatsby-plugin-typescript": "^2.0.6",
     "gatsby-remark-images": "^3.0.3",
     "gatsby-source-filesystem": "^2.0.20",
-    "gatsby-transformer-remark": "^2.2.3",
+    "gatsby-transformer-remark": "^2.2.4",
     "gatsby-transformer-sharp": "^2.1.13",
     "intl": "^1.2.5",
     "ptz-i18n": "^1.0.0",
@@ -48,7 +48,7 @@
     "stylelint-config-idiomatic-order": "^6.2.0",
     "stylelint-config-recommended": "^2.1.0",
     "tslint": "^5.12.1",
-    "tslint-config-prettier": "^1.17.0",
+    "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.3.1"
   },
@@ -64,9 +64,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/podabed/podabed.github.io.git"
-  },
-  "resolutions": {
-    "terser": "3.14.1"
   },
   "scripts": {
     "build": "gatsby build --verbose",
