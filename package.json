@@ -7,7 +7,7 @@
     }
   ],
   "dependencies": {
-    "gatsby": "^2.0.117",
+    "gatsby": "^2.0.118",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^2.0.17",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@types/graphql": "^14.0.5",
     "@types/intl": "^1.2.0",
-    "@types/node": "^10.12.21",
+    "@types/node": "^10.12.24",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
     "@types/react-helmet": "^5.0.8",
@@ -50,7 +50,7 @@
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.3.1"
+    "typescript": "^3.3.3"
   },
   "keywords": [
     "cv",
