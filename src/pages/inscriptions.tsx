@@ -11,7 +11,9 @@ const Inscriptions: React.FC<IPage> = ({
     allFile: { edges },
   },
 }) => {
-  const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => <Img fluid={fluid} key={id} />);
+  const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => (
+    <Img fluid={fluid} key={id} />
+  ));
 
   return (
     <Layout>

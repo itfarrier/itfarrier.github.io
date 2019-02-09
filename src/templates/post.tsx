@@ -21,7 +21,10 @@ const BlogPostTemplate: React.FC<IPage> = ({
   pageContext: { next, previous },
 }) => (
   <Layout>
-    <Helmet meta={[{ name: 'description', content: excerpt }]} title={`${frontmatter.title} | ${title}`} />
+    <Helmet
+      meta={[{ name: 'description', content: excerpt }]}
+      title={`${frontmatter.title} | ${title}`}
+    />
     <article>
       <header>
         <h1>{frontmatter.title}</h1>

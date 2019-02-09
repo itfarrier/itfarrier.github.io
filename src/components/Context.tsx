@@ -11,7 +11,9 @@ const initialState: IContextInitialState = {
   toggleDark: () => {},
 };
 
-const Context: React.Context<IContextInitialState> = React.createContext<IContextInitialState>(initialState);
+const Context: React.Context<IContextInitialState> = React.createContext<IContextInitialState>(
+  initialState,
+);
 
 export class ContextProvider extends React.PureComponent<{}, IContextInitialState> {
   constructor(props) {
