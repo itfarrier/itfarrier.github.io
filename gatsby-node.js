@@ -1,6 +1,8 @@
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+const { langs } = require('./src/languages/languages');
+
 exports.onCreateNode = ({
   node,
   node: {
@@ -32,11 +34,20 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
               edges {
                 node {
                   fields {
+                    langKey
                     slug
                   }
                   frontmatter {
                     title
                   }
+                }
+              }
+            }
+            site {
+              siteMetadata {
+                languages {
+                  defaultLangKey
+                  langs
                 }
               }
             }
@@ -49,18 +60,22 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           reject(errors);
         }
 
-        edges.forEach(({ node: { fields: { slug } } }, index) => {
-          const previous = index === edges.length - 1 ? null : edges[index + 1].node;
-          const next = index === 0 ? null : edges[index - 1].node;
+        return edges.forEach(({ node: { fields: { slug } } }, index) => {
+          const previous = index === edges.length - 1 ? 'null' : edges[index + 1].node;
+          const next = index === 0 ? 'null' : edges[index - 1].node;
 
-          createPage({
-            component: blogPostTemplate,
-            context: {
-              next,
-              previous,
-              slug: slug,
-            },
-            path: `/blog${slug}`,
+          return langs.forEach((lang) => {
+            console.log('path', `${lang}${slug}`);
+
+            return createPage({
+              component: blogPostTemplate,
+              context: {
+                next: `${lang}${next.slug}`,
+                previous: `${lang}${previous.slug}`,
+                slug: `${lang}${slug}`,
+              },
+              path: `${lang}${slug}`,
+            });
           });
         });
       }),

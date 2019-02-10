@@ -57,6 +57,10 @@ export const BlogPostTemplateQuery = graphql`
   query($slug: String!) {
     site {
       siteMetadata {
+        languages {
+          defaultLangKey
+          langs
+        }
         title
       }
     }
