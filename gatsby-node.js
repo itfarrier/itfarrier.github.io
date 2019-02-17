@@ -12,7 +12,7 @@ exports.onCreateNode = ({
   getNode,
 }) => {
   if (type === 'MarkdownRemark') {
-    const value = createFilePath({ node, getNode });
+    const value = `${createFilePath({ node, getNode }).slice(0, -4)}/`;
 
     createNodeField({
       name: 'slug',
@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
       graphql(
         `
           {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
               edges {
                 node {
                   fields {
@@ -55,27 +55,21 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         `,
       ).then(({ data: { allMarkdownRemark: { edges } }, errors }) => {
         if (errors) {
-          console.log(errors);
-
           reject(errors);
         }
 
-        return edges.forEach(({ node: { fields: { slug } } }, index) => {
+        edges.forEach(({ node: { fields: { slug } } }, index) => {
           const previous = index === edges.length - 1 ? 'null' : edges[index + 1].node;
           const next = index === 0 ? 'null' : edges[index - 1].node;
 
-          return langs.forEach((lang) => {
-            console.log('path', `${lang}${slug}`);
-
-            return createPage({
-              component: blogPostTemplate,
-              context: {
-                next: `${lang}${next.slug}`,
-                previous: `${lang}${previous.slug}`,
-                slug: `${lang}${slug}`,
-              },
-              path: `${lang}${slug}`,
-            });
+          createPage({
+            component: blogPostTemplate,
+            context: {
+              next: next.slug,
+              previous: previous.slug,
+              slug,
+            },
+            path: slug,
           });
         });
       }),

@@ -2,33 +2,6 @@ const languages = require('./src/languages/languages');
 
 module.exports = {
   plugins: [
-    {
-      options: {
-        langKeyDefault: languages.defaultLangKey,
-        langKeyForNull: 'en',
-        markdownRemark: {
-          postPage: './src/templates/post.tsx',
-          query: `
-          {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                  }
-                }
-              }
-            }
-          }
-        `,
-        },
-        useLangKeyLayout: false,
-      },
-      resolve: 'gatsby-plugin-i18n',
-    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
@@ -41,10 +14,19 @@ module.exports = {
     },
     {
       options: {
-        name: 'blog',
-        path: `${__dirname}/src/pages/blog`,
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
       resolve: 'gatsby-source-filesystem',
+    },
+    {
+      options: {
+        langKeyDefault: languages.defaultLangKey,
+        langKeyForNull: 'en',
+        prefixDefault: true,
+        useLangKeyLayout: false,
+      },
+      resolve: 'gatsby-plugin-i18n',
     },
     {
       options: {
