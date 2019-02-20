@@ -1,34 +1,8 @@
-const languages = require('./src/languages/languages');
-
 module.exports = {
+  siteMetadata: {
+    title: 'podabed.org',
+  },
   plugins: [
-    {
-      options: {
-        langKeyDefault: languages.defaultLangKey,
-        langKeyForNull: 'en',
-        markdownRemark: {
-          postPage: './src/templates/post.tsx',
-          query: `
-          {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                  }
-                }
-              }
-            }
-          }
-        `,
-        },
-        useLangKeyLayout: false,
-      },
-      resolve: 'gatsby-plugin-i18n',
-    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
@@ -63,22 +37,18 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        background_color: '#fff',
-        display: 'minimal-ui',
         name: 'podabed.org',
         short_name: 'podabed',
         start_url: '/',
+        background_color: '#fff',
         theme_color: '#fff',
+        display: 'minimal-ui',
         // icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
-      resolve: 'gatsby-plugin-manifest',
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
   ],
-  siteMetadata: {
-    languages,
-    title: 'podabed.org',
-  },
 };
