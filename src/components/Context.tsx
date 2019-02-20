@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface IContextInitialState {
   isDark: boolean;
-  toggleDark: () => void;
+  toggleDark(): void;
 }
 
 const initialState: IContextInitialState = {

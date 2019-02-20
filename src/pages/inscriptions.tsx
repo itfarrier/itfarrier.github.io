@@ -1,16 +1,28 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-import { IPage } from '../interfaces';
-
-const Inscriptions: React.FC<IPage> = ({
-  data: {
+const Inscriptions: React.FC = () => {
+  const {
     allFile: { edges },
-  },
-}) => {
+  } = useStaticQuery(graphql`
+    {
+      allFile(filter: { relativeDirectory: { eq: "inscriptions" } }) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+            id
+          }
+        }
+      }
+    }
+  `);
   const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => (
     <Img fluid={fluid} key={id} />
   ));
@@ -27,28 +39,4 @@ const Inscriptions: React.FC<IPage> = ({
   );
 };
 
-export default ({ children }) => {
-  const render = (data) => <Inscriptions children={children} data={data} />;
-
-  return (
-    <StaticQuery
-      query={graphql`
-        {
-          allFile(filter: { relativeDirectory: { eq: "inscriptions" } }) {
-            edges {
-              node {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-                id
-              }
-            }
-          }
-        }
-      `}
-      render={render}
-    />
-  );
-};
+export default Inscriptions;

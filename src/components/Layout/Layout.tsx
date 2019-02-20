@@ -1,25 +1,33 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import Header from '../header';
+import Header from '../Header';
 
 import './Layout.module.css';
 
-import { ILayout } from '../../interfaces';
-
-const Layout: React.FC<ILayout> = ({
-  children,
-  data: {
+const Layout: React.FC = ({ children }) => {
+  const {
     site: {
       siteMetadata: { title },
     },
-  },
-}) => (
-  <>
-    <Helmet title={title} />
-    <Header />
-    <main>{children}</main>
-  </>
-);
+  } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+
+  return (
+    <>
+      <Helmet title={title} />
+      <Header />
+      <main>{children}</main>
+    </>
+  );
+};
 
 export default Layout;

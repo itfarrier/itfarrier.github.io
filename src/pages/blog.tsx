@@ -1,59 +1,55 @@
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-import { IPage } from '../interfaces';
-
-const Blog: React.FC<IPage> = ({
-  data: {
+const Blog: React.FC = () => {
+  const {
     allMarkdownRemark: { edges },
-  },
-}) => (
-  <Layout>
-    {edges.map(({ node: { excerpt, fields: { slug }, frontmatter: { date, title } } }) => (
+  } = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "DD MMMM, YYYY")
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
+  const articleList = edges.map(
+    ({
+      node: {
+        excerpt,
+        fields: { slug },
+        frontmatter: { date, title },
+      },
+    }) => (
       <article key={slug}>
         <header>
           <h3>
-            <Link to={`/blog${slug}`}>{title}</Link>
+            <Link to={slug}>{title}</Link>
           </h3>
         </header>
         <time dateTime={date}>{date}</time>
         <section dangerouslySetInnerHTML={{ __html: excerpt }} />
       </article>
-    ))}
-  </Layout>
-);
-
-export default ({ children }) => {
-  const render = (data) => <Blog children={children} data={data} />;
-
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-          allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-            edges {
-              node {
-                excerpt
-                fields {
-                  slug
-                }
-                frontmatter {
-                  date(formatString: "DD MMMM, YYYY")
-                  title
-                }
-              }
-            }
-          }
-        }
-      `}
-      render={render}
-    />
+    ),
   );
+
+  return <Layout>{articleList}</Layout>;
 };
+
+export default Blog;

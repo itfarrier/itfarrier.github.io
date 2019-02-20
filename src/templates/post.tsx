@@ -1,4 +1,4 @@
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
@@ -35,14 +35,14 @@ const BlogPostTemplate: React.FC<IPage> = ({
         <ul>
           {previous && (
             <li>
-              <Link to={`/blog${previous.fields.slug}`} rel='prev'>
+              <Link to={previous.fields.slug} rel='prev'>
                 ← {previous.frontmatter.title}
               </Link>
             </li>
           )}
           {next && (
             <li>
-              <Link to={`/blog${next.fields.slug}`} rel='next'>
+              <Link to={next.fields.slug} rel='next'>
                 {next.frontmatter.title} →
               </Link>
             </li>
@@ -55,18 +55,18 @@ const BlogPostTemplate: React.FC<IPage> = ({
 
 export const BlogPostTemplateQuery = graphql`
   query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      excerpt
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+      }
+      html
+      id
+    }
     site {
       siteMetadata {
         title
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

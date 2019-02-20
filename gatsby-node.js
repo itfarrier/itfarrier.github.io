@@ -12,23 +12,25 @@ exports.onCreateNode = ({
   if (type === 'MarkdownRemark') {
     const value = createFilePath({ node, getNode });
 
-    createNodeField({
+    return createNodeField({
       name: 'slug',
       node,
       value,
     });
   }
+
+  return false;
 };
 
 exports.createPages = ({ graphql, actions: { createPage } }) => {
   return new Promise((resolve, reject) => {
     const blogPostTemplate = path.resolve('./src/templates/post.tsx');
 
-    resolve(
+    return resolve(
       graphql(
         `
           {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
               edges {
                 node {
                   fields {
@@ -46,21 +48,21 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
         if (errors) {
           console.log(errors);
 
-          reject(errors);
+          return reject(errors);
         }
 
-        edges.forEach(({ node: { fields: { slug } } }, index) => {
+        return edges.forEach(({ node: { fields: { slug } } }, index) => {
           const previous = index === edges.length - 1 ? null : edges[index + 1].node;
           const next = index === 0 ? null : edges[index - 1].node;
 
-          createPage({
+          return createPage({
             component: blogPostTemplate,
             context: {
               next,
               previous,
-              slug: slug,
+              slug,
             },
-            path: `/blog${slug}`,
+            path: slug,
           });
         });
       }),

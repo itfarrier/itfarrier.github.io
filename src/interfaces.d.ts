@@ -43,15 +43,11 @@ export interface IFrontmatter {
   title: string;
 }
 
-export interface ILayout {
-  data: IData;
-}
-
 export interface ICSSModule {
   [className: string]: string;
 }
 
-declare module '*.module.css' {
-  const cssModule: ICSSModule;
-  export = cssModule;
+declare module '*.css' {
+  const classNames: ICSSModule;
+  export = classNames;
 }

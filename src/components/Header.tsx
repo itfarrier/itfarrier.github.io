@@ -4,9 +4,7 @@ import Helmet from 'react-helmet';
 
 import Context from './Context';
 
-import styles from './header.module.css';
-
-import { IHeader } from '../interfaces';
+import * as styles from './Header.module.css';
 
 const Header: React.FC = () => (
   <Context.Consumer>
@@ -26,26 +24,26 @@ const Header: React.FC = () => (
                 /blog
               </Link>
             </li>
-            {/* <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to="/books">
-              /books
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to="/inscriptions">
-              /inscriptions
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to="/video">
-              /video
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to="/wishlist">
-              /wishlist
-            </Link>
-          </li> */}
+            <li className={styles.menuElement}>
+              <Link activeClassName={styles.activeLink} className={styles.link} to='/books'>
+                /books
+              </Link>
+            </li>
+            <li className={styles.menuElement}>
+              <Link activeClassName={styles.activeLink} className={styles.link} to='/inscriptions'>
+                /inscriptions
+              </Link>
+            </li>
+            <li className={styles.menuElement}>
+              <Link activeClassName={styles.activeLink} className={styles.link} to='/video'>
+                /video
+              </Link>
+            </li>
+            <li className={styles.menuElement}>
+              <Link activeClassName={styles.activeLink} className={styles.link} to='/wishlist'>
+                /wishlist
+              </Link>
+            </li>
             <li className={styles.menuElement}>
               <Link activeClassName={styles.activeLink} className={styles.link} to='/about'>
                 /about
