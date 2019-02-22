@@ -15,8 +15,8 @@ module.exports = {
     },
     {
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages`,
+        name: 'blog',
+        path: `${__dirname}/src/pages/blog`,
       },
       resolve: 'gatsby-source-filesystem',
     },
@@ -50,5 +50,14 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
+    {
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
+        prefixDefault: true,
+        useLangKeyLayout: false,
+      },
+      resolve: 'gatsby-plugin-i18n',
+    },
   ],
 };
