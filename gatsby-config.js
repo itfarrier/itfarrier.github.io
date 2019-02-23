@@ -1,7 +1,7 @@
+const siteMetadata = require('./src/data/siteMetadata');
+
 module.exports = {
-  siteMetadata: {
-    title: 'podabed.org',
-  },
+  siteMetadata,
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
@@ -52,8 +52,8 @@ module.exports = {
     'gatsby-plugin-typescript',
     {
       options: {
-        langKeyDefault: 'en',
-        langKeyForNull: 'en',
+        langKeyDefault: siteMetadata.languages.defaultLangKey,
+        langKeyForNull: siteMetadata.languages.defaultLangKey,
         prefixDefault: true,
         useLangKeyLayout: false,
       },

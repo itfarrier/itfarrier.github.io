@@ -58,6 +58,7 @@ export const BlogPostTemplateQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt
       fields {
+        langKey
         slug
       }
       frontmatter {
