@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const Wishlist: React.FC = () => (
-  <Layout>
+const Wishlist: React.FC = (props) => (
+  <Layout location={props.location}>
     <article>
       <header>
         <h1>

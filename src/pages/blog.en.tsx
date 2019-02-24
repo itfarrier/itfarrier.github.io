@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const Blog: React.FC = () => {
+const Blog: React.FC = (props) => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
@@ -49,7 +49,7 @@ const Blog: React.FC = () => {
     ),
   );
 
-  return <Layout>{articleList}</Layout>;
+  return <Layout location={props.location}>{articleList}</Layout>;
 };
 
 export default Blog;

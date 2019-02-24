@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const Inscriptions: React.FC = () => {
+const Inscriptions: React.FC = (props) => {
   const {
     allFile: { edges },
   } = useStaticQuery(graphql`
@@ -28,7 +28,7 @@ const Inscriptions: React.FC = () => {
   ));
 
   return (
-    <Layout>
+    <Layout location={props.location}>
       <article>
         <header>
           <h1>Inscriptions</h1>

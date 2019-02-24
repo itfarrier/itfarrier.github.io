@@ -19,10 +19,13 @@ addLocaleData([...enData, ...ruData]);
 
 import './Layout.module.css';
 
-const Layout: React.FC = (props) => {
+const Layout: React.FC = ({ children, location: { pathname } }) => {
   const {
     site: {
-      siteMetadata: { languages, title },
+      siteMetadata: {
+        languages: { defaultLangKey, langs },
+        title,
+      },
     },
   } = useStaticQuery(graphql`
     {
@@ -37,22 +40,14 @@ const Layout: React.FC = (props) => {
       }
     }
   `);
-  const { children, location } = props;
-  const url = location.pathname;
-  const isHome = isHomePage(url);
-  const { langs, defaultLangKey } = languages;
-  const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-  const homeLink = `/${langKey !== 'en' ? langKey : ''}`;
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({
-    ...item,
-    link: item.link.replace(`/${defaultLangKey}/`, '/'),
-  }));
+  const langKey = getCurrentLangKey(langs, defaultLangKey, pathname);
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(langKey, pathname));
 
   return (
     <IntlProvider locale={langKey} messages={messages[langKey]}>
       <>
         <Helmet title={title} />
-        <Header />
+        <Header langsMenu={langsMenu} />
         <main>{children}</main>
       </>
     </IntlProvider>

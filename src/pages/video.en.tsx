@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const Video: React.FC = () => (
-  <Layout>
+const Video: React.FC = (props) => (
+  <Layout location={props.location}>
     <article>
       <header>
         <h1>Видео</h1>

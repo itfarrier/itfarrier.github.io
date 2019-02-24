@@ -1,4 +1,4 @@
-import { graphql, navigate, withPrefix } from 'gatsby';
+import { graphql, navigate, StaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
 import * as React from 'react';
 
@@ -7,7 +7,7 @@ class RedirectIndex extends React.PureComponent {
     super(props);
 
     if (typeof window !== 'undefined') {
-      const { langs, defaultLangKey } = props.data.site.siteMetadata.languages;
+      const { defaultLangKey, langs } = props.data.site.siteMetadata.languages;
       const langKey = getUserLangKey(langs, defaultLangKey);
       const homeUrl = withPrefix(`/${langKey}/`);
 
@@ -20,17 +20,24 @@ class RedirectIndex extends React.PureComponent {
   }
 }
 
-export default RedirectIndex;
+export default (props) => {
+  const render = (data) => <RedirectIndex data={data} {...props} />;
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        languages {
-          defaultLangKey
-          langs
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              languages {
+                defaultLangKey
+                langs
+              }
+            }
+          }
         }
-      }
-    }
-  }
-`;
+      `}
+      render={render}
+    />
+  );
+};

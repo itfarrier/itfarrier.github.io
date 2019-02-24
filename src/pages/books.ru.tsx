@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import Layout from '../components/Layout';
 
-const Books: React.FC = () => (
-  <Layout>
+const Books: React.FC = (props) => (
+  <Layout location={props.location}>
     <article>
       <section>
         <header>

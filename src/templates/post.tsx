@@ -18,9 +18,10 @@ const BlogPostTemplate: React.FC<IPage> = ({
       siteMetadata: { title },
     },
   },
+  location,
   pageContext: { next, previous },
 }) => (
-  <Layout>
+  <Layout location={location}>
     <Helmet
       meta={[{ name: 'description', content: excerpt }]}
       title={`${frontmatter.title} | ${title}`}
