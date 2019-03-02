@@ -1,15 +1,14 @@
 import * as React from 'react';
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 
 interface IContextInitialState {
   isDark: boolean;
-  toggleDark(): void;
+  toggleDark: Dispatch<SetStateAction<boolean>>;
 }
 
 const initialState: IContextInitialState = {
   isDark: false,
-  /* tslint:disable-next-line:no-empty */
-  toggleDark: () => {},
+  toggleDark: () => !this.isDark,
 };
 
 const Context: React.Context<IContextInitialState> = React.createContext<IContextInitialState>(
@@ -17,7 +16,7 @@ const Context: React.Context<IContextInitialState> = React.createContext<IContex
 );
 
 export const ContextProvider = ({ children }) => {
-  const [isDark, toggleDark] = useState(false);
+  const [isDark, toggleDark] = useState<IContextInitialState['isDark']>(initialState.isDark);
 
   return <Context.Provider value={{ isDark, toggleDark }}>{children}</Context.Provider>;
 };
