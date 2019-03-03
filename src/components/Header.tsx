@@ -11,79 +11,75 @@ const Header: React.FC = ({ langsMenu }) => {
 
   return (
     <Context.Consumer>
-      {({ isDark, toggleDark }) => {
-        const toggleDarkFunction = () => toggleDark(!isDark);
-
-        return (
-          <header>
-            <Helmet htmlAttributes={{ theme: isDark ? 'dark' : 'light' }} />
-            <input checked={isDark} onChange={toggleDarkFunction} type='checkbox' />
-            <nav>
-              <ul className={styles.menu}>
-                <li className={styles.menuElement}>
-                  <Link activeClassName={styles.activeLink} className={styles.link} to={link}>
-                    /
-                  </Link>
-                </li>
-                <li className={styles.menuElement}>
-                  <Link
-                    activeClassName={styles.activeLink}
-                    className={styles.link}
-                    to={`${link}blog`}
-                  >
-                    /blog
-                  </Link>
-                </li>
-                <li className={styles.menuElement}>
-                  <Link
-                    activeClassName={styles.activeLink}
-                    className={styles.link}
-                    to={`${link}books`}
-                  >
-                    /books
-                  </Link>
-                </li>
-                <li className={styles.menuElement}>
-                  <Link
-                    activeClassName={styles.activeLink}
-                    className={styles.link}
-                    to={`${link}inscriptions`}
-                  >
-                    /inscriptions
-                  </Link>
-                </li>
-                <li className={styles.menuElement}>
-                  <Link
-                    activeClassName={styles.activeLink}
-                    className={styles.link}
-                    to={`${link}video`}
-                  >
-                    /video
-                  </Link>
-                </li>
-                <li className={styles.menuElement}>
-                  <Link
-                    activeClassName={styles.activeLink}
-                    className={styles.link}
-                    to={`${link}wishlist`}
-                  >
-                    /wishlist
-                  </Link>
-                </li>
-                <li className={styles.menuElement}>
-                  <Link
-                    activeClassName={styles.activeLink}
-                    className={styles.link}
-                    to={`${link}about`}
-                  >
-                    /about
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </header>
-        );
-      }}
+      {(theme) => (
+        <header>
+          <Helmet htmlAttributes={{ theme: theme.isDark ? 'dark' : 'light' }} />
+          <input checked={theme.isDark} onChange={theme.toggleDark} type='checkbox' />
+          <nav>
+            <ul className={styles.menu}>
+              <li className={styles.menuElement}>
+                <Link activeClassName={styles.activeLink} className={styles.link} to={link}>
+                  /
+                </Link>
+              </li>
+              <li className={styles.menuElement}>
+                <Link
+                  activeClassName={styles.activeLink}
+                  className={styles.link}
+                  to={`${link}blog`}
+                >
+                  /blog
+                </Link>
+              </li>
+              <li className={styles.menuElement}>
+                <Link
+                  activeClassName={styles.activeLink}
+                  className={styles.link}
+                  to={`${link}books`}
+                >
+                  /books
+                </Link>
+              </li>
+              <li className={styles.menuElement}>
+                <Link
+                  activeClassName={styles.activeLink}
+                  className={styles.link}
+                  to={`${link}inscriptions`}
+                >
+                  /inscriptions
+                </Link>
+              </li>
+              <li className={styles.menuElement}>
+                <Link
+                  activeClassName={styles.activeLink}
+                  className={styles.link}
+                  to={`${link}video`}
+                >
+                  /video
+                </Link>
+              </li>
+              <li className={styles.menuElement}>
+                <Link
+                  activeClassName={styles.activeLink}
+                  className={styles.link}
+                  to={`${link}wishlist`}
+                >
+                  /wishlist
+                </Link>
+              </li>
+              <li className={styles.menuElement}>
+                <Link
+                  activeClassName={styles.activeLink}
+                  className={styles.link}
+                  to={`${link}about`}
+                >
+                  /about
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      )}
     </Context.Consumer>
   );
 };
