@@ -2,12 +2,13 @@ import * as React from 'react';
 
 interface IContextInitialState {
   isDark: boolean;
+  language: string;
   toggleDark(): void;
 }
 
 const initialState: IContextInitialState = {
   isDark: false,
-  /* tslint:disable-next-line:no-empty */
+  language: 'en',
   toggleDark: () => {},
 };
 
@@ -21,19 +22,22 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
 
     this.state = {
       isDark: false,
+      language: 'en',
       toggleDark: this.toggleDark,
     };
   }
 
   public componentDidMount() {
-    const { isDark } = this.state;
+    const { isDark, language } = this.state;
 
     const isDarkFromLocalStorage: boolean = JSON.parse(localStorage.getItem('isDark'));
+    const isLanguageFromLocalStorage: string = JSON.parse(localStorage.getItem('language'));
 
-    if (isDarkFromLocalStorage) {
-      this.setState({ isDark: isDarkFromLocalStorage });
+    if (isDarkFromLocalStorage && isLanguageFromLocalStorage) {
+      this.setState({ isDark: isDarkFromLocalStorage, language: isLanguageFromLocalStorage });
     } else {
       localStorage.setItem('isDark', JSON.stringify(isDark));
+      localStorage.setItem('language', JSON.stringify(language));
     }
 
     if (this.isSupportsDarkModeInMacOS()) {
@@ -44,12 +48,13 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
 
   public render() {
     const { children } = this.props;
-    const { isDark } = this.state;
+    const { isDark, language } = this.state;
 
     return (
       <Context.Provider
         value={{
           isDark,
+          language,
           toggleDark: this.toggleDark,
         }}
       >
