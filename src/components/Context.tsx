@@ -26,12 +26,19 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
   }
 
   public componentDidMount() {
+    const { isDark } = this.state;
+
     const isDarkFromLocalStorage: boolean = JSON.parse(localStorage.getItem('isDark'));
 
     if (isDarkFromLocalStorage) {
       this.setState({ isDark: isDarkFromLocalStorage });
-    } else if (this.isSupportsDarkModeInMacOS()) {
+    } else {
+      localStorage.setItem('isDark', JSON.stringify(isDark));
+    }
+
+    if (this.isSupportsDarkModeInMacOS()) {
       this.setState({ isDark: true });
+      localStorage.setItem('isDark', JSON.stringify(isDark));
     }
   }
 
