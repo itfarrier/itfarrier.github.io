@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import Context from './Context';
+import Context from '../Context';
 
 import * as styles from './Header.module.css';
 
