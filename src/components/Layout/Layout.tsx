@@ -11,6 +11,7 @@ import * as ruData from 'react-intl/locale-data/ru';
 import * as en from '../../data/messages/en';
 import * as ru from '../../data/messages/ru';
 
+import Context from '../Context';
 import Header from '../Header';
 
 const messages = { en, ru };
@@ -45,11 +46,15 @@ const Layout: React.FC = ({ children, location: { pathname } }) => {
 
   return (
     <IntlProvider locale={langKey} messages={messages[langKey]}>
-      <>
-        <Helmet title={title} />
-        <Header langsMenu={langsMenu} />
-        <main>{children}</main>
-      </>
+      <Context.Consumer>
+        {(context) => (
+          <>
+            <Helmet title={title} />
+            <Header context={context} langsMenu={langsMenu} />
+            <main>{children}</main>
+          </>
+        )}
+      </Context.Consumer>
     </IntlProvider>
   );
 };
