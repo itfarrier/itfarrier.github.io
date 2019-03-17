@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const path = require('path');
 
 exports.createPages = ({ graphql, actions: { createPage } }) => {
@@ -12,6 +13,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
               edges {
                 node {
                   fields {
+                    langKey
                     slug
                   }
                   frontmatter {
@@ -29,13 +31,33 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           return reject(errors);
         }
 
-        return edges.forEach(({ node: { fields: { slug } } }, index) => {
-          const previous = index === edges.length - 1 ? null : edges[index + 1].node;
-          const next = index === 0 ? null : edges[index - 1].node;
+        const splitted = _.groupBy(edges, { node: { fields: { langKey: 'en' } } });
 
-          return createPage({
+        splitted.false.forEach(({ node: { fields: { langKey, slug } } }, index) => {
+          const previous =
+            index === splitted.false.length - 1 ? null : splitted.false[index + 1].node;
+          const next = index === 0 ? null : splitted.false[index - 1].node;
+
+          createPage({
             component: blogPostTemplate,
             context: {
+              langKey,
+              next,
+              previous,
+              slug,
+            },
+            path: slug,
+          });
+        });
+        splitted.true.forEach(({ node: { fields: { langKey, slug } } }, index) => {
+          const previous =
+            index === splitted.true.length - 1 ? null : splitted.true[index + 1].node;
+          const next = index === 0 ? null : splitted.true[index - 1].node;
+
+          createPage({
+            component: blogPostTemplate,
+            context: {
+              langKey,
               next,
               previous,
               slug,

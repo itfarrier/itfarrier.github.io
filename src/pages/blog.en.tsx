@@ -18,6 +18,7 @@ const Blog: React.FC = (props) => {
           node {
             excerpt
             fields {
+              langKey
               slug
             }
             frontmatter {
@@ -29,14 +30,15 @@ const Blog: React.FC = (props) => {
       }
     }
   `);
-  const articleList = edges.map(
-    ({
-      node: {
-        excerpt,
-        fields: { slug },
-        frontmatter: { date, title },
-      },
-    }) => (
+  const articleList = edges
+    .filter(
+      ({
+        node: {
+          fields: { langKey },
+        },
+      }) => langKey === props.pageContext.langKey,
+    )
+    .map(({ node: { excerpt, fields: { slug }, frontmatter: { date, title } } }) => (
       <article key={slug}>
         <header>
           <h3>
@@ -46,8 +48,7 @@ const Blog: React.FC = (props) => {
         <time dateTime={date}>{date}</time>
         <section dangerouslySetInnerHTML={{ __html: excerpt }} />
       </article>
-    ),
-  );
+    ));
 
   return <Layout location={props.location}>{articleList}</Layout>;
 };
