@@ -2,30 +2,45 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
+import SelectLanguage from '../SelectLanguage';
+
 import * as styles from './Header.module.css';
 
-const Header: React.FC = ({ context: { isDark, toggleDark }, langsMenu }) => {
-  const { link } = langsMenu.find((languageObject) => languageObject.selected === true);
+const Header: React.FC = (props) => {
+  const {
+    context: { isDark, toggleDark },
+    homeLink,
+    langsMenu,
+  } = props;
 
   return (
     <header>
       <Helmet htmlAttributes={{ theme: isDark ? 'dark' : 'light' }} />
       <label htmlFor='darkMode'>Dark mode</label>
       <input checked={isDark} name='darkMode' onChange={toggleDark} type='checkbox' />
+      <SelectLanguage langsMenu={langsMenu} />
       <nav>
         <ul className={styles.menu}>
           <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to={link}>
+            <Link activeClassName={styles.activeLink} className={styles.link} to={homeLink}>
               /
             </Link>
           </li>
           <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to={`${link}blog`}>
+            <Link
+              activeClassName={styles.activeLink}
+              className={styles.link}
+              to={`${homeLink}blog`}
+            >
               /blog
             </Link>
           </li>
           <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to={`${link}books`}>
+            <Link
+              activeClassName={styles.activeLink}
+              className={styles.link}
+              to={`${homeLink}books`}
+            >
               /books
             </Link>
           </li>
@@ -33,13 +48,17 @@ const Header: React.FC = ({ context: { isDark, toggleDark }, langsMenu }) => {
             <Link
               activeClassName={styles.activeLink}
               className={styles.link}
-              to={`${link}inscriptions`}
+              to={`${homeLink}inscriptions`}
             >
               /inscriptions
             </Link>
           </li>
           <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to={`${link}video`}>
+            <Link
+              activeClassName={styles.activeLink}
+              className={styles.link}
+              to={`${homeLink}video`}
+            >
               /video
             </Link>
           </li>
@@ -47,13 +66,17 @@ const Header: React.FC = ({ context: { isDark, toggleDark }, langsMenu }) => {
             <Link
               activeClassName={styles.activeLink}
               className={styles.link}
-              to={`${link}wishlist`}
+              to={`${homeLink}wishlist`}
             >
               /wishlist
             </Link>
           </li>
           <li className={styles.menuElement}>
-            <Link activeClassName={styles.activeLink} className={styles.link} to={`${link}about`}>
+            <Link
+              activeClassName={styles.activeLink}
+              className={styles.link}
+              to={`${homeLink}about`}
+            >
               /about
             </Link>
           </li>

@@ -6,17 +6,13 @@ import { getCurrentLangKey, getLangs, getUrlForLang, isHomePage } from 'ptz-i18n
 import * as React from 'react';
 import Helmet from 'react-helmet';
 import { addLocaleData, FormattedMessage, IntlProvider } from 'react-intl';
-import * as enData from 'react-intl/locale-data/en';
-import * as ruData from 'react-intl/locale-data/ru';
-import * as en from '../../data/messages/en';
-import * as ru from '../../data/messages/ru';
+import * as en from 'react-intl/locale-data/en';
+import * as ru from 'react-intl/locale-data/ru';
+
+addLocaleData([...en, ...ru]);
 
 import Context from '../Context';
 import Header from '../Header';
-
-const messages = { en, ru };
-
-addLocaleData([...enData, ...ruData]);
 
 import './Layout.module.css';
 
@@ -42,15 +38,23 @@ const Layout: React.FC = ({ children, location: { pathname } }) => {
     }
   `);
   const langKey = getCurrentLangKey(langs, defaultLangKey, pathname);
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(langKey, pathname));
+  const homeLink = `/${langKey}/`;
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, pathname));
+  const i18nMessages = require(`../../data/messages/${langKey}`);
 
   return (
-    <IntlProvider locale={langKey} messages={messages[langKey]}>
+    <IntlProvider locale={langKey} messages={i18nMessages}>
       <Context.Consumer>
         {(context) => (
           <>
             <Helmet title={title} />
-            <Header context={context} langsMenu={langsMenu} />
+            <Header
+              context={context}
+              homeLink={homeLink}
+              langsMenu={langsMenu}
+              locale={langKey}
+              pathname={pathname}
+            />
             <main>{children}</main>
           </>
         )}

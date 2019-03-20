@@ -56,6 +56,7 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
           isDark,
           language,
           toggleDark: this.toggleDark,
+          toggleLanguage: this.toggleLanguage,
         }}
       >
         {children}
@@ -68,6 +69,11 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
 
     localStorage.setItem('isDark', JSON.stringify(isDark));
     this.setState({ isDark });
+  };
+
+  public toggleLanguage: (language: string) => void = (language: string) => {
+    localStorage.setItem('language', JSON.stringify(language));
+    this.setState({ language });
   };
 
   private isSupportsDarkModeInMacOS: () => boolean = (): boolean =>
