@@ -1,5 +1,5 @@
 ---
-title: '#немузейка'
+title: '#nemuzejka'
 comments: true
 date: 2016-04-09 18:32:38
 categories:

@@ -1,5 +1,5 @@
 ---
-title: 'Молчание или день второй'
+title: 'Silence or day two'
 comments: true
 date: 2016-09-13 09:38:54
 categories:

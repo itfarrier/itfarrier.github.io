@@ -1,5 +1,5 @@
 ---
-title: 'Почему каждый должен быть параноиком'
+title: 'Why everyone should be paranoid'
 comments: true
 date: 2014-03-31 10:07:43
 categories:

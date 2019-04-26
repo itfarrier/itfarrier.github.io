@@ -1,5 +1,5 @@
 ---
-title: 'Общение'
+title: 'Communication'
 comments: true
 date: 2016-06-10 10:59:04
 categories:

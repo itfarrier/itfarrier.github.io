@@ -1,5 +1,5 @@
 ---
-title: 'Маяковские чтения'
+title: 'Reading of Mayakovsky'
 comments: true
 date: 2016-05-30 10:10:43
 categories:

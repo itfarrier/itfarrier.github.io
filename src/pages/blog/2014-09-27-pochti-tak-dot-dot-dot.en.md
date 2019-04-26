@@ -1,5 +1,5 @@
 ---
-title: 'Почти так...'
+title: 'Almost...'
 comments: true
 date: 2014-09-27 19:38:51
 categories:

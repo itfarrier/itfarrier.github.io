@@ -1,5 +1,5 @@
 ---
-title: 'Реклама в интернете'
+title: 'Internet advertising'
 comments: true
 date: 2016-03-08 11:32:50
 categories:

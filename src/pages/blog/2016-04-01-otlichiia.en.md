@@ -1,5 +1,5 @@
 ---
-title: 'Отличия'
+title: 'Differences'
 comments: true
 date: 2016-04-01 07:59:11
 categories:

@@ -1,5 +1,5 @@
 ---
-title: 'Троица или день третий'
+title: 'Trinity or day three'
 comments: true
 date: 2016-09-14 22:12:49
 categories:
