@@ -51,3 +51,9 @@ declare module '*.css' {
   const classNames: ICSSModule;
   export = classNames;
 }
+
+export interface ILangObject {
+  langKey: string;
+  link: string;
+  selected: boolean;
+}
