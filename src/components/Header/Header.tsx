@@ -2,23 +2,26 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
+import cv from '../../assets/files/cv.pdf';
 import SelectLanguage from '../SelectLanguage';
-
 import * as styles from './Header.module.css';
 
 const Header: React.FC = (props) => {
   const {
-    context: { isDark, toggleDark },
+    context: { isDark, toggleDark, toggleLanguage },
     homeLink,
     langsMenu,
   } = props;
 
+  const theme = isDark ? 'dark' : 'light';
+
   return (
     <header>
-      <Helmet htmlAttributes={{ theme: isDark ? 'dark' : 'light' }} />
-      <label htmlFor='darkMode'>Dark mode</label>
-      <input checked={isDark} name='darkMode' onChange={toggleDark} type='checkbox' />
-      <SelectLanguage langsMenu={langsMenu} />
+      <Helmet htmlAttributes={{ theme }} />
+      <button className={styles.themeChangeButton} onClick={toggleDark}>
+        {theme}
+      </button>
+      <SelectLanguage langsMenu={langsMenu} toggleLanguage={toggleLanguage} />
       <nav>
         <ul className={styles.menu}>
           <li className={styles.menuElement}>
@@ -27,58 +30,9 @@ const Header: React.FC = (props) => {
             </Link>
           </li>
           <li className={styles.menuElement}>
-            <Link
-              activeClassName={styles.activeLink}
-              className={styles.link}
-              to={`${homeLink}blog`}
-            >
-              /blog
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link
-              activeClassName={styles.activeLink}
-              className={styles.link}
-              to={`${homeLink}books`}
-            >
-              /books
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link
-              activeClassName={styles.activeLink}
-              className={styles.link}
-              to={`${homeLink}inscriptions`}
-            >
-              /inscriptions
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link
-              activeClassName={styles.activeLink}
-              className={styles.link}
-              to={`${homeLink}video`}
-            >
-              /video
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link
-              activeClassName={styles.activeLink}
-              className={styles.link}
-              to={`${homeLink}wishlist`}
-            >
-              /wishlist
-            </Link>
-          </li>
-          <li className={styles.menuElement}>
-            <Link
-              activeClassName={styles.activeLink}
-              className={styles.link}
-              to={`${homeLink}about`}
-            >
-              /about
-            </Link>
+            <a className={styles.link} href={cv}>
+              /cv
+            </a>
           </li>
         </ul>
       </nav>
