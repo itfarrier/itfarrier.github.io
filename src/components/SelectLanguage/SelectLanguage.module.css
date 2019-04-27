@@ -1,0 +1,13 @@
+.languageChangeButton {
+  padding: 0;
+  border: none;
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
+  outline: inherit;
+  transition: var(--transition);
+}
+
+.selectedLanguage {
+  text-decoration: line-through;
+}

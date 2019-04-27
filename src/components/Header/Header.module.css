@@ -19,8 +19,20 @@
   background: var(--white);
   color: var(--black);
   text-decoration: none;
+  transition: var(--transition);
 }
 
 .activeLink {
   font-weight: bold;
+}
+
+.themeChangeButton {
+  padding: 0;
+  border: none;
+  background: var(--white);
+  color: var(--black);
+  cursor: pointer;
+  float: left;
+  outline: inherit;
+  transition: var(--transition);
 }
