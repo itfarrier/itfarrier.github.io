@@ -9,14 +9,14 @@ import { addLocaleData, FormattedMessage, IntlProvider } from 'react-intl';
 import * as en from 'react-intl/locale-data/en';
 import * as ru from 'react-intl/locale-data/ru';
 
-addLocaleData([...en, ...ru]);
-
+import { ILangObject } from '../../interfaces';
 import Context from '../Context';
 import Header from '../Header';
-
 import './Layout.module.css';
 
-const Layout: React.FC = ({ children, location: { pathname } }) => {
+addLocaleData([...en, ...ru]);
+
+const Layout: React.FC = ({ children, location: { pathname } }): React.ReactElement => {
   const {
     site: {
       siteMetadata: {
@@ -37,10 +37,10 @@ const Layout: React.FC = ({ children, location: { pathname } }) => {
       }
     }
   `);
-  const langKey = getCurrentLangKey(langs, defaultLangKey, pathname);
-  const homeLink = `/${langKey}/`;
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, pathname));
-  const i18nMessages = require(`../../data/messages/${langKey}`);
+  const langKey: string = getCurrentLangKey(langs, defaultLangKey, pathname);
+  const homeLink: string = `/${langKey}/`;
+  const langsMenu: ILangObject[] = getLangs(langs, langKey, getUrlForLang(homeLink, pathname));
+  const i18nMessages: { [key: string]: string } = require(`../../data/messages/${langKey}`);
 
   return (
     <IntlProvider locale={langKey} messages={i18nMessages}>
