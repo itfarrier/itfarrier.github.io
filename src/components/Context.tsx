@@ -9,6 +9,7 @@ interface IContextInitialState {
 const initialState: IContextInitialState = {
   isDark: false,
   language: 'en',
+  // tslint:disable-next-line: no-empty
   toggleDark: () => {},
 };
 
@@ -16,8 +17,8 @@ const Context: React.Context<IContextInitialState> = React.createContext<IContex
   initialState,
 );
 
-export class ContextProvider extends React.PureComponent<{}, IContextInitialState> {
-  constructor(props) {
+export class ContextProvider extends React.PureComponent<any, IContextInitialState> {
+  constructor(props: any) {
     super(props);
 
     this.state = {
@@ -27,7 +28,7 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
     };
   }
 
-  public componentDidMount() {
+  public componentDidMount = () => {
     const { isDark, language } = this.state;
 
     const isDarkFromLocalStorage: boolean = JSON.parse(localStorage.getItem('isDark'));
@@ -44,9 +45,9 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
       this.setState({ isDark: true });
       localStorage.setItem('isDark', JSON.stringify(isDark));
     }
-  }
+  };
 
-  public render() {
+  public render: () => React.ReactElement = (): React.ReactElement => {
     const { children } = this.props;
     const { isDark, language } = this.state;
 
@@ -62,7 +63,7 @@ export class ContextProvider extends React.PureComponent<{}, IContextInitialStat
         {children}
       </Context.Provider>
     );
-  }
+  };
 
   public toggleDark: () => void = (): void => {
     const isDark = !this.state.isDark;
