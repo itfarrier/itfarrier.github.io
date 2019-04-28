@@ -22,3 +22,8 @@ html {
   background: var(--black);
   color: var(--white);
 }
+
+a {
+  color: var(--black);
+  transition: var(--transition);
+}
