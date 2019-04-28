@@ -17,15 +17,21 @@ const Header: React.FC = (props: any): React.ReactElement => {
   return (
     <header>
       <Helmet htmlAttributes={{ theme }} />
-      <button onClick={toggleDark}>{theme}</button>
-      <SelectLanguage langsMenu={langsMenu} language={language} toggleLanguage={toggleLanguage} />
       <nav>
+        <button onClick={toggleDark}>{theme}</button>
+        <SelectLanguage langsMenu={langsMenu} language={language} toggleLanguage={toggleLanguage} />
+      </nav>
+      <nav role={'navigation'}>
         <ul>
           <li>
-            <Link to={homeLink}>/</Link>
+            <Link role={'link'} to={homeLink}>
+              /
+            </Link>
           </li>
           <li>
-            <a href={cv}>/cv</a>
+            <a href={cv} role={'link'}>
+              /cv
+            </a>
           </li>
         </ul>
       </nav>

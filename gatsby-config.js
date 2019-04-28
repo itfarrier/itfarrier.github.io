@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata,
   plugins: [
     'gatsby-plugin-postcss',
+    'gatsby-plugin-react-axe',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     {

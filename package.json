@@ -13,6 +13,7 @@
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-postcss": "^2.0.7",
+    "gatsby-plugin-react-axe": "^0.2.2",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-typescript": "^2.0.13",
@@ -51,6 +52,7 @@
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.0.0",
+    "tslint-react-a11y": "^1.0.0",
     "typescript": "^3.4.5"
   },
   "keywords": [

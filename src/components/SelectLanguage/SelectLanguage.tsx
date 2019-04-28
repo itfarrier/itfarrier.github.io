@@ -15,7 +15,7 @@ const SelectLanguage: React.FC = (props: any): React.ReactElement => {
 
       return (
         <button key={lang.langKey} onClick={onClick}>
-          <span>{lang.langKey}</span>
+          {lang.langKey}
         </button>
       );
     },
