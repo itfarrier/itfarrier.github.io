@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import cv from '../../assets/files/cv.pdf';
+import cv from '../../assets/documents/cv-podabed.pdf';
 import SelectLanguage from '../SelectLanguage';
 
 const Header: React.FC = (props: any): React.ReactElement => {
