@@ -12,11 +12,15 @@ import * as ru from 'react-intl/locale-data/ru';
 import { ILangObject } from '../../interfaces';
 import Context from '../Context';
 import Header from '../Header';
-import './Layout.module.css';
 
 addLocaleData([...en, ...ru]);
 
-const Layout: React.FC = ({ children, location: { pathname } }): React.ReactElement => {
+const Layout: React.FC = (props: any): React.ReactElement => {
+  const {
+    children,
+    location: { pathname },
+  } = props;
+
   const {
     site: {
       siteMetadata: {
@@ -37,6 +41,7 @@ const Layout: React.FC = ({ children, location: { pathname } }): React.ReactElem
       }
     }
   `);
+
   const langKey: string = getCurrentLangKey(langs, defaultLangKey, pathname);
   const homeLink: string = `/${langKey}/`;
   const langsMenu: ILangObject[] = getLangs(langs, langKey, getUrlForLang(homeLink, pathname));
