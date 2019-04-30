@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Helmet from 'react-helmet';
 
 import '../common.module.css';
 
@@ -63,7 +62,6 @@ export class ContextProvider extends React.PureComponent<any, IContextInitialSta
           toggleLanguage: this.toggleLanguage,
         }}
       >
-        <Helmet htmlAttributes={{ lang: language }} />
         {children}
       </Context.Provider>
     );
