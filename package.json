@@ -7,8 +7,8 @@
     }
   ],
   "dependencies": {
-    "gatsby": "^2.3.33",
-    "gatsby-image": "^2.0.40",
+    "gatsby": "^2.3.34",
+    "gatsby-image": "^2.0.41",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
@@ -18,7 +18,7 @@
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-remark-images": "^3.0.11",
-    "gatsby-source-filesystem": "^2.0.32",
+    "gatsby-source-filesystem": "^2.0.33",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.18",
     "intl": "^1.2.5",
@@ -33,7 +33,7 @@
     "@types/graphql": "^14.2.0",
     "@types/intl": "^1.2.0",
     "@types/node": "^11.13.8",
-    "@types/react": "^16.8.14",
+    "@types/react": "^16.8.15",
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
     "@types/react-intl": "^2.3.17",
