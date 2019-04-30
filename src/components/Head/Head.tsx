@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 const Head: React.FC = (props: any): React.ReactElement => {
   const {
     context: { language },
-    i18nMessages,
+    i18nMessages: { description, keywords, title },
     location: { href },
   } = props;
 
@@ -54,6 +54,11 @@ const Head: React.FC = (props: any): React.ReactElement => {
       ),
     );
   };
+  // const variantOfPageTitle: string = subPage
+  //   ? `${title} — ${description} — ${page} — ${subPage}`
+  //   : page
+  //   ? `${title} — ${description} — ${page}`
+  //   : `${title} — ${description}`;
 
   return (
     <Helmet>
@@ -90,17 +95,17 @@ const Head: React.FC = (props: any): React.ReactElement => {
       <meta content={'yes'} name={'apple-mobile-web-app-capable'} />
       <meta content={href} name={'twitter:url'} />
       <meta content={href} property={'og:url'} />
-      <meta content={i18nMessages.description} name={'description'} />
-      <meta content={i18nMessages.description} name={'twitter:description'} />
-      <meta content={i18nMessages.description} property={'og:description'} />
-      <meta content={i18nMessages.keywords} name={'keywords'} />
-      <meta content={i18nMessages.title} name={'apple-mobile-web-app-title'} />
-      <meta content={i18nMessages.title} name={'application-name'} />
-      <meta content={i18nMessages.title} name={'twitter:title'} />
-      <meta content={i18nMessages.title} property={'og:site_name'} />
-      <meta content={i18nMessages.title} property={'og:title'} />
+      <meta content={description} name={'description'} />
+      <meta content={description} name={'twitter:description'} />
+      <meta content={description} property={'og:description'} />
+      <meta content={keywords} name={'keywords'} />
+      <meta content={title} name={'apple-mobile-web-app-title'} />
+      <meta content={title} name={'application-name'} />
+      <meta content={title} name={'twitter:title'} />
+      <meta content={title} property={'og:site_name'} />
+      <meta content={title} property={'og:title'} />
       <meta content={language} property={'og:locale'} />
-      <title>{i18nMessages.title}</title>
+      <title>{title}</title>
       {generateAndroidChrome([36, 48, 72, 96, 144, 192, 256, 384, 512])}
       {generateAppleTouch([57, 60, 72, 76, 114, 120, 144, 152, 180])}
       {generateFavicon([16, 32])}
