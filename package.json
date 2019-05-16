@@ -7,7 +7,7 @@
     }
   ],
   "dependencies": {
-    "gatsby": "^2.4.5",
+    "gatsby": "^2.5.0",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -18,7 +18,7 @@
     "gatsby-plugin-sharp": "^2.0.37",
     "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-remark-images": "^3.0.11",
-    "gatsby-source-filesystem": "^2.0.34",
+    "gatsby-source-filesystem": "^2.0.35",
     "gatsby-transformer-remark": "^2.3.12",
     "gatsby-transformer-sharp": "^2.1.19",
     "intl": "^1.2.5",
@@ -26,7 +26,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-intl": "^2.8.0"
+    "react-intl": "^2.9.0"
   },
   "description": "Personal site",
   "devDependencies": {
