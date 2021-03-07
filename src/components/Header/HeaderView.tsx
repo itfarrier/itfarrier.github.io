@@ -1,35 +1,36 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
 
-import cv from '../../assets/documents/cv-podabed.pdf';
 import SelectLanguage from '../SelectLanguage';
+import { HeaderViewProps } from './types';
 
-const Header: React.FC = (props: any): React.ReactElement => {
+export const HeaderView: React.FC<HeaderViewProps> = (props) => {
   const {
-    context: { language, toggleLanguage },
-    homeLink,
+    // TODO: add types
     langsMenu,
+    links,
+    toggleLanguage,
   } = props;
 
   return (
     <header>
       <nav>
-        <SelectLanguage langsMenu={langsMenu} language={language} toggleLanguage={toggleLanguage} />
+        <SelectLanguage langsMenu={langsMenu} toggleLanguage={toggleLanguage} />
       </nav>
       <nav role={'navigation'}>
         <ul>
           <li>
-            <Link role={'link'} to={homeLink}>
+            <Link role={'link'} to={links[0]}>
               {'/'}
             </Link>
           </li>
           <li>
-            <Link role={'link'} to={cv}>
+            <Link role={'link'} to={links[1]}>
               {'/cv'}
             </Link>
           </li>
           <li>
-            <Link role={'link'} to={`${homeLink}wishlist`}>
+            <Link role={'link'} to={links[2]}>
               {'/wishlist'}
             </Link>
           </li>
@@ -38,5 +39,3 @@ const Header: React.FC = (props: any): React.ReactElement => {
     </header>
   );
 };
-
-export default Header;
