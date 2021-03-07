@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { HeadView } from './HeadView';
+import { useContext } from 'react';
+import Context from '../Context';
+import { HeadProps } from './types';
 
-const Head: React.FC = (props) => {
+const Head: React.FC<HeadProps> = (props) => {
   const {
-    // TODO: add types
-    context: { language },
     i18nMessages: { description, keywords, title },
-    location: { href },
+    href,
   } = props;
+
+  const { language } = useContext(Context);
 
   const generateAndroidChrome = (sizesInPx: number[]) => {
     return sizesInPx.map((size: number) => {
