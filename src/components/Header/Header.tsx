@@ -24,9 +24,9 @@ const Header: React.FC = (props: any): React.ReactElement => {
             </Link>
           </li>
           <li>
-            <a href={cv} role={'link'}>
+            <Link role={'link'} to={cv}>
               {'/cv'}
-            </a>
+            </Link>
           </li>
           <li>
             <Link role={'link'} to={`${homeLink}wishlist`}>
