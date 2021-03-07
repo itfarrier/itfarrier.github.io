@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{KzLV:function(n,t,o){"use strict";o.r(t);var e=o("q1tI"),a=o("Ng2+");t.default=function(n){return e.createElement(a.a,{location:n.location})}}}]);
-//# sourceMappingURL=component---src-pages-index-ru-tsx-c12c7dbeda31adaefc21.js.map
