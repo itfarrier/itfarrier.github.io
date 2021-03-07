@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{GpL7:function(n,t,o){"use strict";o.r(t);var e=o("q1tI"),a=o("Ng2+");t.default=function(n){return e.createElement(a.a,{location:n.location},"404")}}}]);
-//# sourceMappingURL=component---src-pages-404-en-tsx-f1a9b2f9d6cc08fc15dd.js.map
