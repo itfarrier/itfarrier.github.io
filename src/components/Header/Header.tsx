@@ -20,13 +20,18 @@ const Header: React.FC = (props: any): React.ReactElement => {
         <ul>
           <li>
             <Link role={'link'} to={homeLink}>
-              /
+              {'/'}
             </Link>
           </li>
           <li>
             <a href={cv} role={'link'}>
-              /cv
+              {'/cv'}
             </a>
+          </li>
+          <li>
+            <Link role={'link'} to={`${homeLink}wishlist`}>
+              {'/wishlist'}
+            </Link>
           </li>
         </ul>
       </nav>
