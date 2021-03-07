@@ -1,64 +1,18 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+import { HeadViewProps } from './types';
 
-const Head: React.FC = (props: any): React.ReactElement => {
+export const HeadView: React.FC<HeadViewProps> = (props) => {
   const {
-    context: { language },
-    i18nMessages: { description, keywords, title },
-    location: { href },
+    androidChromeIcons,
+    appleTouchIcons,
+    description,
+    favicons,
+    href,
+    keywords,
+    language,
+    title,
   } = props;
-
-  const generateAndroidChrome = (sizesInPx: number[]): React.ReactElement[] => {
-    return sizesInPx.map(
-      (size: number): React.ReactElement => (
-        <link
-          href={`/favicons/android-chrome-${size}x${size}.png`}
-          key={size}
-          rel={'icon'}
-          sizes={`${size}x${size}`}
-          type={'image/png'}
-        />
-      ),
-    );
-  };
-  const generateAppleTouch = (sizesInPx: number[]): React.ReactElement[][] => {
-    return sizesInPx.map(
-      (size: number): React.ReactElement[] => [
-        <link
-          href={`/favicons/apple-touch-icon-${size}x${size}.png`}
-          key={`1${size}`}
-          rel={'apple-touch-icon'}
-          sizes={`${size}x${size}`}
-          type={'image/png'}
-        />,
-        <link
-          href={`/favicons/apple-touch-icon-${size}x${size}-precomposed.png`}
-          key={`2${size}`}
-          rel={'apple-touch-icon'}
-          sizes={`${size}x${size}`}
-          type={'image/png'}
-        />,
-      ],
-    );
-  };
-  const generateFavicon = (sizesInPx: number[]): React.ReactElement[] => {
-    return sizesInPx.map(
-      (size: number): React.ReactElement => (
-        <link
-          href={`/favicons/favicon-${size}x${size}.png`}
-          key={size}
-          rel={'icon'}
-          sizes={`${size}x${size}`}
-          type={'image/png'}
-        />
-      ),
-    );
-  };
-  // const variantOfPageTitle: string = subPage
-  //   ? `${title} — ${description} — ${page} — ${subPage}`
-  //   : page
-  //   ? `${title} — ${description} — ${page}`
-  //   : `${title} — ${description}`;
 
   return (
     <Helmet>
@@ -106,11 +60,9 @@ const Head: React.FC = (props: any): React.ReactElement => {
       <meta content={title} property={'og:title'} />
       <meta content={language} property={'og:locale'} />
       <title>{title}</title>
-      {generateAndroidChrome([36, 48, 72, 96, 144, 192, 256, 384, 512])}
-      {generateAppleTouch([57, 60, 72, 76, 114, 120, 144, 152, 180])}
-      {generateFavicon([16, 32])}
+      {androidChromeIcons}
+      {appleTouchIcons}
+      {favicons}
     </Helmet>
   );
 };
-
-export default Head;
