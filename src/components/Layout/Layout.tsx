@@ -1,17 +1,18 @@
-import { graphql, useStaticQuery } from 'gatsby';
 import 'intl';
 import 'intl/locale-data/jsonp/en';
 import 'intl/locale-data/jsonp/ru';
-import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
+import 'normalize.css';
 import * as React from 'react';
-import { addLocaleData, IntlProvider } from 'react-intl';
 import * as en from 'react-intl/locale-data/en';
 import * as ru from 'react-intl/locale-data/ru';
+import { addLocaleData, IntlProvider } from 'react-intl';
+import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import { ILangObject } from '../../interfaces';
 import Context from '../Context';
-import Header from '../Header';
 import Head from '../Head';
+import Header from '../Header';
+import { ILangObject } from '../../interfaces';
 
 addLocaleData([...en, ...ru]);
 
