@@ -5,21 +5,19 @@ import 'normalize.css';
 import * as React from 'react';
 import * as en from 'react-intl/locale-data/en';
 import * as ru from 'react-intl/locale-data/ru';
-import { addLocaleData, IntlProvider } from 'react-intl';
+import { addLocaleData } from 'react-intl';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import Context from '../Context';
-import Head from '../Head';
-import Header from '../Header';
 import { ILangObject } from '../../interfaces';
+import { LayoutView } from './LayoutView';
 
 addLocaleData([...en, ...ru]);
 
-const Layout: React.FC = (props: any): React.ReactElement => {
+const Layout: React.FC = (props) => {
   const {
     children,
-    location: { pathname },
+    location: { href, pathname },
   } = props;
 
   const {
@@ -48,23 +46,15 @@ const Layout: React.FC = (props: any): React.ReactElement => {
   const i18nMessages: { [key: string]: string } = require(`../../data/messages/${langKey}`);
 
   return (
-    <IntlProvider locale={langKey} messages={i18nMessages}>
-      <Context.Consumer>
-        {(context) => (
-          <>
-            <Head context={context} i18nMessages={i18nMessages} {...props} />
-            <Header
-              context={context}
-              homeLink={homeLink}
-              langsMenu={langsMenu}
-              locale={langKey}
-              pathname={pathname}
-            />
-            <main>{children}</main>
-          </>
-        )}
-      </Context.Consumer>
-    </IntlProvider>
+    <LayoutView
+      homeLink={homeLink}
+      href={href}
+      i18nMessages={i18nMessages}
+      langsMenu={langsMenu}
+      locale={langKey}
+    >
+      {children}
+    </LayoutView>
   );
 };
 
