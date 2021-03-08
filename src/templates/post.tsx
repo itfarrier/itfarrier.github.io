@@ -38,14 +38,14 @@ const BlogPostTemplate: FC<IPage> = (props) => {
             {previous && (
               <li>
                 <Link rel={'prev'} to={previous.fields.slug}>
-                  ← {previous.frontmatter.title}
+                  {`← ${previous.frontmatter.title}`}
                 </Link>
               </li>
             )}
             {next && (
               <li>
                 <Link rel={'next'} to={next.fields.slug}>
-                  {next.frontmatter.title} →
+                  {`${next.frontmatter.title} →`}
                 </Link>
               </li>
             )}

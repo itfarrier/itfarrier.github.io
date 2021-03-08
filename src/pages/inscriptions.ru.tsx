@@ -33,7 +33,7 @@ const Inscriptions: FC = (props) => {
     <Layout location={props.location}>
       <article>
         <header>
-          <h1>Inscriptions</h1>
+          <h1>{'Надписи'}</h1>
         </header>
         <section>{images}</section>
       </article>
