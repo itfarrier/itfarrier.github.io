@@ -1,7 +1,9 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
-import Layout from '../components/Layout';
+import { Layout } from 'cmpts/Layout';
 
-const Index: React.FC = (props) => <Layout location={props.location} />;
+const Index: FC = (props) => {
+  return <Layout location={props.location} />;
+};
 
 export default Index;

@@ -1,7 +1,9 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
-import Layout from '../components/Layout';
+import { Layout } from 'cmpts/Layout';
 
-const NotFoundPage: React.FC = (props) => <Layout location={props.location}>404</Layout>;
+const NotFoundPage: FC = (props) => {
+  return <Layout location={props.location}>404</Layout>;
+};
 
 export default NotFoundPage;

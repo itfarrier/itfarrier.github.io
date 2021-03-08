@@ -1,16 +1,15 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 import { IntlProvider } from 'react-intl';
 
 import 'normalize.css';
 
-import Context from '../Context';
-import Head from '../Head';
-import Header from '../Header';
+import { Context } from 'cmpts/Context';
+import { Head } from 'cmpts/Head';
+import { Header } from 'cmpts/Header';
+import { LayoutViewProps } from 'cmpts/Layout/types';
 
-import { LayoutViewProps } from './types';
-
-export const LayoutView: React.FC<LayoutViewProps> = (props) => {
+export const LayoutView: FC<LayoutViewProps> = (props) => {
   const { children, homeLink, href, i18nMessages, langsMenu, locale } = props;
 
   return (

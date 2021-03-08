@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
-import Layout from '../components/Layout';
+import { Layout } from 'cmpts/Layout';
 
-const Inscriptions: React.FC = (props) => {
+const Inscriptions: FC = (props) => {
   const {
     allFile: { edges },
   } = useStaticQuery(graphql`
@@ -24,6 +24,7 @@ const Inscriptions: React.FC = (props) => {
       }
     }
   `);
+
   const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => (
     <Img fluid={fluid} key={id} />
   ));

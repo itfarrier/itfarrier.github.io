@@ -1,4 +1,4 @@
-import { Language } from './components/Context';
+import { Language } from 'cmpts/Context';
 
 export interface IData {
   allFile: { edges: Array<{ node: { childImageSharp: IChildImageSharp; id: string } }> };

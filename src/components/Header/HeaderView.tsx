@@ -1,12 +1,11 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 import { Link } from 'gatsby';
 
-import SelectLanguage from '../SelectLanguage';
+import { HeaderViewProps } from 'cmpts/Header/types';
+import { SelectLanguage } from 'cmpts/SelectLanguage';
 
-import { HeaderViewProps } from './types';
-
-export const HeaderView: React.FC<HeaderViewProps> = (props) => {
+export const HeaderView: FC<HeaderViewProps> = (props) => {
   const { langsMenu, links } = props;
 
   return (

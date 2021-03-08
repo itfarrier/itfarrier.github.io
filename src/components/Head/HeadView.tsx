@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 import { Helmet } from 'react-helmet';
 
-import { HeadViewProps } from './types';
+import { HeadViewProps } from 'cmpts/Head/types';
 
-export const HeadView: React.FC<HeadViewProps> = (props) => {
+export const HeadView: FC<HeadViewProps> = (props) => {
   const {
     androidChromeIcons,
     appleTouchIcons,

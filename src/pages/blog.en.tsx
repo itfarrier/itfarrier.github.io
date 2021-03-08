@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 import { graphql, Link, useStaticQuery } from 'gatsby';
 
-import Layout from '../components/Layout';
+import { Layout } from 'cmpts/Layout';
 
-const Blog: React.FC = (props) => {
+const Blog: FC = (props) => {
   const {
     allMarkdownRemark: { edges },
   } = useStaticQuery(graphql`
@@ -31,6 +31,7 @@ const Blog: React.FC = (props) => {
       }
     }
   `);
+
   const articleList = edges
     .filter(
       ({

@@ -1,6 +1,6 @@
 import React, { createContext, FC, useEffect, useState } from 'react';
 
-import { LANGUAGE_CODES, LOCALSTORAGE_KEYS } from '../constants';
+import { LANGUAGE_CODES, LOCALSTORAGE_KEYS } from 'src/constants';
 
 export type Language = LANGUAGE_CODES | string;
 
@@ -11,7 +11,7 @@ export type ContextInitialState = {
 
 const initialState: ContextInitialState = { language: LANGUAGE_CODES.EN, toggleLanguage: () => {} };
 
-const Context = createContext<ContextInitialState>(initialState);
+export const Context = createContext<ContextInitialState>(initialState);
 
 export const ContextProvider: FC = (props) => {
   const [language, setLanguage] = useState<Language>(LANGUAGE_CODES.EN);
@@ -35,5 +35,3 @@ export const ContextProvider: FC = (props) => {
 
   return <Context.Provider value={{ language, toggleLanguage }}>{props.children}</Context.Provider>;
 };
-
-export default Context;

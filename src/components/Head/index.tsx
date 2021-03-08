@@ -1,13 +1,11 @@
-import * as React from 'react';
-import { useContext } from 'react';
+import React, { FC, useContext } from 'react';
 
-import { generateAndroidChromeHeadLinks } from '../../utilities/generateAndroidChromeHeadLinks';
-import { generateAppleTouchHeadLinks } from '../../utilities/generateAppleTouchHeadLinks';
-import { generateFaviconHeadLinks } from '../../utilities/generateFaviconHeadLinks';
-import Context from '../Context';
-
-import { HeadView } from './HeadView';
-import { HeadProps } from './types';
+import { Context } from 'cmpts/Context';
+import { HeadView } from 'cmpts/Head/HeadView';
+import { HeadProps } from 'cmpts/Head/types';
+import { generateAndroidChromeHeadLinks } from 'src/utilities/generateAndroidChromeHeadLinks';
+import { generateAppleTouchHeadLinks } from 'src/utilities/generateAppleTouchHeadLinks';
+import { generateFaviconHeadLinks } from 'src/utilities/generateFaviconHeadLinks';
 
 const androidChromeIcons = generateAndroidChromeHeadLinks([
   36,
@@ -25,7 +23,7 @@ const appleTouchIcons = generateAppleTouchHeadLinks([57, 60, 72, 76, 114, 120, 1
 
 const favicons = generateFaviconHeadLinks([16, 32]);
 
-const Head: React.FC<HeadProps> = (props) => {
+export const Head: FC<HeadProps> = (props) => {
   const {
     href,
     i18nMessages: { description, keywords, title },
@@ -46,5 +44,3 @@ const Head: React.FC<HeadProps> = (props) => {
     />
   );
 };
-
-export default Head;

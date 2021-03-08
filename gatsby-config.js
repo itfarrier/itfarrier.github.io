@@ -251,5 +251,17 @@ module.exports = {
       },
       resolve: 'gatsby-plugin-i18n',
     },
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          cmpts: `${__dirname}/src/components`,
+          docs: `${__dirname}/src/assets/documents`,
+          imgs: `${__dirname}/src/assets/images`,
+          root: `${__dirname}`,
+          src: `${__dirname}/src`,
+        },
+      },
+    },
   ],
 };

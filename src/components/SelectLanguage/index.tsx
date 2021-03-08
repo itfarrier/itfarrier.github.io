@@ -1,14 +1,12 @@
-import * as React from 'react';
-import { useContext } from 'react';
+import React, { FC, useContext } from 'react';
 
 import { navigate } from 'gatsby';
 
-import { ILangObject } from '../../interfaces';
-import Context from '../Context';
+import { Context } from 'cmpts/Context';
+import { SelectLanguageProps } from 'cmpts/SelectLanguage/types';
+import { ILangObject } from 'src/interfaces';
 
-import { SelectLanguageProps } from './types';
-
-const SelectLanguage: React.FC<SelectLanguageProps> = (props) => {
+export const SelectLanguage: FC<SelectLanguageProps> = (props) => {
   const { langsMenu } = props;
 
   const { toggleLanguage } = useContext(Context);
@@ -28,5 +26,3 @@ const SelectLanguage: React.FC<SelectLanguageProps> = (props) => {
 
   return <>{links}</>;
 };
-
-export default SelectLanguage;

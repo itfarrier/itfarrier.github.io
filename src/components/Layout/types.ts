@@ -1,8 +1,8 @@
 import { IntlProvider } from 'react-intl';
 
-import { ILangObject } from '../../interfaces';
-import { HeadProps } from '../Head/types';
-import { HeaderProps } from '../Header/types';
+import { HeadProps } from 'cmpts/Head/types';
+import { HeaderProps } from 'cmpts/Header/types';
+import { ILangObject } from 'src/interfaces';
 
 export type LayoutViewProps = {
   homeLink: HeaderProps['homeLink'];

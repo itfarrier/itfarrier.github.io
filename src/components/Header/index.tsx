@@ -1,15 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 
-// @ts-ignore
-import cv from '../../assets/documents/cv-podabed.pdf';
+import { HeaderView } from 'cmpts/Header/HeaderView';
+import { HeaderProps } from 'cmpts/Header/types';
+import cv from 'docs/cv-podabed.pdf';
 
-import { HeaderView } from './HeaderView';
-import { HeaderProps } from './types';
-
-const Header: React.FC<HeaderProps> = (props) => {
+export const Header: React.FC<HeaderProps> = (props) => {
   const { homeLink, langsMenu } = props;
 
   return <HeaderView langsMenu={langsMenu} links={[homeLink, cv, `${homeLink}wishlist`]} />;
 };
-
-export default Header;

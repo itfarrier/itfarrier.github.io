@@ -23,7 +23,14 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "paths": { "images/*": ["assets/images/*"], "root/*": ["src/*"] },
+    "paths": {
+      // NOTE: duplication from gatbsy-config.js for working types
+      "cmpts/*": ["src/components/*"],
+      "docs/*": ["src/assets/documents/*"],
+      "imgs/*": ["src/assets/images/*"],
+      "root/*": ["./*"],
+      "src/*": ["src/*"]
+    },
     "removeComments": true,
     "resolveJsonModule": true,
     "sourceMap": true,

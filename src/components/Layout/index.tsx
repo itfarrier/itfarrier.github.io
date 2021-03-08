@@ -1,23 +1,22 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
+import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { addLocaleData } from 'react-intl';
-import * as en from 'react-intl/locale-data/en';
-import * as ru from 'react-intl/locale-data/ru';
+import en from 'react-intl/locale-data/en';
+import ru from 'react-intl/locale-data/ru';
 
 import 'intl';
 import 'intl/locale-data/jsonp/en';
 import 'intl/locale-data/jsonp/ru';
-import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
-import { ILangObject } from 'root/interfaces';
-
-import { LayoutView } from './LayoutView';
-import { LayoutProps } from './types';
+import { LayoutView } from 'cmpts/Layout/LayoutView';
+import { LayoutProps } from 'cmpts/Layout/types';
+import { ILangObject } from 'src/interfaces';
 
 addLocaleData([...en, ...ru]);
 
-const Layout: React.FC<LayoutProps> = (props) => {
+export const Layout: FC<LayoutProps> = (props) => {
   const {
     children,
     location: { href, pathname },
@@ -44,7 +43,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
   `);
 
   const langKey: string = getCurrentLangKey(langs, defaultLangKey, pathname);
-  const homeLink: string = `/${langKey}/`;
+  const homeLink = `/${langKey}/`;
   const langsMenu: ILangObject[] = getLangs(langs, langKey, getUrlForLang(homeLink, pathname));
   const i18nMessages: { [key: string]: string } = require(`../../data/messages/${langKey}`);
 
@@ -60,5 +59,3 @@ const Layout: React.FC<LayoutProps> = (props) => {
     </LayoutView>
   );
 };
-
-export default Layout;

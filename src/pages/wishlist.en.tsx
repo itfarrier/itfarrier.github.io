@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
-import Layout from '../components/Layout';
+import { Layout } from 'cmpts/Layout';
 
-const Wishlist: React.FC = (props) => {
+const Wishlist: FC = (props) => {
   return (
     <Layout location={props.location}>
       <article>

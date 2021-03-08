@@ -1,12 +1,12 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 import { graphql, Link } from 'gatsby';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
-import Layout from '../components/Layout';
-import { IPage } from '../interfaces';
+import { Layout } from 'cmpts/Layout';
+import { IPage } from 'src/interfaces';
 
-const BlogPostTemplate: React.FC<IPage> = (props) => {
+const BlogPostTemplate: FC<IPage> = (props) => {
   const {
     data: {
       markdownRemark: {

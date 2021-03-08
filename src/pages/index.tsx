@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React, { PureComponent } from 'react';
 
 import { graphql, navigate, StaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
 
-class RedirectIndex extends React.PureComponent {
-  constructor(props) {
+class RedirectIndex extends PureComponent {
+  constructor(props: unknown) {
     super(props);
 
     if (typeof window !== 'undefined') {
@@ -21,8 +21,10 @@ class RedirectIndex extends React.PureComponent {
   }
 }
 
-export default (props) => {
-  const render = (data) => <RedirectIndex data={data} {...props} />;
+export default (props: unknown) => {
+  const render = (data) => {
+    return <RedirectIndex data={data} {...props} />;
+  };
 
   return (
     <StaticQuery
