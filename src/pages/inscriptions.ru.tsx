@@ -1,6 +1,7 @@
+import * as React from 'react';
+
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import * as React from 'react';
 
 import Layout from '../components/Layout';
 

@@ -1,6 +1,7 @@
+import * as React from 'react';
+
 import { graphql, navigate, StaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
-import * as React from 'react';
 
 class RedirectIndex extends React.PureComponent {
   constructor(props) {

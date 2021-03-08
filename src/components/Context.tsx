@@ -1,5 +1,4 @@
-import * as React from 'react';
-import { createContext, FC, useEffect, useState } from 'react';
+import React, { createContext, FC, useEffect, useState } from 'react';
 
 import { LANGUAGE_CODES, LOCALSTORAGE_KEYS } from '../constants';
 

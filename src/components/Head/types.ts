@@ -1,4 +1,5 @@
 import { HTMLAttributes, LinkHTMLAttributes, MetaHTMLAttributes } from 'react';
+
 import { IntlProvider } from 'react-intl';
 
 export type HeadViewProps = {

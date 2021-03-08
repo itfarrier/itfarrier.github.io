@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 
 import SelectLanguage from '../SelectLanguage';
+
 import { HeaderViewProps } from './types';
 
 export const HeaderView: React.FC<HeaderViewProps> = (props) => {

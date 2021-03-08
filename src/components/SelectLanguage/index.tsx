@@ -5,6 +5,7 @@ import { navigate } from 'gatsby';
 
 import { ILangObject } from '../../interfaces';
 import Context from '../Context';
+
 import { SelectLanguageProps } from './types';
 
 const SelectLanguage: React.FC<SelectLanguageProps> = (props) => {

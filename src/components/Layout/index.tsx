@@ -1,15 +1,17 @@
 import * as React from 'react';
+
+import { graphql, useStaticQuery } from 'gatsby';
 import { addLocaleData } from 'react-intl';
 import * as en from 'react-intl/locale-data/en';
 import * as ru from 'react-intl/locale-data/ru';
 
-import { graphql, useStaticQuery } from 'gatsby';
 import 'intl';
 import 'intl/locale-data/jsonp/en';
 import 'intl/locale-data/jsonp/ru';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
-import { ILangObject } from '../../interfaces';
+import { ILangObject } from 'root/interfaces';
+
 import { LayoutView } from './LayoutView';
 import { LayoutProps } from './types';
 

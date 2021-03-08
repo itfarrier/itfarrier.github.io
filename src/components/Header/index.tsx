@@ -2,6 +2,7 @@ import * as React from 'react';
 
 // @ts-ignore
 import cv from '../../assets/documents/cv-podabed.pdf';
+
 import { HeaderView } from './HeaderView';
 import { HeaderProps } from './types';
 

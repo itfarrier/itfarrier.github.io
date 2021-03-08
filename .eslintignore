@@ -1,8 +1,6 @@
-/.cache/
-/.idea/
-/.vscode/
-/node_modules/
-/public/
-
-*.ts
-*.tsx
+.cache/
+.idea/
+.jest/
+node_modules/
+public/
+static/

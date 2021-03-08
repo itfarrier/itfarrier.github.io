@@ -5,6 +5,7 @@ import { generateAndroidChromeHeadLinks } from '../../utilities/generateAndroidC
 import { generateAppleTouchHeadLinks } from '../../utilities/generateAppleTouchHeadLinks';
 import { generateFaviconHeadLinks } from '../../utilities/generateFaviconHeadLinks';
 import Context from '../Context';
+
 import { HeadView } from './HeadView';
 import { HeadProps } from './types';
 
@@ -26,8 +27,8 @@ const favicons = generateFaviconHeadLinks([16, 32]);
 
 const Head: React.FC<HeadProps> = (props) => {
   const {
-    i18nMessages: { description, keywords, title },
     href,
+    i18nMessages: { description, keywords, title },
   } = props;
 
   const { language } = useContext(Context);
