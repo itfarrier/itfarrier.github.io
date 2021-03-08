@@ -1,0 +1,29 @@
+{
+  "extends": ["tslint:recommended", "tslint-plugin-prettier", "tslint-config-prettier"],
+  "rules": {
+    "ordered-imports": [
+      true,
+      {
+        "grouped-imports": true,
+        "groups": [
+          {
+            "match": "^react",
+            "name": "react libraries",
+            "order": 0
+          },
+          { "match": "^@react", "name": "@react libraries", "order": 1 },
+          {
+            "match": "^(?!(react|@react|root|images|[.])).*",
+            "name": "other libraries",
+            "order": 2
+          },
+          { "match": "^root", "name": "root alias", "order": 3 },
+          { "match": "^images", "name": "image alias", "order": 4 },
+          { "match": "^.", "name": "from current folder", "order": 5 },
+          { "match": "^../", "name": "from previous folder", "order": 6 }
+        ]
+      }
+    ],
+    "prettier": true
+  }
+}

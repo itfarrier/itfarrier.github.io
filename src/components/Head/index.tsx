@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { HeadView } from './HeadView';
 import { useContext } from 'react';
+
 import Context from '../Context';
+import { HeadView } from './HeadView';
 import { HeadProps } from './types';
 
 const Head: React.FC<HeadProps> = (props) => {
@@ -13,7 +14,7 @@ const Head: React.FC<HeadProps> = (props) => {
   const { language } = useContext(Context);
 
   const generateAndroidChrome = (sizesInPx: number[]) => {
-    return sizesInPx.map((size: number) => {
+    return sizesInPx.map((size) => {
       return (
         <link
           href={`/favicons/android-chrome-${size}x${size}.png`}
@@ -27,7 +28,7 @@ const Head: React.FC<HeadProps> = (props) => {
   };
 
   const generateAppleTouch = (sizesInPx: number[]) => {
-    return sizesInPx.map((size: number) => [
+    return sizesInPx.map((size) => [
       <link
         href={`/favicons/apple-touch-icon-${size}x${size}.png`}
         key={`1${size}`}
@@ -46,7 +47,7 @@ const Head: React.FC<HeadProps> = (props) => {
   };
 
   const generateFavicon = (sizesInPx: number[]) => {
-    return sizesInPx.map((size: number) => (
+    return sizesInPx.map((size) => (
       <link
         href={`/favicons/favicon-${size}x${size}.png`}
         key={size}

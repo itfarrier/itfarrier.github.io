@@ -1,9 +1,9 @@
-import { graphql, Link } from 'gatsby';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import Layout from '../components/Layout';
+import { graphql, Link } from 'gatsby';
 
+import Layout from '../components/Layout';
 import { IPage } from '../interfaces';
 
 const BlogPostTemplate: React.FC<IPage> = (props) => {
@@ -15,10 +15,7 @@ const BlogPostTemplate: React.FC<IPage> = (props) => {
         frontmatter: { date, title },
         html,
       },
-      site: {
-        siteMetadata,
-        siteMetadata: { blog, description },
-      },
+      site: { siteMetadata },
     },
     location,
     pageContext: { next, previous },
@@ -27,7 +24,7 @@ const BlogPostTemplate: React.FC<IPage> = (props) => {
   return (
     <Layout location={location}>
       <Helmet
-        meta={[{ name: 'description', content: excerpt }]}
+        meta={[{ content: excerpt, name: 'description' }]}
         title={`${siteMetadata.title} — ${title}`}
       />
       <article>
@@ -40,14 +37,14 @@ const BlogPostTemplate: React.FC<IPage> = (props) => {
           <ul>
             {previous && (
               <li>
-                <Link to={previous.fields.slug} rel='prev'>
+                <Link rel={'prev'} to={previous.fields.slug}>
                   ← {previous.frontmatter.title}
                 </Link>
               </li>
             )}
             {next && (
               <li>
-                <Link to={next.fields.slug} rel='next'>
+                <Link rel={'next'} to={next.fields.slug}>
                   {next.frontmatter.title} →
                 </Link>
               </li>

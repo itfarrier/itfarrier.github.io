@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
+
 import { HeadViewProps } from './types';
 
 export const HeadView: React.FC<HeadViewProps> = (props) => {

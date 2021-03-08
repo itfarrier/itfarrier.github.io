@@ -1,20 +1,21 @@
+import * as React from 'react';
+import { addLocaleData } from 'react-intl';
+import * as en from 'react-intl/locale-data/en';
+import * as ru from 'react-intl/locale-data/ru';
+
+import { graphql, useStaticQuery } from 'gatsby';
 import 'intl';
 import 'intl/locale-data/jsonp/en';
 import 'intl/locale-data/jsonp/ru';
-import 'normalize.css';
-import * as React from 'react';
-import * as en from 'react-intl/locale-data/en';
-import * as ru from 'react-intl/locale-data/ru';
-import { addLocaleData } from 'react-intl';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import { ILangObject } from '../../interfaces';
 import { LayoutView } from './LayoutView';
+import { LayoutProps } from './types';
 
 addLocaleData([...en, ...ru]);
 
-const Layout: React.FC = (props) => {
+const Layout: React.FC<LayoutProps> = (props) => {
   const {
     children,
     location: { href, pathname },

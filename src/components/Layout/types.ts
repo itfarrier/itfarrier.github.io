@@ -1,4 +1,5 @@
 import { IntlProvider } from 'react-intl';
+
 import { ILangObject } from '../../interfaces';
 import { HeadProps } from '../Head/types';
 import { HeaderProps } from '../Header/types';
@@ -10,3 +11,5 @@ export type LayoutViewProps = {
   langsMenu: ILangObject[];
   locale: IntlProvider.Props['locale'];
 };
+
+export type LayoutProps = { location: Location };

@@ -1,21 +1,17 @@
-import { Link } from 'gatsby';
 import * as React from 'react';
+
+import { Link } from 'gatsby';
 
 import SelectLanguage from '../SelectLanguage';
 import { HeaderViewProps } from './types';
 
 export const HeaderView: React.FC<HeaderViewProps> = (props) => {
-  const {
-    // TODO: add types
-    langsMenu,
-    links,
-    toggleLanguage,
-  } = props;
+  const { langsMenu, links } = props;
 
   return (
     <header>
       <nav>
-        <SelectLanguage langsMenu={langsMenu} toggleLanguage={toggleLanguage} />
+        <SelectLanguage langsMenu={langsMenu} />
       </nav>
       <nav role={'navigation'}>
         <ul>

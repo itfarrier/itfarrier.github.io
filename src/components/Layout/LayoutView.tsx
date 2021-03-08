@@ -1,6 +1,7 @@
-import 'normalize.css';
 import * as React from 'react';
 import { IntlProvider } from 'react-intl';
+
+import 'normalize.css';
 
 import Context from '../Context';
 import Head from '../Head';
@@ -16,7 +17,7 @@ export const LayoutView: React.FC<LayoutViewProps> = (props) => {
         {() => (
           <>
             <Head href={href} i18nMessages={i18nMessages} {...props} />
-            <Header homeLink={homeLink} langsMenu={langsMenu} locale={locale} />
+            <Header homeLink={homeLink} langsMenu={langsMenu} />
             <main>{children}</main>
           </>
         )}

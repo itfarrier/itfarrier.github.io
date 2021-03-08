@@ -1,3 +1,5 @@
+import { Language } from './components/Context';
+
 export interface IData {
   allFile: { edges: Array<{ node: { childImageSharp: IChildImageSharp; id: string } }> };
   allMarkdownRemark: {
@@ -12,10 +14,8 @@ export interface IData {
 export interface IPage {
   children: object;
   data: IData;
-  pageContext?: {
-    next: INextPrevious;
-    previous: INextPrevious;
-  };
+  location: Location;
+  pageContext?: { next: INextPrevious; previous: INextPrevious };
 }
 
 export interface INextPrevious {
@@ -53,7 +53,7 @@ declare module '*.css' {
 }
 
 export interface ILangObject {
-  langKey: string;
+  langKey: Language;
   link: string;
   selected: boolean;
 }
