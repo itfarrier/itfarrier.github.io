@@ -1,5 +1,10 @@
 {
   "defaultSeverity": "error",
   "extends": ["./tslintSortOrder.json", "tslint-react", "tslint-react-a11y"],
-  "rules": { "interface-over-type-literal": false, "no-empty": false }
+  "rules": {
+    "array-type": { "options": "array", "severity": "error" },
+    "interface-over-type-literal": false,
+    "jsx-wrap-multiline": false,
+    "no-empty": false
+  }
 }
