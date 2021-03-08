@@ -1,49 +1,40 @@
 import * as React from 'react';
+import { createContext, FC, useEffect, useState } from 'react';
 
 import { LANGUAGE_CODES, LOCALSTORAGE_KEYS } from '../constants';
 
 export type Language = LANGUAGE_CODES | string;
 
-export type ContextInitialState = { language: Language; toggleLanguage(language: Language): void };
+export type ContextInitialState = {
+  language: Language;
+  toggleLanguage(nextLanguage: Language): void;
+};
 
 const initialState: ContextInitialState = { language: LANGUAGE_CODES.EN, toggleLanguage: () => {} };
 
-const Context = React.createContext<ContextInitialState>(initialState);
+const Context = createContext<ContextInitialState>(initialState);
 
-export class ContextProvider extends React.PureComponent<unknown, ContextInitialState> {
-  constructor(props: unknown) {
-    super(props);
+export const ContextProvider: FC = (props) => {
+  const [language, setLanguage] = useState<Language>(LANGUAGE_CODES.EN);
 
-    this.state = { language: LANGUAGE_CODES.EN, toggleLanguage: this.toggleLanguage };
-  }
+  const toggleLanguage: ContextInitialState['toggleLanguage'] = (nextLanguage) => {
+    localStorage.setItem(LOCALSTORAGE_KEYS.LANGUAGE, JSON.stringify(nextLanguage));
+    setLanguage(nextLanguage);
+  };
 
-  public componentDidMount() {
-    const { language } = this.state;
+  useEffect(() => {
+    const languageFromLocalStorage = JSON.parse(
+      localStorage.getItem(LOCALSTORAGE_KEYS.LANGUAGE) ?? '',
+    );
 
-    const isLanguageFromLocalStorage = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEYS.LANGUAGE));
-
-    if (isLanguageFromLocalStorage) {
-      this.setState({ language: isLanguageFromLocalStorage });
+    if (languageFromLocalStorage === '') {
+      setLanguage(languageFromLocalStorage);
     } else {
       localStorage.setItem(LOCALSTORAGE_KEYS.LANGUAGE, JSON.stringify(language));
     }
-  }
+  }, []);
 
-  public render() {
-    const { children } = this.props;
-    const { language } = this.state;
-
-    return (
-      <Context.Provider value={{ language, toggleLanguage: this.toggleLanguage }}>
-        {children}
-      </Context.Provider>
-    );
-  }
-
-  public toggleLanguage = (language: Language) => {
-    localStorage.setItem(LOCALSTORAGE_KEYS.LANGUAGE, JSON.stringify(language));
-    this.setState({ language });
-  };
-}
+  return <Context.Provider value={{ language, toggleLanguage }}>{props.children}</Context.Provider>;
+};
 
 export default Context;
