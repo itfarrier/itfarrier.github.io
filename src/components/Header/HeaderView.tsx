@@ -30,26 +30,6 @@ export const HeaderView: FC<HeaderViewProps> = (props) => {
               {'/wishlist'}
             </Link>
           </li>
-          <li>
-            <Link role={'link'} to={links[3]}>
-              {'/blog'}
-            </Link>
-          </li>
-          <li>
-            <Link role={'link'} to={links[4]}>
-              {'/inscriptions'}
-            </Link>
-          </li>
-          <li>
-            <Link role={'link'} to={links[5]}>
-              {'/books'}
-            </Link>
-          </li>
-          <li>
-            <Link role={'link'} to={links[6]}>
-              {'/videos'}
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>
