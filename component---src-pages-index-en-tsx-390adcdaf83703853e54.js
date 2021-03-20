@@ -1,0 +1,2 @@
+(self.webpackChunkpodabed_org=self.webpackChunkpodabed_org||[]).push([[331],{4764:function(o,e,n){"use strict";n.r(e);var a=n(7333),t=n(5893);e.default=function(o){return(0,t.jsx)(a.A,{location:o.location})}}}]);
+//# sourceMappingURL=component---src-pages-index-en-tsx-390adcdaf83703853e54.js.map
