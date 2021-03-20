@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';

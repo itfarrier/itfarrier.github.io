@@ -1,36 +1,41 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { Helmet } from 'react-helmet';
 
 import { Layout } from 'cmpts/Layout';
 
 const Inscriptions: FC = (props) => {
-  const {
-    allFile: { edges },
-  } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { eq: "inscriptions" } }) {
+      allFile(filter: { relativeDirectory: { eq: "images/inscriptions" } }) {
         edges {
           node {
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(layout: FULL_WIDTH)
             }
-            id
+            name
           }
+        }
+      }
+      site {
+        siteMetadata {
+          title
         }
       }
     }
   `);
 
-  const images = edges.map(({ node: { childImageSharp: { fluid }, id } }) => (
-    <Img fluid={fluid} key={id} />
-  ));
+  const images = data.allFile.edges.map((edge) => {
+    const { childImageSharp, name } = edge.node;
+
+    return <GatsbyImage alt={name} image={childImageSharp.gatsbyImageData} key={name} />;
+  });
 
   return (
-    <Layout location={props.location}>
+    <Layout>
+      <Helmet title={`${data.site.siteMetadata.title} — Надписи`} />
       <article>
         <header>
           <h1>{'Надписи'}</h1>

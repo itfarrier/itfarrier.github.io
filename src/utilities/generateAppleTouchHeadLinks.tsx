@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type GenerateAppleTouchHeadLinks = (
   fromSizesInPx: number[],
 ) => [normal: JSX.Element, precomposed: JSX.Element][];

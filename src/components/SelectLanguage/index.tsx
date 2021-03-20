@@ -1,28 +1,53 @@
-import React, { FC, useContext } from 'react';
+import { FC, useContext } from 'react';
 
-import { navigate } from 'gatsby';
+import { useLocation } from '@reach/router';
+import { graphql, navigate, useStaticQuery } from 'gatsby';
+import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
-import { Context } from 'cmpts/Context';
-import { SelectLanguageProps } from 'cmpts/SelectLanguage/types';
+import { Language, LanguageContext } from 'cmpts/LanguageContext';
 import { ILangObject } from 'src/interfaces';
 
-export const SelectLanguage: FC<SelectLanguageProps> = (props) => {
-  const { langsMenu } = props;
+export const SelectLanguage: FC = () => {
+  const { toggleLanguage } = useContext(LanguageContext);
 
-  const { toggleLanguage } = useContext(Context);
+  const { pathname } = useLocation();
 
-  const links = langsMenu.map((lang: ILangObject) => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          i18n {
+            defaultLanguage
+            languages
+          }
+          title
+        }
+      }
+    }
+  `);
+
+  const { defaultLanguage, languages } = data.site.siteMetadata.i18n;
+
+  const currentLanguage: Language = getCurrentLangKey(languages, defaultLanguage, pathname);
+  const homeUrl = `/${currentLanguage}/`;
+  const languagesMenu: ILangObject[] = getLangs(
+    languages,
+    currentLanguage,
+    getUrlForLang(homeUrl, pathname),
+  );
+
+  return languagesMenu.map((language: ILangObject) => {
+    const { langKey, link } = language;
+
     const onClick = () => {
-      toggleLanguage(lang.langKey);
-      navigate(lang.link);
+      toggleLanguage(langKey);
+      void navigate(link);
     };
 
     return (
-      <button key={lang.langKey} onClick={onClick}>
-        {lang.langKey}
+      <button key={langKey} onClick={onClick}>
+        {langKey}
       </button>
     );
   });
-
-  return <>{links}</>;
 };

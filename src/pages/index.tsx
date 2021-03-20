@@ -1,46 +1,57 @@
-import React, { PureComponent } from 'react';
+import { FC, PureComponent } from 'react';
 
-import { graphql, navigate, StaticQuery, withPrefix } from 'gatsby';
+import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
 
-class RedirectIndex extends PureComponent {
-  constructor(props: unknown) {
+import { Language } from 'cmpts/LanguageContext';
+
+export type RedirectorProps = { defaultLanguage: Language; languages: Language[] };
+
+class Redirector extends PureComponent<RedirectorProps> {
+  constructor(props: RedirectorProps) {
     super(props);
 
+    // https://www.gatsbyjs.com/docs/debugging-html-builds/#how-to-check-if-window-is-defined
     if (typeof window !== 'undefined') {
-      const { defaultLangKey, langs } = props.data.site.siteMetadata.languages;
-      const langKey = getUserLangKey(langs, defaultLangKey);
-      const homeUrl = withPrefix(`/${langKey}/`);
+      const { defaultLanguage, languages } = props;
 
-      navigate(homeUrl);
+      const currentLanguage = getUserLangKey(languages, defaultLanguage);
+
+      const localizedUrl = withPrefix(`/${currentLanguage}/`);
+
+      navigate(localizedUrl, { replace: true });
     }
   }
 
-  public render() {
-    return <div />;
+  render() {
+    return null;
   }
 }
 
-export default (props: unknown) => {
-  const render = (data) => {
-    return <RedirectIndex data={data} {...props} />;
-  };
+export type IndexQuery = {
+  site: { siteMetadata: { i18n: { defaultLanguage: Language; languages: Language[] } } };
+};
 
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              languages {
-                defaultLangKey
-                langs
-              }
-            }
+const Index: FC = () => {
+  const { site } = useStaticQuery<IndexQuery>(graphql`
+    query Index {
+      site {
+        siteMetadata {
+          i18n {
+            defaultLanguage
+            languages
           }
         }
-      `}
-      render={render}
+      }
+    }
+  `);
+
+  return (
+    <Redirector
+      defaultLanguage={site.siteMetadata.i18n.defaultLanguage}
+      languages={site.siteMetadata.i18n.languages}
     />
   );
 };
+
+export default Index;

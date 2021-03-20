@@ -1,8 +1,10 @@
-import React, { FC, useContext } from 'react';
+import { FC, useContext } from 'react';
 
-import { Context } from 'cmpts/Context';
+import { useLocation } from '@reach/router';
+import { graphql, useStaticQuery } from 'gatsby';
+
 import { HeadView } from 'cmpts/Head/HeadView';
-import { HeadProps } from 'cmpts/Head/types';
+import { LanguageContext } from 'cmpts/LanguageContext';
 import { generateAndroidChromeHeadLinks } from 'src/utilities/generateAndroidChromeHeadLinks';
 import { generateAppleTouchHeadLinks } from 'src/utilities/generateAppleTouchHeadLinks';
 import { generateFaviconHeadLinks } from 'src/utilities/generateFaviconHeadLinks';
@@ -23,13 +25,24 @@ const appleTouchIcons = generateAppleTouchHeadLinks([57, 60, 72, 76, 114, 120, 1
 
 const favicons = generateFaviconHeadLinks([16, 32]);
 
-export const Head: FC<HeadProps> = (props) => {
-  const {
-    href,
-    i18nMessages: { description, keywords, title },
-  } = props;
+export const Head: FC = () => {
+  const { language } = useContext(LanguageContext);
 
-  const { language } = useContext(Context);
+  const { href } = useLocation();
+
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          description
+          keywords
+          title
+        }
+      }
+    }
+  `);
+
+  const { description, keywords, title } = data.site.siteMetadata;
 
   return (
     <HeadView

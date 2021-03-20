@@ -13,4 +13,5 @@ tags:
   - JavaScript
 ---
 
-Мда, путь к Hexo с Octopress был очень долог. Начал качать скиллы Javascript, CSS, HTML и закончил новым блогом.
+Мда, путь к Hexo с Octopress был очень долог. Начал качать скиллы Javascript, CSS, HTML и закончил
+новым блогом.

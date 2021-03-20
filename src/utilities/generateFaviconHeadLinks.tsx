@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type GenerateFaviconHeadLinks = (fromSizesInPx: number[]) => JSX.Element[];
 
 export const generateFaviconHeadLinks: GenerateFaviconHeadLinks = (fromSizesInPx) => {

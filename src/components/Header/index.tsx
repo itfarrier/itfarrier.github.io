@@ -1,11 +1,46 @@
-import React from 'react';
+import { FC } from 'react';
+
+import { useLocation } from '@reach/router';
+import { graphql, useStaticQuery } from 'gatsby';
+import { getCurrentLangKey } from 'ptz-i18n';
 
 import { HeaderView } from 'cmpts/Header/HeaderView';
-import { HeaderProps } from 'cmpts/Header/types';
+import { Language } from 'cmpts/LanguageContext';
 import cv from 'docs/cv-podabed.pdf';
 
-export const Header: React.FC<HeaderProps> = (props) => {
-  const { homeLink, langsMenu } = props;
+export const Header: FC = () => {
+  const { pathname } = useLocation();
 
-  return <HeaderView langsMenu={langsMenu} links={[homeLink, cv, `${homeLink}wishlist`]} />;
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          i18n {
+            defaultLanguage
+            languages
+          }
+          title
+        }
+      }
+    }
+  `);
+
+  const { defaultLanguage, languages } = data.site.siteMetadata.i18n;
+
+  const currentLanguage: Language = getCurrentLangKey(languages, defaultLanguage, pathname);
+  const homeUrl = `/${currentLanguage}/`;
+
+  return (
+    <HeaderView
+      links={[
+        homeUrl,
+        cv,
+        `${homeUrl}wishlist`,
+        `${homeUrl}blog`,
+        `${homeUrl}inscriptions`,
+        `${homeUrl}books`,
+        `${homeUrl}videos`,
+      ]}
+    />
+  );
 };

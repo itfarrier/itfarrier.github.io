@@ -22,7 +22,9 @@ module.exports = {
       parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'prettier'],
       rules: {
+        'react/jsx-uses-react': 'off',
         'react/prop-types': 0,
+        'react/react-in-jsx-scope': 'off',
       },
       settings: {
         'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
@@ -66,8 +68,8 @@ module.exports = {
     'import/order': [
       'error',
       {
-        alphabetize: { order: 'asc' },
-        groups: [
+        'alphabetize': { order: 'asc' },
+        'groups': [
           'builtin',
           'external',
           'internal',
@@ -78,8 +80,8 @@ module.exports = {
           'unknown',
         ],
         'newlines-between': 'always',
-        pathGroups: [{ group: 'builtin', pattern: 'react', position: 'before' }],
-        pathGroupsExcludedImportTypes: ['react'],
+        'pathGroups': [{ group: 'builtin', pattern: 'react', position: 'before' }],
+        'pathGroupsExcludedImportTypes': ['react'],
       },
     ],
     'prettier/prettier': 'error',
