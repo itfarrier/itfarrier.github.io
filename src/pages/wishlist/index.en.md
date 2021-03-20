@@ -6,7 +6,7 @@ type: page
 
 ## Needs:
 
-- 3 iPhones;
+- 2 iPhones;
 - NAS;
 - Better stereo;
 - Curved clincher;
