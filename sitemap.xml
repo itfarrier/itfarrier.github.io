@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://podabed.org/en/wishlist/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://podabed.org/ru/videos/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://podabed.org/ru/wishlist/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://podabed.org/ru/books/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://podabed.org/en/videos/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://podabed.org/en/books/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://podabed.org/ru/wishlist/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://podabed.org/ru/videos/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://podabed.org/ru/books/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://podabed.org/en/wishlist/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://podabed.org/en/blog/2017-03-13-vosstanovlenie/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://podabed.org/en/blog/2016-09-21-pierievod/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://podabed.org/en/blog/2016-09-14-troitsa-ili-dien&#039;-trietii/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
