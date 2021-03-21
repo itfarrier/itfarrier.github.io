@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://podabed.org/./src/pages/404.tsx"],"names":[],"mappings":"qHAIA,UAJqB,WACnB,OAAO","file":"component---src-pages-404-tsx-8b97d9425f420c58c566.js","sourcesContent":["const NotFoundPage = () => {\n  return 404;\n};\n\nexport default NotFoundPage;\n"],"sourceRoot":""}
