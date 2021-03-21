@@ -1,8 +1,8 @@
 {
   "author": {
-    "email": "dmitrij@podabed.org",
+    "email": "iam@itfarrier.com",
     "name": "Dmitrij Podabed",
-    "url": "https://podabed.org"
+    "url": "https://itfarrier.com"
   },
   "dependencies": {
     "gatsby": "^3.1.1",
@@ -24,7 +24,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
   },
-  "description": "podabed.org",
+  "description": "ITFarrier",
   "devDependencies": {
     "@types/graphql": "^14.2.3",
     "@types/node": "^14.14.35",
@@ -50,14 +50,12 @@
     "typescript": "^4.2.3"
   },
   "keywords": [
-    "IT farrier",
-    "blog",
-    "gatsby",
-    "itfarrier",
-    "personal",
-    "podabed"
+    "IT Farrier",
+    "IT",
+    "farrier",
+    "itfarrier"
   ],
-  "name": "podabed.org",
+  "name": "itfarrier",
   "private": true,
   "scripts": {
     "build": "gatsby build --verbose",
