@@ -6,7 +6,7 @@ type: page
 
 ## Needs:
 
-- 2 iPhones;
+- iPhone 12 mini;
 - NAS;
 - Better stereo;
 - Curved clincher;
