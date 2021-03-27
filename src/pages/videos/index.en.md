@@ -4,8 +4,8 @@ title: Videos
 type: page
 ---
 
-- Фильмы про супергероев — все хуйня и говно (это чтобы не писать про каждый из них, что хуйня и
-  говно). Просто посмотрел тут (ну, как посмотрел, проскакал фильмы минут за 10) «Batman vs
-  Superman: Dawn of Justice (2016)» и «Captain America: Civil War (2016)». Какая всё-таки жвачка.
-- Горько!(2013) — В очередной раз посмотрел это кино. Клёво, чего тут. Это фильм-предостережение для
-  брачующихся (sic!), какой не должна быть их свадьба.
+- Movies about superheroes are all bullshit. I’ve just watched (well, simply jumped via whole film
+  for 10 minutes) «Batman vs Superman: Dawn of Justice (2016)» and «Captain America: Civil War
+  (2016)».
+- Горько! (2013) — I watched this movie again. And it’s cool. This movie is a warning for newlyweds
+  (sic!) how their wedding shouldn’t look like.
