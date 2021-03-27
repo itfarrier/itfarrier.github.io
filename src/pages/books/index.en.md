@@ -4,37 +4,38 @@ title: Books
 type: page
 ---
 
-## Overcomed:
+## Done:
 
-- Олег Юрьевич Тиньков — «Я такой как все» (2015). Пиздит. Нихуя не такой. Тогда бы все были с
-  состоянием 1,7 млрд. баксов.
-- Олег Юрьевич Тиньков — «Как стать бизнесменом» (2012). Понравилось.
-- Досси Истон — «Этика блядства» (2007). Опять ебучая психология с дивана (это я про анализ
-  поведения героев), но в общем согласен с основной мыслью.
-- Сергей Викторович Яров — «Повседневная жизнь блокадного Ленинграда» (2013). Очень много
-  рассуждений, анализов, отношения автора к документам. Не понравилось.
-- Лидия Алексеевна Невзорова — «Теория и практика школьной расчистки» (2010). Не согласен, что
-  «кованые НЕ МОГУТ быть здоровы». Ковалю следует это прочесть, чтобы знать «врага» в лицо. В книге
-  много красочных подробных фотоиллюстраций, что прекрасно. И много ПАФОСА: Школа, Теория Школьной
-  Расчистки, Метод Школы… Тьфу.
-- Лидия Алексеевна Невзорова — «Как достичь баланса» (2009). Аналогично. Пафос, ковка — зло. Но про
-  баланс рассказано заебись: поймёт любой.
-- Алексей Петрович Ермолов — «Записки русского генерала» (2014). Очень интересно. Весьма деликатно
-  описаны ужасы войны: «с потерею двух человек вырезано до 400 душ всякого возраста и обоего пола».
-  Присутствует и критика Ермолова от современников, что не делает его образ таким идеальным.
-- Дин Маклафлин — «Ястреб среди воробьёв» (1992). Ненавязчивый фантастический рассказ про оружие
-  будущего против оружия прошлого. Основная мысль: «Всему своё время».
-- Сергей Донатович Довлатов — «Заповедник» (2016). Венечка не в поезде. И никаких рецептов.
-- Сергей Донатович Довлатов — «Зона: Записки надзирателя» (1982). Скука. Написано про людей, а не
-  про зону. Но всё равно прочёл.
-- Антон Викторович Кротов — «Практика вольных путешествий» (2015). Очень полезная книга не только
-  для автостопщика, но и для любого человека, интересно написанная.
-- Анджей Сапковский — «Ведьмак». Интересно. В игру не играл.
+- Oleg Tinkov — «I’m Just Like Anyone Else» (2015): Bullshit. He is not common. Then everyone would
+  be with $1.7BN.
+- Oleg Tinkov — «How to become a businessman» (2012): Liked.
+- Dossie Easton — «The Ethical Slut» (2007): Fucking «sofa» psychology again. But I agree with the
+  main idea.
+- Sergej Viktorovich Jarov — «Everyday life of besieged Leningrad» (2013): A lot of reasoning,
+  analysis, the author’s attitude to documents. Don’t like.
+- Lidija Alekseevna Nevzorova — «School’s trimming theory and practice» (2010): Disagree that «shod
+  horses must not be healthy». A farrier should read this to know the enemy in his face. The book
+  has many colored illustrations and this is very good. And too many PATHOS: School, School’s
+  Trimming Theory, School’s Method… Ugh!
+- Lidija Alekseevna Nevzorova — «How to achieve balance» (2009): The same. PATHOS, shoeing is evil.
+  But written very good about the balance: anyone should understand.
+- Aleksey Petrovich Yermolov — «Russian general memoirs» (2014): Very interesting. Horrors of war
+  described very gently: «up to 400 souls of all ages and both sexes were massacred with the loss of
+  two people». There is also criticism of Yermolov from his contemporaries, which does not make him
+  so ideal.
+- Dean McLaughlin — «Hawk Among the Sparrows» (1992): An unobtrusive science fiction novella about
+  the weapons of the future against the weapons of the past. The main idea: «All in good time».
+- Sergei Donatovich Dovlatov — «Pushkin Hills» (2016): Venechka is not on the train. And no recipes.
+- Sergei Donatovich Dovlatov — «The Zone: A Prison Camp Guard's Story» (1982): Boredom. It is
+  written about people, not about the zone. But I read it anyway.
+- Anton Viktorovich Krotov — «Practice of free travels» (2015): A very useful book not only for a
+  hitchhiker but also for any person, interestingly written.
+- Andrzej Sapkowski — «The Witcher»: Good fantasy.
 
-## Бросил на полпути:
+## Failed:
 
-- Андрей Андреевич Громыко — «Памятное» (1988). Одолел один том. Очень интересно, да уж больно
-  скучно. Как Библия. Я про советских политиков думал, как Новосельцев: «…вы сухарь!…В вас нет
-  ничего человеческого!…В вас нет сердца, потому что у вас одни цифры и отчёты…». Эта книга показала
-  мне, что хотя бы Громыко был очень интересным человеком.
-- Томас Метцингер — «Туннель эго». Устал на 21 странице, слишком для меня сложно.
+- Andrei Andreyevich Gromyko — «Memoirs» (1988): I finished only one volume. It’s very interesting,
+  but it’s too boring. Like the Bible. I thought about Soviet politicians, like Novoseltsev: «…you
+  are a rusk!…There is nothing human in you!…There is no heart in you because you have only numbers
+  and reports…». This book showed me that at least Gromyko was a very interesting person.
+- Thomas Metzinger — «The Ego Tunnel»: Tired on page 21, too difficult for me.
