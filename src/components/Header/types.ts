@@ -1,5 +1,5 @@
-import { GatsbyLinkProps } from 'gatsby';
+import { HeaderLinkProps } from 'cmpts/HeaderLink/types';
 
-export type Link = GatsbyLinkProps<unknown>['to'];
-
-export type HeaderViewProps = { links: [home: Link, cv: Link, wishlist: Link] };
+export type HeaderViewProps = {
+  links: { text: HeaderLinkProps['text']; to: HeaderLinkProps['to'] }[];
+};
