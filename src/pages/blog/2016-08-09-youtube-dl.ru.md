@@ -1,6 +1,5 @@
 ---
 title: 'youtube-dl'
-comments: true
 date: 2016-08-09 22:43:51
 categories:
   - IT

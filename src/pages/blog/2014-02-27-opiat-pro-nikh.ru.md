@@ -1,6 +1,5 @@
 ---
 title: 'Опять про них'
-comments: true
 date: 2014-02-27 08:51:58
 categories:
   - негодование

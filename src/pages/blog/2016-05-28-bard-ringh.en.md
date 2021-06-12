@@ -1,6 +1,5 @@
 ---
 title: 'Bard-ring'
-comments: true
 date: 2016-05-28 21:20:58
 categories:
   - цитата

@@ -1,6 +1,5 @@
 ---
 title: 'Hardcore Henry'
-comments: true
 date: 2016-06-23 12:44:41
 categories:
   - кино

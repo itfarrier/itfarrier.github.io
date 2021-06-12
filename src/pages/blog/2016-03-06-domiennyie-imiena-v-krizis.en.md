@@ -1,6 +1,5 @@
 ---
 title: 'Domain names in times of crisis'
-comments: true
 date: 2016-03-06 14:16:38
 categories:
   - IT

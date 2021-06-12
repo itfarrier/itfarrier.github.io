@@ -1,6 +1,5 @@
 ---
 title: 'Новый дизайн ВКонтакте'
-comments: true
 date: 2016-04-17 10:47:53
 categories:
   - IT

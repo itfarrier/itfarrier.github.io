@@ -1,6 +1,5 @@
 ---
 title: 'Донорство'
-comments: true
 date: 2016-05-11 17:54:48
 categories:
   - мысли вслух

@@ -1,6 +1,5 @@
 ---
 title: 'Wileyfox Swift'
-comments: true
 date: 2016-03-16 14:56:51
 categories:
   - IT

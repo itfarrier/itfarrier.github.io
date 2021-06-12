@@ -1,6 +1,5 @@
 ---
 title: 'About the benefits of 2ch'
-comments: true
 date: 2014-03-18 17:41:09
 categories:
   - диалог

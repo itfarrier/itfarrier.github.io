@@ -1,6 +1,5 @@
 ---
 title: 'Что значит «Подобед»?'
-comments: true
 date: 2014-07-05 17:58:28
 categories:
   - копипаста

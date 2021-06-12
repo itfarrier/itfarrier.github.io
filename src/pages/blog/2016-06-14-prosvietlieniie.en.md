@@ -1,6 +1,5 @@
 ---
 title: 'Enlightenment'
-comments: true
 date: 2016-06-14 22:11:27
 categories:
   - IT

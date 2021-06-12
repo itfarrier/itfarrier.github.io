@@ -1,6 +1,5 @@
 ---
 title: 'Relatos salvajes'
-comments: true
 date: 2016-03-16 20:56:05
 categories:
   - кино

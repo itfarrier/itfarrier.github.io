@@ -1,6 +1,5 @@
 ---
 title: 'Reading of Mayakovsky'
-comments: true
 date: 2016-04-25 14:21:34
 categories:
   - мероприятие

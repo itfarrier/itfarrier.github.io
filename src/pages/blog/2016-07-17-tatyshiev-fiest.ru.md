@@ -1,6 +1,5 @@
 ---
 title: 'Татышев фест'
-comments: true
 date: 2016-07-17 19:58:33
 categories:
   - мероприятие

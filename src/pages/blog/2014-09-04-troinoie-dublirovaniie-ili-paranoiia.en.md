@@ -1,6 +1,5 @@
 ---
 title: 'Triple duplication or paranoia'
-comments: true
 date: 2014-09-04 07:23:48
 categories:
   - IT

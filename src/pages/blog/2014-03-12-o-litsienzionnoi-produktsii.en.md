@@ -1,6 +1,5 @@
 ---
 title: 'About licensed products'
-comments: true
 date: 2014-03-12 11:14:27
 categories:
   - негодование

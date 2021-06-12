@@ -1,6 +1,5 @@
 ---
 title: 'Translation'
-comments: true
 date: 2016-09-21 13:55:05
 categories:
   - мысли вслух

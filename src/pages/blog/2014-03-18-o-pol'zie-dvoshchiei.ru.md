@@ -1,6 +1,5 @@
 ---
 title: 'О пользе <del>о</del>двощей'
-comments: true
 date: 2014-03-18 17:41:09
 categories:
   - диалог

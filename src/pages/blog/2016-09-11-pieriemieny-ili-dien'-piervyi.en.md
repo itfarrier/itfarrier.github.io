@@ -1,6 +1,5 @@
 ---
 title: 'Changes or day first'
-comments: true
 date: 2016-09-11 09:33:54
 categories:
   - путешествие

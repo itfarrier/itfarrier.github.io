@@ -1,6 +1,5 @@
 ---
 title: 'О провайдерах'
-comments: true
 date: 2014-02-21 22:36:54
 categories:
   - негодование

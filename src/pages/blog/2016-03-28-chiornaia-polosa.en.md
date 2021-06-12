@@ -1,6 +1,5 @@
 ---
 title: 'Black line'
-comments: true
 date: 2016-03-28 07:26:12
 categories:
   - мероприятие

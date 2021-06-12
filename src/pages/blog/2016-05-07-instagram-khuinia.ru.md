@@ -1,6 +1,5 @@
 ---
 title: 'Instagram — хуйня!'
-comments: true
 date: 2016-05-07 11:26:23
 categories:
   - IT

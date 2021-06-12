@@ -1,6 +1,5 @@
 ---
 title: Восстановление
-comments: true
 date: 2017-03-13 10:17:25
 language: ru
 categories:

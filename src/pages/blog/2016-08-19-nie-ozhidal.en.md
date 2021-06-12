@@ -1,6 +1,5 @@
 ---
 title: 'Not expected'
-comments: true
 date: 2016-08-19 16:42:20
 categories:
   - путешествие
