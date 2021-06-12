@@ -61,16 +61,16 @@
     "build": "gatsby build --verbose",
     "clean": "rm -rf .cache public",
     "deploy": "yarn clean && git push origin source && yarn build && cp CNAME public/ && gh-pages -b master -d public",
-    "deployTest": "yarn clean && git push test && yarn build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
+    "deploy-test": "yarn clean && git push test && yarn build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
     "eslint": "eslint . --ext .js,.jsx",
-    "eslintAutoFixWholeProject": "eslint . -c ./.eslintrc.autoFixes.js --debug --fix --no-eslintrc",
-    "prettierWholeProject": "prettier --loglevel debug --write '**/*.{css,js,json,jsx,markdown,md,scss,ts,tsx}'",
+    "eslint-auto-fix-the-whole-project": "eslint . -c ./.eslintrc.autoFixes.js --debug --fix --no-eslintrc",
+    "prettier-the-whole-project": "prettier --loglevel debug --write '**/*.{css,js,json,jsx,markdown,md,scss,ts,tsx}'",
     "setup": "rm -rf .cache node_modules public && yarn --verbose",
     "start": "yarn clean && gatsby develop -p 8000 --verbose",
-    "startProd": "yarn clean && yarn build && gatsby serve -p 8000 --verbose",
-    "upgradeAllDepsToLatest": "ncu -l debug --timeout 999999999 -u && yarn && yarn up -C",
-    "upgradeDevDepsToLatest": "ncu --dep dev -l debug -u && yarn --verbose",
-    "upgradeProdDepsToLatest": "ncu --dep prod -l debug -u && yarn --verbose"
+    "start-prod": "yarn clean && yarn build && gatsby serve -p 8000 --verbose",
+    "upgrade-all-deps": "ncu -l debug --timeout 999999999 -u && yarn && yarn up -C",
+    "upgrade-dev-deps": "ncu --dep dev -l debug -u && yarn --verbose",
+    "upgrade-prod-deps": "ncu --dep prod -l debug -u && yarn --verbose"
   },
   "version": "3.0.0"
 }
