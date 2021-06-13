@@ -36,6 +36,7 @@ export const Header: FC = () => {
         { text: '/', to: homeUrl },
         { text: '/books', to: `${homeUrl}books` },
         { text: '/cv', to: cv },
+        { text: '/videos', to: `${homeUrl}videos` },
         { text: '/wishlist', to: `${homeUrl}wishlist` },
       ]}
     />
