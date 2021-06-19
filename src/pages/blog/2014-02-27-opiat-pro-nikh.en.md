@@ -11,7 +11,8 @@ tags:
   - тариф
 ---
 
-Мегафон отрапортовал: «<a href="http://habrahabr.ru/company/megafon/blog/213991">Самая быстрая в
-мире сеть передачи данных от «МегаФона</a>». Заебись, чо! Но посмотрим в тарифы:
-<a href="http://megafon.ru/internet">http://megafon.ru/internet</a>. И вот радость пропала, лицо
-закрылось рукой...
+MegaFon reported: «<a href="http://habrahabr.ru/company/megafon/blog/213991">The fastest network in
+the world from „MegaFon“</a>». Fuck!
+
+But see in the tariffs: <a href="http://megafon.ru/internet">https://megafon.ru/internet</a>. And
+now the joy was gone, the face was facepalmed…
