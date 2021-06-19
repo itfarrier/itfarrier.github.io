@@ -10,23 +10,23 @@ tags:
   - ОС
 ---
 
-Почти как полгода полностью перешёл на Linux.
+Almost half a year I completely switched to the Linux.
 
-Мои плюсы:
+Pros:
 
-— Бесплатность. Для меня самый важный фактор <del>я ж нищеброд</del>.
+- Free. The most important for me. ~~’cause I’m poor~~
 
-— Возможность «задротства». Использую вместо игр.
+- Possibility for «nerding». I use it instead of games.
 
-— ГИПОТЕТИЧЕСКАЯ возможность посмотреть исходники и убедиться, что АНБ, ФСБ и др. не следят.
-На практике хуй у одного человека хватит знаний в этом убедиться.
+- HYPOTHETICAL possibility for security audit of source code. It’s impossible for the regular human
+  being.
 
-— Возможность сделать систему УДОБНОЙ лично для себя.
+- Deep customizing possibility.
 
-— «Более лучшая» поддержка таких штук как TOR, I2P, CJDNS. Они просто работают в фоне.
+- Better working with TOR, I2P, CJDNS etc. It just works.
 
-— Удобное обновление всей системы вместе с программами.
+- Package manager for upgrading the whole system with all apps.
 
-Мои минусы:
+Cons:
 
-— «Скучные обои».
+- Bored wallpapers.
