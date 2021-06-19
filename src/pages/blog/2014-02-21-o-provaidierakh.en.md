@@ -12,14 +12,13 @@ tags:
   - трафик
 ---
 
-Думаю, у всех провайдеров есть примерно такое:
+I think all ISPs have something like this:
 
-«4.3.2. Временно, в период часов наибольшей нагрузки на Сеть, ограничивать полосу пропускания
-трафика для сервисов, использующих ресурсы Сети для доступа к пиринговым файлообменным сетям (в т.
-ч. с использованием технологии распределенного распространения файлов BitTorrent и пр.), загрузки
-файлов большого объема, а также доступа к потоковым мультимедиа-ресурсам (в т. ч. аудио- и
-видеостриминга), если использование этих сервисов существенно увеличивает объем трафика и снижает
-полосу пропускания трафика для других сервисов.»
+«4.3.2 Temporarily in time with the highest Network loading throttle traffic speed for services that
+use Network resources for access to P2P networks (including BitTorrent technology etc.), load big
+size files and for access streaming resources (including audio- and video-streaming) if using them
+critically increase traffic volume and decrease traffic speed for others.»
 
-Т. е., они хотят, чтобы я использовал все сумасшедшие мегабайты и мегабиты скорости для почты и
-фэйсбучиков. Хуй вам! TOR и I2P «спасут гиганта мысли». Пока не начнут резать и их.
+I. e. they want that I use all insane megabytes and megabits of network speed only for email and
+«facebooks». Fuck you all! TOR and I2P «will save the giant of thought». Until they will filter them
+too.
