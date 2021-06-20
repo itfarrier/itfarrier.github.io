@@ -9,8 +9,9 @@ tags:
   - интернет
 ---
 
-Решил сократить количество подписок в блокировщике рекламы. Начал по очереди отключать и удивляться
-появляющейся рекламе. Она оказалась везде: в шапке сайта, в подвале, в сайдах, между постами и в
-постах. Включил всё обратно: пусть лучше страница загружается чуть медленнее, чем наблюдать весь
-этот пиздец. Каждый раз, как вижу браузер без блокировщика, удивляюсь, как люди пользуются так
-интернетом? Там же столько дерьма в глаза льют.
+I decided to reduce the number of adblocker subscriptions. Started to turn them off one to one and
+was surprised ’cause of becoming ads. It was everywhere: in the header, in the footer, in the
+sidebar, between posts, and inside them.
+
+Reverted subscriptions back. I prefer slow page loading instead of seeing ads. Every time when I see
+a browser without an adblocker I was wondered how people may use it like this? Too much bullshit.
