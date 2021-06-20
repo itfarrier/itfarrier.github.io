@@ -15,13 +15,12 @@ tags:
   - cwm
 ---
 
-Искал метод сделать на своём смарте автоматический бэкап через CWM и в итоге наткнулся
-на <a href="https://play.google.com/store/apps/details?id=com.h3r3t1c.onnandbup">Online Nandroid
-Backup \* ROOT</a>. На форумах пишут про опасности живых бэкапов файловой системы, но мой аппарат
-в списке официально поддерживаемых, да, и протестировал я несколько живых бэкапов, восстановился
-с них без каких-либо проблем.
+I was looking for a method for automatic backup through CWM and found
+<a href="https://play.google.com/store/apps/details?id=com.h3r3t1c.onnandbup">Online Nandroid
+Backup \* ROOT</a>. I read about the danger of live file system backups but my device is officially
+supported and I’ve tested several live backups restoring. No problems.
 
-В итоге у меня теперь бэкап по расписанию через
+Finally, I have recurring backups through
 <a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup">Titanium Backup
 ★ root</a>, <a href="https://play.google.com/store/apps/details?id=com.h3r3t1c.onnandbup">Online
-Nandroid Backup \* ROOT</a> и стандартный гугловский. Это ли не <del>пиздец</del> паранойя?
+Nandroid Backup \* ROOT</a>, and standard android. This is paranoia, isn’t it?
