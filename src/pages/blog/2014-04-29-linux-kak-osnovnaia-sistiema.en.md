@@ -1,5 +1,5 @@
 ---
-title: 'Linux like main OS'
+title: 'Linux as main OS'
 date: 2014-04-29 08:58:09
 categories:
   - IT
