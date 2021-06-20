@@ -8,8 +8,7 @@ tags:
   - Wileyfox Swift
 ---
 
-Много где была джинса, как он хорош. Таки это правда, за 89 баксов действительно заебись. Но меня
-выбесила Cyanogen OS. Вот вроде бы основана на CM, но говна там как в любой стоковой прошивке. Один
-хуй пришлось пердолиться: разблокировать загрузчик, менять рекавери, менять прошивку на CM. Минус
-поменьше - отсутствие физических кнопок Back, Home, Menu. Их отображение отнимает довольно солидный
-кусок, а если их убрать, то нужно каждый раз делать свайп, чтобы они появились. В общем, негодую.
+I see ads about how it’s good in many places. So, it’s true. Awesome for $89. But I irritated 'cause
+of Cyanogen OS. It based on CM but contains much bloatware as any stock firmware. So, I should do
+geek stuff: unlock the bootloader, replace recovery, replace firmware to CM. A little con is no
+physical button on phone. It shows on display. So, I’m nervous.
