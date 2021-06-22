@@ -9,4 +9,6 @@ tags:
   - голос
 ---
 
-<p>Поговорил с&nbsp;нею. Голос тихий, вкрадчивый, почти неслышный&hellip; Но&nbsp;когда она поёт, голос настолько другой, <nobr>как-будто</nobr> другого человека: громкий, довольно высокий, с&nbsp;нотами плача, иногда срывающийся. Насколько, <nobr>всё-таки</nobr>, повседневный голос у&nbsp;поющих иногда отличается от&nbsp;певческого.</p>
+I talked with her. The voice is quiet, insinuating, almost inaudible… But when she sings, the voice
+is so different, as from a different person: loud, rather high, with some crying, sometimes
+breaking. How much, after all, the common singer voice sometimes differs from the singing one.
