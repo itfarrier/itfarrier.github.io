@@ -10,23 +10,22 @@ tags:
   - КПД
 ---
 
-![Билет на немузейку](nemuzejka-02042016.jpg) Ну, впечатления устаканились, можно и&nbsp;написать.
+![#nemuzejka ticket](nemuzejka-02042016.jpg)
 
-Впервые после того, как он&nbsp;был ужасной рыгаловкой, посетил Пилот. Естественно, ради КПД.
-Но&nbsp;зацепил ещё и&nbsp;плохих поэтов. Сначала стихи действительно были <nobr>какие-то</nobr>
-<del>говно</del> плохие. Я&nbsp;даже испытал испанский стыд. Но&nbsp;потом они преобразились
-во&nbsp;вполне себе хорошие и, даже, весёлые. КПД порадовали, как всегда (<nobr>всего-то</nobr> 2
-раза слушал вживую, а&nbsp;уже &laquo;всегдакаю&raquo; :D). Услышал новую песню, но&nbsp;опять
-не&nbsp;понял слов. :( Конферансье был впечатлён количеством инструментов группы (что есть,
-то&nbsp;есть). Тут к&nbsp;месту цитата <nobr>SMM-щика</nobr> группы:
+Well, the impressions are settled, I can write.
 
-> У&nbsp;нас было 2 гитары, 75 шумелок, 5 губных гармошек, полчемодана шейкеров и&nbsp;целое
-> множество флейт всех сортов и&nbsp;расцветок, а&nbsp;так&nbsp;же укулеле, агого, шалюмо, ящик
-> кахона, мастеровой курай и&nbsp;2 аккордеона. Не&nbsp;то&nbsp;чтобы это был необходимый запас для
-> выступления, но&nbsp;если начал пахнуть деревьями, становится сложно остановиться. Единственное,
-> что вызывало у&nbsp;нас опасение&nbsp;&mdash; это диджериду. Ничто в&nbsp;мире не&nbsp;бывает
-> более беспомощным, безответственным и&nbsp;порочным, чем игра на&nbsp;диджериду. Мы&nbsp;знали,
-> что рано или поздно мы&nbsp;перейдем и&nbsp;на&nbsp;эту дрянь.
+I visited “Pilot” for the first time since it was a terrible place. Naturally, for the CSLT. But
+also I’ve seen the bad poets. At the first time, the lyrics were really bad. I even experienced
+vicarious embarrassment. But then they became quite good and even funny. CSLT pleased, as always
+(only 2 times listened to their lives, and already say “always”: D). I heard a new song, but again I
+did not understand the words. : (The entertainer was impressed by the number of instruments in the
+band (which is, that is). Here is a quote from the band’s SMM manager:
 
-После концерта я&nbsp;узнал, что у&nbsp;КПДшников уже есть свой небольшой фэндом, что радует, куда
-вхожу и&nbsp;я.
+> We had 2 guitars, 75 noisemakers, 5 harmonicas, half of the suitcase shakers, and a whole galaxy
+> of flutes of all types and colors and also ukulele, agogo, chalumeau, cajon, handmade quray, and 2
+> piano accordions. Not that we needed all that for the performance, but once you get smelled like
+> trees it becomes too difficult to stop. The only thing that caused us was the didgeridoo. Nothing
+> in the world is more helpless, irresponsible, and vicious than didgeridoo playing. We knew that
+> sooner or later we would switch to this rubbish.
+
+After the concert, I learned that the CSLT already has their own small fandom and I’m in it.
