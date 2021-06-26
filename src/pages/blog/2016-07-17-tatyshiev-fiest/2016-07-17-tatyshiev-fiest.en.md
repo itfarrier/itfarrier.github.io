@@ -15,26 +15,26 @@ tags:
   - фестиваль
 ---
 
-13 июля посетил <nobr>из-за</nobr> неких двоих это мероприятие. Понравилось, только вот обидно, что
-было мало людей. Наверное, потому, что рекламы у&nbsp;мероприятия было совсем нихуя.
-Я&nbsp;о&nbsp;фесте узнал случайно, потому и&nbsp;сходил.
+On July 13th, I attended this event because of some two. I liked it, but it’s a shame that there
+were few people. Probably because the advertising for the event was absolutely shitty. I found out
+about the fest by chance, that’s why I went.
 
-Последний шиллинг как всегда отыграли охуенно и&nbsp;весело. С&nbsp;плясками и&nbsp;хороводами.
-Только мало (откровенно говоря, мало было всего).
+“The last shilling” was played as cool as always. With dances and round dances. Only a little
+(frankly, there was little of everything).
 
 ![](IMG_20160713_180011.jpg)
 
-К&nbsp;своему стыду, впервые услышал Инну Желанную и&nbsp;Сергея Старостина. Старостин
-не&nbsp;по&nbsp;мне, а&nbsp;вот Желанная вкатила. Очень напомнила Orange Blossom. Колыбельная
-в&nbsp;её исполнении годится только умертвления. :D Драйв невероятный, конечно.
+To my shame, I firstly heard Inna Zhelannaya and Sergei Starostin. Starostin is not for me, but
+Zhelannaya rolled in. Very reminiscent of “Orange Blossom”. The lullaby in her performance is
+suitable only for mortification. :D The drive is incredible, of course.‘
 
 ![](IMG_20160713_202116.jpg)
 
-Ещё <nobr>из-за</nobr> моей любви к&nbsp;горловому пению понравились &laquo;Иренек Хан&raquo;. Жаль,
-нельзя послушать дома, больно уж&nbsp;мало записей в&nbsp;сети.
+Also because of my love for throat singing, I liked “Irenek Khan”. It’s a pity, you can’t listen to
+it at home, there are too few recordings on the net.
 
 ![](IMG_20160713_212541.jpg)
 
-Даже панораму сделал. Вот так уныло прошло заебательское, в&nbsp;<nobr>общем-то</nobr>, мероприятие.
+I even made a panorama. This is how depressingly, in general, the cool event passed.
 
 ![](PANO_20160713_202011.jpg)
