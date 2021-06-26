@@ -13,3 +13,11 @@ type: page
   extreme situation. Pros, in my opinion, in this almanac is not ~~146~~100% tragedy in each novel:
   it contains happy, fun and fantastic. In fun, I suppose, author compared heroes with ovises
   (Hello, “Modern Times”). So stupid it started, continued and finished. You should see.
+
+- Хардкор (2015) — Вот и&nbsp;посмотрел то, что так долго ждал. Если коротко, то&nbsp;заебись всё,
+  кроме сюжета. На&nbsp;мой взгляд, именно &laquo;отпервоголицевости&raquo; не&nbsp;хватает
+  боевикам. Этот приём зацепил ещё в&nbsp;том хуёвом фильме &laquo;Doom&raquo; по&nbsp;мотивам
+  охуенной игры. А&nbsp;тут весь фильм, как стрелялка! В&nbsp;некоторых моментах голова шла кругом,
+  в&nbsp;некоторых слишком много тряски. Думаю, этот приём будут использовать теперь чаще, ведь
+  Хардкор проложил путь, закончившийся не&nbsp;очень успешно <nobr>из-за</nobr> никакого сюжета. Но
+  смотрелось оригинально.
