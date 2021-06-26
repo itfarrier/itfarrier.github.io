@@ -9,47 +9,45 @@ tags:
   - поэзия
 ---
 
-![Батя](batya.jpg)
+![Father](batya.jpg)
 
-24 апреля 2016 года в&nbsp;Красноярске прошли традиционные (первый раз за&nbsp;пять лет, блядь!)
-&laquo;<a href="https://vk.com/mayakkrsk">Маяковские чтения</a>&raquo;, посвящённые одноимённому
-поэту. Людей было мало, ведь поэзия никому не&nbsp;нужна. Больше всего мероприятие было похоже
-на&nbsp;междусобойчик для фил- и&nbsp;литфаков местных шараг.&nbsp;Читали охуенно вот эти люди
-(фотографии маленького хромого человека с&nbsp;мощным голосом не&nbsp;нашёл):
+24th April 2016, Krasnoyarsk hosted the traditional (for the first time in five years, fuck!)
+“<a href="https://vk.com/mayakkrsk">Mayakovsky Readings</a>” dedicated to the poet with the same
+name. There were few people because no one needed poetry. Most of all, the event was like a
+tet-a-tet for the philology and literary faculty of local universities. These people read awesome (I
+couldn’t find pictures of a small lame man with a powerful voice):
 
-![Борода](boroda.jpg)
+![Beard](boroda.jpg)
 
-![Борода 2](boroda2.jpg)
+![Beard 2](boroda2.jpg)
 
-![Цветков](cvetkov.jpg)
+![Cvetkov](cvetkov.jpg)
 
-![Нефедьев](nefediev.jpg)
+![Nefed’ev](nefediev.jpg)
 
-Не&nbsp;берусь судить её, дабы не&nbsp;быть предвзятым (стоит отметить, что хотя&nbsp;бы было
-слышно, в&nbsp;отличие от&nbsp;остальных баб, которые вообще полушёпотом себе под нос
-<nobr>что-то</nobr> бурчали):
+I don’t presume to judge her, so as not to be biased (it is worth noting that at least she was
+audible, unlike other women, who generally muttered something in a half-whisper under their breath):
 
-![Сергиенко](sergienko.jpg)
+![Sergienko](sergienko.jpg)
 
-Остальные читали хуёво. Самое интересное, что им&nbsp;было категорически не&nbsp;стыдно за&nbsp;своё
-чтение&hellip; Стыдно было мне (испанский во&nbsp;всей красе, да!). Периодически веселил толпу алкаш
-с&nbsp;двумя собачками на&nbsp;одном поводке (слева внизу даже видно &laquo;кусок&raquo; собаки):
+The rest read like shit. The most interesting thing is that they were absolutely not ashamed of
+their reading… I was ashamed (vicarious embarrassment in all its glory, yes!). Periodically, a drunk
+with two dogs on one leash amused the crowd (at the bottom left, you can even see a “piece” of a
+dog):
 
-![Алкаш](alkash.jpg)
+![Drunk](alkash.jpg)
 
-Но&nbsp;гвоздём программы стал случайный (хотя я&nbsp;сомневаюсь) прохожий, которого я&nbsp;назвал
-&laquo;батей&raquo;. Он&nbsp;как торнадо забежал в&nbsp;круг зрителей и&nbsp;чтецов, сказал
-<nobr>какие-то</nobr> слова и&nbsp;начал орать стихи. Орал он&nbsp;их&nbsp;крайне охуительно:
-с&nbsp;надрывом в&nbsp;голосе, летящими слюнями, горящим взглядом глаза в&nbsp;глаза своим
-&laquo;жертвам&raquo;, с&nbsp;бутылкой <nobr>какого-то</nobr> пойла в&nbsp;руке (или нет,
-я&nbsp;не&nbsp;запомнил, <nobr>т. к.</nobr> охуел от&nbsp;такого внезапного и&nbsp;крутого чтения!),
-<nobr>какой-то</nobr> жестикуляцией (местами даже &laquo;атакующей&raquo;). Прокричав
-&laquo;стих&raquo;, собрался было уходить и&nbsp;кинул нам всем &laquo;Пойду пить дальше!&raquo;,
-чем сорвал овации. Но&nbsp;потом вернулся и&nbsp;дал нам ещё стихов. Только ради него стоило
-посетить эти чтения. Только ради него. Только. Ради. Него. Очень круто!
+But the highlight of the program was a casual (although I doubt) passer-by whom I called “dad”. He,
+like a tornado, ran into the circle of spectators and readers, said some words, and began to shout
+poetry. He yelled them extremely awesome: with anguish in his voice, flying saliva, a burning
+eye-to-eye sight of his “victims”, with a bottle of some sort of drink in his hand (or not, I didn’t
+remember, because I was fucked from a sudden and abrupt reading!), some gesticulation (sometimes
+even “attacking”). Having shouted “verse”, he was about to leave and shout to us all “I’ll go drink
+further!” But then he came back and gave us more poetry. It was worth attending these readings only
+for his sake. Just for his sake. Only. For. His. Sake. Very cool!
 
-![Батя](batya.jpg)
+![Dad](batya.jpg)
 
-Закончилось всё матерными стихами про &laquo;любовь как кусок пизды&raquo;, &laquo;хуй из&nbsp;уст
-в&nbsp;уста&raquo; и&nbsp;политическими про &laquo;это Путин виноват&raquo;. Чтения определённо
-удались. Придётся идти ещё.
+Readings were ended with obscene verses about “love is like a piece of pussy”, “dick from mouth to
+mouth” and political about “It’s Putin’s fault.” The readings were definitely successful. We’ll have
+to go some more.
