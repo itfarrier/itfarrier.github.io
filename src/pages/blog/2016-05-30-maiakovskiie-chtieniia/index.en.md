@@ -11,19 +11,19 @@ tags:
 
 ![1](C2qeZqfnoco.jpg)
 
-Вот и&nbsp;прошли вновь &laquo;воскрешённые&raquo; чтения, вторые уже. В&nbsp;этот раз они
-прошли&hellip; Они прошли. Дождь шёл, хуле. Вместо чтений получился квартирник на&nbsp;площади
-Маяковского у&nbsp;памятника ему&nbsp;же под дождём.
+Here again “resurrected” readings have passed, the second already. This time it was passed… It was
+passed because raining. Instead of readings, it turned out to be a flat on Mayakovsky Square with
+his monument in the rain.
 
 ![2](Xjw762gOpyQ.jpg)
 
-Думаю, на&nbsp;такой случай организаторам нужно носить в&nbsp;кармане бюстик Маяковского, ставить
-его там, где условия комфортнее и&nbsp;проводить чтения там (альтернативная точка сбора
-на&nbsp;случай плохой погоды). Идея с&nbsp;&laquo;отметками&raquo; лучших хороша,
-но&nbsp;я&nbsp;сразу помыслил: &laquo;А&nbsp;как&nbsp;же худшие? Их&nbsp;тоже надо отмечать&raquo;.
-В&nbsp;этот раз всех было слышно, что, безусловно, заебись! Вот и&nbsp;причина, почему мне
-на&nbsp;первом мероприятии понравились далеко не&nbsp;все чтецы: их&nbsp;не&nbsp;было слышно.
+I think that in such a case, the organizers need to carry a bust of Mayakovsky in their pockets,
+place it where conditions are more comfortable, and conduct readings there (an alternative meeting
+point in case of bad weather). The idea of grading the best is good, but I immediately thought:
+“What about the worst? They also need to be celebrated”. This time everyone could hearable and that,
+of course, awesome! That’s the reason why I didn’t like all the readers at the first event: I
+couldn’t hear them.
 
-<p><nobr>Всё-таки</nobr> такое мероприятие должно быть многочисленнее.</p>
+Still, such an event should be more numerous.
 
-Update: Самым хуёвым чтецам надо дарить книжку Донцовой.
+Update: The worst readers should be given Dontsova’s book.
