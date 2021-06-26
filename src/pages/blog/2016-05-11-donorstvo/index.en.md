@@ -8,22 +8,22 @@ tags:
   - кровь
 ---
 
-После перерыва в&nbsp;9&nbsp;месяцев <del>беременности</del> лени возобновил &laquo;поточное&raquo;
-донорство (каждые 2 месяца). Сам не&nbsp;знаю, для чего это делаю? Денег не&nbsp;платят,
-на&nbsp;помощь <nobr>кому-то</nobr> мне насрать, еды мало дают, больно, &laquo;Почётный донор&raquo;
-вообще не&nbsp;почётен. Осязаемые плюсы&nbsp;&mdash; это бесплатный анализ крови
-на&nbsp;разнообразные болезни и&nbsp;освобождение от&nbsp;работы в&nbsp;день кроводачи +
-дополнительный выходной. Неосязаемый&nbsp;&mdash; тренировка организма в&nbsp;выработке крови. Вот
-процесс:
+After a break of 9 months of ~~pregnancy~~ laziness, I resumed “flow” donation (every 2 months). I
+don’t know what I’m doing this for? It is not paid, I don’t give a shit to help someone, It is not
+rewarded with enough food, it hurts, the Honorary Donor is not honorable at all. The tangible
+advantages are a free blood test for various diseases and a free day off from work on the day of
+blood donation + an additional day off. Intangible — training the body to produce blood. Here’s the
+process:
 
-![Рука](ruka.jpg)
+![Hand](ruka.jpg)
 
-Кровь два раза берут: для предварительного анализа (тонкой иглой) и, собственно, сама кроводача уже
-с&nbsp;другой руки (на&nbsp;фото). Сегодня мне сделали СЮРПРИЗ: отклеивая пластырь, что держит иглу
-в&nbsp;вене, медсестра очень грубо рванула иглу, <nobr>как-то</nobr> под углом. Чуть
-не&nbsp;обоссался, как это противно и&nbsp;<nobr>по-новому</nobr> больно. А&nbsp;вот результат:
+Blood is taken twice: for a preliminary analysis (with a thin needle) and, in fact, the blood
+donation itself is already from the other hand (pictured). Today they gave me a SURPRISE: while
+peeling off the plaster that holds the needle in the vein, the nurse jerked the needle very rudely,
+somehow at an angle. I was almost pissed, how disgusting and painful in a new way. And here’s the
+result:
 
-![Пакет](paket.jpg)
+![Package](paket.jpg)
 
-Да, немного. <nobr>Хуй-то</nobr> получится на&nbsp;это прожить (привет, &laquo;Без чувств&raquo;).
-<nobr>P. S.</nobr> Я&nbsp;не&nbsp;гру<del>ппа</del>зчик, я&nbsp;фотоблогер.
+Yes, too little. You can’t pay bills with donation “salary” (hello, “Senseless”). P. S. I’m not a
+loader, I’m a photoblogger.

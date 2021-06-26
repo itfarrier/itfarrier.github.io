@@ -26,4 +26,4 @@ tags:
 ![Пакет](paket.jpg)
 
 Да, немного. <nobr>Хуй-то</nobr> получится на&nbsp;это прожить (привет, &laquo;Без чувств&raquo;).
-<nobr>P. S.</nobr> Я&nbsp;не&nbsp;гру<del>ппа</del>зчик, я&nbsp;фотоблогер.
+<nobr>P. S.</nobr> Я&nbsp;не&nbsp;грузчик, я&nbsp;фотоблогер.
