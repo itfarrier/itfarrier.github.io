@@ -9,52 +9,52 @@ tags:
   - опыт
 ---
 
-Ездили недавно в&nbsp;конный клуб на&nbsp;базе отдыха в&nbsp;маленькой деревне под Новокузнецком.
-По&nbsp;работе. По&nbsp;любимой. Поездка была вполне себе обычной: водитель страдал,
-а&nbsp;я&nbsp;&mdash; спал, ел, слушал музыку лёжа на&nbsp;заднем сиденье шохи. <nobr>Где-то</nobr>
-на&nbsp;полпути автомобиль на&nbsp;ходу сделал несколько мелких рывков&nbsp;&mdash; бензин
-кончается, сказал водитель. Через некоторое время он, действительно, кончился. Хуй&nbsp;бы
-с&nbsp;ним, если&nbsp;бы рядом была АЗС, но&nbsp;она была в&nbsp;8&nbsp;км от&nbsp;нас. А&nbsp;уже
-темнело. И&nbsp;остановилась машина как раз в&nbsp;начале подъёма. Водитель, со&nbsp;смехом
-и&nbsp;издёвкой, выдал: &laquo;Ну, что каучсёрфер, лови машину! Ты&nbsp;ж хочешь автостопом поехать,
-вот и&nbsp;попробуешь!&raquo; Хуле, взял в&nbsp;руки канистру (пустую, которая и&nbsp;была пустой
-в&nbsp;багажнике, хотя должна быть полной для таких случаев, блядь!) и&nbsp;пошёл в&nbsp;направлении
-АЗС, пытаясь ловить попутку. Мимо проехало машин 10 и&nbsp;я&nbsp;уже успел подняться в&nbsp;гору,
-под которой мы&nbsp;и&nbsp;остановились &laquo;на&nbsp;аварийке&raquo;. Неожиданно остановилась
-TOYOTA (вот он, первый автостоп)! Поздоровался, сказал, что нужно доехать до&nbsp;ближайшей
-заправки, которая в&nbsp;8 километрах дальше по&nbsp;пути, водитель согласился, я&nbsp;сел
-и&nbsp;мы&nbsp;поехали. И&nbsp;начался разговор:
+We’ve recently gone to an equestrian club at a recreation center in a small village near
+Novokuznetsk. For work. For my beloved. The trip was quite ordinary: the driver suffered, and I
+slept, ate, listened to music while lying in the back seat of the VAZ 6th. Somewhere in the middle
+of the way, the car made several small jerks on the move — gasoline runs out, the driver said. After
+some time, it really ended. Fuck it if there was a gas station nearby, but it was 8 km from us. And
+it was already getting dark. And the car stopped just at the beginning of the ascent. The driver,
+laughing and mocking, issued: “Well, what a couchsurfer, catch the car! You want to hitchhike, so
+you will try! " So, picked up a canister (empty, which was empty in the trunk, although it should be
+full for such cases, damn it!) And went in the direction of the gas station, trying to catch a ride.
+10 cars passed by and I had already managed to climb the mountain, under which we stopped at the
+emergency. TOYOTA suddenly stopped (here it is, the first hitchhiking)! The driver was greeted, I
+said that I need to get to the nearest gas station, which is 8 kilometers further along the way, the
+driver agreed, I sat down and we drove off. And the conversation began:
 
-> &mdash;&nbsp;Это ваша машина там
-> на&nbsp;аварийке?<br> >&mdash;&nbsp;Да.<br> >&mdash;&nbsp;А&nbsp;что
-> случилось?<br> >&mdash;&nbsp;Бензин кончился. И&nbsp;канистра в&nbsp;багажнике была пустая. Вот,
-> пошёл до&nbsp;заправки.<br> >&mdash;&nbsp;Быва-<nobr>а-а-ет</nobr>.
+> ― Is that your car there on the emergency gang?
+>
+> ― Yes.
+>
+> ― And what happened?
+>
+> ― Gasoline ran out. And the canister in the trunk was empty. So, here we are.
+>
+> ― Shit happens.
 
-Да, бывает, хотя не&nbsp;должно, блядь! Нахуя я&nbsp;канистру подарил этому
-<nobr>горе-водителю</nobr>? Чтобы потом по&nbsp;ночам ходить с&nbsp;этой&nbsp;же канистрой
-за&nbsp;бензином? Не&nbsp;помню ход дальнейшего разговора, но&nbsp;выяснилось, что водитель тоёты
-тоже ехал в&nbsp;Новокузнецк. И&nbsp;тоже из&nbsp;Красноярска. И&nbsp;тоже по&nbsp;работе. Какие
-подозрительные совпадения&hellip;
+Yes, it happens, although it shouldn’t, damn it! What the fuck did I give this unfortunate driver a
+canister? For the going at night with the same canister for gasoline? I don’t remember the course of
+further conversation, but it turned out that the Toyota driver was also going to Novokuznetsk. And
+also from Krasnoyarsk. And also for work. What a suspicious coincidence…
 
-Доехал. Попрощался. Поблагодарил. Вышел.
+I arrived. Said goodbye. I thanked. Released.
 
-На АЗС купил бензин и&nbsp;пошёл в&nbsp;обратную сторону. На&nbsp;стоянке стояло две фуры,
-но&nbsp;обе с&nbsp;заглушенными моторами, к&nbsp;сожалению. Начал попытки остановить вторую
-в&nbsp;жизни попутку. Не&nbsp;успело мимо меня проехать и&nbsp;4&nbsp;машин, как одна из&nbsp;фур
-подала признаки жизни: в&nbsp;кабине зажёгся свет, фары тоже ожили. В&nbsp;башке <nobr>что-то</nobr>
-щёлкнуло и&nbsp;я&nbsp;пошёл к&nbsp;фуре. Постучался в&nbsp;дверь и&nbsp;водитель опустил боковое
-стекло, а&nbsp;я&nbsp;уже залез на&nbsp;подножку. Сказав, что мне нужно доехать до&nbsp;машины,
-в&nbsp;которой кончилось топливо, дальше по&nbsp;дороге, получил ответ, что если машина стоит
-на&nbsp;подъёме, то&nbsp;не&nbsp;повезёт. На&nbsp;моё счастье машина как раз стояла на&nbsp;спуске,
-ведь на&nbsp;подъёме она стояла, когда я&nbsp;ехал на&nbsp;АЗС. В&nbsp;общем, сел и&nbsp;поехали.
-Это был первый раз в&nbsp;жизни, когда я&nbsp;оказался в&nbsp;кабине грузовика KENWORTH (это который
-как у&nbsp;дальнобойщиков из&nbsp;американских фильмов с&nbsp;огромным капотом и&nbsp;чуть&nbsp;ли
-не&nbsp;домом за&nbsp;сиденьем водителя). Был удивлён, что он&nbsp;на&nbsp;автомате. Что сказать,
-по&nbsp;сравнению с&nbsp;шестёркой грузовик едет гораздо мягче и&nbsp;даже наши хуёвые дороги
-кажутся очень ровными. Опять&nbsp;же <nobr>чуть-чуть</nobr> поговорили: дальнобойщик, оказалось,
-не&nbsp;берёт автостопщиков (Заебали уже!), а&nbsp;меня взял, потому что помогать надо
-на&nbsp;дорогах. На&nbsp;этом общение прекратилось. Доехали до&nbsp;нашей несчастной шестёрки
-и&nbsp;по&nbsp;выходу из&nbsp;грузовика я&nbsp;увидел удивлённую и&nbsp;радостную рожу друга,
-которая выкинула: &laquo;Обезьяна на&nbsp;грузовике приехала! Совсем охуел!&raquo; Всё
-&laquo;приключение&raquo; заняло меньше получаса. Вот такой автостоп. Ну, а&nbsp;про Couchsurfing
-<nobr>как-нибудь</nobr> потом.
+I bought gasoline at the gas station and went back. There were two trucks in the parking, but
+unfortunately, both with turned off engines. Began trying to stop the second car in my life. No
+sooner had 4 cars passed me than one of the trucks showed signs of life: the light came on in the
+cockpit, the headlights also came to life. Something clicked in my head and I went to the truck. I
+knocked on the door and the driver lowered the side window, and I already climbed onto the step.
+Having said that I need to get to the car, which ran out of fuel, further along, the road, I
+received the answer that if the car is on the rise, then I will not get lucky. Fortunately for me,
+the car was just standing on the descent, because it was on the rise when I was driving to the gas
+station. In general, I sat down and drove off. It was the first time in my life when I found myself
+in the cab of a KENWORTH truck (which is like truckers from American films with a huge hood and
+almost a house behind the driver’s seat). I was surprised that it was on the automatic transmission.
+What can I say, compared to the VAZ 6th, the truck rides much softer and even our shitty roads seem
+very smooth. Again, we talked a little: the trucker does not take hitchhikers (Irritated him
+already!), But he took me because it was necessary to help on the roads. This ended the
+communication. We reached our unfortunate VAZ and on getting out of the truck I saw the surprised
+and joyful face of a friend who threw out: “The monkey arrived in the truck! Absolutely fucked up!”
+The whole “adventure” took less than half an hour. Here’s a hitchhiking. Well, about Couchsurfing
+sometime later.
