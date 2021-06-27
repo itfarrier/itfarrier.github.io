@@ -14,7 +14,7 @@ tags:
   - сервис
 ---
 
-![Tinkoff Black](../../assets/images/uncategorized/tinkoff.jpg) Клиентом банка от
+![Tinkoff Black](../../../assets/images/uncategorized/tinkoff.jpg) Клиентом банка от
 <del>пивовара</del> Тинькова являюсь очень давно. Но есть нюанс. Пользуюсь я дебетовой картой,
 никаких кредитов и кредитных карт. И user experience у меня почти только положительный.
 
