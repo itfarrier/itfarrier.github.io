@@ -13,54 +13,49 @@ tags:
   - опыт
 ---
 
-24 августа 2016 года отправился автостопом на&nbsp;Байкал&hellip; Хотя, лучше загляну чуть дальше
-в&nbsp;прошлое.
+On August 24th, 2016, I hitchhiked to Lake Baikal… Although, I’d better look a little further into
+the past.
 
-23 августа вечером начал собираться в&nbsp;свой первый автостоп. В&nbsp;свой школьный рюкзак,
-который со&nbsp;мною уже более 10 лет, упихал спальник, снаружи в&nbsp;его нижние петли укрутил
-коврик и&nbsp;за&nbsp;них&nbsp;же зацепил &laquo;ЛЕНТАчную&raquo; палатку за&nbsp;почти 800 &#8381;,
-дальше, напихал вовнутрь всякой мелочи, типа
-паст-щёток-контейнеровдлялинз-<nobr>зарядок-чутьчутьеды-шапкутрусыноски</nobr>. Мой максимализм был
-придушен проСВЕТлением благоразумия и&nbsp;я&nbsp;взял с&nbsp;собою карту с&nbsp;0 &#8381;
-на&nbsp;счету и&nbsp;125 &#8381; наличными.
+On the evening of August 23rd, I began to pack up my first hitchhiking. I put a sleeping bag into my
+school backpack, which I have been with for more than 10 years, twisted a mat outside into its lower
+loops and hooked a “LENTA” tent for almost 800 rubles behind them, then stuffed inside all sorts of
+little things, such as paste-brushes-containers for lenses-charging-a little bit of the food-hats
+and socks. My maximalism was stifled by the enlightenment of prudence and I took with me a card with
+0₽ in my account and 125₽ in cash.
 
 ![](IMG_20160903_071525.jpg)
 
-24 августа. Утро на&nbsp;нервах, ведь я&nbsp;ссусь выходить из&nbsp;своей &laquo;теплицы&raquo; (еду
-<nobr>куда-то</nobr>, почти без денег, один, впервые лет за&nbsp;10 или больше). Поел, собрался,
-попрощался и&nbsp;пошёл. На&nbsp;улице был дождь, что хорошо сочеталось с&nbsp;дырками
-в&nbsp;подошвах кед. Естественно, сразу промокли ноги, на&nbsp;что я&nbsp;неблагоразумно положил
-хуй. На&nbsp;остановке около дома решил воспользоваться деньгами, чтобы сэкономить время,
-и&nbsp;доехал за&nbsp;22&nbsp;рубля до&nbsp;трассы на&nbsp;Канск.
+August 24th. Morning on my nerves, because I piss to go out of my “greenhouse” (going somewhere,
+almost without money, alone, for the first time in 10 years or more). I ate, got ready, said goodbye
+and went. It was raining outside, which went well with the holes in the soles of the sneakers.
+Naturally, my feet immediately got wet, on which I unwisely don’t care. At the bus stop near the
+house, I decided to use the money to save time, and drove for 22 rubles to the highway to Kansk.
 
-А&nbsp;теперь самое оно!
+And now it is!
 
-Не&nbsp;проголосовав и&nbsp;10&nbsp;минут, добился успеха: меня подобрал грузовик. Водитель был
-из&nbsp;&laquo;среднеазиат&raquo; и&nbsp;<nobr>по-русски</nobr> <del>говорил</del> пытался говорить.
-Подвёз до&nbsp;Берёзовки и&nbsp;пожелал счастливого пути. Даже имён не&nbsp;узнали&nbsp;друг
-у&nbsp;друга. Дальше минут 5 ожидания и&nbsp;вторая машина: Александр на&nbsp;универсале. Подвёз
-до&nbsp;Кускунки, если память не&nbsp;подводит. Следом минут 15 ожидания и&nbsp;&laquo;Женя&raquo;
-на&nbsp;Ларгусе. Он&nbsp;оказался автостопщиком из&nbsp;<nobr>90-х</nobr>, отошедшим уже
-&laquo;от&nbsp;дел&raquo;. Объехал чуть&nbsp;ли не&nbsp;весь бСССР. Узнав, что
-я&nbsp;на&nbsp;Байкал, сказал <nobr>что-то</nobr> типа: &laquo;Блядь, ты&nbsp;там ОХУЕЕШЬ! Вода
-чистейшая, природа заебись. Это не&nbsp;объяснить, просто поверь&raquo;. Настоятельно советовал
-побывать на&nbsp;тундровых озёрах и&nbsp;вообще поездить по&nbsp;стране. Доехали до&nbsp;Уяра почти.
-Потом БЕЗЫМЯННЫЙ УГРЮМЫЙ ВОДИТЕЛЬ на&nbsp;классике. Назвать имя отказался и&nbsp;сказал, что поедем
-молча. Под старою магнитолою валялись кассеты (кассеты, блядь! В&nbsp;2016 году!) из&nbsp;серии
-&laquo;шансон, волчья доля, жизнь моя жестянка&raquo;. До&nbsp;Канска доехали в&nbsp;тишине.
+Without voting for 10 minutes, I was successful: I was picked up by a truck. The driver was from
+“Central Asia” and spoke Russian and tried to speak. I rode to Berezovka and he wished me a happy
+journey. We didn’t even know the names of each other. Then 5 minutes of waiting and the second car:
+Alexander on the wagon. I rode to Kuskunka if memory does not fail. Next 15 minutes of waiting and
+“Zhenya” on Largus. He turned out to be a hitchhiker from the 90s, already retired. Traveled almost
+all of the ex-USSR. When he found out that I was on Baikal, he said something like: “Damn, you FUCK
+there! The water is pure, the nature is awesome. It cannot be explained, just believe me.” He
+strongly advised me to visit the tundra lakes and generally travel around the country. We reached
+Uyar almost. Then the NAMELESS SULLEN DRIVER on the VAZ 9th. He refused to give the name and said
+that we would ride in silence. Under the old radio were cassettes (cassettes, damn it! In 2016!)
+From the series “chanson, wolf’s share, my life is a tin”. We reached Kansk in silence.
 
 ![](PANO_20160824_125025.jpg)
 
-Дальше автостоп перестал работать и&nbsp;я&nbsp;пошёл пешком от&nbsp;самой стелы
-&laquo;Канск&raquo;.
+Then the hitchhiking stopped working and I went on foot from the stele “Kansk”.
 
 ![](IMG_20160824_130634.jpg)
 
-В&nbsp;итоге я&nbsp;затупил и&nbsp;прошёл объездную. Пришлось пройти насквозь весь город. Заняло это
-полдня и&nbsp;два мозоля. Канск оказался ужасной дырой: обосранная деревня, которая
-<nobr>почему-то</nobr> носит статус &laquo;город&raquo;. На&nbsp;выезде из&nbsp;города стоял около
-часа, хотя место было хорошим! Потом остановился грузовик, что довёз Тайшета. Интересно, что
-водитель проехал мимо меня, понял, что забыл в&nbsp;магазине в&nbsp;Канске товар, который купил
-и&nbsp;съездил обратно, а&nbsp;потом на&nbsp;обратном пути увидел меня второй раз и, тогда уже,
-подобрал. К&nbsp;Тайшету приехали почти в&nbsp;21 час и&nbsp;было уже темно. Я&nbsp;принял решение
-заночевать и&nbsp;поставил под деревьями около трассы палатку. Первая ночёвка!..
+As a result, I blunted and went through the bypass. I had to go through the whole city. It took half
+a day and two calluses. Kansk turned out to be a terrible hole: a crap village, which for some
+reason has the status of a “city”. It was about an hour at the exit from the city, although the
+location was good! Then the truck stopped that took Taishet. It is interesting that the driver drove
+past me, realized that he had forgotten the goods in the store in Kansk, which he had bought, and
+drove back, and then on the way back, he saw me a second time and, then, picked me up. We arrived at
+Taishet at almost 21 o’clock and it was already dark. I decided to spend the night and put up a tent
+under the trees near the track. The first overnight stay! .
