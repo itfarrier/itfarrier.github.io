@@ -14,7 +14,7 @@ tags:
   - сервис
 ---
 
-![Tinkoff Black](../../../assets/images/uncategorized/tinkoff.jpg)
+![Tinkoff Black](tinkoff.jpg)
 
 I’m a ~~brewer’s~~Tin’kov’s bank client a long time ago. But nuance is there. I’m using debit card
 only. And ’cause of that I have almost positive UX.
