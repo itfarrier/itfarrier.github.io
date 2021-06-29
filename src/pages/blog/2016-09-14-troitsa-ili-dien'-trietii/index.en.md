@@ -14,53 +14,47 @@ tags:
   - Троица
 ---
 
-Ранним утром 26 числа проснулся от&nbsp;холода! Я&nbsp;был одет во&nbsp;всю свою одежду, спал
-в&nbsp;спальнике в&nbsp;позе эмбриона на&nbsp;коврике в&nbsp;палатке. И&nbsp;один хуй замёрз!
-В&nbsp;палатке было очень влажно. И&nbsp;ПИЗДЕЦ ДУБАК! <nobr>Кое-как</nobr> заставил себя вылезти
-из&nbsp;спальника и&nbsp;пожрать. В&nbsp;процессе согрелся <nobr>чуть-чуть</nobr>. Начав покидать
-палатку, взял в&nbsp;руки обувь и&nbsp;<del>вознегодовал</del>охуел! Она была мокрее, чем
-я&nbsp;положил её сушиться. Но&nbsp;делать нехуй, одел всё мокрым. Собрался и&nbsp;вышел стопить.
-Стоп не&nbsp;попёр от&nbsp;слова &laquo;совсем&raquo;. Пришлось пройти вдоль трассы
-до&nbsp;остановки, где уже я&nbsp;поехал &laquo;перебежками&raquo; до&nbsp;самых Ользонов.
-За&nbsp;это время ехал с&nbsp;военным, на&nbsp;микрике, с&nbsp;таксистом,
-на&nbsp;&laquo;хлебовозке&raquo;. Тут я&nbsp;покинул &laquo;хлебовозку&raquo; в&nbsp;первый раз:
+In the early morning of the 26th, I woke up ’cause of cold! I was dressed in all my clothes,
+sleeping in a sleeping bag in a fetal position on a rug in a tent. And one I’m frozen! The tent was
+very humid. AND VERY COLD! Somehow I forced myself to get out of the sleeping bag and ate. In the
+process, I warmed up a little. Starting to leave the tent, I took my shoes in my hands and was
+surprised! It was wetter than I put it to dry. I dressed everything wet. Packed my stuff and went
+out hitchhiking. The hitchhiking was unsuccessful from the word “absolutely”. I had to walk along
+the road to a stop, where I went from time to time to the Olzons. During this time I was traveling
+with a military man, in a wagon, with a taxi driver, in a “bread truck”. Then I left the “bread
+truck” for the first time:
 
 ![](IMG_20160826_084320.jpg)
 
-В&nbsp;Ользонах &laquo;хлебовозка&raquo; остановилась второй раз. Водитель&nbsp;&mdash; Александр.
-С&nbsp;ним ехали до&nbsp;Еланцов. Сам он&nbsp;с&nbsp;Ангарска. Именно в&nbsp;пути на&nbsp;его машине
-я&nbsp;понял, что я&nbsp;на&nbsp;Байкале. Природа изменилась, начались частые перевалы, красивые
-виды сверху на&nbsp;долины. Машина была в&nbsp;возрасте и&nbsp;при езде в&nbsp;гору ощутимо
-&laquo;охуевала&raquo; от&nbsp;таких нагрузок. Интересно, что Саня тоже охуевал. Сказал, что в этих
-местах в первый раз лет за&nbsp;восемь, хоть и&nbsp;живёт рядом. Прям как я&nbsp;до&nbsp;этого
-путешествия. Обмолвился, что <nobr>наконец-то</nobr> нашёл себе пихточку для посадки рядом
-с&nbsp;домом (их&nbsp;там было просто завались вокруг, разных форм, размеров и&nbsp;расцветок).
-Надеюсь, что он&nbsp;<nobr>всё-таки</nobr> приехал туда ещё раз и&nbsp;забрал к&nbsp;себе желаемое
-дерево. В&nbsp;Еланцах я&nbsp;переоделся за&nbsp;<nobr>каким-то</nobr> забором, поменял,
-<nobr>наконец-то</nobr>, носки (ну, как поменял, одел снизу мокрых и&nbsp;дырявых сухие недырявые),
-&laquo;попушистил&raquo; корову, которая испугалась и&nbsp;рванула от&nbsp;меня в&nbsp;дыру
-в&nbsp;заборе. Стоп снова начал угасать. Пришлось идти дальше пешком. И&nbsp;тут снова
-&laquo;хлебовозка&raquo;. &laquo;Бог троицу любит&raquo;,&nbsp;&mdash; сказал &laquo;старый
-знакомый&raquo;. Довёз меня до&nbsp;выезда из&nbsp;Еланцов, но&nbsp;это, увы, не&nbsp;помогло.
-Пришлось несколько километров пиздовать пешком <nobr>из-за</nobr> никакой
-&laquo;останавливаемости&raquo;. В&nbsp;пути были примерно такие пейзажи:
+In Olzony the “bread truck” stopped for the second time. The driver was Alexander. We rode with him
+to Elancy. He is from Angarsk. It was on the way in his car I understood that I was at Lake Baikal.
+Nature has changed, frequent passes began, beautiful views from above to the valleys. The car was
+aged and, when driving uphill, noticeably “fucked up” from such loads. Interestingly, Sanya was
+fucked up too. He said that in these places for the first time in eight years, although he lives
+nearby. Just like me before this trip. He mentioned that he had finally found a tree for planting
+near the house (there were different shapes, sizes, and colors). I hope that he still came there
+again and took the desired tree with him. In Elancy, I changed my clothes behind a fence, finally
+changed my socks (well I put on wet and leaky dry ones below), pet a cow, which got scared and
+jerked away from me into a hole in the fence. The stop began unsuccessfully again. I had to go
+further on foot. And here again the “bread truck”. “God loves the Trinity, ” said the “old
+acquaintance”. He took me to the departure from Elancy, but, alas, it did not help. I had to walk
+for several kilometers because of no “stoppability”. On the way, there were approximately the
+following landscapes:
 
 ![](IMG_20160826_130042.jpg)
 
-Спустя час с&nbsp;лишним остановились две машины. В&nbsp;них было 6 баб разного возраста.
-Не&nbsp;успев сесть в&nbsp;первую из&nbsp;машин, услышал, как с&nbsp;переднего сиденья раздалось:
-&laquo;А&nbsp;у&nbsp;<nobr>нас-то</nobr> мужик есть!&raquo; Они ехали до&nbsp;Ольхона, а&nbsp;меня
-высадили в&nbsp;Сахюрте (который местные называют &laquo;МРС&raquo;), где и&nbsp;проходил фестиваль.
-В&nbsp;пути много &laquo;лялякали&raquo;, остановились около памятника с&nbsp;орлом:
+More than an hour later, two cars stopped. There were 6 women of different ages in them. Not having
+time to get into the first of the cars, I heard from the front seat: “And we have a man!” They drove
+to Olkhon, and they dropped me off in Sakhyurt (which the locals call “MRS”), where the festival was
+held. On the way there were a lot of chatting, we stopped near the monument with the eagle:
 
 ![](IMG_20160826_140235.jpg)
 
 ![](IMG_20160826_140040.jpg)
 
-Неприятно удивила дорога до&nbsp;такого популярного места, как Ольхон: грунтовка, очень
-некомфортная, пыльная и&nbsp;ухабная. Пиздец, короче.
+The road to such a popular place as Olkhon was unpleasantly surprised: a dirt road, very
+uncomfortable, dusty and bumpy.
 
-В&nbsp;МРСе я&nbsp;просто поднялся вверх от&nbsp;трассы и&nbsp;очутился на&nbsp;базе отдыха, где
-на&nbsp;входе никого не&nbsp;было, хотя вход платный. Зашёл в&nbsp;КПДшную юрту. На&nbsp;часах было
-<nobr>что-то</nobr> около 15 часов. Мой первый автостоп на&nbsp;&#8776;1300&nbsp;км. занял
-&#8776;2,5 дня. Было здорово!
+In MRS, I just climbed up from the highway and found myself at a recreation center, where there was
+no one at the entrance, although the entrance was paid. I went to the CSLT’s yurt. The clock was
+about 15 o’clock. My first hitchhiking at ≈1300 km. took ≈2.5 days. It was great!
