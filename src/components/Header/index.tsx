@@ -30,5 +30,16 @@ export const Header: FC = () => {
   const currentLanguage: Language = getCurrentLangKey(languages, defaultLanguage, pathname);
   const homeUrl = `/${currentLanguage}/`;
 
-  return <HeaderView links={[homeUrl, cv, `${homeUrl}wishlist`]} />;
+  return (
+    <HeaderView
+      links={[
+        { text: '/', to: homeUrl },
+        { text: '/blog', to: `${homeUrl}blog` },
+        { text: '/books', to: `${homeUrl}books` },
+        { text: '/cv', to: cv },
+        { text: '/videos', to: `${homeUrl}videos` },
+        { text: '/wishlist', to: `${homeUrl}wishlist` },
+      ]}
+    />
+  );
 };

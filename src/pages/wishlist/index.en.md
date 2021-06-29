@@ -6,7 +6,6 @@ type: page
 
 ## Needs:
 
-- iPhone 12 mini;
 - NAS;
 - Better stereo;
 - Curved clincher;
@@ -19,7 +18,8 @@ type: page
 - Hoof stand;
 - Lose weight;
 - Apron;
-- Headlight.
+- Headlight;
+- PC for games.
 
 ## Done:
 
@@ -31,4 +31,5 @@ type: page
 - Power bank;
 - Charger;
 - Grinder tool;
-- PC.
+- PC;
+- iPhone 12 mini.

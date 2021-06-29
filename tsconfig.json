@@ -40,6 +40,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ESNext",
+    "typeRoots": ["./src/global.d.ts"],
     "watch": true
   },
   "exclude": [
