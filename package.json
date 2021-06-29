@@ -62,7 +62,7 @@
     "clean": "find . -name '*.log' -type f -delete && rm -rf .cache node_modules public",
     "clean-build": "rm -rf .cache public",
     "clean-lockfile": "rm -rf package-lock.json yarn.lock",
-    "deploy": "npm run clean && git push origin source && npm run build && cp CNAME public/ && gh-pages -b master -d public",
+    "deploy": "npm run clean-build && git push origin source && npm run build && cp CNAME public/ && gh-pages -b master -d public",
     "deploy-test": "npm run clean && git push test && npm run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
     "eslint": "eslint . --ext .js,.jsx",
     "eslint-auto-fix-the-whole-project": "eslint . -c ./.eslintrc.autoFixes.js --debug --fix --no-eslintrc",
