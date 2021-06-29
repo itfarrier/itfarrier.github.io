@@ -34,6 +34,7 @@ export const Header: FC = () => {
     <HeaderView
       links={[
         { text: '/', to: homeUrl },
+        { text: '/blog', to: `${homeUrl}blog` },
         { text: '/books', to: `${homeUrl}books` },
         { text: '/cv', to: cv },
         { text: '/videos', to: `${homeUrl}videos` },
