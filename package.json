@@ -5,7 +5,7 @@
     "url": "https://itfarrier.com"
   },
   "dependencies": {
-    "gatsby": "^3.8.0",
+    "gatsby": "^3.8.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^1.8.0",
@@ -27,12 +27,12 @@
   "description": "ITFarrier",
   "devDependencies": {
     "@types/graphql": "^14.5.0",
-    "@types/node": "^15.12.4",
+    "@types/node": "^15.12.5",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "@types/react-helmet": "^6.1.1",
-    "@typescript-eslint/eslint-plugin": "^4.28.0",
-    "@typescript-eslint/parser": "^4.28.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.4.0",
