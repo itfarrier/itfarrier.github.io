@@ -3,9 +3,9 @@ import { FC, useContext } from 'react';
 import { useLocation } from '@reach/router';
 import { graphql, navigate, useStaticQuery } from 'gatsby';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
+import { ILangObject } from 'src/interfaces';
 
 import { Language, LanguageContext } from 'cmpts/LanguageContext';
-import { ILangObject } from 'src/interfaces';
 
 export const SelectLanguage: FC = () => {
   const { toggleLanguage } = useContext(LanguageContext);

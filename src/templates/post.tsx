@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import { graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import { IPage } from 'src/interfaces';
 
 import { Layout } from 'cmpts/Layout';
-import { IPage } from 'src/interfaces';
 
 const BlogPostTemplate: FC<IPage> = (props) => {
   const {
@@ -57,7 +57,7 @@ const BlogPostTemplate: FC<IPage> = (props) => {
 };
 
 export const BlogPostTemplateQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt
       fields {

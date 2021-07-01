@@ -2,9 +2,9 @@ import { FC } from 'react';
 
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import { IPage } from 'src/interfaces';
 
 import { Layout } from 'cmpts/Layout';
-import { IPage } from 'src/interfaces';
 
 const PageTemplate: FC<IPage> = (props) => {
   const {
@@ -37,7 +37,7 @@ const PageTemplate: FC<IPage> = (props) => {
 };
 
 export const PageTemplateQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt
       fields {
