@@ -1,0 +1,4 @@
+{
+  "compilerOptions": { "isolatedModules": false, "module": "CommonJS" },
+  "extends": "./tsconfig.json"
+}

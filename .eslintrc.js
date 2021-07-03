@@ -8,7 +8,7 @@ module.exports = {
   ],
   overrides: [
     {
-      excludedFiles: ['*.test.ts', '*.test.tsx'],
+      excludedFiles: ['*.test.ts', '*.test.tsx', './src/utilities/cli.ts'],
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
@@ -32,6 +32,7 @@ module.exports = {
       },
     },
     {
+      excludedFiles: ['./src/utilities/cli.ts'],
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
@@ -50,16 +51,36 @@ module.exports = {
       },
     },
     {
+      excludedFiles: ['./src/utilities/cli.ts'],
       extends: ['plugin:prettier/recommended'],
       files: ['*.js', '*.jsx'],
       parser: 'espree',
       plugins: ['prettier'],
     },
     {
+      excludedFiles: ['./src/utilities/cli.ts'],
       extends: ['plugin:eslint-plugin-json-es/recommended', 'plugin:prettier/recommended'],
       files: ['*.json'],
       parser: 'eslint-plugin-json-es',
       plugins: ['prettier'],
+    },
+    {
+      extends: [
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:jsx-a11y/strict',
+        'plugin:react-hooks/recommended',
+        'plugin:prettier/recommended',
+      ],
+      files: ['./src/utilities/cli.ts'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: { project: ['./tsconfig.cli.json'], tsconfigRootDir: __dirname },
+      plugins: ['@typescript-eslint', 'prettier'],
+      settings: {
+        'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
+        'import/resolver': { typescript: { alwaysTryTypes: true } },
+      },
     },
   ],
   plugins: ['import', 'sort-destructure-keys'],
