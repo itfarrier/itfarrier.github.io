@@ -1,14 +1,6 @@
 ---
-title: 'Black line'
 date: 2016-03-28 07:26:12
-categories:
-  - мероприятие
-tags:
-  - чёрная полоса
-  - концерт
-  - КИЦ
-  - Кэдди пахнет деревьями
-  - КПД
+title: 'Black line'
 ---
 
 ![KIC ticket](salyut-vesna-kic-27-03-16.jpg)

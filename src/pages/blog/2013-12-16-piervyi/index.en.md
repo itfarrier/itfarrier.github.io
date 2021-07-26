@@ -1,19 +1,6 @@
 ---
-title: First
 date: 2013-12-16 13:36:01
-categories:
-  - сайт
-tags:
-  - CMS
-  - Octopress
-  - Jekyll
-  - Hexo
-  - LAMP
-  - Ruhoh
-  - Wordpress
-  - GitHub
-  - HTML5
-  - CSS3
+title: First
 ---
 
 I wanted to write a personal ~~shit~~blog. So, where’s the start? From blog hostings, of course. But

@@ -1,12 +1,6 @@
 ---
-title: 'Not expected'
 date: 2016-08-19 16:42:20
-categories:
-  - путешествие
-tags:
-  - автостоп
-  - Новокузнецк
-  - опыт
+title: 'Not expected'
 ---
 
 We’ve recently gone to an equestrian club at a recreation center in a small village near

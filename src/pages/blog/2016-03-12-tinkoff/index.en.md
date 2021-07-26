@@ -1,17 +1,6 @@
 ---
-title: 'Tinkoff'
 date: 2016-03-12 09:56:01
-categories:
-  - негодование
-tags:
-  - tinkoff
-  - tinkov
-  - тиньков
-  - тинькофф
-  - опыт
-  - лояльность
-  - банк
-  - сервис
+title: 'Tinkoff'
 ---
 
 ![Tinkoff Black](tinkoff.jpg)

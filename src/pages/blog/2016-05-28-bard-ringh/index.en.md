@@ -1,13 +1,6 @@
 ---
-title: 'Bard-ring'
 date: 2016-05-28 21:20:58
-categories:
-  - цитата
-  - мероприятие
-tags:
-  - бард-ринг
-  - барды
-  - афоризм
+title: 'Bard-ring'
 ---
 
 ![Bard ring](IMG_20160529_004850.jpg)

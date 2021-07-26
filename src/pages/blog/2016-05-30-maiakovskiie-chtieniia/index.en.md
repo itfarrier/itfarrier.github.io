@@ -1,12 +1,6 @@
 ---
-title: 'Reading of Mayakovsky'
 date: 2016-05-30 10:10:43
-categories:
-  - мероприятие
-tags:
-  - маяковские чтения
-  - маяковский
-  - поэзия
+title: 'Reading of Mayakovsky'
 ---
 
 ![1](C2qeZqfnoco.jpg)

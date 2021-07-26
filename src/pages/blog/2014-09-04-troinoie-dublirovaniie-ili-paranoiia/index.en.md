@@ -1,18 +1,6 @@
 ---
-title: 'Triple duplication or paranoia'
 date: 2014-09-04 07:23:48
-categories:
-  - IT
-tags:
-  - бэкап
-  - резервное копирование
-  - отказоустойчивость
-  - надёжность
-  - onandroid
-  - android
-  - google backup
-  - titanium
-  - cwm
+title: 'Triple duplication or paranoia'
 ---
 
 I was looking for a method for automatic backup through CWM and found

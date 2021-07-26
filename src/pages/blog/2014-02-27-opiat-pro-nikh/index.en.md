@@ -1,14 +1,6 @@
 ---
-title: 'About them again'
 date: 2014-02-27 08:51:58
-categories:
-  - негодование
-  - пидарасы
-tags:
-  - провайдер
-  - пидарасы
-  - Мегафон
-  - тариф
+title: 'About them again'
 ---
 
 MegaFon reported: «<a href="http://habrahabr.ru/company/megafon/blog/213991">The fastest network in

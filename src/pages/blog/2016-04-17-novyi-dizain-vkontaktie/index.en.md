@@ -1,13 +1,6 @@
 ---
-title: 'New design of VK'
 date: 2016-04-17 10:47:53
-categories:
-  - IT
-tags:
-  - вконтакте
-  - новый дизайн
-  - дизайн
-  - vk
+title: 'New design of VK'
 ---
 
 In 2016 (sic!) they FINALLY decided to increase the page width. Feedback in the beta test is

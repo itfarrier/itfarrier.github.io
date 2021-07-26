@@ -1,18 +1,6 @@
 ---
-title: 'Tatyshev island festival'
 date: 2016-07-17 19:58:33
-categories:
-  - мероприятие
-tags:
-  - Татышев фест
-  - фолк
-  - этно
-  - концерт
-  - музыка
-  - Желанная
-  - Старостин
-  - Последний шиллинг
-  - фестиваль
+title: 'Tatyshev island festival'
 ---
 
 On July 13th, I attended this event because of some two. I liked it, but it’s a shame that there

@@ -1,12 +1,6 @@
 ---
-title: 'Reading of Mayakovsky'
 date: 2016-04-25 14:21:34
-categories:
-  - мероприятие
-tags:
-  - маяковские чтения
-  - маяковский
-  - поэзия
+title: 'Reading of Mayakovsky'
 ---
 
 ![Father](batya.jpg)

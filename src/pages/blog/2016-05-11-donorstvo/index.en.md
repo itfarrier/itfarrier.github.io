@@ -1,11 +1,6 @@
 ---
-title: 'Donation'
 date: 2016-05-11 17:54:48
-categories:
-  - мысли вслух
-tags:
-  - донорство
-  - кровь
+title: 'Donation'
 ---
 
 After a break of 9 months of ~~pregnancy~~ laziness, I resumed “flow” donation (every 2 months). I
