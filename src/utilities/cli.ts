@@ -40,7 +40,7 @@ inquirer
     languages.forEach((language) => {
       writeFile(
         `${newPostFolder}/index.${language}.md`,
-        `---\ntitle: '${postTitle}'\ndate: ${todayDate} ${todayTime}\ncategories:\ntags:\n---\n`,
+        `---\ndate: ${todayDate} ${todayTime}\ntitle: '${postTitle}'\n---\n`,
         (error) => {
           if (error !== null) {
             console.error('### writeFile error', error);

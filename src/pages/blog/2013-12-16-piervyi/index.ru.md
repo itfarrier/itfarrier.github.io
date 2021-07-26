@@ -1,19 +1,6 @@
 ---
-title: Первый
 date: 2013-12-16 13:36:01
-categories:
-  - сайт
-tags:
-  - CMS
-  - Octopress
-  - Jekyll
-  - Hexo
-  - LAMP
-  - Ruhoh
-  - Wordpress
-  - GitHub
-  - HTML5
-  - CSS3
+title: Первый
 ---
 
 Захотелось мне вести личный <del>говно</del>блог. С чего же начать? С блогохостингов, конечно! Но

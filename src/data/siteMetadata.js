@@ -4,6 +4,8 @@ module.exports = {
   description: 'About something',
   i18n,
   keywords: ['IT Farrier', 'IT', 'farrier', 'itfarrier'],
+  name: 'itfarrier.com',
+  shortName: 'itfarrier',
   siteUrl: 'https://itfarrier.com',
   title: 'ITFarrier',
 };

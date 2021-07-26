@@ -1,13 +1,6 @@
 ---
-title: '#nemuzejka'
 date: 2016-04-09 18:32:38
-categories:
-  - мероприятие
-tags:
-  - немузейка
-  -  #немузейка
-  - кэдди пахнет деревьями
-  - КПД
+title: '#nemuzejka'
 ---
 
 ![#nemuzejka ticket](nemuzejka-02042016.jpg)

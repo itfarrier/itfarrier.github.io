@@ -1,17 +1,6 @@
 ---
-title: 'Trinity or day three'
 date: 2016-09-14 22:12:49
-categories:
-  - путешествие
-tags:
-  - автостоп
-  - Байкал
-  - Baikallive
-  - фестиваль
-  - КПД
-  - Кэдди пахнет деревьями
-  - опыт
-  - Троица
+title: 'Trinity or day three'
 ---
 
 In the early morning of the 26th, I woke up ’cause of cold! I was dressed in all my clothes,

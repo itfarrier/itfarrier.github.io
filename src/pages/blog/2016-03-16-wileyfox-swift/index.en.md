@@ -1,11 +1,6 @@
 ---
-title: 'Wileyfox Swift'
 date: 2016-03-16 14:56:51
-categories:
-  - IT
-tags:
-  - смартфон
-  - Wileyfox Swift
+title: 'Wileyfox Swift'
 ---
 
 I see ads about how it’s good in many places. So, it’s true. Awesome for $89. But I irritated 'cause

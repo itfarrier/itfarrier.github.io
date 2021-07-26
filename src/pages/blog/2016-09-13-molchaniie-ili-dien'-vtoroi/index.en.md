@@ -1,16 +1,6 @@
 ---
-title: 'Silence or day two'
 date: 2016-09-13 09:38:54
-categories:
-  - путешествие
-tags:
-  - автостоп
-  - Байкал
-  - Baikallive
-  - фестиваль
-  - КПД
-  - Кэдди пахнет деревьями
-  - опыт
+title: 'Silence or day two'
 ---
 
 On the 25th I got up early in the morning. I ate, packed my stuff, went out on the track. 5 minutes

@@ -1,11 +1,6 @@
 ---
-title: 'Wileyfox Swift'
 date: 2016-03-16 14:56:51
-categories:
-  - IT
-tags:
-  - смартфон
-  - Wileyfox Swift
+title: 'Wileyfox Swift'
 ---
 
 Много где была джинса, как он хорош. Таки это правда, за 89 баксов действительно заебись. Но меня

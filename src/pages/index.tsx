@@ -1,3 +1,11 @@
+import 'sanitize.css';
+import 'sanitize.css/assets.css';
+import 'sanitize.css/evergreen.css';
+import 'sanitize.css/forms.css';
+import 'sanitize.css/forms.evergreen.css';
+import 'sanitize.css/reduce-motion.css';
+import 'sanitize.css/typography.css';
+
 import { FC, PureComponent } from 'react';
 
 import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
