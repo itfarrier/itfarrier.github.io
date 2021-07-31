@@ -11,7 +11,7 @@ export type LanguageContextState = {
 
 const initialState: LanguageContextState = {
   language: LANGUAGE_CODES.EN,
-  toggleLanguage: () => {},
+  toggleLanguage: () => undefined,
 };
 
 export const LanguageContext = createContext<LanguageContextState>(initialState);
