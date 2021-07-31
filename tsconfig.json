@@ -47,7 +47,6 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ESNext",
-    "typeRoots": ["./src/types", "./src/types/__generated/graphql.d.ts", "node_modules"],
     "watch": true
   },
   "exclude": [
