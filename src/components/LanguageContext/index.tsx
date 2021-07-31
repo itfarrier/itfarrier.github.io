@@ -6,7 +6,7 @@ export type Language = LANGUAGE_CODES | string;
 
 export type LanguageContextState = {
   language: Language;
-  toggleLanguage(nextLanguage: Language): void;
+  toggleLanguage: (nextLanguage: Language) => void;
 };
 
 const initialState: LanguageContextState = {
