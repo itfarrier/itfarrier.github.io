@@ -9,6 +9,7 @@ module.exports = {
           { options: { avoidOptionals: true }, resolve: 'operations' },
           { options: { avoidOptionals: true }, resolve: 'typescript' },
         ],
+        emitSchema: { 'src/graphql/__generated__/schema.json': true },
         outputPath: 'src/types/__generated__/graphql.d.ts',
       },
       resolve: 'gatsby-plugin-typegen',
