@@ -3,6 +3,16 @@ const siteMetadata = require('./src/data/siteMetadata');
 module.exports = {
   siteMetadata,
   plugins: [
+    {
+      options: {
+        codegenPlugins: [
+          { options: { avoidOptionals: true }, resolve: 'operations' },
+          { options: { avoidOptionals: true }, resolve: 'typescript' },
+        ],
+        outputPath: 'src/types/__generated__/graphql.d.ts',
+      },
+      resolve: 'gatsby-plugin-typegen',
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
