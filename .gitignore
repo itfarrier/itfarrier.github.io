@@ -2,6 +2,7 @@
 
 .cache/
 .idea/
+__generated__/
 node_modules/
 public/
 
