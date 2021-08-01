@@ -31,6 +31,13 @@
       "root/*": ["./*"],
       "src/*": ["src/*"]
     },
+    "plugins": [
+      {
+        "name": "ts-graphql-plugin",
+        "schema": "./src/graphql/__generated__/schema.json",
+        "tag": "gql"
+      }
+    ],
     "removeComments": true,
     "resolveJsonModule": true,
     "sourceMap": true,
@@ -40,7 +47,6 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ESNext",
-    "typeRoots": ["./src/global.d.ts", "node_modules"],
     "watch": true
   },
   "exclude": [

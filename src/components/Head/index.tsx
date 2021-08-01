@@ -5,6 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { HeadView } from 'cmpts/Head/HeadView';
 import { LanguageContext } from 'cmpts/LanguageContext';
+import siteMetadata from 'root/src/data/siteMetadata';
 import { generateAndroidChromeHeadLinks } from 'src/utilities/generateAndroidChromeHeadLinks';
 import { generateAppleTouchHeadLinks } from 'src/utilities/generateAppleTouchHeadLinks';
 import { generateFaviconHeadLinks } from 'src/utilities/generateFaviconHeadLinks';
@@ -22,8 +23,8 @@ export const Head: FC = () => {
 
   const { href } = useLocation();
 
-  const data = useStaticQuery(graphql`
-    {
+  const data = useStaticQuery<GatsbyTypes.HeadQuery>(graphql`
+    query Head {
       site {
         siteMetadata {
           description
@@ -34,7 +35,7 @@ export const Head: FC = () => {
     }
   `);
 
-  const { description, keywords, title } = data.site.siteMetadata;
+  const { description, keywords = [], title } = data.site?.siteMetadata ?? siteMetadata;
 
   return (
     <HeadView
@@ -43,7 +44,7 @@ export const Head: FC = () => {
       description={description}
       favicons={favicons}
       href={href}
-      keywords={keywords}
+      keywords={keywords.toString()}
       language={language}
       title={title}
     />

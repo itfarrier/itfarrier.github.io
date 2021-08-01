@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   extends: [
     '.eslintrc.defaults.js',
@@ -20,8 +22,16 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: __dirname },
-      plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'prettier'],
+      plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'graphql', 'prettier'],
       rules: {
+        'graphql/template-strings': [
+          'error',
+          {
+            env: 'relay',
+            schemaJsonFilepath: path.resolve(__dirname, 'src/graphql/__generated__/schema.json'),
+            tagName: 'graphql',
+          },
+        ],
         'react/jsx-uses-react': 'off',
         'react/prop-types': 0,
         'react/react-in-jsx-scope': 'off',

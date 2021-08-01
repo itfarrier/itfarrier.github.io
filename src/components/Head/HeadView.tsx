@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Helmet } from 'react-helmet';
 
 import { HeadViewProps } from 'cmpts/Head/types';
+import { COLORS } from 'src/constants';
 
 export const HeadView: FC<HeadViewProps> = (props) => {
   const {
@@ -31,12 +32,16 @@ export const HeadView: FC<HeadViewProps> = (props) => {
         sizes={'180x180'}
         type={'image/png'}
       />
-      <link color={'#000'} href={'/favicons/safari-pinned-tab.svg'} rel={'mask-icon'} />
+      <link
+        color={COLORS.RGBA_0_0_0_100}
+        href={'/favicons/safari-pinned-tab.svg'}
+        rel={'mask-icon'}
+      />
       <link href={'/favicons/favicon.ico'} rel={'shortcut icon'} />
       <link href={href} hrefLang={language} rel={'alternate'} />
       <link href={href} rel={'canonical'} />
-      <meta content={'#fff'} name={'msapplication-TileColor'} />
-      <meta content={'#fff'} name={'theme-color'} />
+      <meta content={COLORS.RGBA_255_255_255_100} name={'msapplication-TileColor'} />
+      <meta content={COLORS.RGBA_255_255_255_100} name={'theme-color'} />
       <meta content={'/favicons/android-chrome-512x512.png'} name={'twitter:image'} />
       <meta content={'/favicons/android-chrome-512x512.png'} property={'og:image'} />
       <meta content={'/favicons/browserconfig.xml'} name={'msapplication-config'} />
