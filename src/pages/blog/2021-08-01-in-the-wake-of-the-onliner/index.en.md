@@ -7,22 +7,22 @@ Once upon a time, I saw an
 <a href="https://realt.onliner.by/2021/06/12/20-krutyx-mest-dlya-progulok">article</a> at Onliner.
 And now, more than a month later, I’m ready to look at places from that article.
 
-Как транспорт использовал каршеринг <a href="https://any-time.by">Anytime</a>. Со старта затупил,
-что машина заводится только после начала аренды (поддержка всё растолковала). Поехал. По дороге
-увидел аистовое гнездо с птенцами.
+I used the car sharing by <a href="https://any-time.by">Anytime</a> as a transport. From the
+beginning, I blunted that the car starts only after the start of the sharing (support explained
+everything). On the way, I saw a white stork’s nest with chicks.
 
-![А вот и они.](IMG_1410.JPG)
+![And here they are.](IMG_1410.JPG)
 
-![И похуёвее.](IMG_1411.JPG)
+![And worse.](IMG_1411.JPG)
 
-Первой точкой пути были «Святые криницы». Сюда я уже ездил на велике (где умудрился сделать
-«восьмёрку» на колесо и погнуть «петух»), но на автомобиле оказалось гораздо приятнее ~~кто бы
-сомневался~~. В криницах тихо, спокойно, но портят всё человеческий мусор да поваленные деревья, что
-перегородили тропу. Вода отдаёт каким‐то железом во вкусе.
+The first point of the way was the ‘Holy Krinitsy’. I have already traveled here on a bike (where I
+made figure-eight on the back wheel and bent the derailleur hanger) but the trip was much nicer on
+the car ~~whoever doubted~~. It is quiet, calm in the krinitsy, but everything is spoiled by human
+garbage and fallen trees that blocked the trail. The water tastes like iron.
 
-![Первый родник. Ленточки навевают воспоминания о Байкале.](IMG_1426.JPG)
+![The first spring. Ribbons evoke memories of Lake Baikal.](IMG_1426.JPG)
 
-![Беседка у второго родника.](IMG_1445.JPG)
+![Gazebo near the second spring.](IMG_1445.JPG)
 
 Вторая точка — «Водохранилище Удранка». Площадь его довольно скромная, но искупаться хватило. Дамбу
 засрали битыми бутылками.
