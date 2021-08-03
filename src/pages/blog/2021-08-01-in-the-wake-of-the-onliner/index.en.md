@@ -24,50 +24,52 @@ garbage and fallen trees that blocked the trail. The water tastes like iron.
 
 ![Gazebo near the second spring.](IMG_1445.JPG)
 
-Вторая точка — «Водохранилище Удранка». Площадь его довольно скромная, но искупаться хватило. Дамбу
-засрали битыми бутылками.
+The second point is the ‘Udranka Reservoir’. Its area is rather small, but it was enough to swim.
+The dam was shitted with broken bottles.
 
-![Слив из дамбы с утками. На «бетоне» справа и валяются битые бутылки.](IMG_1455.JPG)
+![Drainage from the dam with ducks. Broken bottles are lying on the ‘concrete’ on the right.](IMG_1455.JPG)
 
-![Канал](IMG_1458.JPG)
+![Canal.](IMG_1458.JPG)
 
-Номер три — «Гидропарк санатория „Сосновый бор“». А вот тут даже есть какая‐то инфраструктура:
-лодочный прокат, островки с мангалами и беседками. Беседки, кстати, бесплатны для клиентов санатория
-и платны для всех остальных. Но, как обычно в Беларуси, захочешь заплатить — ~~хуй тебе~~ не найдёшь
-куда. Больше всего радости доставляют подвесные мостики да утки, коих здесь много.
+Number three – ‘Hydropark of the sanatorium “Sosnovy Bor”’. And here is even some kind of
+infrastructure: boat rental, islands with barbecues and gazebos. Gazebos, by the way, are free for
+the clients of the sanatorium and paid for everyone else. But, as usual in Belarus, if you want to
+pay – ~~fuck off~~ you won’t find where. Most of all the joy is delivered by the suspension bridges
+and ducks.
 
-Четыре — «Балластный карьер» возле Вязынки. Приехал, да не попал через КПП. ШТОШ…
+Four – ‘Ballast quarry’ near Vyazynka. I arrived but did not get through the checkpoint. WELL…
 
-Номер пять — «Быстротоки у Заславля». Путь сюда заканчивается весьма длинной паршивой грунтовкой. Но
-зато потом можно посмотреть сами быстротоки и живность, что тут обитает: множество лягушек, что
-расскакиваются из‐под ног, да какие‐то мелкие рыбы.
+Number five – ‘Rapid flow at Zaslavl’. The path ends with a very long lousy dirt road. But then you
+can see the rapid flows and the animals that live here: a lot of frogs that jump out under your
+feet, and some small fish.
 
-![Вид вперёд.](IMG_0630.JPG)
+![Forward view.](IMG_0630.JPG)
 
-![Назад с завалом.](IMG_0635.JPG)
+![Backward with incline.](IMG_0635.JPG)
 
-6 — «Юцковские родники». Почти то же самое, что номер один, но вода гораздо более приятная: без
-металла во вкусе, чуть сладковатая. И гораздо больше точек для набора воды. А ещё атмосфера тут
-гораздо таинственнее — овраг, прохлада, тропа среди нависающих деревьев…
+6 – ‘Yutskovsky Springs’. Almost the same as number one, but the water is much more pleasant:
+without metal in taste, slightly sweet. And there are many more points for collecting water. And
+also the atmosphere is much mysterious – a ravine, coolness, a trail among overhanging trees…
 
-![Сверху вниз.](IMG_1479.JPG)
+![Top down.](IMG_1479.JPG)
 
-И этого хватило на весь день.
+And that was enough for the whole day.
 
-В общем, я нашёл, чем заполнять выходные ~~не всё же за компом сидеть~~. Удивило меня в себе то, что
-понравилось водить, особенно на шоссе. Очень расслабляет (почти как ETS2), но ведь опасно на
-скорости 120. Не водил я лет 10 ~~вообще не водил, кроме как на экзамене~~, а за день езды вполне
-привык (пришлось, правда, прилагу для ПДД с неделю использовать, чтобы освежить знания). От аренды
-впечатление портит завязка на мобильное приложение, да такая, что без интернета машину не закрыть и
-не открыть. Пришлось звонить в поддержку для этого около «криниц». И апп странно работает с 3G
-интернетомv— вообще не работает. ~~Не читал, но~~ осуждаю.
+In general, I found something to fill my weekends with ~~not, all the same, to sit at the
+computer~~. What surprised me that I enjoyed driving, especially on the highway. Very relaxing
+(almost like ETS2), but it’s dangerous at a speed of 120 km/h. I have not driven for about 10 years
+~~I have not driven at all, except for the exam~~, but after a day of driving, I got used to it
+(however, I had to use traffic rules app for a week to refresh my knowledge). Car rent impressions
+are spoiled by the coherence with the mobile application, such that without the Internet the car
+cannot be closed or opened. I had to call support for solving this near the “Krinitsy”. And the app
+works strangely with 3G Internet – does not work at all. ~~I haven’t read it, but~~ I condemn.
 
-В итоге за день накатал 266 км, истратив пол‐бака. Потратил на всё ≈$42 (105.34 BYN). В планах
-посетить остальные места.
+As a result, in a day I drove off 266 km and spent half a gas tank. I spent ≈$42 (105.34 BYN) on
+everything. I planned to visit other places.
 
-![Пруф.](IMG_0648.PNG)
+![Proof.](IMG_0648.PNG)
 
-А ещё меня удивило, что смог машину задним ходом нормально запарковать с первого раза. Не ожидал от
-себя.
+And I was also surprised that I was able to park the car reversed normally from the first time. I
+didn’t expect it from myself.
 
-![Гений парковки.](IMG_0641.JPG)
+![Parking genius.](IMG_0641.JPG)
