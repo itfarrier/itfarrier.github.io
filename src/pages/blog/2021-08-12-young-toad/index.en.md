@@ -3,51 +3,52 @@ date: 2021-08-12 16:10:22
 title: 'Young toad'
 ---
 
-Продолжил свои поездки. В этот раз взял машину получше (BMW), чтобы ездить было ещё интереснее.
+I continued my trips. In this time I took a better car (BMW) to make the ride even more interesting.
 
-Первый
-номер — [дворец Чапских в Прилуках](<https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%A7%D0%B0%D0%BF%D1%81%D0%BA%D0%B8%D1%85_(%D0%9F%D1%80%D0%B8%D0%BB%D1%83%D0%BA%D0%B8)>).
+First
+number — [Chapsky palace in Priluki](<https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%A7%D0%B0%D0%BF%D1%81%D0%BA%D0%B8%D1%85_(%D0%9F%D1%80%D0%B8%D0%BB%D1%83%D0%BA%D0%B8)>).
 
-![Красивая сторона.](IMG_0699.JPG)
+![Beautiful side.](IMG_0699.JPG)
 
-Впечатление от дворца гнетущее — всё там очень хуёво: как всегда нет инфраструктуры, территория
-загажена, сам дворец в пиздецовом состоянии.
+The impression of the palace is depressing – everything is very bad there: as always, there is no
+infrastructure, the territory is dirty, the palace itself is in a fucking state.
 
-![Что-то очень нужное.](IMG_0686.JPG)
+![Something very useful.](IMG_0686.JPG)
 
-Судя по всему, «Институт защиты растений» хорошо защищает растения, но не дворец. Самое прикольное,
-что увидел — молодая жаба.
+The ‘Plant Protection Institute’ is good at protecting plants, but not the palace. The coolest thing
+I saw was a young toad.
 
-![Первые секунды.](IMG_0694.JPG)
+![The first seconds.](IMG_0694.JPG)
 
-![Когда люди уже заебали.](IMG_0695.JPG)
+![When people are already fucked up.](IMG_0695.JPG)
 
-Есть множество котов, что охотно гладятся. Можно съездить, чтобы котов покормить-погладить.
+There are many cats here. You can go to feed and pet the cats.
 
-Дальше — парк Чапских в Станьково.
+Further – the Chapsky Park in Stankovo.
 
-![Замануха.](IMG_0729.JPG)
+![Enticement.](IMG_0729.JPG)
 
-Тут всё то же самое. Разруха.
+Everything is the same here. Devastation.
 
-![«Ахоўваецца дзяржавай» до того мощно, что даже решётку не спиздили.](IMG_0731.JPG)
+![‘Ахоўваецца дзяржавай’ (Protected by the state) is so powerful that someone didn’t even screw up the bars.](IMG_0731.JPG)
 
-Вблизи лучше не смотреть тут ни на что. Здания изуродованы «новоделом», запущены, рассыпаются.
+It’s better not to look at anything up closely. The buildings are disfigured by the “remake”,
+neglected, crumbling.
 
-![Красота.](IMG_0739.JPG)
+![Beauty.](IMG_0739.JPG)
 
-![Муха не сидела.](IMG_0753.JPG)
+![The fly didn’t sit.](IMG_0753.JPG)
 
-![Просто куча говна.](IMG_0740.JPG)
+![Just a bunch of shit.](IMG_0740.JPG)
 
-А вот издалека всё, как обычно, прекрасно. Короче, едем сюда и сразу идём на пирс, чтобы просто
-смотреть вдаль. Так круче.
+But from afar, everything, as usual, is fine. In short, you should go there and immediately go to
+the pier to just look into the distance. So much cooler.
 
-![Збс.](IMG_0755.JPG)
+![Fck.](IMG_0755.JPG)
 
-![Збс. Часть вторая.](IMG_0757.JPG)
+![Fck. Part two.](IMG_0757.JPG)
 
-Пока ехал «из пункта A в пункт B», прохватил 200 на трассе. Получил бан. Грустно, но честно. А с
-другой стороны, для чего ещё брать BMW, как ни «навалить»?
+While driving ‘from point A to point B’, I was reached 200 on the highway. Got a ban. Sad but
+honest. On the other hand, why else would you take a BMW, no matter to race?
 
-![Утренние новости.](IMG_0771.PNG)
+![Breaking news.](IMG_0771.PNG)
