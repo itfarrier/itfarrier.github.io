@@ -9,7 +9,7 @@ Pros:
 
 - Free. The most important for me. ~~’cause I’m poor~~
 
-- Possibility for «nerding». I use it instead of games.
+- Possibility for ‘nerding’. I use it instead of games.
 
 - HYPOTHETICAL possibility for security audit of source code. It’s impossible for the regular human
   being.
