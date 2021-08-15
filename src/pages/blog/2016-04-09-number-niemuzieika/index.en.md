@@ -7,11 +7,11 @@ title: '#nemuzejka'
 
 Well, the impressions are settled, I can write.
 
-I visited “Pilot” for the first time since it was a terrible place. Naturally, for the CSLT. But
+I visited ‘Pilot’ for the first time since it was a terrible place. Naturally, for the CSLT. But
 also I’ve seen the bad poets. At the first time, the lyrics were really bad. I even experienced
 vicarious embarrassment. But then they became quite good and even funny. CSLT pleased, as always
-(only 2 times listened to their lives, and already say “always”: D). I heard a new song, but again I
-did not understand the words. : (The entertainer was impressed by the number of instruments in the
+(only 2 times listened to their lives, and already say “always” :D). I heard a new song, but again I
+did not understand the words. :( The entertainer was impressed by the number of instruments in the
 band (which is, that is). Here is a quote from the band’s SMM manager:
 
 > We had 2 guitars, 75 noisemakers, 5 harmonicas, half of the suitcase shakers, and a whole galaxy
