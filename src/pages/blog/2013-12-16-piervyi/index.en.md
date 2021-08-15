@@ -6,12 +6,12 @@ title: First
 I wanted to write a personal ~~shit~~blog. So, where’s the start? From blog hostings, of course. But
 that’s not for Jedi. I want MY OWN blog with my own domain name. Denied. Further, sure,
 <a href="https://wordpress. org">Wordpress</a>. Tried all of this under the light of the
-«<acronym title="LAMP = Linux, Apache, MySQL, PHP">LAMP</acronym>»: chosen the theme, installed some
+«<abbr title="LAMP = Linux, Apache, MySQL, PHP">LAMP</abbr>»: chosen the theme, installed some
 plugins. Need a hosting. And here I understood that I don’t want to pay ’cause I’m poor. And I
 started looking for a freeway.
 
 I invented some ways: free hosting or on my own PC. Free hostings scared my paranoia.
-«<acronym title="LAMP = Linux, Apache, MySQL, PHP">LAMP</acronym>» remote setup on my own PC was to
+«<abbr title="LAMP = Linux, Apache, MySQL, PHP">LAMP</abbr>» remote setup on my own PC was to
 difficult for me. And I found in Google that I can use GitHub as a hosting. And galloped... Static
 site generator <a href="http://jekyllrb.com">Jekyll</a> was googled. Tried. Beautiful, free, but
 difficult. Let’s google again... And I found <a href="http://octopress.org">Octopress</a>,
