@@ -4,12 +4,12 @@ title: 'In the wake of the Onliner'
 ---
 
 Once upon a time, I saw an
-<a href="https://realt.onliner.by/2021/06/12/20-krutyx-mest-dlya-progulok">article</a> at Onliner.
-And now, more than a month later, I’m ready to look at places from that article.
+[article](https://realt.onliner.by/2021/06/12/20-krutyx-mest-dlya-progulok) at Onliner. And now,
+more than a month later, I’m ready to look at places from that article.
 
-I used the car sharing by <a href="https://any-time.by">Anytime</a> as a transport. From the
-beginning, I blunted that the car starts only after the start of the sharing (support explained
-everything). On the way, I saw a white stork’s nest with chicks.
+I used the car sharing by [Anytime](https://any-time.by) as a transport. From the beginning, I
+blunted that the car starts only after the start of the sharing (support explained everything). On
+the way, I saw a white stork’s nest with chicks.
 
 ![And here they are.](IMG_1410.JPG)
 
