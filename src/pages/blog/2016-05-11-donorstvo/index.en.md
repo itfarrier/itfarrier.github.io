@@ -3,11 +3,11 @@ date: 2016-05-11 17:54:48
 title: 'Donation'
 ---
 
-After a break of 9 months of ~~pregnancy~~ laziness, I resumed “flow” donation (every 2 months). I
+After a break of 9 months of ~~pregnancy~~ laziness, I resumed ‘flow’ donation (every 2 months). I
 don’t know what I’m doing this for? It is not paid, I don’t give a shit to help someone, It is not
 rewarded with enough food, it hurts, the Honorary Donor is not honorable at all. The tangible
 advantages are a free blood test for various diseases and a free day off from work on the day of
-blood donation + an additional day off. Intangible — training the body to produce blood. Here’s the
+blood donation + an additional day off. Intangible – training the body to produce blood. Here’s the
 process:
 
 ![Hand](ruka.jpg)
