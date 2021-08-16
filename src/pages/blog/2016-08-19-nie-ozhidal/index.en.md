@@ -6,16 +6,16 @@ title: 'Not expected'
 We’ve recently gone to an equestrian club at a recreation center in a small village near
 Novokuznetsk. For work. For my beloved. The trip was quite ordinary: the driver suffered, and I
 slept, ate, listened to music while lying in the back seat of the VAZ 6th. Somewhere in the middle
-of the way, the car made several small jerks on the move — gasoline runs out, the driver said. After
+of the way, the car made several small jerks on the move – gasoline runs out, the driver said. After
 some time, it really ended. Fuck it if there was a gas station nearby, but it was 8 km from us. And
 it was already getting dark. And the car stopped just at the beginning of the ascent. The driver,
 laughing and mocking, issued: “Well, what a couchsurfer, catch the car! You want to hitchhike, so
-you will try! " So, picked up a canister (empty, which was empty in the trunk, although it should be
-full for such cases, damn it!) And went in the direction of the gas station, trying to catch a ride.
-10 cars passed by and I had already managed to climb the mountain, under which we stopped at the
-emergency. TOYOTA suddenly stopped (here it is, the first hitchhiking)! The driver was greeted, I
-said that I need to get to the nearest gas station, which is 8 kilometers further along the way, the
-driver agreed, I sat down and we drove off. And the conversation began:
+you will try! &quot; So, picked up a canister (empty, which was empty in the trunk, although it
+should be full for such cases, damn it!) And went in the direction of the gas station, trying to
+catch a ride. 10 cars passed by and I had already managed to climb the mountain, under which we
+stopped at the emergency. TOYOTA suddenly stopped (here it is, the first hitchhiking)! The driver
+was greeted, I said that I need to get to the nearest gas station, which is 8 kilometers further
+along the way, the driver agreed, I sat down and we drove off. And the conversation began:
 
 > ― Is that your car there on the emergency gang?
 >
