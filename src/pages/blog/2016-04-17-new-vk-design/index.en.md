@@ -1,6 +1,6 @@
 ---
 date: 2016-04-17 10:47:53
-title: 'New design of VK'
+title: 'New VK design'
 ---
 
 In 2016 (sic!) they FINALLY decided to increase the page width. Feedback in the beta test is
