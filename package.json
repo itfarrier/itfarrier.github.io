@@ -64,12 +64,12 @@
   "name": "itfarrier",
   "private": true,
   "scripts": {
+    "add-new-post": "npx ts-node -P ./tsconfig.cli.json ./src/utilities/cli.ts",
     "build": "gatsby build --verbose",
     "check-useless-dependencies": "npx depcheck",
     "clean": "find . -name '*.log' -type f -delete && rm -rf .cache node_modules public",
     "clean-build": "rm -rf .cache public",
     "clean-lockfile": "rm -rf package-lock.json yarn.lock",
-    "create-new-post": "npx ts-node -P ./tsconfig.cli.json ./src/utilities/cli.ts",
     "deploy": "npm run clean-build && git push origin source && npm run build && cp CNAME public/ && gh-pages -b master -d public",
     "deploy-test": "npm run clean && git push test && npm run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
     "eslint": "eslint . --ext .js,.jsx",
