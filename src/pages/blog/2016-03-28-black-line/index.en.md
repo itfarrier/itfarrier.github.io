@@ -22,9 +22,9 @@ people with high‐level Zen. For example:
 
 Scary men… ‘[Another team](https://vk.com/wall-115786413_36)’ is closer to me:
 
-> I should say you… It was a rape… Guys, are you listening to yourself??? Poets – everyone to the
+> I should say you… It was a rape… Guys, are you listening to yourself??? Poets – everyone to the
 > factory!!! Have you been told that poetry is not just a set of words? There, as it were, the
-> meaning should at least slip through! Trees – there are no petitions to you (there is to sound
+> meaning should at least slip through! Trees – there are no petitions to you (there is to sound
 > engineer). Clouds!!! Vocals -??? Whaaat was that?. I will not say anything to everyone who was
 > there further, because it was unbearable. Sorry for being rude. But the listener must also be
 > respected. And that was a shame.

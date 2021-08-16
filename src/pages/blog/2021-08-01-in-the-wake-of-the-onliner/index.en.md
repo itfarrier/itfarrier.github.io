@@ -62,7 +62,7 @@ computer~~. What surprised me that I enjoyed driving, especially on the highway.
 (however, I had to use traffic rules app for a week to refresh my knowledge). Car rent impressions
 are spoiled by the coherence with the mobile application, such that without the Internet the car
 cannot be closed or opened. I had to call support for solving this near the “Krinitsy”. And the app
-works strangely with 3G Internet – does not work at all. ~~I haven’t read it, but~~ I condemn.
+works strangely with 3G Internet – does not work at all. ~~I haven’t read it, but~~ I condemn.
 
 As a result, in a day I drove off 266 km and spent half a gas tank. I spent ≈$42 (105.34 BYN) on
 everything. I planned to visit other places.
