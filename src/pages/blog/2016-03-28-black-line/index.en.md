@@ -9,7 +9,7 @@ Came to KIC… and didn’t find the fucking entrance (I was looking for about 5
 building). Obviously, their entrance was at the front but in this case, it was in the backyard. Some
 nonsense. The event was started from lyrics reading. And it was like
 [№ 5](https://en.wikipedia.org/wiki/No._5,_1948). Sets of words where the meaning can see only
-people with high-level Zen. For example:
+people with high‐level Zen. For example:
 
 > And I liked everything. The poems got into the soul, made me think, and just reminded me what love
 > is and the fact that we are all equal. Some authors directly transferred fire to just their eyes,
@@ -30,7 +30,7 @@ Scary men… ‘[Another team](https://vk.com/wall-115786413_36)’ is closer to
 > respected. And that was a shame.
 
 Although I liked it and remembered lyrics about women and fire by the first poet that was presented
-as ‘fashion-guru’ :) After all of the poets for whom I went to the concert, I’ve seen them – CSLT.
+as ‘fashion‐guru’ :) After all of the poets for whom I went to the concert, I’ve seen them – CSLT.
 CSLT burned, of course. If the audience applauded the poets for the sake of decency, then for them
 for 100%. Good job. By the way like on [Andrew’s](https://vk.com/a_shevelev) lection bassist was the
 loudest. :D And I bought his book:

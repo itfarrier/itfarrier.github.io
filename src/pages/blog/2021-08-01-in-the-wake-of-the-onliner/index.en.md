@@ -16,7 +16,7 @@ the way, I saw a white stork’s nest with chicks.
 ![And worse.](IMG_1411.JPG)
 
 The first point of the way was the ‘Holy Krinitsy’. I have already traveled here on a bike (where I
-made figure-eight on the back wheel and bent the derailleur hanger) but the trip was much nicer on
+made figure‐eight on the back wheel and bent the derailleur hanger) but the trip was much nicer on
 the car ~~whoever doubted~~. It is quiet, calm in the krinitsy, but everything is spoiled by human
 garbage and fallen trees that blocked the trail. The water tastes like iron.
 

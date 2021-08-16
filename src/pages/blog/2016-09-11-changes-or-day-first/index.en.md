@@ -9,7 +9,7 @@ the past.
 On the evening of August 23rd, I began to pack up my first hitchhiking. I put a sleeping bag into my
 school backpack, which I have been with for more than 10 years, twisted a mat outside into its lower
 loops and hooked a ‘LENTA’ tent for almost 800 ₽ behind them, then stuffed inside all sorts of
-little things, such as paste-brushes-containers for lenses-charging-a little bit of the food-hats
+little things, such as paste‐brushes‐containers for lenses‐charging‐a little bit of the food‐hats
 and socks. My maximalism was stifled by the enlightenment of prudence and I took with me a card with
 0 ₽ in my account and 125 ₽ in cash.
 
@@ -29,7 +29,7 @@ Without voting for 10 minutes, I was successful: I was picked up by a truck. The
 journey. We didn’t even know the names of each other. Then 5 minutes of waiting and the second car:
 Alexander on the wagon. I rode to Kuskunka if memory does not fail. Next 15 minutes of waiting and
 “Zhenya” on Largus. He turned out to be a hitchhiker from the 90s, already retired. Traveled almost
-all of the ex-USSR. When he found out that I was on Baikal, he said something like: “Damn, you FUCK
+all of the ex‐USSR. When he found out that I was on Baikal, he said something like: “Damn, you FUCK
 there! The water is pure, the nature is awesome. It cannot be explained, just believe me.” He
 strongly advised me to visit the tundra lakes and generally travel around the country. We reached
 Uyar almost. Then the NAMELESS SULLEN DRIVER on the VAZ 9th. He refused to give the name and said
