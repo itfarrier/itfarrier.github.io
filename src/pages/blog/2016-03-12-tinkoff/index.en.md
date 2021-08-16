@@ -5,12 +5,12 @@ title: 'Tinkoff'
 
 ![Tinkoff Black](tinkoff.jpg)
 
-I’m a ~~brewer’s~~Tin’kov’s bank client a long time ago. But nuance is there. I’m using debit card
+I’m a ~~brewer’s~~Tin’kov’s bank client a long time ago. But nuance is there. I’m using a debit card
 only. And ’cause of that I have almost positive UX.
 
-From the latest. I’ve blocked my card &#39;cause of ~~stupidity~~carelessness. After blocking the
-card you can reissue it only but as the contract says reissue via user initiative costs 290₽. But
-for me it was free. That is the service. In Russia. Other pros knew.
+From the latest. I’ve blocked my card ’cause of ~~stupidity~~carelessness. After blocking the card
+you can reissue it only but as the contract says reissue via user initiative costs 290₽. But for me
+it was free. That is the service. In Russia. Other pros knew.
 
 Cons. Some time ago support specialist said that I shouldn’t use rough words. WTF? Tin’kov swears.
 Where is the service? I think that a business should interact with the client in its own language.

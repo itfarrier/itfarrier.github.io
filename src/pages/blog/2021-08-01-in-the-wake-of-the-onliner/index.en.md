@@ -4,19 +4,19 @@ title: 'In the wake of the Onliner'
 ---
 
 Once upon a time, I saw an
-<a href="https://realt.onliner.by/2021/06/12/20-krutyx-mest-dlya-progulok">article</a> at Onliner.
-And now, more than a month later, I’m ready to look at places from that article.
+[article](https://realt.onliner.by/2021/06/12/20-krutyx-mest-dlya-progulok) at Onliner. And now,
+more than a month later, I’m ready to look at places from that article.
 
-I used the car sharing by <a href="https://any-time.by">Anytime</a> as a transport. From the
-beginning, I blunted that the car starts only after the start of the sharing (support explained
-everything). On the way, I saw a white stork’s nest with chicks.
+I used the car sharing by [Anytime](https://any-time.by) as a transport. From the beginning, I
+blunted that the car starts only after the start of the sharing (support explained everything). On
+the way, I saw a white stork’s nest with chicks.
 
 ![And here they are.](IMG_1410.JPG)
 
 ![And worse.](IMG_1411.JPG)
 
 The first point of the way was the ‘Holy Krinitsy’. I have already traveled here on a bike (where I
-made figure-eight on the back wheel and bent the derailleur hanger) but the trip was much nicer on
+made figure‐eight on the back wheel and bent the derailleur hanger) but the trip was much nicer on
 the car ~~whoever doubted~~. It is quiet, calm in the krinitsy, but everything is spoiled by human
 garbage and fallen trees that blocked the trail. The water tastes like iron.
 
@@ -62,7 +62,7 @@ computer~~. What surprised me that I enjoyed driving, especially on the highway.
 (however, I had to use traffic rules app for a week to refresh my knowledge). Car rent impressions
 are spoiled by the coherence with the mobile application, such that without the Internet the car
 cannot be closed or opened. I had to call support for solving this near the “Krinitsy”. And the app
-works strangely with 3G Internet – does not work at all. ~~I haven’t read it, but~~ I condemn.
+works strangely with 3G Internet – does not work at all. ~~I haven’t read it, but~~ I condemn.
 
 As a result, in a day I drove off 266 km and spent half a gas tank. I spent ≈$42 (105.34 BYN) on
 everything. I planned to visit other places.
