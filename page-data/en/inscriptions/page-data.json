@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-inscriptions-en-tsx","path":"/en/inscriptions/","result":{"pageContext":{"slug":"/en/inscriptions/","langKey":"en"}},"staticQueryHashes":["2314851741","2674376943","357539041","4035578580"]}
+{
+    "componentChunkName": "component---src-pages-inscriptions-en-tsx",
+    "path": "/en/inscriptions/",
+    "result": {"pageContext":{"slug":"/en/inscriptions/","langKey":"en"}},
+    "staticQueryHashes": ["2314851741","2674376943","357539041","4035578580"]}
