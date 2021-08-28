@@ -6,3 +6,28 @@ on:
       - source
 
 jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          git-commit-gpgsign: true
+          git-user-signingkey: true
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2.5.0
+        with:
+          author: Dmitrij Podabed <iam@itfarrier.com>
+          build_dir: public
+          commit_message: Updates
+          committer: Dmitrij Podabed <iam@itfarrier.com>
+          domain: itfarrier.com
+          dry_run: true
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          fqdn: itfarrier.com
+          keep_history: true
+          target_branch: master
+          verbose: true
