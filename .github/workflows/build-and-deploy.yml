@@ -25,9 +25,10 @@ jobs:
           committer: Dmitrij Podabed <iam@itfarrier.com>
           domain: itfarrier.com
           dry_run: true
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
           fqdn: itfarrier.com
           keep_history: true
           target_branch: master
           verbose: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
