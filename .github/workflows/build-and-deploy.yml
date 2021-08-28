@@ -1,0 +1,42 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - source
+
+jobs:
+  build-and-deploy:
+    runs-on: macos-11
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          git-commit-gpgsign: true
+          git-user-signingkey: true
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          CI: true
+
+      - name: GitHub Pages deploy
+        uses: crazy-max/ghaction-github-pages@v2.5.0
+        with:
+          author: Dmitrij Podabed <iam@itfarrier.com>
+          build_dir: public
+          commit_message: Updates
+          committer: Dmitrij Podabed <iam@itfarrier.com>
+          fqdn: itfarrier.com
+          keep_history: true
+          target_branch: master
+          verbose: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

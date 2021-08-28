@@ -5,7 +5,7 @@
     "url": "https://itfarrier.com"
   },
   "dependencies": {
-    "gatsby": "^3.12.0",
+    "gatsby": "^3.12.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^1.12.0",
@@ -29,17 +29,17 @@
   "devDependencies": {
     "@types/graphql": "^14.5.0",
     "@types/inquirer": "^7.3.3",
-    "@types/node": "^16.7.1",
+    "@types/node": "^16.7.4",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@types/react-helmet": "^6.1.2",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
-    "@typescript-eslint/parser": "^4.29.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-graphql": "^4.0.0",
-    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-json-es": "^1.5.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
@@ -48,12 +48,12 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sort-destructure-keys": "^1.3.5",
     "gh-pages": "^3.2.3",
-    "husky": "^7.0.1",
+    "husky": "^7.0.2",
     "inquirer": "^8.1.2",
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "ts-graphql-plugin": "^2.1.4",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.2"
   },
   "keywords": [
     "IT Farrier",
