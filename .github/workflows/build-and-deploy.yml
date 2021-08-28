@@ -19,7 +19,10 @@ jobs:
           git-user-signingkey: true
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
 
-      - name: GitHub Pages
+      - name: Build
+        run: npm run build
+
+      - name: GitHub Pages deploy
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           author: Dmitrij Podabed <iam@itfarrier.com>
