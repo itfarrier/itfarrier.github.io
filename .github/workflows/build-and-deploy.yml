@@ -3,7 +3,7 @@ name: Build and deploy
 on:
   push:
     branches:
-      - add-github-actions
+      - source
 
 jobs:
   build-and-deploy:
@@ -34,7 +34,6 @@ jobs:
           build_dir: public
           commit_message: Updates
           committer: Dmitrij Podabed <iam@itfarrier.com>
-          dry_run: true
           fqdn: itfarrier.com
           keep_history: true
           target_branch: master
