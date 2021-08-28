@@ -32,7 +32,6 @@ jobs:
           build_dir: public
           commit_message: Updates
           committer: Dmitrij Podabed <iam@itfarrier.com>
-          domain: itfarrier.com
           dry_run: true
 
           fqdn: itfarrier.com
