@@ -19,9 +19,6 @@ jobs:
           git-user-signingkey: true
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
 
-      - name: Install NPM v7
-        run: npm -g i npm@latest
-
       - name: Install dependencies
         run: npm ci
 
