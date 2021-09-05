@@ -149,7 +149,13 @@ module.exports = {
       options: {
         plugins: [
           {
-            options: { maxWidth: 15360, showCaptions: true, withAvif: true, withWebp: true },
+            options: {
+              markdownCaptions: true,
+              maxWidth: 7680,
+              showCaptions: true,
+              withAvif: true,
+              withWebp: true,
+            },
             resolve: 'gatsby-remark-images',
           },
         ],
