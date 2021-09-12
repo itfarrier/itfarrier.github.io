@@ -5,8 +5,6 @@ title: 'I love…'
 
 ![](IMG_0982.JPG)
 
-![](IMG_0983.JPG)
-
 ![](IMG_0985.JPG)
 
 ![](IMG_0996.JPG)
@@ -16,8 +14,6 @@ title: 'I love…'
 ![](IMG_1132.JPG)
 
 ![](IMG_1133.JPG)
-
-![](IMG_1192.JPG)
 
 ![](IMG_1199.JPG)
 
@@ -29,11 +25,7 @@ title: 'I love…'
 
 ![](IMG_1223.JPG)
 
-![](IMG_1230.JPG)
-
 ![](IMG_1233.JPG)
-
-![](IMG_1247.JPG)
 
 ![](IMG_1260.JPG)
 
