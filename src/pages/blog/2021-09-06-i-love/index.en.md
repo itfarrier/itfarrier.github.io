@@ -9,8 +9,6 @@ title: 'I love…'
 
 ![](IMG_0996.JPG)
 
-![](IMG_0998.JPG)
-
 ![](IMG_1132.JPG)
 
 ![](IMG_1133.JPG)
