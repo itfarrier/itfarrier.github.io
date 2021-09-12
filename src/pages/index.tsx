@@ -41,7 +41,7 @@ export type IndexQuery = {
 };
 
 const Index: FC = () => {
-  const { site } = useStaticQuery<IndexQuery>(graphql`
+  const { site } = useStaticQuery<GatsbyTypes.IndexQuery>(graphql`
     query Index {
       site {
         siteMetadata {
