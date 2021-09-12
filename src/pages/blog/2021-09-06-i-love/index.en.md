@@ -3,32 +3,32 @@ date: 2021-09-06 17:14:09
 title: 'I love…'
 ---
 
-Посетил древнейший город Беларуси.
+I visited the oldest city in Belarus.
 
-![Реклама.](IMG_0982.JPG)
+![Ad.](IMG_0982.JPG)
 
-Очень классное решение построить современное панельное говно в виде Новополоцка не засирая Полоцк. В
-итоге остался туристический городок.
+A very cool solution to build a modern panel shit in the form of Novopolotsk without shitting
+Polotsk. As a result, there was a tourist town.
 
 ![](IMG_0985.JPG)
 
 ![](IMG_0996.JPG)
 
-Ещё посмотрел площадку для съёмок Беларусьфильма. Смотреть нечего, конечно.
+I also looked at the filming site of Belarusfilm. There is nothing to watch, of course.
 
 ![](IMG_1132.JPG)
 
 ![](IMG_1133.JPG)
 
-А вот и первая любовь. Орша оказалась не такой тюремной, как я предполагал. Хотя, вдали от замчища,
-город очень плох.
+And here is the first love. Orsha turned out to be not as a prison as I expected. Although, far from
+the castle, the city is very bad.
 
 ![](IMG_1199.JPG)
 
 ![](IMG_1200.JPG)
 
-Шклов больше похож на деревню, чем на город. Ощущение такое, что после постройки ратуши в 18 веке
-больше ничего и не делали.
+Shklov looks more like a village than a city. The feeling is that after the construction of the town
+hall in the 18th century, nothing else was done.
 
 ![](IMG_1223.JPG)
 
@@ -36,12 +36,13 @@ title: 'I love…'
 
 ![](IMG_1217.JPG)
 
-Рядом со Шкловом увидел замечательное. Но наверняка от слова «яблоко»…
+Near the Shklov I saw something wonderful. But for sure from the word ‘apple’…
 
 ![](IMG_1233.JPG)
 
-Дальше случайно увидел эти руины и пришлось развернуться. Привлекла внимание табличка в виде щита.
-От города осталось ничего. Заехать можно только лишь погрустить об утраченном.
+Then I accidentally saw these ruins and had to turn around. A sign with the form of a shield
+attracted my attention. Nothing remained of the city. You can only visit this place to be sad about
+what we have lost.
 
 ![](IMG_1262.JPG)
 
@@ -49,13 +50,13 @@ title: 'I love…'
 
 ![](IMG_1280.JPG)
 
-Следом ещё одна любовь. Очень скучная.
+Another love follows. Very boring.
 
 ![](IMG_1284.JPG)
 
-Болота оказались не такими тоскливыми. Омрачил всё каршеринг. Заехал в лес метров на 7 и долго
-мучился с блокировкой машины и разблокировкой после при наличии хорошей мобильной связи. Получил
-урок не заезжать на шеринге в лес.
+The swamps were not so boring. Car sharing spoiled everything. I drove into the forest about 7
+meters and suffered for a long time by blocking the car and unlocking it afterward with a good
+mobile connection. Got a lesson not to drive into the forest on a sharing.
 
 ![](IMG_1286.JPG)
 
@@ -63,14 +64,15 @@ title: 'I love…'
 
 ![](IMG_1298.JPG)
 
-![Не моё.](IMG_1302.JPG)
+![Not mine.](IMG_1302.JPG)
 
 ![](IMG_1303.JPG)
 
 ![](IMG_1305.JPG)
 
-Ну и напоследок город, где самое интересное — завод.
+And finally, the city where the most interesting thing is the factory.
 
 ![](IMG_1315.JPG)
 
-Вообще, ездить по всем этим жопам очень интересно, хотя ничего интересного там и не видишь. Странно.
+In general, driving to all these assholes is very interesting, although you don’t see anything
+interesting there. That’s weird.
