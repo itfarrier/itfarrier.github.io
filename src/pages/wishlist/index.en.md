@@ -4,8 +4,7 @@ title: Wishlist
 type: page
 ---
 
-## Needs:
-
+- iPhone 13 Pro 1TB;
 - NAS;
 - Better stereo;
 - Curved clincher;
@@ -20,16 +19,13 @@ type: page
 - Apron;
 - Headlight;
 - PC for games.
-
-## Done:
-
-- Decent salary at my favourite (at my beloved, not necessary) work;
-- Backpack;
-- Sleeping bag;
-- Mat;
-- Tent;
-- Power bank;
-- Charger;
-- Grinder tool;
-- PC;
-- iPhone 12 mini.
+- ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
+- ~~Backpack~~;
+- ~~Sleeping bag~~;
+- ~~Mat~~;
+- ~~Tent~~;
+- ~~Power bank~~;
+- ~~Charger~~;
+- ~~Grinder tool~~;
+- ~~PC~~;
+- ~~iPhone 12 mini~~.
