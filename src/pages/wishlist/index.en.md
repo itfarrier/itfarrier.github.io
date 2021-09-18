@@ -5,6 +5,7 @@ type: page
 ---
 
 - iPhone 13 Pro 1TB;
+- resume investment;
 - NAS;
 - Better stereo;
 - Curved clincher;
