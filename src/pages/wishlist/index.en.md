@@ -5,7 +5,7 @@ type: page
 ---
 
 - iPhone 13 Pro 1TB;
-- resume investment;
+- Resume investment;
 - NAS;
 - Better stereo;
 - Curved clincher;
@@ -19,7 +19,7 @@ type: page
 - Lose weight;
 - Apron;
 - Headlight;
-- PC for games.
+- PC for games;
 - ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
 - ~~Backpack~~;
 - ~~Sleeping bag~~;
