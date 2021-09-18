@@ -20,3 +20,5 @@ type: page
   the whole film is like a shooter! In some moments my head was spinning, in others, there was too
   much shaking. I think this technique will be used more often now because “Hardcore Henry” paved
   the way, which ended not very successfully due to no plot. But it looked original.
+
+- The Red Ghost (2020) – Cool!
