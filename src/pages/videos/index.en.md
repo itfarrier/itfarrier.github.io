@@ -21,4 +21,5 @@ type: page
   much shaking. I think this technique will be used more often now because “Hardcore Henry” paved
   the way, which ended not very successfully due to no plot. But it looked original.
 
-- The Red Ghost (2020) – Cool!
+- The Red Ghost (2020) – The authors have the balls to make a movie about WW2 with notes of Leone
+  and Tarantino. After all that patriotic shit, this is a diamond.
