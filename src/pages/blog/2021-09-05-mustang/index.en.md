@@ -3,7 +3,7 @@ date: 2021-09-05 19:41:16
 title: 'Mustang'
 ---
 
-![And here is the horse.](IMG_1192.JPG)
+![And here is the horse.](IMG_1192.jpg)
 
 So I drove the Mustang.
 
