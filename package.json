@@ -78,7 +78,7 @@
     "prettier-the-whole-project": "prettier --loglevel debug --write '**/*.{css,js,json,jsx,markdown,md,scss,ts,tsx}'",
     "reset": "npm run clean && npm run setup",
     "reset-full": "npm run clean && npm run clean-lockfile && npm run setup",
-    "setup": "npm i",
+    "setup": "npm i --legacy-peer-deps",
     "start": "npm run clean-build && gatsby develop -p 8000 --verbose",
     "start-prod": "npm run clean-build && npm run build && gatsby serve -p 8000 --verbose",
     "upgrade-all-deps": "npx npm-check-updates --concurrency 999999999 --deep -l silly --timeout 999999999 -u && npm i",
