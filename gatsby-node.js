@@ -75,6 +75,7 @@ exports.createPages = (gatsbyNodeHelpers) => {
           createPage({
             component: pageTemplate,
             context: { langKey, language: langKey, slug },
+            defer: true,
             path: slug,
           });
         });
@@ -93,6 +94,7 @@ exports.createPages = (gatsbyNodeHelpers) => {
           createPage({
             component: blogPostTemplate,
             context: { langKey, language: langKey, next, previous, slug },
+            defer: true,
             path: slug,
           });
         });
