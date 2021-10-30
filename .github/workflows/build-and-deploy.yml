@@ -19,11 +19,14 @@ jobs:
           git-user-signingkey: true
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
 
+      - name: Install Yarn
+        run: npm i yarn -g
+
       - name: Install dependencies
-        run: npm ci
+        run: yarn
 
       - name: Build
-        run: npm run build
+        run: yarn run build
         env:
           CI: true
 

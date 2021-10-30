@@ -144,7 +144,6 @@ module.exports = {
       options: { name: 'pages', path: `${__dirname}/src/pages` },
       resolve: 'gatsby-source-filesystem',
     },
-    { options: { jsxPragma: 'react-jsx' }, resolve: 'gatsby-plugin-typescript' },
     {
       options: {
         plugins: [

@@ -11,25 +11,25 @@ I used the car sharing by [Anytime](https://any-time.by) as a transport. From th
 blunted that the car starts only after the start of the sharing (support explained everything). On
 the way, I saw a white stork’s nest with chicks.
 
-![And here they are.](IMG_1410.JPG)
+![And here they are.](IMG_1410.jpg)
 
-![And worse.](IMG_1411.JPG)
+![And worse.](IMG_1411.jpg)
 
 The first point of the way was the ‘Holy Krinitsy’. I have already traveled here on a bike (where I
 made figure‐eight on the back wheel and bent the derailleur hanger) but the trip was much nicer on
 the car ~~whoever doubted~~. It is quiet, calm in the krinitsy, but everything is spoiled by human
 garbage and fallen trees that blocked the trail. The water tastes like iron.
 
-![The first spring. Ribbons evoke memories of Lake Baikal.](IMG_1426.JPG)
+![The first spring. Ribbons evoke memories of Lake Baikal.](IMG_1426.jpg)
 
-![Gazebo near the second spring.](IMG_1445.JPG)
+![Gazebo near the second spring.](IMG_1445.jpg)
 
 The second point is the ‘Udranka Reservoir’. Its area is rather small, but it was enough to swim.
 The dam was shitted with broken bottles.
 
-![Drainage from the dam with ducks. Broken bottles are lying on the ‘concrete’ on the right.](IMG_1455.JPG)
+![Drainage from the dam with ducks. Broken bottles are lying on the ‘concrete’ on the right.](IMG_1455.jpg)
 
-![Canal.](IMG_1458.JPG)
+![Canal.](IMG_1458.jpg)
 
 Number three – ‘Hydropark of the sanatorium “Sosnovy Bor”’. And here is even some kind of
 infrastructure: boat rental, islands with barbecues and gazebos. Gazebos, by the way, are free for
@@ -43,15 +43,15 @@ Number five – ‘Rapid flow at Zaslavl’. The path ends with a very long 
 can see the rapid flows and the animals that live here: a lot of frogs that jump out under your
 feet, and some small fish.
 
-![Forward view.](IMG_0630.JPG)
+![Forward view.](IMG_0630.jpg)
 
-![Backward with incline.](IMG_0635.JPG)
+![Backward with incline.](IMG_0635.jpg)
 
 6 – ‘Yutskovsky Springs’. Almost the same as number one, but the water is much more pleasant:
 without metal in taste, slightly sweet. And there are many more points for collecting water. And
 also the atmosphere is much mysterious – a ravine, coolness, a trail among overhanging trees…
 
-![Top down.](IMG_1479.JPG)
+![Top down.](IMG_1479.jpg)
 
 And that was enough for the whole day.
 
@@ -72,4 +72,4 @@ everything. I planned to visit other places.
 And I was also surprised that I was able to park the car reversed normally from the first time. I
 didn’t expect it from myself.
 
-![Parking genius.](IMG_0641.JPG)
+![Parking genius.](IMG_0641.jpg)
