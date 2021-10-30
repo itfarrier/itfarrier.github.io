@@ -27,7 +27,7 @@ inquirer
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-member-access
     const postTitle: string = answers.postTitle;
 
-    const titleWithDashes = postTitle.replace(/\s/gi, '-');
+    const titleWithDashes = postTitle.replace(/\s/gi, '-').toLowerCase();
 
     const newPostFolder = `${__dirname}/../pages/blog/${todayDate}-${titleWithDashes}`;
 
