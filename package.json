@@ -69,19 +69,19 @@
     "clean": "find . -name '*.log' -type f -delete && rm -rf .cache node_modules public",
     "clean-build": "rm -rf .cache public",
     "clean-lockfile": "rm -rf package-lock.json yarn.lock",
-    "deploy": "npm run clean-build && git push origin source && npm run build && cp CNAME public/ && gh-pages -b master -d public",
-    "deploy-test": "npm run clean && git push test && npm run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
+    "deploy": "yarn run clean-build && git push origin source && yarn run build && cp CNAME public/ && gh-pages -b master -d public",
+    "deploy-test": "yarn run clean && git push test && yarn run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
     "eslint": "eslint . --ext .js,.jsx",
     "eslint-auto-fix-the-whole-project": "eslint . -c ./.eslintrc.autoFixes.js --debug --fix --no-eslintrc",
     "prepare": "husky install",
     "prettier-the-whole-project": "prettier --loglevel debug --write '**/*.{css,js,json,jsx,markdown,md,scss,ts,tsx}'",
-    "reset": "npm run clean && npm run setup",
-    "reset-full": "npm run clean && npm run clean-lockfile && npm run setup",
-    "setup": "npm i --legacy-peer-deps",
-    "start": "npm run clean-build && gatsby develop -p 8000 --verbose",
-    "start-prod": "npm run clean-build && npm run build && gatsby serve -p 8000 --verbose",
-    "upgrade-all-deps": "npx npm-check-updates --concurrency 999999999 --deep -l silly --timeout 999999999 -u && npm i",
-    "upgrade-dev-deps": "npx npm-check-updates --concurrency 999999999 --deep --dep dev -l silly --timeout 999999999 -u && npm i"
+    "reset": "yarn run clean && yarn run setup",
+    "reset-full": "yarn run clean && yarn run clean-lockfile && yarn run setup",
+    "setup": "yarn",
+    "start": "yarn run clean-build && gatsby develop -p 8000 --verbose",
+    "start-prod": "yarn run clean-build && yarn run build && gatsby serve -p 8000 --verbose",
+    "upgrade-all-deps": "npx npm-check-updates --concurrency 999999999 --deep -l silly --timeout 999999999 -u && yarn",
+    "upgrade-dev-deps": "npx npm-check-updates --concurrency 999999999 --deep --dep dev -l silly --timeout 999999999 -u && yarn"
   },
   "version": "3.0.0"
 }
