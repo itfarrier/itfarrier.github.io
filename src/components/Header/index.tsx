@@ -8,7 +8,7 @@ import { getCurrentLangKey } from 'ptz-i18n';
 
 import { HeaderView } from 'cmpts/Header/HeaderView';
 import { Language } from 'cmpts/LanguageContext';
-import cv from 'docs/cv-podabed.pdf';
+import cv from 'docs/podabed-cv.pdf';
 import siteMetadata from 'src/data/siteMetadata';
 
 export const Header: FC = () => {
