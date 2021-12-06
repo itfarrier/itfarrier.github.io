@@ -20,6 +20,14 @@ type: page
 - Apron;
 - Headlight;
 - PC for games;
+- Weekend car;
+- Heavy blanket;
+- Orthopedic mattress;
+- Vision correction;
+- Apple Developer Account;
+- Hookah;
+- Suit;
+- Dash cam 4K 120fps;
 - ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
 - ~~Backpack~~;
 - ~~Sleeping bag~~;
