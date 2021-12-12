@@ -5,6 +5,9 @@ type: page
 ---
 
 - iPhone 13 Pro 1TB;
+- Compound bow;
+- Compound crossbow;
+- Dash cam 4K 120fps;
 - Resume investment;
 - NAS;
 - Better stereo;
@@ -27,7 +30,6 @@ type: page
 - Apple Developer Account;
 - Hookah;
 - Suit;
-- Dash cam 4K 120fps;
 - ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
 - ~~Backpack~~;
 - ~~Sleeping bag~~;
