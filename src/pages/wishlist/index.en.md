@@ -19,7 +19,8 @@ type: page
 - Hoof knife loop;
 - Hoof knife;
 - Hoof stand;
-- Lose weight;
+- Beautiful body;
+- Tattoos;
 - Apron;
 - Headlight;
 - PC for games;
