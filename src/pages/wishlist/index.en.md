@@ -31,6 +31,7 @@ type: page
 - Apple Developer Account;
 - Hookah;
 - Suit;
+- Driving courses;
 - ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
 - ~~Backpack~~;
 - ~~Sleeping bag~~;
