@@ -9,7 +9,7 @@ type: page
 - Compound crossbow;
 - Dash cam 4K 120fps;
 - Resume investment;
-- NAS;
+- NAS ≥ 4 disks;
 - Better stereo;
 - Curved clincher;
 - House with a land;
@@ -29,7 +29,7 @@ type: page
 - Orthopedic mattress;
 - Vision correction;
 - Apple Developer Account;
-- Hookah;
+- Hookah like in Elementum;
 - Suit;
 - Driving courses;
 - ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
