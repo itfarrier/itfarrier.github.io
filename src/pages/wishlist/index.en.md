@@ -5,7 +5,6 @@ type: page
 ---
 
 - Apple Developer Account;
-- Apple Watch 7 45mm;
 - Apron;
 - Beautiful body;
 - Better stereo;
@@ -28,13 +27,14 @@ type: page
 - Orthopedic mattress;
 - PC for games;
 - Resume investment;
-- Suit;
 - Tattoos;
 - Vision correction;
 - Weekend car;
-- iPhone 13 Pro Max 1TB;
+- iPhone with 1TB storage;
+- ~~Apple Watch 7 45mm~~;
 - ~~Backpack~~;
 - ~~Charger~~;
+- ~~Classic suit~~;
 - ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
 - ~~Grinder tool~~;
 - ~~Mat~~;
