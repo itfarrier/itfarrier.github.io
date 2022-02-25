@@ -8,7 +8,7 @@ module.exports = {
   jsxSingleQuote: true,
   printWidth: 100,
   proseWrap: 'always',
-  quoteProps: 'consistent',
+  quoteProps: 'as-needed',
   requirePragma: false,
   semi: true,
   singleQuote: true,
