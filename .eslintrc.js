@@ -3,7 +3,7 @@ module.exports = {
     {
       env: { amd: true, commonjs: true, node: true },
       extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-      files: ['*config.js'],
+      files: ['**/*.config.js', '**/{,.}*rc*.js'],
     },
     {
       extends: [
