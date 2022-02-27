@@ -23,5 +23,11 @@ module.exports = {
       ],
       files: ['*.yaml', '*.yml'],
     },
+    {
+      extends: ['plugin:prettier/recommended', 'plugin:md/recommended'],
+      files: ['*.md'],
+      parser: 'markdown-eslint-parser',
+      rules: { 'prettier/prettier': ['error', { parser: 'markdown' }] },
+    },
   ],
 };
