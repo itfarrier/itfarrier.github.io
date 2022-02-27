@@ -14,5 +14,14 @@ module.exports = {
       ],
       files: ['*.json'],
     },
+    {
+      extends: [
+        'eslint:recommended',
+        'plugin:yml/standard',
+        'plugin:yml/prettier',
+        'plugin:prettier/recommended',
+      ],
+      files: ['*.yaml', '*.yml'],
+    },
   ],
 };
