@@ -3,7 +3,7 @@ module.exports = {
     {
       env: { amd: true, commonjs: true, es2022: true, node: true },
       extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-      files: ['**/*.config.js', '**/{,.}*rc*.js'],
+      files: ['{.,}*.js{x,}'],
       plugins: ['import', 'sort-keys-fix', 'sort-destructure-keys'],
       rules: {
         'import/order': [
