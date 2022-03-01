@@ -30,4 +30,5 @@ module.exports = {
       rules: { 'prettier/prettier': ['error', { parser: 'markdown' }] },
     },
   ],
+  root: true,
 };
