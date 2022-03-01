@@ -80,7 +80,7 @@ module.exports = {
       plugins: ['@typescript-eslint', 'import'],
       rules: { 'import/no-unresolved': 'error' },
       settings: {
-        'import/parsers': { '@typescript-eslint/parser': ['.ts', '.tsx'] },
+        'import/parsers': { '@typescript-eslint/parser': ['.ts{x,}'] },
         'import/resolver': {
           typescript: { alwaysTryTypes: true, project: 'tsconfig{.cli,}.json' },
         },
