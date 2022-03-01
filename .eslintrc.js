@@ -66,12 +66,19 @@ module.exports = {
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'plugin:react-hooks/recommended',
+        'plugin:jsx-a11y/strict',
         'plugin:prettier/recommended',
       ],
       files: ['{.,}*.ts{x,}'],
       parser: '@typescript-eslint/parser',
       parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: __dirname },
-      plugins: ['@typescript-eslint', 'import', 'sort-destructure-keys', 'sort-keys-fix'],
+      plugins: [
+        '@typescript-eslint',
+        'import',
+        'jsx-a11y',
+        'sort-destructure-keys',
+        'sort-keys-fix',
+      ],
       rules: {
         'import/no-unresolved': 'error',
         'import/order': [
