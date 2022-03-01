@@ -63,6 +63,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/recommended',
         'plugin:import/typescript',
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
         'plugin:prettier/recommended',
       ],
       files: ['{.,}*.ts{x,}'],
