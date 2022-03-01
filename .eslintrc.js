@@ -65,6 +65,16 @@ module.exports = {
       parser: 'markdown-eslint-parser',
       rules: { 'prettier/prettier': ['error', { parser: 'markdown' }] },
     },
+    {
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+      ],
+      files: ['{.,}*.ts{x,}'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+    },
   ],
   root: true,
 };
