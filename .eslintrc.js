@@ -6,6 +6,7 @@ module.exports = {
       files: ['{.,}*.js{x,}'],
       plugins: ['import', 'sort-keys-fix', 'sort-destructure-keys'],
       rules: {
+        'import/no-unresolved': 'error',
         'import/order': [
           'error',
           {
@@ -26,16 +27,6 @@ module.exports = {
           },
         ],
         'sort-destructure-keys/sort-destructure-keys': 2,
-        'sort-imports': [
-          'error',
-          {
-            allowSeparatedGroups: true,
-            ignoreCase: false,
-            ignoreDeclarationSort: false,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-          },
-        ],
         'sort-keys': ['error', 'asc', { caseSensitive: true, minKeys: 2, natural: false }],
         'sort-keys-fix/sort-keys-fix': 'error',
         'sort-vars': 'error',
@@ -77,8 +68,33 @@ module.exports = {
       files: ['{.,}*.ts{x,}'],
       parser: '@typescript-eslint/parser',
       parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: __dirname },
-      plugins: ['@typescript-eslint', 'import'],
-      rules: { 'import/no-unresolved': 'error' },
+      plugins: ['@typescript-eslint', 'import', 'sort-destructure-keys', 'sort-keys-fix'],
+      rules: {
+        'import/no-unresolved': 'error',
+        'import/order': [
+          'error',
+          {
+            alphabetize: { order: 'asc' },
+            groups: [
+              'builtin',
+              'external',
+              'internal',
+              'parent',
+              'sibling',
+              'index',
+              'object',
+              'unknown',
+            ],
+            'newlines-between': 'always',
+            pathGroups: [{ group: 'builtin', pattern: 'react', position: 'before' }],
+            pathGroupsExcludedImportTypes: ['react'],
+          },
+        ],
+        'sort-destructure-keys/sort-destructure-keys': 2,
+        'sort-keys': ['error', 'asc', { caseSensitive: true, minKeys: 2, natural: false }],
+        'sort-keys-fix/sort-keys-fix': 'error',
+        'sort-vars': 'error',
+      },
       settings: {
         'import/parsers': { '@typescript-eslint/parser': ['.ts{x,}'] },
         'import/resolver': {
