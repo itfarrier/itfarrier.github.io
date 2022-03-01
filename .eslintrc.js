@@ -65,6 +65,7 @@ module.exports = {
         'plugin:import/typescript',
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
+        'plugin:react-hooks/recommended',
         'plugin:prettier/recommended',
       ],
       files: ['{.,}*.ts{x,}'],
