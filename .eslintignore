@@ -1,7 +1,10 @@
-.cache/
-.idea/
-.jest/
-__generated__/
-node_modules/
-public/
-static/
+!.*
+.*ignore
+.cache
+.git
+.idea
+.jest
+__generated__
+node_modules
+public
+static
