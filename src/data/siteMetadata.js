@@ -7,5 +7,5 @@ module.exports = {
   name: 'itfarrier.com',
   shortName: 'itfarrier',
   siteUrl: 'https://itfarrier.com',
-  title: '#nowar #noputin #nolukashenko #нетвойне #нетпутину #нетлукашенко ITFarrier',
+  title: '🇺🇦 #nowar #noputin #nolukashenko #нетвойне #нетпутину #нетлукашенко ITFarrier',
 };
