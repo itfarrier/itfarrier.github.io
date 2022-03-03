@@ -24,8 +24,8 @@ module.exports = {
     'import/order': [
       'warn',
       {
-        'alphabetize': { order: 'asc' },
-        'groups': [
+        alphabetize: { order: 'asc' },
+        groups: [
           'builtin',
           'external',
           'internal',
@@ -36,8 +36,8 @@ module.exports = {
           'unknown',
         ],
         'newlines-between': 'always',
-        'pathGroups': [{ group: 'builtin', pattern: 'react', position: 'before' }],
-        'pathGroupsExcludedImportTypes': ['react'],
+        pathGroups: [{ group: 'builtin', pattern: 'react', position: 'before' }],
+        pathGroupsExcludedImportTypes: ['react'],
       },
     ],
     'prettier/prettier': 'warn',

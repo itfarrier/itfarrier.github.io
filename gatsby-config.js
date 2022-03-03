@@ -1,7 +1,6 @@
 const siteMetadata = require('./src/data/siteMetadata');
 
 module.exports = {
-  siteMetadata,
   plugins: [
     {
       options: {
@@ -162,4 +161,5 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
     },
   ],
+  siteMetadata,
 };
