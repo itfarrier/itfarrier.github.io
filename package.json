@@ -76,7 +76,7 @@
     "deploy": "yarn run clean-build && git push origin source && yarn run build && cp CNAME public/ && gh-pages -b master -d public",
     "deploy-test": "yarn run clean && git push test && yarn run build && cp CNAME-TEST public/CNAME && gh-pages -b master -d public -o test",
     "eslint": "eslint . --debug",
-    "eslint-auto-fix-the-whole-project": "eslint . -c ./.eslintrc.autoFixes.js --debug --fix --no-eslintrc",
+    "eslint-auto-fix-the-whole-project": "eslint . --debug --fix",
     "prepare": "husky install",
     "prettier-the-whole-project": "prettier --loglevel debug --write '**/*.{css,js,json,jsx,markdown,md,scss,ts,tsx}'",
     "reset": "yarn run clean && yarn run setup",
