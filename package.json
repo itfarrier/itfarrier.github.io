@@ -5,7 +5,7 @@
     "url": "https://itfarrier.com"
   },
   "dependencies": {
-    "gatsby": "^4.9.1",
+    "gatsby": "^4.9.2",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^2.9.0",
