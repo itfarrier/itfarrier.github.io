@@ -134,7 +134,11 @@ const config: GatsbyConfig = {
     'gatsby-plugin-offline',
     {
       options: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         langKeyDefault: siteMetadata.i18n.defaultLanguage,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         langKeyForNull: siteMetadata.i18n.defaultLanguage,
         prefixDefault: true,
         useLangKeyLayout: false,
