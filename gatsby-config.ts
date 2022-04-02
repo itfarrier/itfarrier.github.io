@@ -1,6 +1,8 @@
+import type { GatsbyConfig } from 'gatsby';
+
 const siteMetadata = require('./src/data/siteMetadata');
 
-module.exports = {
+const config: GatsbyConfig = {
   plugins: [
     {
       options: {
@@ -163,3 +165,5 @@ module.exports = {
   ],
   siteMetadata,
 };
+
+export default config;
