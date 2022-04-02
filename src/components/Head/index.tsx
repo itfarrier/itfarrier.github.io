@@ -5,7 +5,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { HeadView } from 'cmpts/Head/HeadView';
 import { LanguageContext } from 'cmpts/LanguageContext';
-import siteMetadata from 'root/src/data/siteMetadata';
+import { siteMetadata } from 'src/data/siteMetadata';
 import { generateAndroidChromeHeadLinks } from 'src/utilities/generateAndroidChromeHeadLinks';
 import { generateAppleTouchHeadLinks } from 'src/utilities/generateAppleTouchHeadLinks';
 import { generateFaviconHeadLinks } from 'src/utilities/generateFaviconHeadLinks';

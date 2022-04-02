@@ -7,7 +7,7 @@ import { graphql, navigate, useStaticQuery } from 'gatsby';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
 import { Language, LanguageContext } from 'cmpts/LanguageContext';
-import siteMetadata from 'src/data/siteMetadata';
+import { siteMetadata } from 'src/data/siteMetadata';
 import { ILangObject } from 'src/types';
 
 export const SelectLanguage: FC = () => {

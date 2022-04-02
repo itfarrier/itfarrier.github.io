@@ -2,7 +2,7 @@ import { resolve } from 'path';
 
 import type { GatsbyConfig } from 'gatsby';
 
-import siteMetadata from './src/data/siteMetadata';
+import { siteMetadata } from './src/data/siteMetadata';
 
 const config: GatsbyConfig = {
   plugins: [
@@ -24,7 +24,6 @@ const config: GatsbyConfig = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     {
-      __key: 'assets',
       options: { name: 'assets', path: resolve('src/assets') },
       resolve: 'gatsby-source-filesystem',
     },
@@ -142,11 +141,7 @@ const config: GatsbyConfig = {
       },
       resolve: 'gatsby-plugin-i18n',
     },
-    {
-      __key: 'pages',
-      options: { name: 'pages', path: resolve('src/pages') },
-      resolve: 'gatsby-source-filesystem',
-    },
+    { options: { name: 'pages', path: resolve('src/pages') }, resolve: 'gatsby-source-filesystem' },
     {
       options: {
         plugins: [
