@@ -2,24 +2,13 @@ import { resolve } from 'path';
 
 import { GatsbyNode } from 'gatsby';
 
+import { accumulateEdgesByType } from './src/utilities/accumulateEdgesByType';
+
 export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = (gatsbyNodeHelpers) => {
   gatsbyNodeHelpers.actions.setBabelPlugin({
     name: '@babel/plugin-transform-react-jsx',
     options: { runtime: 'automatic' },
   });
-};
-
-const accumulateEdgesByType = (accumulator, item, itemLanguage, type) => {
-  return {
-    ...accumulator,
-    [type]: {
-      ...accumulator[type],
-      [itemLanguage]: [
-        ...(accumulator[type][itemLanguage] !== undefined ? accumulator[type][itemLanguage] : []),
-        item,
-      ],
-    },
-  };
 };
 
 export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
