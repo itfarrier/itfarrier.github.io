@@ -1,6 +1,6 @@
 import type { GatsbyConfig } from 'gatsby';
 
-const siteMetadata = require('./src/data/siteMetadata');
+import siteMetadata from './src/data/siteMetadata';
 
 const config: GatsbyConfig = {
   plugins: [
