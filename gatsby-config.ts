@@ -1,3 +1,5 @@
+import { resolve } from 'path';
+
 import type { GatsbyConfig } from 'gatsby';
 
 import siteMetadata from './src/data/siteMetadata';
@@ -23,17 +25,17 @@ const config: GatsbyConfig = {
     'gatsby-transformer-sharp',
     {
       __key: 'assets',
-      options: { name: 'assets', path: `${__dirname}/src/assets` },
+      options: { name: 'assets', path: resolve('src/assets') },
       resolve: 'gatsby-source-filesystem',
     },
     {
       options: {
         alias: {
-          cmpts: `${__dirname}/src/components`,
-          docs: `${__dirname}/src/assets/documents`,
-          imgs: `${__dirname}/src/assets/images`,
-          root: __dirname,
-          src: `${__dirname}/src`,
+          cmpts: resolve('src/components'),
+          docs: resolve('src/assets/documents'),
+          imgs: resolve('src/assets/images'),
+          root: resolve('.'),
+          src: resolve('src'),
         },
       },
       resolve: 'gatsby-plugin-alias-imports',
@@ -142,7 +144,7 @@ const config: GatsbyConfig = {
     },
     {
       __key: 'pages',
-      options: { name: 'pages', path: `${__dirname}/src/pages` },
+      options: { name: 'pages', path: resolve('src/pages') },
       resolve: 'gatsby-source-filesystem',
     },
     {
