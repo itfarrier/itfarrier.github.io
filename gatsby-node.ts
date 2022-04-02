@@ -1,6 +1,8 @@
-const path = require('path');
+import { resolve } from 'path';
 
-exports.onCreateBabelConfig = (gatsbyNodeHelpers) => {
+import { GatsbyNode } from 'gatsby';
+
+export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = (gatsbyNodeHelpers) => {
   gatsbyNodeHelpers.actions.setBabelPlugin({
     name: '@babel/plugin-transform-react-jsx',
     options: { runtime: 'automatic' },
@@ -20,15 +22,15 @@ const accumulateEdgesByType = (accumulator, item, itemLanguage, type) => {
   };
 };
 
-exports.createPages = (gatsbyNodeHelpers) => {
+export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
   const {
     actions: { createPage },
     graphql,
   } = gatsbyNodeHelpers;
 
-  const blogPostTemplate = path.resolve(`${__dirname}/src/templates/post.tsx`);
+  const blogPostTemplate = resolve('src/templates/post.tsx');
 
-  const pageTemplate = path.resolve(`${__dirname}/src/templates/page.tsx`);
+  const pageTemplate = resolve('src/templates/page.tsx');
 
   return graphql(
     `
