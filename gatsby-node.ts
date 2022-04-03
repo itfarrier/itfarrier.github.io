@@ -2,8 +2,7 @@ import { resolve } from 'path';
 
 import { GatsbyNode } from 'gatsby';
 
-import { FRONTMATTER_TYPES } from 'src/constants';
-
+import { FRONTMATTER_TYPES } from './src/constants';
 import { accumulateEdgesByType } from './src/utilities/accumulateEdgesByType';
 
 export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = (gatsbyNodeHelpers) => {
