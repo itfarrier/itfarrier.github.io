@@ -1,6 +1,6 @@
 import { FRONTMATTER_TYPES, LANGUAGE_CODES } from 'src/constants';
 
-import MarkdownRemarkEdge = GatsbyTypes.MarkdownRemarkEdge;
+type MarkdownRemarkEdge = GatsbyTypes.MarkdownRemarkEdge;
 
 export type ItemLanguage = Record<LANGUAGE_CODES, MarkdownRemarkEdge[]>;
 
