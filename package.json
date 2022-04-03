@@ -53,6 +53,7 @@
     "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "inquirer": "^8.2.2",
+    "jest": "^27.5.1",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.1",
     "ts-graphql-plugin": "^2.1.6",
