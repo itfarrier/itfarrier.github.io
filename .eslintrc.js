@@ -3,7 +3,7 @@ module.exports = {
     {
       env: { amd: true, commonjs: true, es2022: true, node: true },
       extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-      files: ['{.,}*.js{x,}'],
+      files: '{.,}*.js{x,}',
       plugins: ['import', 'sort-keys-fix', 'sort-destructure-keys'],
       rules: {
         'import/no-unresolved': 'error',
@@ -39,7 +39,7 @@ module.exports = {
         'plugin:jsonc/recommended-with-json',
         'plugin:prettier/recommended',
       ],
-      files: ['*.json'],
+      files: '*.json',
     },
     {
       extends: [
@@ -48,7 +48,7 @@ module.exports = {
         'plugin:yml/prettier',
         'plugin:prettier/recommended',
       ],
-      files: ['*.yaml', '*.yml'],
+      files: '*.y{a,}ml',
     },
     {
       extends: ['plugin:prettier/recommended', 'plugin:md/recommended'],
@@ -57,6 +57,7 @@ module.exports = {
       rules: { 'prettier/prettier': ['error', { parser: 'markdown' }] },
     },
     {
+      excludedFiles: '{.,}*.test.ts{x,}',
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
@@ -69,7 +70,7 @@ module.exports = {
         'plugin:jsx-a11y/strict',
         'plugin:prettier/recommended',
       ],
-      files: ['{.,}*.ts{x,}'],
+      files: '{.,}*.ts{x,}',
       parser: '@typescript-eslint/parser',
       parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: __dirname },
       plugins: [
