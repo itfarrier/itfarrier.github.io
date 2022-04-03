@@ -48,7 +48,7 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         throw result.errors;
       }
 
-      const groupedByLanguage = result.data.allMarkdownRemark.edges.reduce(
+      const groupedByTypeAndLanguage = result.data.allMarkdownRemark.edges.reduce(
         (acc, item) => {
           const { fields, frontmatter } = item.node;
           const itemLanguage = fields.langKey;
@@ -60,8 +60,8 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         { [FRONTMATTER_TYPES.PAGE]: {}, [FRONTMATTER_TYPES.POST]: {} },
       );
 
-      Object.keys(groupedByLanguage.pages).forEach((key) => {
-        groupedByLanguage.pages[key].forEach((item) => {
+      Object.keys(groupedByTypeAndLanguage.pages).forEach((key) => {
+        groupedByTypeAndLanguage.pages[key].forEach((item) => {
           const { langKey, slug } = item.node.fields;
 
           createPage({
@@ -72,15 +72,15 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         });
       });
 
-      Object.keys(groupedByLanguage.posts).forEach((key) => {
-        groupedByLanguage.posts[key].forEach((item, index) => {
+      Object.keys(groupedByTypeAndLanguage.posts).forEach((key) => {
+        groupedByTypeAndLanguage.posts[key].forEach((item, index) => {
           const { langKey, slug } = item.node.fields;
 
-          const next = index === 0 ? null : groupedByLanguage.posts[key][index - 1].node;
+          const next = index === 0 ? null : groupedByTypeAndLanguage.posts[key][index - 1].node;
           const previous =
-            index === groupedByLanguage.posts[key].length - 1
+            index === groupedByTypeAndLanguage.posts[key].length - 1
               ? null
-              : groupedByLanguage.posts[key][index + 1].node;
+              : groupedByTypeAndLanguage.posts[key][index + 1].node;
 
           createPage({
             component: blogPostTemplate,
