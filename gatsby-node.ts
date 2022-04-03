@@ -2,6 +2,8 @@ import { resolve } from 'path';
 
 import { GatsbyNode } from 'gatsby';
 
+import { FRONTMATTER_TYPES } from 'src/constants';
+
 import { accumulateEdgesByType } from './src/utilities/accumulateEdgesByType';
 
 export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = (gatsbyNodeHelpers) => {
@@ -53,10 +55,10 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
           const itemLanguage = fields.langKey;
 
           return frontmatter.type === 'page'
-            ? accumulateEdgesByType(acc, item, itemLanguage, 'pages')
-            : accumulateEdgesByType(acc, item, itemLanguage, 'posts');
+            ? accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.PAGE)
+            : accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.POST);
         },
-        { pages: {}, posts: {} },
+        { [FRONTMATTER_TYPES.PAGE]: {}, [FRONTMATTER_TYPES.POST]: {} },
       );
 
       Object.keys(groupedByLanguage.pages).forEach((key) => {
