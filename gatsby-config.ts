@@ -9,8 +9,18 @@ const config: GatsbyConfig = {
     {
       options: {
         codegenPlugins: [
-          { options: { avoidOptionals: true }, resolve: 'operations' },
-          { options: { avoidOptionals: true }, resolve: 'typescript' },
+          {
+            options: { avoidOptionals: true, declarationKind: 'type', enumsAsTypes: true },
+            resolve: 'operations',
+          },
+          {
+            options: {
+              avoidOptionals: true,
+              exportFragmentSpreadSubTypes: true,
+              globalNamespace: false,
+            },
+            resolve: 'typescript',
+          },
         ],
         emitSchema: { 'src/graphql/__generated__/schema.json': true },
         outputPath: 'src/types/__generated__/graphql.d.ts',
