@@ -45,6 +45,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ESNext",
+    "typeRoots": ["node_modules", "src/types"],
     "watch": true
   },
   "exclude": [
