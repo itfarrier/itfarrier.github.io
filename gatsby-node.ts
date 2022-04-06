@@ -2,6 +2,8 @@ import { resolve } from 'path';
 
 import { GatsbyNode } from 'gatsby';
 
+import { GROUPED_BY_TYPE_AND_LANGUAGE_FALLBACK } from 'src/constants/fallbacks';
+
 import { FRONTMATTER_TYPES } from './src/constants';
 import { accumulateEdgesByType } from './src/utilities/accumulateEdgesByType';
 
@@ -48,17 +50,14 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         throw result.errors;
       }
 
-      const groupedByTypeAndLanguage = result.data.allMarkdownRemark.edges.reduce(
-        (acc, item) => {
-          const { fields, frontmatter } = item.node;
-          const itemLanguage = fields.langKey;
+      const groupedByTypeAndLanguage = result.data.allMarkdownRemark.edges.reduce((acc, item) => {
+        const { fields, frontmatter } = item.node;
+        const itemLanguage = fields.langKey;
 
-          return frontmatter.type === 'page'
-            ? accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.PAGE)
-            : accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.POST);
-        },
-        { [FRONTMATTER_TYPES.PAGE]: {}, [FRONTMATTER_TYPES.POST]: {} },
-      );
+        return frontmatter.type === 'page'
+          ? accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.PAGE)
+          : accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.POST);
+      }, GROUPED_BY_TYPE_AND_LANGUAGE_FALLBACK);
 
       Object.keys(groupedByTypeAndLanguage.pages).forEach((key) => {
         groupedByTypeAndLanguage.pages[key].forEach((item) => {
