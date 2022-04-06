@@ -89,6 +89,7 @@
     "setup": "yarn --verbose",
     "start": "yarn run clean-build && gatsby develop -H 0.0.0.0 -p 8000 --verbose",
     "start-prod": "yarn run clean-build && yarn run build && gatsby serve -p 8000 --verbose",
+    "test": "jest",
     "upgrade-all-deps": "npx npm-check-updates --concurrency 999999999 --deep -l silly --timeout 999999999 -u && yarn",
     "upgrade-dev-deps": "npx npm-check-updates --concurrency 999999999 --deep --dep dev -l silly --timeout 999999999 -u && yarn"
   },
