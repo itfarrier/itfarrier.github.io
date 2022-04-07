@@ -2,6 +2,8 @@ import { resolve } from 'path';
 
 import { GatsbyNode } from 'gatsby';
 
+import { AllMarkdownContentQuery } from 'root/graphql-types';
+
 import { EMPTY_OBJECT } from './src/constants/fallbacks';
 import { groupByTypeAndLanguage } from './src/utilities/groupByTypeAndLanguage';
 
@@ -22,9 +24,9 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
 
   const pageTemplate = resolve('src/templates/page.tsx');
 
-  return graphql(
+  return graphql<AllMarkdownContentQuery>(
     `
-      {
+      query AllMarkdownContent {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
@@ -48,7 +50,7 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         throw result.errors;
       }
 
-      const groupedByTypeAndLanguage = result.data.allMarkdownRemark.edges.reduce(
+      const groupedByTypeAndLanguage = result.data?.allMarkdownRemark.edges.reduce(
         groupByTypeAndLanguage,
         EMPTY_OBJECT,
       );
