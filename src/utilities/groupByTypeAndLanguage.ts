@@ -1,19 +1,6 @@
-import { FRONTMATTER_TYPES, LANGUAGE_CODES } from 'src/constants';
+import { EMPTY_ARRAY, EMPTY_OBJECT } from '../constants/fallbacks';
 
-type MarkdownRemarkEdge = GatsbyTypes.MarkdownRemarkEdge;
-
-export type ItemLanguage = Record<LANGUAGE_CODES, MarkdownRemarkEdge[] | unknown>;
-
-export type AccumulatedEdgesByType = Record<FRONTMATTER_TYPES, ItemLanguage>;
-
-export type AccumulateEdgesByType = (
-  accumulator: AccumulatedEdgesByType,
-  item: MarkdownRemarkEdge,
-  itemLanguage: LANGUAGE_CODES,
-  type: FRONTMATTER_TYPES,
-) => AccumulatedEdgesByType;
-
-export const groupByTypeAndLanguage = (accumulator, item: MarkdownRemarkEdge) => {
+export const groupByTypeAndLanguage = (accumulator, item) => {
   const { fields, frontmatter } = item.node;
 
   const { langKey } = fields;
@@ -25,19 +12,19 @@ export const groupByTypeAndLanguage = (accumulator, item: MarkdownRemarkEdge) =>
     ...(type
       ? {
           [type]: {
-            ...(accumulator[type] ? accumulator[type] : {}),
+            ...(accumulator[type] ? accumulator[type] : EMPTY_OBJECT),
             ...(langKey
               ? {
                   [langKey]: [
                     ...(accumulator[type] && accumulator[type][langKey]
                       ? accumulator[type][langKey]
-                      : []),
+                      : EMPTY_ARRAY),
                     item,
                   ],
                 }
-              : {}),
+              : EMPTY_OBJECT),
           },
         }
-      : {}),
+      : EMPTY_OBJECT),
   };
 };
