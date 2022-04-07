@@ -1,13 +1,12 @@
-import { FRONTMATTER_TYPES, LANGUAGE_CODES } from 'src/constants';
-import { GROUPED_BY_TYPE_AND_LANGUAGE_FALLBACK } from 'src/constants/fallbacks';
-import { accumulateEdgesByType } from 'src/utilities/accumulateEdgesByType';
+import { LANGUAGE_CODES } from 'src/constants';
+import { groupByTypeAndLanguage } from 'src/utilities/groupByTypeAndLanguage';
 
 type MarkdownRemarkEdge = GatsbyTypes.MarkdownRemarkEdge;
 
-describe('accumulateEdgesByType', () => {
+describe('groupByTypeAndLanguage', () => {
   it('returns initial structure with example object inside the right lang key', () => {
     expect(
-      accumulateEdgesByType(
+      groupByTypeAndLanguage(
         GROUPED_BY_TYPE_AND_LANGUAGE_FALLBACK,
         { isExample: true } as unknown as MarkdownRemarkEdge,
         LANGUAGE_CODES.EN,
@@ -19,7 +18,7 @@ describe('accumulateEdgesByType', () => {
     });
 
     expect(
-      accumulateEdgesByType(
+      groupByTypeAndLanguage(
         GROUPED_BY_TYPE_AND_LANGUAGE_FALLBACK,
         { isExample: true } as unknown as MarkdownRemarkEdge,
         LANGUAGE_CODES.RU,
