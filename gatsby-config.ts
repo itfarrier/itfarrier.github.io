@@ -10,7 +10,12 @@ const config: GatsbyConfig = {
       options: {
         codegenPlugins: [
           {
-            options: { avoidOptionals: true, declarationKind: 'type', enumsAsTypes: true },
+            options: {
+              avoidOptionals: true,
+              declarationKind: 'type',
+              enumsAsTypes: true,
+              maybeValue: 'T',
+            },
             resolve: 'operations',
           },
           {
@@ -18,6 +23,7 @@ const config: GatsbyConfig = {
               avoidOptionals: true,
               exportFragmentSpreadSubTypes: true,
               globalNamespace: false,
+              maybeValue: 'T',
             },
             resolve: 'typescript',
           },
