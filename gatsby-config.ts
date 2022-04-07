@@ -31,7 +31,7 @@ const config: GatsbyConfig = {
         emitSchema: { 'src/graphql/__generated__/schema.json': true },
         outputPath: 'src/types/__generated__/graphql.d.ts',
       },
-      resolve: 'gatsby-plugin-typegen',
+      resolve: 'gatsby-plugin-graphql-codegen',
     },
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
