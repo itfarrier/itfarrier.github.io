@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import { GatsbyNode } from 'gatsby';
 
 import { AllMarkdownContentQuery } from 'root/graphql-types';
+import { GroupedByTypeAndLanguage } from 'src/types';
 
 import { EMPTY_OBJECT } from './src/constants/fallbacks';
 import { groupByTypeAndLanguage } from './src/utilities/groupByTypeAndLanguage';
@@ -14,11 +15,12 @@ export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = (gatsbyNod
   });
 };
 
-export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
+export const createPages: GatsbyNode['createPages'] = (args) => {
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   const {
     actions: { createPage },
     graphql,
-  } = gatsbyNodeHelpers;
+  } = args;
 
   const blogPostTemplate = resolve('src/templates/post.tsx');
 
@@ -50,10 +52,11 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         throw result.errors;
       }
 
-      const groupedByTypeAndLanguage = result.data?.allMarkdownRemark.edges.reduce(
-        groupByTypeAndLanguage,
-        EMPTY_OBJECT,
-      );
+      const groupedByTypeAndLanguage =
+        result.data?.allMarkdownRemark.edges.reduce<GroupedByTypeAndLanguage>(
+          groupByTypeAndLanguage,
+          EMPTY_OBJECT,
+        ) ?? EMPTY_OBJECT;
 
       Object.keys(groupedByTypeAndLanguage.page).forEach((key) => {
         groupedByTypeAndLanguage.page[key].forEach((item) => {
