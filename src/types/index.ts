@@ -5,3 +5,5 @@ export interface ILangObject {
   link: string;
   selected: boolean;
 }
+
+export type CommonObject = Record<string, unknown>;
