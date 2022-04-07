@@ -1,6 +1,21 @@
+import { CommonObject } from 'src/types';
+
 import { EMPTY_ARRAY, EMPTY_OBJECT } from '../constants/fallbacks';
 
-export const groupByTypeAndLanguage = (accumulator, item) => {
+export type Type = string;
+
+export type Language = string;
+
+export type GroupedByLanguage = Record<Language, CommonObject>;
+
+export type GroupedByTypeAndLanguage = Record<Type, GroupedByLanguage>;
+
+export type GroupByTypeAndLanguage = (
+  accumulator: GroupedByTypeAndLanguage,
+  item: CommonObject,
+) => GroupedByTypeAndLanguage;
+
+export const groupByTypeAndLanguage: GroupByTypeAndLanguage = (accumulator, item) => {
   const { fields, frontmatter } = item.node;
 
   const { langKey } = fields;
