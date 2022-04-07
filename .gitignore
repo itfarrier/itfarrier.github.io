@@ -17,3 +17,7 @@ public/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Generated types
+
+graphql-types.ts

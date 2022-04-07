@@ -5,13 +5,29 @@ module.exports = {
     {
       options: {
         codegenPlugins: [
-          { options: { avoidOptionals: true }, resolve: 'operations' },
-          { options: { avoidOptionals: true }, resolve: 'typescript' },
+          {
+            options: {
+              avoidOptionals: true,
+              declarationKind: 'type',
+              enumsAsTypes: true,
+              maybeValue: 'T',
+            },
+            resolve: 'operations',
+          },
+          {
+            options: {
+              avoidOptionals: true,
+              exportFragmentSpreadSubTypes: true,
+              globalNamespace: false,
+              maybeValue: 'T',
+            },
+            resolve: 'typescript',
+          },
         ],
         emitSchema: { 'src/graphql/__generated__/schema.json': true },
         outputPath: 'src/types/__generated__/graphql.d.ts',
       },
-      resolve: 'gatsby-plugin-typegen',
+      resolve: 'gatsby-plugin-graphql-codegen',
     },
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
