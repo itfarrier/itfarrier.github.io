@@ -1,6 +1,7 @@
 ---
 date: 2016-04-09 18:32:38
 title: '#nemuzejka'
+type: post
 ---
 
 ![#nemuzejka ticket](nemuzejka-02042016.jpg)

@@ -1,6 +1,7 @@
 ---
 date: 2021-08-01 18:13:54
 title: 'In the wake of the Onliner'
+type: post
 ---
 
 Once upon a time, I saw an

@@ -1,6 +1,7 @@
 ---
 date: 2014-09-04 07:23:48
 title: 'Triple duplication or paranoia'
+type: post
 ---
 
 I was looking for a method for automatic backup through CWM and found

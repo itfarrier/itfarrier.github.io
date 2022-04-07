@@ -1,6 +1,7 @@
 ---
 date: 2016-04-25 14:21:34
 title: 'Mayakovsky Readings'
+type: post
 ---
 
 ![Father](batya.jpg)

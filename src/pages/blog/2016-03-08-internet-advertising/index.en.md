@@ -1,6 +1,7 @@
 ---
 date: 2016-03-08 11:32:50
 title: 'Internet advertising'
+type: post
 ---
 
 I decided to reduce the number of adblocker subscriptions. Started to turn them off one to one and

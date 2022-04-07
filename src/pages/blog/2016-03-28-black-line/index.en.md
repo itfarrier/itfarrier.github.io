@@ -1,6 +1,7 @@
 ---
 date: 2016-03-28 07:26:12
 title: 'Black line'
+type: post
 ---
 
 ![KIC ticket](salyut-vesna-kic-27-03-16.jpg)

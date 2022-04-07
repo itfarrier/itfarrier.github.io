@@ -1,6 +1,7 @@
 ---
 date: 2016-04-01 07:59:11
 title: 'Differences'
+type: post
 ---
 
 I talked with her. The voice is quiet, insinuating, almost inaudible… But when she sings, the voice

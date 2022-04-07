@@ -1,6 +1,7 @@
 ---
 date: 2021-09-06 17:14:09
 title: 'I love…'
+type: post
 ---
 
 I visited the oldest city in Belarus.

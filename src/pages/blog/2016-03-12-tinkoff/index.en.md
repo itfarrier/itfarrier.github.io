@@ -1,6 +1,7 @@
 ---
 date: 2016-03-12 09:56:01
 title: 'Tinkoff'
+type: post
 ---
 
 ![Tinkoff Black](tinkoff.jpg)

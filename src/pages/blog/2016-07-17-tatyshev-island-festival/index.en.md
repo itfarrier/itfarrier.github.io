@@ -1,6 +1,7 @@
 ---
 date: 2016-07-17 19:58:33
 title: 'Tatyshev island festival'
+type: post
 ---
 
 On July 13th, I attended this event because of some two. I liked it, but it’s a shame that there
