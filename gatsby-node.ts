@@ -2,10 +2,8 @@ import { resolve } from 'path';
 
 import { GatsbyNode } from 'gatsby';
 
-import { GROUPED_BY_TYPE_AND_LANGUAGE_FALLBACK } from 'src/constants/fallbacks';
-
-import { FRONTMATTER_TYPES } from './src/constants';
-import { accumulateEdgesByType } from './src/utilities/accumulateEdgesByType';
+import { EMPTY_OBJECT } from './src/constants/fallbacks';
+import { groupByTypeAndLanguage } from './src/utilities/groupByTypeAndLanguage';
 
 export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = (gatsbyNodeHelpers) => {
   gatsbyNodeHelpers.actions.setBabelPlugin({
@@ -50,17 +48,13 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         throw result.errors;
       }
 
-      const groupedByTypeAndLanguage = result.data.allMarkdownRemark.edges.reduce((acc, item) => {
-        const { fields, frontmatter } = item.node;
-        const itemLanguage = fields.langKey;
+      const groupedByTypeAndLanguage = result.data.allMarkdownRemark.edges.reduce(
+        groupByTypeAndLanguage,
+        EMPTY_OBJECT,
+      );
 
-        return frontmatter.type === 'page'
-          ? accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.PAGE)
-          : accumulateEdgesByType(acc, item, itemLanguage, FRONTMATTER_TYPES.POST);
-      }, GROUPED_BY_TYPE_AND_LANGUAGE_FALLBACK);
-
-      Object.keys(groupedByTypeAndLanguage.pages).forEach((key) => {
-        groupedByTypeAndLanguage.pages[key].forEach((item) => {
+      Object.keys(groupedByTypeAndLanguage.page).forEach((key) => {
+        groupedByTypeAndLanguage.page[key].forEach((item) => {
           const { langKey, slug } = item.node.fields;
 
           createPage({
@@ -71,15 +65,15 @@ export const createPages: GatsbyNode['createPages'] = (gatsbyNodeHelpers) => {
         });
       });
 
-      Object.keys(groupedByTypeAndLanguage.posts).forEach((key) => {
-        groupedByTypeAndLanguage.posts[key].forEach((item, index) => {
+      Object.keys(groupedByTypeAndLanguage.post).forEach((key) => {
+        groupedByTypeAndLanguage.post[key].forEach((item, index) => {
           const { langKey, slug } = item.node.fields;
 
-          const next = index === 0 ? null : groupedByTypeAndLanguage.posts[key][index - 1].node;
+          const next = index === 0 ? null : groupedByTypeAndLanguage.post[key][index - 1].node;
           const previous =
-            index === groupedByTypeAndLanguage.posts[key].length - 1
+            index === groupedByTypeAndLanguage.post[key].length - 1
               ? null
-              : groupedByTypeAndLanguage.posts[key][index + 1].node;
+              : groupedByTypeAndLanguage.post[key][index + 1].node;
 
           createPage({
             component: blogPostTemplate,
