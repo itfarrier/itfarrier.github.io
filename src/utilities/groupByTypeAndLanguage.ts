@@ -1,22 +1,14 @@
-import { CommonObject } from 'src/types';
+import { Edge, GroupedByTypeAndLanguage } from 'src/types';
 
 import { EMPTY_ARRAY, EMPTY_OBJECT } from '../constants/fallbacks';
 
-export type Type = string;
-
-export type Language = string;
-
-export type GroupedByLanguage = Record<Language, CommonObject>;
-
-export type GroupedByTypeAndLanguage = Record<Type, GroupedByLanguage>;
-
 export type GroupByTypeAndLanguage = (
   accumulator: GroupedByTypeAndLanguage,
-  item: CommonObject,
+  edge: Edge,
 ) => GroupedByTypeAndLanguage;
 
-export const groupByTypeAndLanguage: GroupByTypeAndLanguage = (accumulator, item) => {
-  const { fields, frontmatter } = item.node;
+export const groupByTypeAndLanguage: GroupByTypeAndLanguage = (accumulator, edge) => {
+  const { fields, frontmatter } = edge.node;
 
   const { langKey } = fields;
 
@@ -31,10 +23,10 @@ export const groupByTypeAndLanguage: GroupByTypeAndLanguage = (accumulator, item
             ...(langKey
               ? {
                   [langKey]: [
-                    ...(accumulator[type] && accumulator[type][langKey]
-                      ? accumulator[type][langKey]
+                    ...(accumulator[type] && accumulator[type]?.[langKey]
+                      ? accumulator[type]?.[langKey] ?? EMPTY_ARRAY
                       : EMPTY_ARRAY),
-                    item,
+                    edge,
                   ],
                 }
               : EMPTY_OBJECT),
