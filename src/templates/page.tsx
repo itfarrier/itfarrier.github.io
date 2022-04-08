@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
 import { graphql } from 'gatsby';
+import type { PageProps } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { IPage } from 'src/interfaces';
 
 import { Layout } from 'cmpts/Layout';
+import type { PageTemplateQuery as PageTemplateQueryType } from 'root/graphql-types';
 
-const PageTemplate: FC<IPage> = (props) => {
+const PageTemplate: FC<PageProps<PageTemplateQueryType>> = (props) => {
   const {
     data: {
       markdownRemark: {
@@ -37,7 +38,7 @@ const PageTemplate: FC<IPage> = (props) => {
 };
 
 export const PageTemplateQuery = graphql`
-  query ($slug: String!) {
+  query PageTemplate($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt
       fields {
