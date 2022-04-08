@@ -13,6 +13,7 @@ import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
 
 import { Language } from 'cmpts/LanguageContext';
+import { IndexQuery } from 'root/graphql-types';
 
 export type RedirectorProps = { defaultLanguage: Language; languages: Language[] };
 
@@ -37,12 +38,8 @@ class Redirector extends PureComponent<RedirectorProps> {
   }
 }
 
-export type IndexQuery = {
-  site: { siteMetadata: { i18n: { defaultLanguage: Language; languages: Language[] } } };
-};
-
 const Index: FC = () => {
-  const { site } = useStaticQuery<GatsbyTypes.IndexQuery>(graphql`
+  const { site } = useStaticQuery<IndexQuery>(graphql`
     query Index {
       site {
         siteMetadata {
