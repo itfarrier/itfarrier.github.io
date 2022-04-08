@@ -5,11 +5,11 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import { Helmet } from 'react-helmet';
 
 import { Layout } from 'cmpts/Layout';
-import { InscriptionsQuery } from 'root/graphql-types';
+import { InscriptionsRuQuery } from 'root/graphql-types';
 
 const Inscriptions: FC = () => {
-  const data = useStaticQuery<InscriptionsQuery>(graphql`
-    query Inscriptions {
+  const data = useStaticQuery<InscriptionsRuQuery>(graphql`
+    query InscriptionsRu {
       allFile(filter: { relativeDirectory: { eq: "images/inscriptions" } }) {
         edges {
           node {
