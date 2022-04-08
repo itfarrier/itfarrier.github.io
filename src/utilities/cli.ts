@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'fs';
 
 import inquirer from 'inquirer';
 
-import { languages } from '../data/i18n';
+import { i18n } from '../data/i18n';
 
 inquirer
   .prompt([
@@ -37,7 +37,7 @@ inquirer
       }
     });
 
-    languages.forEach((language) => {
+    i18n.languages.forEach((language) => {
       writeFile(
         `${newPostFolder}/index.${language}.md`,
         `---\ndate: ${todayDate} ${todayTime}\ntitle: '${postTitle}'\n---\n`,
@@ -50,5 +50,5 @@ inquirer
     });
   })
   .catch((error) => {
-    console.log('### inquirer error', error);
+    console.error('### inquirer error', error);
   });
