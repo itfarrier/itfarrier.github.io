@@ -1,5 +1,6 @@
 import { Language } from 'cmpts/LanguageContext';
 import { AllMarkdownContentQuery } from 'root/graphql-types';
+import { EDGE_TYPES } from 'src/constants';
 
 export interface ILangObject {
   langKey: Language;
@@ -13,7 +14,7 @@ export type Edge = ElementTypeOfArray<AllMarkdownContentQuery['allMarkdownRemark
 
 export type EdgeLanguage = Edge['node']['fields']['langKey'];
 
-export type EdgeType = Edge['node']['frontmatter']['type'];
+export type EdgeType = EDGE_TYPES | Edge['node']['frontmatter']['type'];
 
 export type ElementTypeOfArray<T> = T extends (infer U)[] ? U : T;
 
