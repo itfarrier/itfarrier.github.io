@@ -9,12 +9,13 @@ import { getCurrentLangKey } from 'ptz-i18n';
 import { HeaderView } from 'cmpts/Header/HeaderView';
 import { Language } from 'cmpts/LanguageContext';
 import cv from 'docs/podabed-cv.pdf';
+import { HeaderQuery } from 'root/graphql-types';
 import { siteMetadata } from 'src/data/siteMetadata';
 
 export const Header: FC = () => {
   const { pathname } = useLocation();
 
-  const data = useStaticQuery<GatsbyTypes.HeaderQuery>(graphql`
+  const data = useStaticQuery<HeaderQuery>(graphql`
     query Header {
       site {
         siteMetadata {
