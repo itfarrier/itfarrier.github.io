@@ -1,10 +1,11 @@
 import { resolve } from 'path';
 
-import { GatsbyNode } from 'gatsby';
+import type { GatsbyNode } from 'gatsby';
 
-import { AllMarkdownContentQuery } from 'root/graphql-types';
-import { GroupedByTypeAndLanguage } from 'src/types';
+import type { AllMarkdownContentQuery } from 'root/graphql-types';
+import type { Edge, GroupedByTypeAndLanguage } from 'src/types';
 
+import { EDGE_TYPES } from './src/constants';
 import { EMPTY_OBJECT } from './src/constants/fallbacks';
 import { groupByTypeAndLanguage } from './src/utilities/groupByTypeAndLanguage';
 
@@ -58,35 +59,42 @@ export const createPages: GatsbyNode['createPages'] = (args) => {
           EMPTY_OBJECT,
         ) ?? EMPTY_OBJECT;
 
-      Object.keys(groupedByTypeAndLanguage.page).forEach((key) => {
-        groupedByTypeAndLanguage.page[key].forEach((item) => {
-          const { langKey, slug } = item.node.fields;
+      Object.keys(groupedByTypeAndLanguage[EDGE_TYPES.PAGE] ?? EMPTY_OBJECT).forEach(
+        (langKey: Edge['node']['fields']['langKey']) => {
+          groupedByTypeAndLanguage?.[EDGE_TYPES.PAGE]?.[langKey]?.forEach((edge) => {
+            const { langKey, slug } = edge.node.fields;
 
-          createPage({
-            component: pageTemplate,
-            context: { langKey, language: langKey, slug },
-            path: slug,
+            createPage({
+              component: pageTemplate,
+              context: { langKey, language: langKey, slug },
+              path: slug,
+            });
           });
-        });
-      });
+        },
+      );
 
-      Object.keys(groupedByTypeAndLanguage.post).forEach((key) => {
-        groupedByTypeAndLanguage.post[key].forEach((item, index) => {
-          const { langKey, slug } = item.node.fields;
+      Object.keys(groupedByTypeAndLanguage[EDGE_TYPES.POST] ?? EMPTY_OBJECT).forEach(
+        (langKey: Edge['node']['fields']['langKey']) => {
+          groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.forEach((edge, index) => {
+            const { langKey, slug } = edge.node.fields;
 
-          const next = index === 0 ? null : groupedByTypeAndLanguage.post[key][index - 1].node;
-          const previous =
-            index === groupedByTypeAndLanguage.post[key].length - 1
-              ? null
-              : groupedByTypeAndLanguage.post[key][index + 1].node;
+            const next =
+              index === 0
+                ? null
+                : groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.[index - 1]?.node;
+            const previous =
+              index === groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.length ?? 0 - 1
+                ? null
+                : groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.[index + 1]?.node;
 
-          createPage({
-            component: blogPostTemplate,
-            context: { langKey, language: langKey, next, previous, slug },
-            path: slug,
+            createPage({
+              component: blogPostTemplate,
+              context: { langKey, language: langKey, next, previous, slug },
+              path: slug,
+            });
           });
-        });
-      });
+        },
+      );
     })
     .catch((error) => {
       throw error;
