@@ -1,6 +1,7 @@
 ---
 date: 2021-08-28 19:11:31
 title: 'Sputnik V'
+type: post
 ---
 
 That’s all. From the consequences only 37.5 °C for one day after the second injection (nothing at

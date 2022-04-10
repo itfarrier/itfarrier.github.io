@@ -1,6 +1,7 @@
 ---
 date: 2016-05-30 10:10:43
 title: 'Маяковские чтения'
+type: post
 ---
 
 ![1](C2qeZqfnoco.jpg)

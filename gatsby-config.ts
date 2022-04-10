@@ -1,6 +1,10 @@
-const siteMetadata = require('./src/data/siteMetadata');
+import { resolve } from 'path';
 
-module.exports = {
+import type { GatsbyConfig } from 'gatsby';
+
+import { siteMetadata } from './src/data/siteMetadata';
+
+const config: GatsbyConfig = {
   plugins: [
     {
       options: {
@@ -24,8 +28,12 @@ module.exports = {
             resolve: 'typescript',
           },
         ],
-        emitSchema: { 'src/graphql/__generated__/schema.json': true },
-        outputPath: 'src/types/__generated__/graphql.d.ts',
+        documentPaths: [
+          './.cache/fragments/*.js',
+          './gatsby-node.ts',
+          './node_modules/gatsby-*/**/*.js',
+          './src/**/*.ts{x,}',
+        ],
       },
       resolve: 'gatsby-plugin-graphql-codegen',
     },
@@ -36,18 +44,17 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     {
-      __key: 'assets',
-      options: { name: 'assets', path: `${__dirname}/src/assets` },
+      options: { name: 'assets', path: resolve('src/assets') },
       resolve: 'gatsby-source-filesystem',
     },
     {
       options: {
         alias: {
-          cmpts: `${__dirname}/src/components`,
-          docs: `${__dirname}/src/assets/documents`,
-          imgs: `${__dirname}/src/assets/images`,
-          root: __dirname,
-          src: `${__dirname}/src`,
+          cmpts: resolve('src/components'),
+          docs: resolve('src/assets/documents'),
+          imgs: resolve('src/assets/images'),
+          root: resolve('.'),
+          src: resolve('src'),
         },
       },
       resolve: 'gatsby-plugin-alias-imports',
@@ -147,18 +154,18 @@ module.exports = {
     'gatsby-plugin-offline',
     {
       options: {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         langKeyDefault: siteMetadata.i18n.defaultLanguage,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         langKeyForNull: siteMetadata.i18n.defaultLanguage,
         prefixDefault: true,
         useLangKeyLayout: false,
       },
       resolve: 'gatsby-plugin-i18n',
     },
-    {
-      __key: 'pages',
-      options: { name: 'pages', path: `${__dirname}/src/pages` },
-      resolve: 'gatsby-source-filesystem',
-    },
+    { options: { name: 'pages', path: resolve('src/pages') }, resolve: 'gatsby-source-filesystem' },
     {
       options: {
         plugins: [
@@ -179,3 +186,5 @@ module.exports = {
   ],
   siteMetadata,
 };
+
+export default config;

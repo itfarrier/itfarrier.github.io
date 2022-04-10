@@ -1,6 +1,7 @@
 ---
 date: 2014-02-21 22:36:54
 title: 'About ISPs'
+type: post
 ---
 
 I think all ISPs have something like this:

@@ -1,6 +1,8 @@
-const i18n = require('./i18n');
+import { GatsbyConfig } from 'gatsby';
 
-module.exports = {
+import { i18n } from './i18n';
+
+export const siteMetadata: Required<GatsbyConfig>['siteMetadata'] = {
   description: 'About something',
   i18n,
   keywords: ['IT Farrier', 'IT', 'farrier', 'itfarrier'],

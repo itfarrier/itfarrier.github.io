@@ -1,6 +1,7 @@
 ---
 date: 2016-09-11 09:33:54
 title: 'Changes or day first'
+type: post
 ---
 
 On August 24th, 2016, I hitchhiked to Lake Baikal… Although, I’d better look a little further into

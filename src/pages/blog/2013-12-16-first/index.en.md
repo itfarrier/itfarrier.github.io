@@ -1,6 +1,7 @@
 ---
 date: 2013-12-16 13:36:01
 title: First
+type: post
 ---
 
 I wanted to write a personal ~~shit~~blog. So, where’s the start? From blog hostings, of course. But

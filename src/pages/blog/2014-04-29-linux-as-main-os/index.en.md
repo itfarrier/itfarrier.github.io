@@ -1,6 +1,7 @@
 ---
 date: 2014-04-29 08:58:09
 title: 'Linux as main OS'
+type: post
 ---
 
 Almost half a year I completely switched to the Linux.

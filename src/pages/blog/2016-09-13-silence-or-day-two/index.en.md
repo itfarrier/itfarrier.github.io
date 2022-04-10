@@ -1,6 +1,7 @@
 ---
 date: 2016-09-13 09:38:54
 title: 'Silence or day two'
+type: post
 ---
 
 On the 25th I got up early in the morning. I ate, packed my stuff, went out on the track. 5 minutes

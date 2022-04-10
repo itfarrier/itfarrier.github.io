@@ -7,7 +7,8 @@ import { graphql, navigate, useStaticQuery } from 'gatsby';
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
 import { Language, LanguageContext } from 'cmpts/LanguageContext';
-import siteMetadata from 'src/data/siteMetadata';
+import { SelectLanguageQuery } from 'root/graphql-types';
+import { siteMetadata } from 'src/data/siteMetadata';
 import { ILangObject } from 'src/types';
 
 export const SelectLanguage: FC = () => {
@@ -15,7 +16,7 @@ export const SelectLanguage: FC = () => {
 
   const { pathname } = useLocation();
 
-  const data = useStaticQuery<GatsbyTypes.SelectLanguageQuery>(graphql`
+  const data = useStaticQuery<SelectLanguageQuery>(graphql`
     query SelectLanguage {
       site {
         siteMetadata {

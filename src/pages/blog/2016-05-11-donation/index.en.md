@@ -1,6 +1,7 @@
 ---
 date: 2016-05-11 17:54:48
 title: 'Donation'
+type: post
 ---
 
 After a break of 9 months of ~~pregnancy~~ laziness, I resumed ‘flow’ donation (every 2 months). I

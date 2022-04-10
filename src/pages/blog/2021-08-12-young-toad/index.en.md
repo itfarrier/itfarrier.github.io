@@ -1,6 +1,7 @@
 ---
 date: 2021-08-12 16:10:22
 title: 'Young toad'
+type: post
 ---
 
 I continued my trips. In this time I took a better car (BMW) to make the ride even more interesting.

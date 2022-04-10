@@ -1,6 +1,7 @@
 ---
 date: 2021-08-01 18:13:54
 title: 'По следам onliner’а'
+type: post
 ---
 
 Увидел когда‐то давно [статью](https://realt.onliner.by/2021/06/12/20-krutyx-mest-dlyaprogulok) на

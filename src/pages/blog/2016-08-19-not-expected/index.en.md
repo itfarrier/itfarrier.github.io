@@ -1,6 +1,7 @@
 ---
 date: 2016-08-19 16:42:20
 title: 'Not expected'
+type: post
 ---
 
 We’ve recently gone to an equestrian club at a recreation center in a small village near

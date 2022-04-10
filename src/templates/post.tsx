@@ -1,12 +1,13 @@
 import { FC } from 'react';
 
 import { graphql, Link } from 'gatsby';
+import type { PageProps } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { IPage } from 'src/interfaces';
 
 import { Layout } from 'cmpts/Layout';
+import type { BlogPostTemplateQuery as BlogPostTemplateQueryType } from 'root/graphql-types';
 
-const BlogPostTemplate: FC<IPage> = (props) => {
+const BlogPostTemplate: FC<PageProps<BlogPostTemplateQueryType>> = (props) => {
   const {
     data: {
       markdownRemark: {
@@ -57,7 +58,7 @@ const BlogPostTemplate: FC<IPage> = (props) => {
 };
 
 export const BlogPostTemplateQuery = graphql`
-  query ($slug: String!) {
+  query BlogPostTemplate($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt
       fields {

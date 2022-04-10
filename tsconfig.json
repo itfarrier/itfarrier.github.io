@@ -10,7 +10,6 @@
     "extendedDiagnostics": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
-    "isolatedModules": true,
     "jsx": "react-jsx",
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
@@ -24,7 +23,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      // NOTE: duplication from gatbsy-config.js for working types
       "cmpts/*": ["src/components/*"],
       "docs/*": ["src/assets/documents/*"],
       "imgs/*": ["src/assets/images/*"],
@@ -60,5 +58,5 @@
     "public",
     "static"
   ],
-  "include": ["src"]
+  "include": ["src", "gatsby-*.ts"]
 }

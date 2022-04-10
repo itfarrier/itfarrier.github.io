@@ -3,7 +3,7 @@ module.exports = {
     {
       env: { amd: true, commonjs: true, es2022: true, node: true },
       extends: ['eslint:recommended', 'plugin:prettier/recommended'],
-      files: ['{.,}*.js{x,}'],
+      files: '{.,}*.js{x,}',
       plugins: ['import', 'sort-keys-fix', 'sort-destructure-keys'],
       rules: {
         'import/no-unresolved': 'error',
@@ -39,7 +39,7 @@ module.exports = {
         'plugin:jsonc/recommended-with-json',
         'plugin:prettier/recommended',
       ],
-      files: ['*.json'],
+      files: '*.json',
     },
     {
       extends: [
@@ -48,7 +48,7 @@ module.exports = {
         'plugin:yml/prettier',
         'plugin:prettier/recommended',
       ],
-      files: ['*.yaml', '*.yml'],
+      files: '*.y{a,}ml',
     },
     {
       extends: ['plugin:prettier/recommended', 'plugin:md/recommended'],
@@ -57,6 +57,7 @@ module.exports = {
       rules: { 'prettier/prettier': ['error', { parser: 'markdown' }] },
     },
     {
+      excludedFiles: '{.,}*.test.ts{x,}',
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
@@ -69,7 +70,7 @@ module.exports = {
         'plugin:jsx-a11y/strict',
         'plugin:prettier/recommended',
       ],
-      files: ['{.,}*.ts{x,}'],
+      files: '{.,}*.ts{x,}',
       parser: '@typescript-eslint/parser',
       parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: __dirname },
       plugins: [
@@ -79,6 +80,53 @@ module.exports = {
         'sort-destructure-keys',
         'sort-keys-fix',
       ],
+      rules: {
+        'import/no-unresolved': 'error',
+        'import/order': [
+          'error',
+          {
+            alphabetize: { order: 'asc' },
+            groups: [
+              'builtin',
+              'external',
+              'internal',
+              'parent',
+              'sibling',
+              'index',
+              'object',
+              'unknown',
+            ],
+            'newlines-between': 'always',
+            pathGroups: [{ group: 'builtin', pattern: 'react', position: 'before' }],
+            pathGroupsExcludedImportTypes: ['react'],
+          },
+        ],
+        'sort-destructure-keys/sort-destructure-keys': 2,
+        'sort-keys': ['error', 'asc', { caseSensitive: true, minKeys: 2, natural: false }],
+        'sort-keys-fix/sort-keys-fix': 'error',
+        'sort-vars': 'error',
+      },
+      settings: {
+        'import/parsers': { '@typescript-eslint/parser': ['.ts{x,}'] },
+        'import/resolver': {
+          typescript: { alwaysTryTypes: true, project: 'tsconfig{.cli,}.json' },
+        },
+      },
+    },
+    {
+      env: { amd: true, commonjs: true, es2022: true, jest: true, node: true },
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
+        'plugin:prettier/recommended',
+      ],
+      files: '{.,}*.test.ts{x,}',
+      parser: '@typescript-eslint/parser',
+      parserOptions: { project: ['./tsconfig.json'], tsconfigRootDir: __dirname },
+      plugins: ['@typescript-eslint', 'import', 'sort-destructure-keys', 'sort-keys-fix'],
       rules: {
         'import/no-unresolved': 'error',
         'import/order': [

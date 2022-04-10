@@ -1,6 +1,7 @@
 ---
 date: 2021-10-10 12:43:27
 title: 'Chigiri'
+type: post
 ---
 
 I heard phrase ‘in the chigiri’ at work. And didn’t understand. Of course, ask to explain. Later
