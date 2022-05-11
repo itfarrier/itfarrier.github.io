@@ -31,6 +31,9 @@ type: page
 - Anton Viktorovich Krotov – «Practice of free travels» (2015): A very useful book not only for a
   hitchhiker but also for any person, interestingly written.
 - Andrzej Sapkowski – «The Witcher»: Good fantasy.
+- Alexandre Dumas — «The Count of Monte Cristo» (2021, translation from French by L. Olavskaya and
+  V. Stroev): Classic. The plot, of course, cool, but too much descriptions with gentle talk between
+  characters and the action is too slow.
 
 ## Failed:
 
