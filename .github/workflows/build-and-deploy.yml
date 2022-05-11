@@ -31,7 +31,7 @@ jobs:
           CI: true
 
       - name: GitHub Pages deploy
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+        uses: crazy-max/ghaction-github-pages@v2
         with:
           author: Dmitrij Podabed <iam@itfarrier.com>
           build_dir: public
