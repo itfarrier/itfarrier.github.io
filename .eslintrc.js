@@ -54,7 +54,10 @@ module.exports = {
       extends: ['plugin:prettier/recommended', 'plugin:md/recommended'],
       files: ['*.md'],
       parser: 'markdown-eslint-parser',
-      rules: { 'prettier/prettier': ['error', { parser: 'markdown' }] },
+      rules: {
+        'md/remark': ['error', { plugins: [['lint-maximum-line-length', false]] }],
+        'prettier/prettier': ['error', { parser: 'markdown' }],
+      },
     },
     {
       excludedFiles: '{.,}*.test.ts{x,}',
