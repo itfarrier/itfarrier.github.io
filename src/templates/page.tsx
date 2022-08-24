@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { graphql } from 'gatsby';
 import type { PageProps } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import type { PageTemplateQuery as PageTemplateQueryType } from 'root/graphql-types';
 
 import { Layout } from 'cmpts/Layout';
-import type { PageTemplateQuery as PageTemplateQueryType } from 'root/graphql-types';
 
 const PageTemplate: FC<PageProps<PageTemplateQueryType>> = (props) => {
   const {

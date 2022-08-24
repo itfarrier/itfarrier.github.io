@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Helmet } from 'react-helmet';
+import { InscriptionsRuQuery } from 'root/graphql-types';
 
 import { Layout } from 'cmpts/Layout';
-import { InscriptionsRuQuery } from 'root/graphql-types';
 
 const Inscriptions: FC = () => {
   const data = useStaticQuery<InscriptionsRuQuery>(graphql`

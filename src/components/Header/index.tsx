@@ -5,11 +5,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { getCurrentLangKey } from 'ptz-i18n';
+import { HeaderQuery } from 'root/graphql-types';
 
 import { HeaderView } from 'cmpts/Header/HeaderView';
 import { Language } from 'cmpts/LanguageContext';
 import cv from 'docs/podabed-cv.pdf';
-import { HeaderQuery } from 'root/graphql-types';
 import { siteMetadata } from 'src/data/siteMetadata';
 
 export const Header: FC = () => {
