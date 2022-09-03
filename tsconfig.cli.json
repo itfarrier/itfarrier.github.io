@@ -1,4 +1,4 @@
 {
-  "compilerOptions": { "isolatedModules": false, "module": "CommonJS" },
+  "compilerOptions": { "module": "ESNext", "moduleResolution": "NodeNext" },
   "extends": "./tsconfig.json"
 }

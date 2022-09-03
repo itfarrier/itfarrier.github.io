@@ -1,10 +1,16 @@
 import { mkdir, writeFile } from 'fs';
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 import inquirer from 'inquirer';
 
-import { i18n } from '../data/i18n';
+import { i18n } from '../data/i18n.js';
 
-inquirer
+export default inquirer
   .prompt([
     {
       default() {
