@@ -46,7 +46,7 @@ export default inquirer
     i18n.languages.forEach((language) => {
       writeFile(
         `${newPostFolder}/index.${language}.md`,
-        `---\ndate: ${todayDate} ${todayTime}\ntitle: '${postTitle}'\n---\n`,
+        `---\ndate: ${todayDate} ${todayTime}\ntitle: '${postTitle}'\ntype: post\n---\n`,
         (error) => {
           if (error !== null) {
             console.error('### writeFile error', error);
