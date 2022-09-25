@@ -1,6 +1,6 @@
 ---
 date: 2022-09-11 20:54:45
-title: 'Death'
+title: 'Смерть'
 type: post
 ---
 
