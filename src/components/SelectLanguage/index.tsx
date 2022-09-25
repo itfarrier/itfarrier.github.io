@@ -5,9 +5,9 @@ import { graphql, navigate, useStaticQuery } from 'gatsby';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
+import { SelectLanguageQuery } from 'root/graphql-types';
 
 import { Language, LanguageContext } from 'cmpts/LanguageContext';
-import { SelectLanguageQuery } from 'root/graphql-types';
 import { siteMetadata } from 'src/data/siteMetadata';
 import { ILangObject } from 'src/types';
 

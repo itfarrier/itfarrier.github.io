@@ -1,6 +1,7 @@
 !.*
 .*ignore
 .cache
+.editorconfig
 .git
 .idea
 .jest
@@ -8,3 +9,4 @@ __generated__
 node_modules
 public
 static
+yarn.lock

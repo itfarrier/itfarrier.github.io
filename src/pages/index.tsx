@@ -11,9 +11,9 @@ import { FC, PureComponent } from 'react';
 
 import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
+import { IndexQuery } from 'root/graphql-types';
 
 import { Language } from 'cmpts/LanguageContext';
-import { IndexQuery } from 'root/graphql-types';
 
 export type RedirectorProps = { defaultLanguage: Language; languages: Language[] };
 

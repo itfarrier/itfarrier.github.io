@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { graphql, Link } from 'gatsby';
 import type { PageProps } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import type { BlogPostTemplateQuery as BlogPostTemplateQueryType } from 'root/graphql-types';
 
 import { Layout } from 'cmpts/Layout';
-import type { BlogPostTemplateQuery as BlogPostTemplateQueryType } from 'root/graphql-types';
 
 const BlogPostTemplate: FC<PageProps<BlogPostTemplateQueryType>> = (props) => {
   const {

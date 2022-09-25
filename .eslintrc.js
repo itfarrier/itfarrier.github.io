@@ -2,6 +2,7 @@ module.exports = {
   overrides: [
     {
       env: { amd: true, commonjs: true, es2022: true, node: true },
+      excludedFiles: '.*rc',
       extends: ['eslint:recommended', 'plugin:prettier/recommended'],
       files: '{.,}*.js{x,}',
       plugins: ['import', 'sort-keys-fix', 'sort-destructure-keys'],
@@ -39,7 +40,7 @@ module.exports = {
         'plugin:jsonc/recommended-with-json',
         'plugin:prettier/recommended',
       ],
-      files: '*.json',
+      files: ['*.json', '.*rc'],
     },
     {
       extends: [
@@ -54,7 +55,10 @@ module.exports = {
       extends: ['plugin:prettier/recommended', 'plugin:md/recommended'],
       files: ['*.md'],
       parser: 'markdown-eslint-parser',
-      rules: { 'prettier/prettier': ['error', { parser: 'markdown' }] },
+      rules: {
+        'md/remark': ['error', { plugins: [['lint-maximum-line-length', false]] }],
+        'prettier/prettier': ['error', { parser: 'markdown' }],
+      },
     },
     {
       excludedFiles: '{.,}*.test.ts{x,}',

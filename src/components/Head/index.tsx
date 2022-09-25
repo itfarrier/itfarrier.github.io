@@ -2,10 +2,10 @@ import { FC, useContext } from 'react';
 
 import { useLocation } from '@reach/router';
 import { graphql, useStaticQuery } from 'gatsby';
+import { HeadQuery } from 'root/graphql-types';
 
 import { HeadView } from 'cmpts/Head/HeadView';
 import { LanguageContext } from 'cmpts/LanguageContext';
-import { HeadQuery } from 'root/graphql-types';
 import { siteMetadata } from 'src/data/siteMetadata';
 import { generateAndroidChromeHeadLinks } from 'src/utilities/generateAndroidChromeHeadLinks';
 import { generateAppleTouchHeadLinks } from 'src/utilities/generateAppleTouchHeadLinks';

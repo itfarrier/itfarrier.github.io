@@ -1,5 +1,6 @@
-import { Language } from 'cmpts/LanguageContext';
 import { AllMarkdownContentQuery } from 'root/graphql-types';
+
+import { Language } from 'cmpts/LanguageContext';
 import { EDGE_TYPES } from 'src/constants';
 
 export interface ILangObject {

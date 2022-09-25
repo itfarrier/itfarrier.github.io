@@ -5,11 +5,11 @@ import { graphql, useStaticQuery } from 'gatsby';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { getCurrentLangKey } from 'ptz-i18n';
+import { HeaderQuery } from 'root/graphql-types';
 
 import { HeaderView } from 'cmpts/Header/HeaderView';
 import { Language } from 'cmpts/LanguageContext';
 import cv from 'docs/podabed-cv.pdf';
-import { HeaderQuery } from 'root/graphql-types';
 import { siteMetadata } from 'src/data/siteMetadata';
 
 export const Header: FC = () => {
@@ -43,6 +43,7 @@ export const Header: FC = () => {
         { text: '/blog', to: `${homeUrl}blog` },
         { text: '/books', to: `${homeUrl}books` },
         { text: '/cv', to: cv },
+        { text: '/games', to: `${homeUrl}games` },
         { text: '/videos', to: `${homeUrl}videos` },
         { text: '/wishlist', to: `${homeUrl}wishlist` },
       ]}
