@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkitfarrier=self.webpackChunkitfarrier||[]).push([[722],{5750:function(r,t,e){e.r(t);var i=e(4822),n=e(5893);t.default=function(r){return(0,n.jsx)(i.A,{location:r.location})}}}]);
+//# sourceMappingURL=component---src-pages-index-ru-tsx-b74dfa5e225a6697eb3c.js.map
