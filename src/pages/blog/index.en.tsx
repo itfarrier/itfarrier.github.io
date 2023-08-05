@@ -13,7 +13,7 @@ const Blog: FC = () => {
     {
       allMarkdownRemark(
         filter: { fields: { langKey: { eq: "en" } }, frontmatter: { type: { ne: "page" } } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {

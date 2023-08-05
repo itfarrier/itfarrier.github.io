@@ -27,27 +27,25 @@ export const createPages: GatsbyNode['createPages'] = (args) => {
 
   const pageTemplate = resolve('src/templates/page.tsx');
 
-  return graphql<AllMarkdownContentQuery>(
-    `
-      query AllMarkdownContent {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-          edges {
-            node {
-              fields {
-                langKey
-                slug
-              }
-              frontmatter {
-                language
-                title
-                type
-              }
+  return graphql<AllMarkdownContentQuery>(`
+    query AllMarkdownContent {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+        edges {
+          node {
+            fields {
+              langKey
+              slug
+            }
+            frontmatter {
+              language
+              title
+              type
             }
           }
         }
       }
-    `,
-  )
+    }
+  `)
     .then((result) => {
       if (result.errors) {
         throw result.errors;
