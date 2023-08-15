@@ -5,13 +5,12 @@ import 'sanitize.css/reduce-motion.css';
 import 'sanitize.css/system-ui.css';
 import 'sanitize.css/typography.css';
 import 'sanitize.css/ui-monospace.css';
-import 'src/pages/index.module.css';
 
-import { FC, PureComponent } from 'react';
+import { type FC, type PureComponent } from 'react';
 
 import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
-import { IndexQuery } from 'root/graphql-types';
+import { type IndexQuery } from 'root/graphql-types';
 
 import { Language } from 'cmpts/LanguageContext';
 
