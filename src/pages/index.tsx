@@ -6,7 +6,7 @@ import 'sanitize.css/system-ui.css';
 import 'sanitize.css/typography.css';
 import 'sanitize.css/ui-monospace.css';
 
-import { type FC, type PureComponent } from 'react';
+import { type FC, PureComponent } from 'react';
 
 import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
 import { getUserLangKey } from 'ptz-i18n';
