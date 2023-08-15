@@ -10,10 +10,10 @@ const Blog: FC = () => {
     allMarkdownRemark: { edges },
     site: { siteMetadata },
   } = useStaticQuery(graphql`
-    {
+    query BlogRu {
       allMarkdownRemark(
         filter: { fields: { langKey: { eq: "ru" } }, frontmatter: { type: { ne: "page" } } }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: { date: DESC } }
       ) {
         edges {
           node {

@@ -185,6 +185,7 @@ const config: GatsbyConfig = {
     },
   ],
   siteMetadata,
+  trailingSlash: 'never',
 };
 
 export default config;
