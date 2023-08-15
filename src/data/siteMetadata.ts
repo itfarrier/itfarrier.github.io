@@ -1,4 +1,4 @@
-import { GatsbyConfig } from 'gatsby';
+import { type GatsbyConfig } from 'gatsby';
 
 import { i18n } from './i18n';
 
@@ -9,5 +9,5 @@ export const siteMetadata: Required<GatsbyConfig>['siteMetadata'] = {
   name: 'itfarrier.com',
   shortName: 'itfarrier',
   siteUrl: 'https://itfarrier.com',
-  title: '🇺🇦 #nowar #noputin #nolukashenko #нетвойне #нетпутину #нетлукашенко ITFarrier',
+  title: 'ITFarrier',
 };
