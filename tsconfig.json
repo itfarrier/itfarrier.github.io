@@ -45,8 +45,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ESNext",
-    "typeRoots": ["graphql-types.ts", "node_modules"],
-    "watch": true
+    "typeRoots": ["graphql-types.ts", "node_modules"]
   },
   "exclude": [
     "*.config.js",
