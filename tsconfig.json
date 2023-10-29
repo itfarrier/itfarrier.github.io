@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "alwaysStrict": true,
     "baseUrl": ".",
-    "checkJs": true,
     "diagnostics": true,
     "esModuleInterop": true,
+    "exactOptionalPropertyTypes": true,
     "extendedDiagnostics": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "jsx": "react-jsx",
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "noEmit": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
+    "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -38,6 +41,7 @@
     ],
     "removeComments": true,
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "strictBindCallApply": true,
@@ -45,8 +49,6 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "ESNext",
-    "typeRoots": ["graphql-types.ts", "node_modules"]
-  },
-  "exclude": ["*.config.js", ".cache", ".idea", ".jest", "coverage", "node_modules", "public", "static"],
-  "include": ["gatsby-*.ts", "src"]
+    "useUnknownInCatchVariables": true
+  }
 }
