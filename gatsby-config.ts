@@ -1,6 +1,6 @@
-import { resolve } from 'path';
-
 import type { GatsbyConfig } from 'gatsby';
+
+import { resolve } from 'path';
 
 import { siteMetadata } from './src/data/siteMetadata';
 

@@ -1,9 +1,8 @@
-import { FC } from 'react';
-
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import type { FC } from 'react';
 
 import { Layout } from 'cmpts/Layout';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const Blog: FC = () => {
   const {

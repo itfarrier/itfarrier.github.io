@@ -4,9 +4,8 @@ title: 'Kitty! Kitty! Kitty!'
 type: post
 ---
 
-Since some time, I decided to go to the office to increase my activity. So, it was warm sunny day
-and I went home from work, but without glasses and lenses. I saw that cat stretched out on the
-asphalt and rests.
+Since some time, I decided to go to the office to increase my activity. So, it was warm sunny day and I went home from
+work, but without glasses and lenses. I saw that cat stretched out on the asphalt and rests.
 
 > — Kitty! Kitty! Kitty!
 

@@ -1,9 +1,8 @@
-import { resolve } from 'path';
-
 import type { GatsbyNode } from 'gatsby';
 import type { AllMarkdownContentQuery } from 'root/graphql-types';
-
 import type { Edge, GroupedByTypeAndLanguage } from 'src/types';
+
+import { resolve } from 'path';
 
 import { EDGE_TYPES } from './src/constants';
 import { EMPTY_OBJECT } from './src/constants/fallbacks';
@@ -52,10 +51,8 @@ export const createPages: GatsbyNode['createPages'] = (args) => {
       }
 
       const groupedByTypeAndLanguage =
-        result.data?.allMarkdownRemark.edges.reduce<GroupedByTypeAndLanguage>(
-          groupByTypeAndLanguage,
-          EMPTY_OBJECT,
-        ) ?? EMPTY_OBJECT;
+        result.data?.allMarkdownRemark.edges.reduce<GroupedByTypeAndLanguage>(groupByTypeAndLanguage, EMPTY_OBJECT) ??
+        EMPTY_OBJECT;
 
       Object.keys(groupedByTypeAndLanguage[EDGE_TYPES.PAGE] ?? EMPTY_OBJECT).forEach(
         (langKey: Edge['node']['fields']['langKey']) => {
@@ -76,10 +73,7 @@ export const createPages: GatsbyNode['createPages'] = (args) => {
           groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.forEach((edge, index) => {
             const { langKey, slug } = edge.node.fields;
 
-            const next =
-              index === 0
-                ? null
-                : groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.[index - 1]?.node;
+            const next = index === 0 ? null : groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.[index - 1]?.node;
             const previous =
               index === groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.length ?? 0 - 1
                 ? null

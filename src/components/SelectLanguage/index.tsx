@@ -1,15 +1,16 @@
-import { FC, useContext } from 'react';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+import type { Language } from 'cmpts/LanguageContext';
+import type { FC } from 'react';
+import type { SelectLanguageQuery } from 'root/graphql-types';
+import type { ILangObject } from 'src/types';
 
 import { useLocation } from '@reach/router';
+import { LanguageContext } from 'cmpts/LanguageContext';
 import { graphql, navigate, useStaticQuery } from 'gatsby';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
-import { SelectLanguageQuery } from 'root/graphql-types';
-
-import { Language, LanguageContext } from 'cmpts/LanguageContext';
+import { useContext } from 'react';
 import { siteMetadata } from 'src/data/siteMetadata';
-import { ILangObject } from 'src/types';
 
 export const SelectLanguage: FC = () => {
   const { toggleLanguage } = useContext(LanguageContext);

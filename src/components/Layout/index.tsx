@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 
 import { Head } from 'cmpts/Head';
 import { Header } from 'cmpts/Header';

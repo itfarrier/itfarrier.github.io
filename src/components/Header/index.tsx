@@ -1,15 +1,14 @@
-import { type FC } from 'react';
+import type { Language } from 'cmpts/LanguageContext';
+import type { FC } from 'react';
+import type { HeaderQuery } from 'root/graphql-types';
 
 import { useLocation } from '@reach/router';
+import { HeaderView } from 'cmpts/Header/HeaderView';
+import cv from 'docs/podabed-cv.pdf';
 import { graphql, useStaticQuery } from 'gatsby';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { getCurrentLangKey } from 'ptz-i18n';
-
-import { HeaderView } from 'cmpts/Header/HeaderView';
-import { Language } from 'cmpts/LanguageContext';
-import cv from 'docs/podabed-cv.pdf';
-import { type HeaderQuery } from 'root/graphql-types';
 import { siteMetadata } from 'src/data/siteMetadata';
 
 export const Header: FC = () => {

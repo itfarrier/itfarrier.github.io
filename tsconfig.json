@@ -47,15 +47,6 @@
     "target": "ESNext",
     "typeRoots": ["graphql-types.ts", "node_modules"]
   },
-  "exclude": [
-    "*.config.js",
-    ".cache",
-    ".idea",
-    ".jest",
-    "coverage",
-    "node_modules",
-    "public",
-    "static"
-  ],
-  "include": ["src", "gatsby-*.ts"]
+  "exclude": ["*.config.js", ".cache", ".idea", ".jest", "coverage", "node_modules", "public", "static"],
+  "include": ["gatsby-*.ts", "src"]
 }

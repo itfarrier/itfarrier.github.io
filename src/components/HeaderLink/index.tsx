@@ -1,8 +1,7 @@
-import { FC } from 'react';
+import type { HeaderLinkProps } from 'cmpts/HeaderLink/types';
+import type { FC } from 'react';
 
 import { Link } from 'gatsby';
-
-import { HeaderLinkProps } from 'cmpts/HeaderLink/types';
 
 export const HeaderLink: FC<HeaderLinkProps> = (props) => {
   const { text, to } = props;

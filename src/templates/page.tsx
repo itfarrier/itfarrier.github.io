@@ -1,11 +1,10 @@
-import { FC } from 'react';
-
-import { graphql } from 'gatsby';
 import type { PageProps } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import type { FC } from 'react';
 import type { PageTemplateQuery as PageTemplateQueryType } from 'root/graphql-types';
 
 import { Layout } from 'cmpts/Layout';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const PageTemplate: FC<PageProps<PageTemplateQueryType>> = (props) => {
   const {
@@ -23,10 +22,7 @@ const PageTemplate: FC<PageProps<PageTemplateQueryType>> = (props) => {
 
   return (
     <Layout location={location}>
-      <Helmet
-        meta={[{ content: excerpt, name: 'description' }]}
-        title={`${siteMetadata.title} — ${title}`}
-      />
+      <Helmet meta={[{ content: excerpt, name: 'description' }]} title={`${siteMetadata.title} — ${title}`} />
       <article>
         <header>
           <h1>{frontmatter.title}</h1>

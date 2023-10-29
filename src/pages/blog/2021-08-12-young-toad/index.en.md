@@ -11,13 +11,13 @@ number – [Chapsky palace in Priluki](<https://ru.wikipedia.org/wiki/%D0%94
 
 ![Beautiful side.](IMG_0699.jpg)
 
-The impression of the palace is depressing – everything is very bad there: as always, there is no
-infrastructure, the territory is dirty, the palace itself is in a fucking state.
+The impression of the palace is depressing – everything is very bad there: as always, there is no infrastructure, the
+territory is dirty, the palace itself is in a fucking state.
 
 ![Something very useful.](IMG_0686.jpg)
 
-The ‘Plant Protection Institute’ is good at protecting plants, but not the palace. The coolest thing
-I saw was a young toad.
+The ‘Plant Protection Institute’ is good at protecting plants, but not the palace. The coolest thing I saw was a young
+toad.
 
 ![The first seconds.](IMG_0694.jpg)
 
@@ -33,8 +33,7 @@ Everything is the same here. Devastation.
 
 ![‘Ахоўваецца дзяржавай’ (Protected by the state) is so powerful that someone didn’t even screw up the bars.](IMG_0731.jpg)
 
-It’s better not to look at anything up closely. The buildings are disfigured by the “remake”,
-neglected, crumbling.
+It’s better not to look at anything up closely. The buildings are disfigured by the “remake”, neglected, crumbling.
 
 ![Beauty.](IMG_0739.jpg)
 
@@ -42,14 +41,14 @@ neglected, crumbling.
 
 ![Just a bunch of shit.](IMG_0740.jpg)
 
-But from afar, everything, as usual, is fine. In short, you should go there and immediately go to
-the pier to just look into the distance. So much cooler.
+But from afar, everything, as usual, is fine. In short, you should go there and immediately go to the pier to just look
+into the distance. So much cooler.
 
 ![Fck.](IMG_0755.jpg)
 
 ![Fck. Part two.](IMG_0757.jpg)
 
-While driving ‘from point A to point B’, I was reached 200 on the highway. Got a ban. Sad but
-honest. On the other hand, why else would you take a BMW, no matter to race?
+While driving ‘from point A to point B’, I was reached 200 on the highway. Got a ban. Sad but honest. On the other hand,
+why else would you take a BMW, no matter to race?
 
 ![Breaking news.](IMG_0771.PNG)

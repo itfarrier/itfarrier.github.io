@@ -1,3 +1,3 @@
 module.exports = {
-  '*': ['eslint --debug --fix', 'yarn run prettier-the-whole-project'],
+  '*': ['eslint --debug --fix', 'prettier --log-level debug --write'],
 };
