@@ -8,9 +8,9 @@ type: post
 
 ![Female swift.](IMG_4760.jpg)
 
-I had to euthanize two birds lately. Picked up both with injuries. And I couldn’t treat them.
-Compared with the recent mobilization (gravilization?), this somehow pales. But I still remember how
-I didn’t care to myself when the swift was injected with the last two injections.
+I had to euthanize two birds lately. Picked up both with injuries. And I couldn’t treat them. Compared with the recent
+mobilization (gravilization?), this somehow pales. But I still remember how I didn’t care to myself when the swift was
+injected with the last two injections.
 
 One shot - paralyze.
 

@@ -1,19 +1,17 @@
-import { FC, useContext } from 'react';
+import type { FC } from 'react';
+import type { HeadQuery } from 'root/graphql-types';
 
 import { useLocation } from '@reach/router';
-import { graphql, useStaticQuery } from 'gatsby';
-import { HeadQuery } from 'root/graphql-types';
-
 import { HeadView } from 'cmpts/Head/HeadView';
 import { LanguageContext } from 'cmpts/LanguageContext';
+import { graphql, useStaticQuery } from 'gatsby';
+import { useContext } from 'react';
 import { siteMetadata } from 'src/data/siteMetadata';
 import { generateAndroidChromeHeadLinks } from 'src/utilities/generateAndroidChromeHeadLinks';
 import { generateAppleTouchHeadLinks } from 'src/utilities/generateAppleTouchHeadLinks';
 import { generateFaviconHeadLinks } from 'src/utilities/generateFaviconHeadLinks';
 
-const androidChromeIcons = generateAndroidChromeHeadLinks([
-  36, 48, 72, 96, 144, 192, 256, 384, 512,
-]);
+const androidChromeIcons = generateAndroidChromeHeadLinks([36, 48, 72, 96, 144, 192, 256, 384, 512]);
 
 const appleTouchIcons = generateAppleTouchHeadLinks([57, 60, 72, 76, 114, 120, 144, 152, 180]);
 

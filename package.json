@@ -44,9 +44,11 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jest": "^27.6.0",
     "eslint-plugin-json-es": "^1.5.7",
+    "eslint-plugin-json-schema-validator": "^4.7.0",
     "eslint-plugin-jsonc": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-md": "^1.0.19",
+    "eslint-plugin-perfectionist": "^2.2.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -65,8 +67,8 @@
     "typescript": "^5.2.2"
   },
   "keywords": [
-    "IT Farrier",
     "IT",
+    "IT Farrier",
     "farrier",
     "itfarrier"
   ],

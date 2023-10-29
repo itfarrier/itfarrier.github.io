@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import type { HeaderViewProps } from 'cmpts/Header/types';
+import type { FC } from 'react';
 
-import { HeaderViewProps } from 'cmpts/Header/types';
 import { HeaderLink } from 'cmpts/HeaderLink';
 import { SelectLanguage } from 'cmpts/SelectLanguage';
 

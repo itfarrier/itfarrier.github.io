@@ -10,5 +10,4 @@ Why can you drive 150 km?
 
 ![No. For it.](IMG_4798.jpg)
 
-For Belarusian Smazhenka, yes. Not gluttony, but
-[gastronomy tourism](https://en.wikipedia.org/wiki/Culinary_tourism).
+For Belarusian Smazhenka, yes. Not gluttony, but [gastronomy tourism](https://en.wikipedia.org/wiki/Culinary_tourism).

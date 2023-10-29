@@ -1,11 +1,10 @@
-import { FC } from 'react';
-
-import { graphql, Link } from 'gatsby';
 import type { PageProps } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import type { FC } from 'react';
 import type { BlogPostTemplateQuery as BlogPostTemplateQueryType } from 'root/graphql-types';
 
 import { Layout } from 'cmpts/Layout';
+import { graphql, Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const BlogPostTemplate: FC<PageProps<BlogPostTemplateQueryType>> = (props) => {
   const {
@@ -24,10 +23,7 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateQueryType>> = (props) => {
 
   return (
     <Layout location={location}>
-      <Helmet
-        meta={[{ content: excerpt, name: 'description' }]}
-        title={`${siteMetadata.title} — ${title}`}
-      />
+      <Helmet meta={[{ content: excerpt, name: 'description' }]} title={`${siteMetadata.title} — ${title}`} />
       <article>
         <header>
           <h1>{frontmatter.title}</h1>

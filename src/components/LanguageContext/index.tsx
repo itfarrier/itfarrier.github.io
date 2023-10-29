@@ -1,5 +1,6 @@
-import { createContext, FC, useEffect, useState } from 'react';
+import type { FC } from 'react';
 
+import { createContext, useEffect, useState } from 'react';
 import { LANGUAGE_CODES, LOCALSTORAGE_KEYS } from 'src/constants';
 
 export type Language = LANGUAGE_CODES | string;
@@ -35,9 +36,5 @@ export const LanguageContextProvider: FC = (props) => {
     }
   }, [language]);
 
-  return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
-      {props.children}
-    </LanguageContext.Provider>
-  );
+  return <LanguageContext.Provider value={{ language, toggleLanguage }}>{props.children}</LanguageContext.Provider>;
 };

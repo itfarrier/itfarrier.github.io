@@ -12,8 +12,7 @@ Pros:
 
 - Possibility for ‘nerding’. I use it instead of games.
 
-- HYPOTHETICAL possibility for security audit of source code. It’s impossible for the regular human
-  being.
+- HYPOTHETICAL possibility for security audit of source code. It’s impossible for the regular human being.
 
 - Deep customizing possibility.
 
