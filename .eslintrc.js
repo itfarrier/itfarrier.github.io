@@ -3,7 +3,6 @@ module.exports = {
     // JavaScript config files like ".examplerc", ".examplerc.js" or "example.config.js"
     {
       env: { amd: true, commonjs: true, es2024: true, node: true, 'shared-node-browser': true },
-      excludedFiles: ['.lintstagedrc'],
       extends: ['eslint:recommended', 'plugin:perfectionist/recommended-alphabetical', 'plugin:prettier/recommended'],
       files: ['**/*.config.js', '**/.*rc{,.js}'],
       plugins: ['perfectionist'],
@@ -19,7 +18,7 @@ module.exports = {
         'plugin:jsonc/recommended-with-json',
         'plugin:prettier/recommended',
       ],
-      files: ['*.json', '.lintstagedrc'],
+      files: '*.json',
       parser: 'jsonc-eslint-parser',
       rules: {
         'jsonc/sort-array-values': ['error', { order: { type: 'asc' }, pathPattern: '.*' }],
