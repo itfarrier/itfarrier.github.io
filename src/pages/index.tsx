@@ -50,10 +50,7 @@ const Index: FC = () => {
   `);
 
   return (
-    <Redirector
-      defaultLanguage={site.siteMetadata.i18n.defaultLanguage}
-      languages={site.siteMetadata.i18n.languages}
-    />
+    <Redirector defaultLanguage={site.siteMetadata.i18n.defaultLanguage} languages={site.siteMetadata.i18n.languages} />
   );
 };
 

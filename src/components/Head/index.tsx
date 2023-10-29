@@ -11,9 +11,7 @@ import { generateAndroidChromeHeadLinks } from 'src/utilities/generateAndroidChr
 import { generateAppleTouchHeadLinks } from 'src/utilities/generateAppleTouchHeadLinks';
 import { generateFaviconHeadLinks } from 'src/utilities/generateFaviconHeadLinks';
 
-const androidChromeIcons = generateAndroidChromeHeadLinks([
-  36, 48, 72, 96, 144, 192, 256, 384, 512,
-]);
+const androidChromeIcons = generateAndroidChromeHeadLinks([36, 48, 72, 96, 144, 192, 256, 384, 512]);
 
 const appleTouchIcons = generateAppleTouchHeadLinks([57, 60, 72, 76, 114, 120, 144, 152, 180]);
 

@@ -5,16 +5,7 @@ import { Helmet } from 'react-helmet';
 import { COLORS } from 'src/constants';
 
 export const HeadView: FC<HeadViewProps> = (props) => {
-  const {
-    androidChromeIcons,
-    appleTouchIcons,
-    description,
-    favicons,
-    href,
-    keywords,
-    language,
-    title,
-  } = props;
+  const { androidChromeIcons, appleTouchIcons, description, favicons, href, keywords, language, title } = props;
 
   return (
     <Helmet>
@@ -25,17 +16,8 @@ export const HeadView: FC<HeadViewProps> = (props) => {
         sizes={'180x180'}
         type={'image/png'}
       />
-      <link
-        href={'/favicons/apple-touch-icon.png'}
-        rel={'apple-touch-icon'}
-        sizes={'180x180'}
-        type={'image/png'}
-      />
-      <link
-        color={COLORS.RGBA_0_0_0_100}
-        href={'/favicons/safari-pinned-tab.svg'}
-        rel={'mask-icon'}
-      />
+      <link href={'/favicons/apple-touch-icon.png'} rel={'apple-touch-icon'} sizes={'180x180'} type={'image/png'} />
+      <link color={COLORS.RGBA_0_0_0_100} href={'/favicons/safari-pinned-tab.svg'} rel={'mask-icon'} />
       <link href={'/favicons/favicon.ico'} rel={'shortcut icon'} />
       <link href={href} hrefLang={language} rel={'alternate'} />
       <link href={href} rel={'canonical'} />

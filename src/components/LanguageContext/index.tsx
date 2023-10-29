@@ -36,9 +36,5 @@ export const LanguageContextProvider: FC = (props) => {
     }
   }, [language]);
 
-  return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
-      {props.children}
-    </LanguageContext.Provider>
-  );
+  return <LanguageContext.Provider value={{ language, toggleLanguage }}>{props.children}</LanguageContext.Provider>;
 };

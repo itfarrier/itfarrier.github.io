@@ -2,10 +2,7 @@ import type { Edge, GroupedByTypeAndLanguage } from 'src/types';
 
 import { EMPTY_ARRAY, EMPTY_OBJECT } from '../constants/fallbacks';
 
-export type GroupByTypeAndLanguage = (
-  accumulator: GroupedByTypeAndLanguage,
-  edge: Edge,
-) => GroupedByTypeAndLanguage;
+export type GroupByTypeAndLanguage = (accumulator: GroupedByTypeAndLanguage, edge: Edge) => GroupedByTypeAndLanguage;
 
 export const groupByTypeAndLanguage: GroupByTypeAndLanguage = (accumulator, edge) => {
   const { fields, frontmatter } = edge.node;

@@ -23,10 +23,7 @@ const BlogPostTemplate: FC<PageProps<BlogPostTemplateQueryType>> = (props) => {
 
   return (
     <Layout location={location}>
-      <Helmet
-        meta={[{ content: excerpt, name: 'description' }]}
-        title={`${siteMetadata.title} — ${title}`}
-      />
+      <Helmet meta={[{ content: excerpt, name: 'description' }]} title={`${siteMetadata.title} — ${title}`} />
       <article>
         <header>
           <h1>{frontmatter.title}</h1>
