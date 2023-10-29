@@ -5,6 +5,7 @@
     "url": "https://itfarrier.github.io"
   },
   "dependencies": {
+    "@p5-wrapper/react": "^4.2.0",
     "gatsby": "^5.12.9",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-graphql-codegen": "^3.1.1",
