@@ -31,8 +31,9 @@ module.exports = {
       },
     },
 
-    // TypeScript files like "example.ts" or "example.tsx"
+    // TypeScript files like "example.ts"
     {
+      excludedFiles: ['**/*.tsx', '{.,}*.test.ts{,x}'],
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
@@ -40,7 +41,30 @@ module.exports = {
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
-      files: ['**/*.ts{,x}'],
+      files: '**/*.ts',
+      parser: '@typescript-eslint/parser',
+      parserOptions: { project: true, tsconfigRootDir: __dirname },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '_*', varsIgnorePattern: '_*' },
+        ],
+      },
+    },
+
+    // TypeScript JSX files like "example.tsx"
+    {
+      excludedFiles: ['**/*.ts', '{.,}*.test.ts{x,}'],
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:perfectionist/recommended-alphabetical',
+        'plugin:prettier/recommended',
+      ],
+      files: '**/*.tsx',
       parser: '@typescript-eslint/parser',
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
@@ -52,6 +76,67 @@ module.exports = {
         ],
         'react/jsx-boolean-value': ['error', 'always'],
         'react/jsx-curly-brace-presence': ['error', 'always'],
+      },
+    },
+
+    // TypeScript test files like "example.test.ts"
+    {
+      env: { amd: true, commonjs: true, es2022: true, jest: true, node: true },
+      excludedFiles: '**/*.ts{,x}',
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:perfectionist/recommended-alphabetical',
+        'plugin:prettier/recommended',
+      ],
+      files: '{.,}*.test.ts',
+      parser: '@typescript-eslint/parser',
+      parserOptions: { project: true, tsconfigRootDir: __dirname },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '_*', varsIgnorePattern: '_*' },
+        ],
+      },
+    },
+
+    // TypeScript JSX test files like "example.test.tsx"
+    {
+      env: { amd: true, commonjs: true, es2022: true, jest: true, node: true },
+      excludedFiles: '**/*.ts{,x}',
+      extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:perfectionist/recommended-alphabetical',
+        'plugin:prettier/recommended',
+      ],
+      files: '{.,}*.test.tsx',
+      parser: '@typescript-eslint/parser',
+      parserOptions: { project: true, tsconfigRootDir: __dirname },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          { argsIgnorePattern: '_*', varsIgnorePattern: '_*' },
+        ],
+        'react/jsx-boolean-value': ['error', 'always'],
+        'react/jsx-curly-brace-presence': ['error', 'always'],
+      },
+    },
+
+    // Markdown files like "example.md"
+    {
+      extends: ['plugin:prettier/recommended', 'plugin:md/recommended'],
+      files: ['*.md'],
+      parser: 'markdown-eslint-parser',
+      rules: {
+        'md/remark': ['error', { plugins: [['lint-maximum-line-length', false]] }],
+        'prettier/prettier': ['error', { parser: 'markdown' }],
       },
     },
   ],
