@@ -31,8 +31,8 @@ module.exports = {
       excludedFiles: ['**/*.tsx', '{.,}*.test.ts{,x}'],
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
@@ -51,8 +51,8 @@ module.exports = {
       excludedFiles: ['**/*.ts', '{.,}*.test.ts{x,}'],
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
@@ -63,8 +63,6 @@ module.exports = {
       rules: {
         '@typescript-eslint/consistent-type-imports': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
-        'react/jsx-boolean-value': ['error', 'always'],
-        'react/jsx-curly-brace-presence': ['error', 'always'],
       },
     },
 
@@ -74,8 +72,8 @@ module.exports = {
       excludedFiles: '**/*.ts{,x}',
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
@@ -95,8 +93,8 @@ module.exports = {
       excludedFiles: '**/*.ts{,x}',
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
