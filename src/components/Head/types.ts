@@ -1,16 +1,12 @@
-import { HTMLAttributes, LinkHTMLAttributes, MetaHTMLAttributes } from 'react';
+import type { HTMLAttributes, LinkHTMLAttributes, MetaHTMLAttributes } from 'react';
 
 export type HeadViewProps = {
   androidChromeIcons: JSX.Element[];
   appleTouchIcons: JSX.Element[][];
   description: MetaHTMLAttributes<HTMLMetaElement>['content'];
   favicons: JSX.Element[];
-  href:
-    | LinkHTMLAttributes<HTMLLinkElement>['href']
-    | MetaHTMLAttributes<HTMLMetaElement>['content'];
+  href: LinkHTMLAttributes<HTMLLinkElement>['href'];
   keywords: MetaHTMLAttributes<HTMLMetaElement>['content'];
-  language:
-    | LinkHTMLAttributes<HTMLLinkElement>['hrefLang']
-    | HTMLAttributes<HTMLHtmlElement>['lang'];
+  language: HTMLAttributes<HTMLHtmlElement>['lang'];
   title: MetaHTMLAttributes<HTMLMetaElement>['content'];
 };

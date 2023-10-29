@@ -1,4 +1,4 @@
-import { Edge, GroupedByTypeAndLanguage } from 'src/types';
+import type { Edge, GroupedByTypeAndLanguage } from 'src/types';
 
 import { EMPTY_ARRAY, EMPTY_OBJECT } from '../constants/fallbacks';
 

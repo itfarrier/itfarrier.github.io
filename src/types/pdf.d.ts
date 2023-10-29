@@ -1,5 +1,5 @@
 declare module '*.pdf' {
-  import { Link } from 'cmpts/HeaderLink/types';
+  import type { Link } from 'cmpts/HeaderLink/types';
 
   const pdf: Link;
 

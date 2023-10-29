@@ -1,4 +1,4 @@
-import { Edge } from 'src/types';
+import type { Edge } from 'src/types';
 
 export const EMPTY_ARRAY = [];
 export const EMPTY_COMPONENT = () => <></>;

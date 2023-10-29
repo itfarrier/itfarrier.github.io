@@ -1,9 +1,8 @@
-import { resolve } from 'path';
-
 import type { GatsbyNode } from 'gatsby';
 import type { AllMarkdownContentQuery } from 'root/graphql-types';
-
 import type { Edge, GroupedByTypeAndLanguage } from 'src/types';
+
+import { resolve } from 'path';
 
 import { EDGE_TYPES } from './src/constants';
 import { EMPTY_OBJECT } from './src/constants/fallbacks';

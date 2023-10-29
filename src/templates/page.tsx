@@ -1,11 +1,10 @@
-import { FC } from 'react';
-
-import { graphql } from 'gatsby';
 import type { PageProps } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import type { FC } from 'react';
 import type { PageTemplateQuery as PageTemplateQueryType } from 'root/graphql-types';
 
 import { Layout } from 'cmpts/Layout';
+import { graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 const PageTemplate: FC<PageProps<PageTemplateQueryType>> = (props) => {
   const {

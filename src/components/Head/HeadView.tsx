@@ -1,8 +1,7 @@
-import { FC } from 'react';
+import type { HeadViewProps } from 'cmpts/Head/types';
+import type { FC } from 'react';
 
 import { Helmet } from 'react-helmet';
-
-import { HeadViewProps } from 'cmpts/Head/types';
 import { COLORS } from 'src/constants';
 
 export const HeadView: FC<HeadViewProps> = (props) => {

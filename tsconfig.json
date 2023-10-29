@@ -57,5 +57,5 @@
     "public",
     "static"
   ],
-  "include": ["src", "gatsby-*.ts"]
+  "include": ["gatsby-*.ts", "src"]
 }

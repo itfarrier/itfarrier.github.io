@@ -1,3 +1,9 @@
+import type { Language } from 'cmpts/LanguageContext';
+
+import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
+import { getUserLangKey } from 'ptz-i18n';
+import { type FC, PureComponent } from 'react';
+import { type IndexQuery } from 'root/graphql-types';
 import 'sanitize.css';
 import 'sanitize.css/assets.css';
 import 'sanitize.css/forms.css';
@@ -5,14 +11,6 @@ import 'sanitize.css/reduce-motion.css';
 import 'sanitize.css/system-ui.css';
 import 'sanitize.css/typography.css';
 import 'sanitize.css/ui-monospace.css';
-
-import { type FC, PureComponent } from 'react';
-
-import { graphql, navigate, useStaticQuery, withPrefix } from 'gatsby';
-import { getUserLangKey } from 'ptz-i18n';
-import { type IndexQuery } from 'root/graphql-types';
-
-import { Language } from 'cmpts/LanguageContext';
 
 export type RedirectorProps = { defaultLanguage: Language; languages: Language[] };
 

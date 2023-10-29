@@ -1,11 +1,10 @@
-import { FC } from 'react';
+import type { FC } from 'react';
+import type { InscriptionsEnQuery } from 'root/graphql-types';
 
+import { Layout } from 'cmpts/Layout';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Helmet } from 'react-helmet';
-import { InscriptionsEnQuery } from 'root/graphql-types';
-
-import { Layout } from 'cmpts/Layout';
 
 const Inscriptions: FC = () => {
   const data = useStaticQuery<InscriptionsEnQuery>(graphql`

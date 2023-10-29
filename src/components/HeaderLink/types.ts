@@ -1,4 +1,4 @@
-import { GatsbyLinkProps } from 'gatsby';
+import type { GatsbyLinkProps } from 'gatsby';
 
 export type Link = GatsbyLinkProps<unknown>['to'];
 
