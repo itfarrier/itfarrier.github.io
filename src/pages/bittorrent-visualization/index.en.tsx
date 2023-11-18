@@ -21,7 +21,19 @@ const BittorrentVisualization: FC = () => {
   return (
     <Layout>
       <Helmet title={`${data.site.siteMetadata.title} — Bittorrent Visualization`} />
-      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+      <div
+        style={{
+          alignItems: 'center',
+          display: 'flex',
+          height: '100%',
+          justifyContent: 'center',
+          left: 0,
+          position: 'absolute',
+          top: 0,
+          width: '100%',
+          zIndex: -1,
+        }}
+      >
         <ReactP5Wrapper fallback={<h1>{'No Bittorrent visualization, sorry.'}</h1>} sketch={sketch} />
       </div>
     </Layout>

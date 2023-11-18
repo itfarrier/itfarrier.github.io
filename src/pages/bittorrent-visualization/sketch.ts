@@ -5,53 +5,49 @@ export const sketch = (p5: p5) => {
     bitHue: number;
     id: number;
 
-    constructor(i: number, hu: number) {
-      this.id = i;
-      this.bitHue = hu;
+    constructor(id: number, bitHue: number) {
+      this.id = id;
+      this.bitHue = bitHue;
     }
   }
 
   class Connection {
-    deadkibbles;
-    from;
+    deadKibbles;
+    from: Peer;
     kibbles: Kibble[];
-    lastdraw;
+    lastDraw;
     speed;
     stream;
     theBit: Bit;
-    to;
+    to: Peer;
 
-    constructor(f, t, bit: Bit) {
+    constructor(from: Peer, to: Peer, bit: Bit) {
       this.theBit = bit;
       this.kibbles = [];
-      this.from = f;
-      this.to = t;
+      this.from = from;
+      this.to = to;
       this.stream = true;
-      this.lastdraw = p5.millis();
-      this.deadkibbles = 0;
-      this.speed = p5.int(p5.random(30, 500));
+      this.lastDraw = p5.millis();
+      this.deadKibbles = 0;
+      this.speed = p5.random(0, 100);
     }
 
     drawKibbles() {
-      for (let i = 0; i < this.kibbles.length; i++) {
-        const k = this.kibbles[i];
-
-        if (p5.millis() > k.endtime) {
-          this.kibbles.splice(i, 1);
-          this.deadkibbles++;
+      this.kibbles.forEach((kibble, index) => {
+        if (p5.millis() > kibble.endtime) {
+          this.kibbles.splice(index, 1);
+          this.deadKibbles++;
         } else {
-          const diff = (p5.millis() - k.starttime) / (k.endtime - k.starttime);
+          const diff = (p5.millis() - kibble.starttime) / (kibble.endtime - kibble.starttime);
           const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
           const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
 
           p5.colorMode(p5.HSB);
           p5.fill(this.theBit.bitHue, 255, 255);
           p5.stroke(this.theBit.bitHue, 255, 255);
-          p5.strokeWeight(1);
-          // k.big);
-          p5.ellipse(xpos, ypos, k.big, k.big);
+          p5.circle(xpos, ypos, kibble.big);
         }
-      }
+      });
     }
 
     getIdxFrom() {
@@ -63,10 +59,10 @@ export const sketch = (p5: p5) => {
     }
 
     manageKibbles() {
-      if (this.from.removing >= 1 || this.to.removing >= 1 || this.deadkibbles > 125) {
+      if (this.from.removing >= 1 || this.to.removing >= 1 || this.deadKibbles > 125) {
         this.stream = false;
       } else {
-        if (this.lastdraw < p5.millis() - this.speed) {
+        if (this.lastDraw < p5.millis() - this.speed) {
           this.newKibble();
         }
       }
@@ -79,7 +75,7 @@ export const sketch = (p5: p5) => {
       k.endtime = k.starttime + 5000;
 
       this.kibbles.push(k);
-      this.lastdraw = p5.millis();
+      this.lastDraw = p5.millis();
     }
   }
 
@@ -118,7 +114,7 @@ export const sketch = (p5: p5) => {
   const initialPeers = 5;
 
   class Peer {
-    actBits: unknown[];
+    actBits: Bit[];
     ccolor: p5.Color;
     chue: number;
     cxpos: number; // x of where peer should be
@@ -173,13 +169,14 @@ export const sketch = (p5: p5) => {
 
       this.lastcheck = p5.millis();
       this.chue = 5;
+      this.ccolor = p5.color(this.chue, p5.random(0, 255), p5.random(0, 255));
 
       p5.pop();
 
       this.setupBits();
     }
 
-    bitRequest(k, j) {
+    bitRequest(k: Peer, j) {
       if (k.knex.length < 4) {
         const mz = new Connection(k, peers[this.index], j);
 
@@ -192,12 +189,11 @@ export const sketch = (p5: p5) => {
     }
 
     drawSelf() {
-      p5.fill(256); // fix crash was p5.fill(this.ccolor);
+      p5.fill(this.ccolor);
       p5.stroke(this.myBits.length);
-      // strokeWeight(1);
       p5.noStroke();
       p5.ellipseMode(p5.CENTER);
-      p5.ellipse(this.cxpos, this.cypos, 50, 50);
+      p5.circle(this.cxpos, this.cypos, 50);
       p5.fill(0);
 
       const w = testTorrent.bits.length - 1;
@@ -208,6 +204,7 @@ export const sketch = (p5: p5) => {
         const k = this.myBits[i];
 
         p5.colorMode(p5.HSB);
+        p5.fill(k.bitHue, 255, 255);
         p5.stroke(k.bitHue, 255, 255);
         p5.line(this.cxpos - w / 2 + 1 * k.id, this.cypos - 5, this.cxpos - w / 2 + 1 * k.id, this.cypos + 5);
       }
@@ -314,27 +311,29 @@ export const sketch = (p5: p5) => {
     const i = p5.int(p5.random(0, peers.length - 1));
     const toRemove = peers[i];
 
-    toRemove.removing = 1;
+    if (toRemove) {
+      toRemove.removing = 1;
+    }
   }
 
-  function keyPressed() {
-    if (p5.key == 'p') {
+  p5.keyPressed = () => {
+    if (p5.key === 'p') {
       addPeer();
     }
 
-    if (p5.key == 's') {
+    if (p5.key === 's') {
       addSeeder();
     }
 
-    if (p5.key == 'r') {
+    if (p5.key === 'r' || p5.keyCode === p5.DELETE || p5.keyCode === p5.BACKSPACE) {
       removePeer();
     }
-  }
+  };
 
   p5.setup = () => {
-    p5.createCanvas(450, 450, p5.WEBGL);
-    p5.fill(256);
-    p5.fill(0);
+    const size = p5.windowWidth > p5.windowHeight ? p5.windowHeight : p5.windowWidth;
+
+    p5.createCanvas(size, size, p5.WEBGL);
     p5.textAlign(p5.CENTER);
 
     // establish initial seeds/peers
@@ -348,7 +347,7 @@ export const sketch = (p5: p5) => {
   };
 
   p5.draw = () => {
-    p5.background(0);
+    p5.background(0, 0);
 
     // rotate peers and seeds (disabled by default)
     if (rot >= 0) {
