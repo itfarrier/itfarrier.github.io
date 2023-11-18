@@ -18,11 +18,11 @@ export const sketch = (p5: p5) => {
     lastdraw;
     speed;
     stream;
-    theBit;
+    theBit: Bit;
     to;
 
-    constructor(f, t, b) {
-      this.theBit = b;
+    constructor(f, t, bit: Bit) {
+      this.theBit = bit;
       this.kibbles = [];
       this.from = f;
       this.to = t;
@@ -120,10 +120,10 @@ export const sketch = (p5: p5) => {
   class Peer {
     actBits: unknown[];
     ccolor: p5.Color;
-    chue: number; // x of peer
-    cxpos: number; // y of peer
-    cypos: number; // x of where peer should be
-    ehue: number; // y of where peer should be
+    chue: number;
+    cxpos: number; // x of where peer should be
+    cypos: number; // y of where peer should be
+    ehue: number;
     emovetime: number;
     expos: number;
     eypos: number;
@@ -137,8 +137,8 @@ export const sketch = (p5: p5) => {
     removing: number;
     shue: number;
     smovetime: number;
-    sxpos: number;
-    sypos: number;
+    sxpos: number; // x of peer
+    sypos: number; // y of peer
 
     constructor(pct: number) {
       let szv = peers.length;
@@ -163,8 +163,8 @@ export const sketch = (p5: p5) => {
 
       this.expos = p5.width / 2 + 230 * p5.cos(p5.radians(angle)); // screenX(0, 230)
       this.eypos = p5.height / 2 + 230 * p5.sin(p5.radians(angle)); // screenY(0, 230)
-      this.sxpos = p5.width / 2;
-      this.sypos = p5.height / 2;
+      this.sxpos = 0;
+      this.sypos = 0;
       this.smovetime = p5.millis();
       this.emovetime = this.smovetime + 1250;
       this.percent = pct;
@@ -271,8 +271,8 @@ export const sketch = (p5: p5) => {
 
       this.sxpos = this.cxpos;
       this.sypos = this.cypos;
-      this.expos = p5.width / 2 + 180 * p5.cos(p5.radians(angle)); // screenX(0, 180, 0);
-      this.eypos = p5.height / 2 + 180 * p5.sin(p5.radians(angle)); // screenY(0, 180, 0);
+      this.expos = (p5.width / 4) * p5.cos(p5.radians(angle)); // screenX(0, 180, 0);
+      this.eypos = (p5.height / 4) * p5.sin(p5.radians(angle)); // screenY(0, 180, 0);
       this.smovetime = p5.millis();
       this.emovetime = this.smovetime + 3000;
 
