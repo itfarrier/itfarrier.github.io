@@ -30,9 +30,6 @@ export const sketch = (p5: p5) => {
     createKibble() {
       const kibble = new Kibble();
 
-      kibble.startTime = p5.millis();
-      kibble.endTime = kibble.startTime + 5000;
-
       this.kibbles.push(kibble);
       this.lastDraw = p5.millis();
     }
@@ -76,8 +73,15 @@ export const sketch = (p5: p5) => {
 
   class Kibble {
     big = p5.random(0, 4);
-    endTime = 0;
-    startTime = 0;
+    endTime: number;
+    startTime: number;
+
+    constructor() {
+      const startTime = p5.millis();
+
+      this.endTime = startTime + 5000;
+      this.startTime = startTime;
+    }
   }
 
   class Torrent {
