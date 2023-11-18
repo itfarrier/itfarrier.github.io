@@ -374,17 +374,15 @@ export const sketch = (p5: p5) => {
       }
     });
 
-    for (let i = 0; i < peers.length; i++) {
-      const p = peers[i];
+    peers.forEach((peer, index) => {
+      peer.moveSelf();
+      peer.drawSelf();
+      peer.reConfigure(index);
 
-      p.moveSelf();
-      p.drawSelf();
-      p.reConfigure(i);
-
-      if (p.removing > 1) {
-        peers.splice(i, 1);
+      if (peer.removing > 1) {
+        peers.splice(index, 1);
       }
-    }
+    });
 
     const tmp = p5.shuffle(peers);
 
