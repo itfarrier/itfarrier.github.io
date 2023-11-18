@@ -281,9 +281,7 @@ export const sketch = (p5: p5) => {
   }
 
   function addPeer() {
-    const k = new Peer(p5.random(0, 1));
-
-    peers.push(k);
+    peers.push(new Peer(p5.random(0, 1)));
   }
 
   function addSeeder() {
