@@ -27,6 +27,16 @@ export const sketch = (p5: p5) => {
       this.to = to;
     }
 
+    createKibble() {
+      const kibble = new Kibble();
+
+      kibble.startTime = p5.millis();
+      kibble.endTime = kibble.startTime + 5000;
+
+      this.kibbles.push(kibble);
+      this.lastDraw = p5.millis();
+    }
+
     drawKibbles() {
       this.kibbles.forEach((kibble, index) => {
         if (p5.millis() > kibble.endTime) {
@@ -58,19 +68,9 @@ export const sketch = (p5: p5) => {
         this.stream = false;
       } else {
         if (this.lastDraw < p5.millis() - this.speed) {
-          this.newKibble();
+          this.createKibble();
         }
       }
-    }
-
-    newKibble() {
-      const k = new Kibble();
-
-      k.startTime = p5.millis();
-      k.endTime = k.startTime + 5000;
-
-      this.kibbles.push(k);
-      this.lastDraw = p5.millis();
     }
   }
 
@@ -365,11 +365,11 @@ export const sketch = (p5: p5) => {
         c.from.knex.splice(c.from.knex.indexOf(c.to), 1);
         c.to.myBits.push(c.theBit);
 
-        if (c.to.needBits.indexOf(c.theBit) != -1) {
+        if (c.to.needBits.includes(c.theBit)) {
           c.to.needBits.splice(c.to.needBits.indexOf(c.theBit), 1);
         }
 
-        if (c.to.knex.indexOf(c.theBit) != -1) {
+        if (c.to.knex.includes(c.theBit)) {
           c.to.knex.splice(c.to.knex.indexOf(c.theBit), 1);
         }
 
