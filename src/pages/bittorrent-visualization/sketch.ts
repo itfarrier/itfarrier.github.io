@@ -99,7 +99,7 @@ export const sketch = (p5: p5) => {
 
   const peers: Peer[] = [];
   const connections: Connection[] = [];
-  let isRotatePeers = 1;
+  let isRotatePeers = -1;
   const testTorrent = new Torrent(30);
   const initialSeeders = 1;
   const initialPeers = 5;
