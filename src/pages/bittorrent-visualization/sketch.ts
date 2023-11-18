@@ -6,8 +6,8 @@ export const sketch = (p5: p5) => {
     id: number;
 
     constructor(id: number, bitHue: number) {
-      this.id = id;
       this.bitHue = bitHue;
+      this.id = id;
     }
   }
 
@@ -34,11 +34,11 @@ export const sketch = (p5: p5) => {
 
     drawKibbles() {
       this.kibbles.forEach((kibble, index) => {
-        if (p5.millis() > kibble.endtime) {
+        if (p5.millis() > kibble.endTime) {
           this.kibbles.splice(index, 1);
           this.deadKibbles++;
         } else {
-          const diff = (p5.millis() - kibble.starttime) / (kibble.endtime - kibble.starttime);
+          const diff = (p5.millis() - kibble.startTime) / (kibble.endTime - kibble.startTime);
           const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
           const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
 
@@ -71,8 +71,8 @@ export const sketch = (p5: p5) => {
     newKibble() {
       const k = new Kibble();
 
-      k.starttime = p5.millis();
-      k.endtime = k.starttime + 5000;
+      k.startTime = p5.millis();
+      k.endTime = k.startTime + 5000;
 
       this.kibbles.push(k);
       this.lastDraw = p5.millis();
@@ -80,15 +80,9 @@ export const sketch = (p5: p5) => {
   }
 
   class Kibble {
-    big: number;
-    endtime: number;
-    starttime: number;
-
-    constructor() {
-      this.starttime = 0;
-      this.endtime = 0;
-      this.big = p5.random(0, 4);
-    }
+    big = p5.random(0, 4);
+    endTime = 0;
+    startTime = 0;
   }
 
   class Torrent {
