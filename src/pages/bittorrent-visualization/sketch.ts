@@ -119,7 +119,7 @@ export const sketch = (p5: p5) => {
     lastcheck: number;
     myBits: Bit[];
     needBits: Bit[];
-    percent: number;
+    percent = p5.random(0, 1);
     pwait: number;
     removing: number;
     shue: number;
@@ -127,7 +127,7 @@ export const sketch = (p5: p5) => {
     sxpos: number; // x of peer
     sypos: number; // y of peer
 
-    constructor(pct: number) {
+    constructor() {
       let szv = peers.length;
 
       if (szv === 0) {
@@ -154,7 +154,6 @@ export const sketch = (p5: p5) => {
       this.sypos = 0;
       this.smovetime = p5.millis();
       this.emovetime = this.smovetime + 1250;
-      this.percent = pct;
 
       p5.colorMode(p5.HSB);
 
@@ -281,11 +280,11 @@ export const sketch = (p5: p5) => {
   }
 
   function addPeer() {
-    peers.push(new Peer(p5.random(0, 1)));
+    peers.push(new Peer());
   }
 
   function addSeeder() {
-    const p = new Peer(p5.random(0, 1));
+    const p = new Peer();
 
     peers.push(p);
 
