@@ -384,15 +384,11 @@ export const sketch = (p5: p5) => {
       }
     });
 
-    const tmp = p5.shuffle(peers);
-
-    for (let i = 0; i < tmp.length; i++) {
-      const cpeer = tmp[i];
-
-      if (cpeer.lastcheck < p5.millis() - cpeer.pwait) {
-        cpeer.findPeer();
-        cpeer.lastcheck = p5.millis();
+    p5.shuffle(peers).forEach((peer: Peer) => {
+      if (peer.lastcheck < p5.millis() - peer.pwait) {
+        peer.findPeer();
+        peer.lastcheck = p5.millis();
       }
-    }
+    });
   };
 };
