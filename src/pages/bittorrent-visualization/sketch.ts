@@ -97,12 +97,12 @@ export const sketch = (p5: p5) => {
     }
   }
 
-  const peers: Peer[] = [];
+  const INITIAL_PEERS = 5;
+  const INITIAL_SEEDS = 1;
   const connections: Connection[] = [];
-  let isRotatePeers = -1;
+  const peers: Peer[] = [];
   const testTorrent = new Torrent(30);
-  const initialSeeders = 1;
-  const initialPeers = 5;
+  let isRotatePeers = -1;
 
   class Peer {
     actBits: Bit[];
@@ -321,12 +321,11 @@ export const sketch = (p5: p5) => {
     p5.createCanvas(size, size, p5.WEBGL);
     p5.textAlign(p5.CENTER);
 
-    // establish initial seeds/peers
-    for (let i = 0; i < initialSeeders; i++) {
+    for (let i = 0; i < INITIAL_SEEDS; i++) {
       addSeed();
     }
 
-    for (let i = 0; i < initialPeers; i++) {
+    for (let i = 0; i < INITIAL_PEERS; i++) {
       addPeer();
     }
   };
