@@ -180,10 +180,10 @@ export const sketch = (p5: p5) => {
     }
 
     bitRequest(k, j) {
-      if (k.knex.size() < 4) {
+      if (k.knex.length < 4) {
         const mz = new Connection(k, peers[this.index], j);
 
-        k.knex.add(peers[this.index]);
+        k.knex.push(peers[this.index]);
 
         this.actBits.push(j);
 
@@ -192,7 +192,7 @@ export const sketch = (p5: p5) => {
     }
 
     drawSelf() {
-      p5.fill(this.ccolor);
+      p5.fill(256); // fix crash was p5.fill(this.ccolor);
       p5.stroke(this.myBits.length);
       // strokeWeight(1);
       p5.noStroke();
