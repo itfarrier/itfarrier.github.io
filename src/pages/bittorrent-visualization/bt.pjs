@@ -271,7 +271,7 @@ class Connection
   Connection(Peer f, Peer t, Bit b)
   {
     theBit = (Bit)b;
-    kibbles = new ArrayList()
+    kibbles = new ArrayList();
     from = f;
     to = t;
     stream = true;
@@ -344,15 +344,12 @@ class Connection
 
 void addPeer()
 {
-  int cc = peers.size();
   Peer k = new Peer(random(0,1));
   peers.add(k);
 }
 
 void addSeeder()
 {
-  int cc = peers.size();
-
   Peer p = new Peer(random(0,1));
   peers.add(p);
 
