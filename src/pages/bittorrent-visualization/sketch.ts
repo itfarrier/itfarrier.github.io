@@ -97,9 +97,7 @@ export const sketch = (p5: p5) => {
     }
   }
 
-  const angle = 0;
   const peers: Peer[] = [];
-  const tmp = [];
   const connections: Connection[] = [];
   const rot = -1;
   const testTorrent = new Torrent(30);
