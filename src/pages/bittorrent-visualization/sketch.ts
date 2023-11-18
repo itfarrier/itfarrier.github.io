@@ -346,35 +346,33 @@ export const sketch = (p5: p5) => {
       }
     }
 
-    for (let i = 0; i < connections.length; i++) {
-      const c = connections[i];
+    connections.forEach((connection, index) => {
+      connection.manageKibbles();
+      connection.drawKibbles();
 
-      c.manageKibbles();
-      c.drawKibbles();
-
-      if (c.kibbles.length === 0 && !c.stream) {
-        if (c.to.removing >= 1) {
-          c.to.removing++;
+      if (!connection.kibbles.length && !connection.stream) {
+        if (connection.to.removing >= 1) {
+          connection.to.removing++;
         }
 
-        if (c.from.removing >= 1) {
-          c.from.removing++;
+        if (connection.from.removing >= 1) {
+          connection.from.removing++;
         }
 
-        c.from.knex.splice(c.from.knex.indexOf(c.to), 1);
-        c.to.myBits.push(c.theBit);
+        connection.from.knex.splice(connection.from.knex.indexOf(connection.to), 1);
+        connection.to.myBits.push(connection.theBit);
 
-        if (c.to.needBits.includes(c.theBit)) {
-          c.to.needBits.splice(c.to.needBits.indexOf(c.theBit), 1);
+        if (connection.to.needBits.includes(connection.theBit)) {
+          connection.to.needBits.splice(connection.to.needBits.indexOf(connection.theBit), 1);
         }
 
-        if (c.to.knex.includes(c.theBit)) {
-          c.to.knex.splice(c.to.knex.indexOf(c.theBit), 1);
+        if (connection.to.knex.includes(connection.theBit)) {
+          connection.to.knex.splice(connection.to.knex.indexOf(connection.theBit), 1);
         }
 
-        connections.splice(i, 1);
+        connections.splice(index, 1);
       }
-    }
+    });
 
     for (let i = 0; i < peers.length; i++) {
       const p = peers[i];
