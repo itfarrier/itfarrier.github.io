@@ -283,16 +283,16 @@ export const sketch = (p5: p5) => {
     peers.push(new Peer());
   }
 
-  function addSeeder() {
-    const p = new Peer();
+  function addSeed() {
+    const peer = new Peer();
 
-    peers.push(p);
+    peers.push(peer);
 
-    for (let i = 0; i < testTorrent.bits.length; i++) {
-      p.myBits.push(testTorrent.bits[i]);
-    }
+    testTorrent.bits.forEach((bit) => {
+      peer.myBits.push(bit);
+    });
 
-    p.needBits = [];
+    peer.needBits = [];
   }
 
   function removeRandomPeer() {
@@ -310,7 +310,7 @@ export const sketch = (p5: p5) => {
     }
 
     if (p5.key === 's') {
-      addSeeder();
+      addSeed();
     }
 
     if (p5.key === 'r' || p5.keyCode === p5.DELETE || p5.keyCode === p5.BACKSPACE) {
@@ -326,7 +326,7 @@ export const sketch = (p5: p5) => {
 
     // establish initial seeds/peers
     for (let i = 0; i < initialSeeders; i++) {
-      addSeeder();
+      addSeed();
     }
 
     for (let i = 0; i < initialPeers; i++) {
