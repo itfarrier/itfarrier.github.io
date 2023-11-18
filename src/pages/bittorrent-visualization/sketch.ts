@@ -296,12 +296,12 @@ export const sketch = (p5: p5) => {
     p.needBits = [];
   }
 
-  function removePeer() {
-    const i = p5.int(p5.random(0, peers.length - 1));
-    const toRemove = peers[i];
+  function removeRandomPeer() {
+    const randomPeerIndex = p5.random(0, peers.length - 1);
+    const peerToBeDeleted = peers[randomPeerIndex];
 
-    if (toRemove) {
-      toRemove.removing = 1;
+    if (peerToBeDeleted) {
+      peerToBeDeleted.removing = 1;
     }
   }
 
@@ -315,7 +315,7 @@ export const sketch = (p5: p5) => {
     }
 
     if (p5.key === 'r' || p5.keyCode === p5.DELETE || p5.keyCode === p5.BACKSPACE) {
-      removePeer();
+      removeRandomPeer();
     }
   };
 
