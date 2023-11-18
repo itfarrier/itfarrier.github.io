@@ -99,7 +99,7 @@ export const sketch = (p5: p5) => {
 
   const peers: Peer[] = [];
   const connections: Connection[] = [];
-  const rot = -1;
+  let isRotatePeers = 1;
   const testTorrent = new Torrent(30);
   const initialSeeders = 1;
   const initialPeers = 5;
@@ -253,7 +253,7 @@ export const sketch = (p5: p5) => {
 
       this.index = i;
 
-      const angle = (360 / k) * i + rot;
+      const angle = (360 / k) * i + isRotatePeers;
 
       p5.rotate(p5.radians(angle));
 
@@ -338,12 +338,11 @@ export const sketch = (p5: p5) => {
   p5.draw = () => {
     p5.background(0, 0);
 
-    // rotate peers and seeds (disabled by default)
-    if (rot >= 0) {
-      if (rot < 360) {
-        rot += 0.2;
+    if (isRotatePeers >= 0) {
+      if (isRotatePeers < 360) {
+        isRotatePeers += 0.2;
       } else {
-        rot = rot - 360;
+        isRotatePeers = isRotatePeers - 360;
       }
     }
 
