@@ -168,7 +168,7 @@ export const sketch = (p5: p5) => {
 
     bitRequest(k: Peer, j) {
       if (k.knex.length < 4) {
-        const mz = new Connection(k, peers[this.index], j);
+        const mz = new Connection(k, this, j);
 
         k.knex.push(peers[this.index]);
 
