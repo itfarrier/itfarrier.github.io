@@ -12,24 +12,19 @@ export const sketch = (p5: p5) => {
   }
 
   class Connection {
-    deadKibbles;
+    deadKibbles = 0;
     from: Peer;
-    kibbles: Kibble[];
-    lastDraw;
-    speed;
-    stream;
+    kibbles: Kibble[] = [];
+    lastDraw = p5.millis();
+    speed = p5.random(0, 100);
+    stream = true;
     theBit: Bit;
     to: Peer;
 
-    constructor(from: Peer, to: Peer, bit: Bit) {
-      this.theBit = bit;
-      this.kibbles = [];
+    constructor(from: Connection['from'], to: Connection['to'], bit: Connection['theBit']) {
       this.from = from;
+      this.theBit = bit;
       this.to = to;
-      this.stream = true;
-      this.lastDraw = p5.millis();
-      this.deadKibbles = 0;
-      this.speed = p5.random(0, 100);
     }
 
     drawKibbles() {
