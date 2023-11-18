@@ -111,7 +111,7 @@ export const sketch = (p5: p5) => {
   const angle = 0;
   const peers: Peer[] = [];
   const tmp = [];
-  const connections = [];
+  const connections: Connection[] = [];
   const rot = -1;
   const testTorrent = new Torrent(30);
   const initialSeeders = 1;
@@ -344,6 +344,72 @@ export const sketch = (p5: p5) => {
 
     for (let i = 0; i < initialPeers; i++) {
       addPeer();
+    }
+  };
+
+  p5.draw = () => {
+    p5.background(0);
+
+    // rotate peers and seeds (disabled by default)
+    if (rot >= 0) {
+      if (rot < 360) {
+        rot += 0.2;
+      } else {
+        rot = rot - 360;
+      }
+    }
+
+    for (let i = 0; i < connections.length; i++) {
+      const c = connections[i];
+
+      c.manageKibbles();
+      c.drawKibbles();
+
+      if (c.kibbles.length === 0 && !c.stream) {
+        if (c.to.removing >= 1) {
+          c.to.removing++;
+        }
+
+        if (c.from.removing >= 1) {
+          c.from.removing++;
+        }
+
+        c.from.knex.splice(c.from.knex.indexOf(c.to), 1);
+        c.to.myBits.push(c.theBit);
+
+        if (c.to.needBits.indexOf(c.theBit) != -1) {
+          c.to.needBits.splice(c.to.needBits.indexOf(c.theBit), 1);
+        }
+
+        if (c.to.knex.indexOf(c.theBit) != -1) {
+          c.to.knex.splice(c.to.knex.indexOf(c.theBit), 1);
+        }
+
+        connections.splice(i, 1);
+      }
+    }
+
+    for (let i = 0; i < peers.length; i++) {
+      const p = peers[i];
+
+      p.moveSelf();
+      p.drawSelf();
+      p.reConfigure(i);
+
+      if (p.removing > 1) {
+        peers.splice(i, 1);
+      }
+    }
+
+    const tmp = p5.shuffle(peers);
+
+    for (let i = 0; i < tmp.length; i++) {
+      const cpeer = tmp[i];
+
+      if (cpeer.lastcheck < p5.millis() - cpeer.pwait) {
+        cpeer.findPeer();
+        cpeer.lastcheck = p5.millis();
+      }
     }
   };
 };
