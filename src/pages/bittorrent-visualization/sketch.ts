@@ -271,11 +271,11 @@ export const sketch = (p5: p5) => {
     }
 
     setupBits() {
-      for (let i = 0; i < testTorrent.bits.length; i++) {
-        if (!this.myBits.includes(testTorrent.bits[i])) {
-          this.needBits.push(testTorrent.bits[i]);
+      testTorrent.bits.forEach((bit) => {
+        if (!this.myBits.includes(bit)) {
+          this.needBits.push(bit);
         }
-      }
+      });
     }
   }
 
