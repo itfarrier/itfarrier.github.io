@@ -11,6 +11,18 @@ export const sketch = (p5: p5) => {
     }
   }
 
+  class Kibble {
+    big: number;
+    endtime: number;
+    starttime: number;
+
+    constructor() {
+      this.starttime = 0;
+      this.endtime = 0;
+      this.big = p5.random(0, 4);
+    }
+  }
+
   class Torrent {
     bits: Bit[] = [];
 
