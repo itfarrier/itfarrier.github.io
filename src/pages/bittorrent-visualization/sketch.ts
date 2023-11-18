@@ -190,14 +190,15 @@ export const sketch = (p5: p5) => {
 
       p5.rect(this.cxpos - w / 2, this.cypos - 5, w, 10);
 
-      for (let i = 0; i < this.myBits.length; i++) {
-        const k = this.myBits[i];
-
+      this.myBits.forEach((myBit) => {
         p5.colorMode(p5.HSB);
-        p5.fill(k.bitHue, 255, 255);
-        p5.stroke(k.bitHue, 255, 255);
-        p5.line(this.cxpos - w / 2 + 1 * k.id, this.cypos - 5, this.cxpos - w / 2 + 1 * k.id, this.cypos + 5);
-      }
+        p5.fill(myBit.bitHue, 255, 255);
+        p5.stroke(myBit.bitHue, 255, 255);
+
+        const someCoordinate = this.cxpos - w / 2 + myBit.id;
+
+        p5.line(someCoordinate, this.cypos - 5, someCoordinate, this.cypos + 5);
+      });
     }
 
     findPeer() {
