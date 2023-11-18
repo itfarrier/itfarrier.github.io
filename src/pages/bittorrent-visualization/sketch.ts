@@ -293,12 +293,7 @@ export const sketch = (p5: p5) => {
   }
 
   function removeRandomPeer() {
-    const randomPeerIndex = p5.random(0, peers.length - 1);
-    const peerToBeDeleted = peers[randomPeerIndex];
-
-    if (peerToBeDeleted) {
-      peerToBeDeleted.removing = 1;
-    }
+    (p5.random(peers) as Peer).removing = 1;
   }
 
   p5.keyPressed = () => {
