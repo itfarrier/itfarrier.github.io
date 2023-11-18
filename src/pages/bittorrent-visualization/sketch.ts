@@ -201,26 +201,22 @@ export const sketch = (p5: p5) => {
     }
 
     findPeer() {
-      for (let i = 0; i < this.needBits.length; i++) {
-        this.needBits = p5.shuffle(this.needBits);
+      this.needBits.forEach((needBit) => {
+        this.needBits = p5.shuffle(this.needBits) as Bit[];
 
-        const b = this.needBits[i];
-
-        for (let o = 0; o < peers.length; o++) {
-          const p = peers[o];
-
+        peers.forEach((peer) => {
           if (
-            p.myBits.includes(b) &&
-            !(p.removing > 0) &&
+            peer.myBits.includes(needBit) &&
+            !(peer.removing > 0) &&
             !(this.removing > 0) &&
-            !p.knex.includes(peers[this.index]) &&
-            p.index != this.index &&
-            !this.actBits.includes(b)
+            !peer.knex.includes(peers[this.index]) &&
+            peer.index != this.index &&
+            !this.actBits.includes(needBit)
           ) {
-            this.bitRequest(p, b);
+            this.bitRequest(peer, needBit);
           }
-        }
-      }
+        });
+      });
     }
 
     moveSelf() {
