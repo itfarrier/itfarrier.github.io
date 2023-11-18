@@ -292,10 +292,58 @@ export const sketch = (p5: p5) => {
     }
   }
 
+  function addPeer() {
+    const k = new Peer(p5.random(0, 1));
+
+    peers.push(k);
+  }
+
+  function addSeeder() {
+    const p = new Peer(p5.random(0, 1));
+
+    peers.push(p);
+
+    for (let i = 0; i < testTorrent.bits.length; i++) {
+      p.myBits.push(testTorrent.bits[i]);
+    }
+
+    p.needBits = [];
+  }
+
+  function removePeer() {
+    const i = p5.int(p5.random(0, peers.length - 1));
+    const toRemove = peers[i];
+
+    toRemove.removing = 1;
+  }
+
+  function keyPressed() {
+    if (p5.key == 'p') {
+      addPeer();
+    }
+
+    if (p5.key == 's') {
+      addSeeder();
+    }
+
+    if (p5.key == 'r') {
+      removePeer();
+    }
+  }
+
   p5.setup = () => {
     p5.createCanvas(450, 450, p5.WEBGL);
     p5.fill(256);
     p5.fill(0);
     p5.textAlign(p5.CENTER);
+
+    // establish initial seeds/peers
+    for (let i = 0; i < initialSeeders; i++) {
+      addSeeder();
+    }
+
+    for (let i = 0; i < initialPeers; i++) {
+      addPeer();
+    }
   };
 };
