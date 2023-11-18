@@ -11,6 +11,78 @@ export const sketch = (p5: p5) => {
     }
   }
 
+  class Connection {
+    deadkibbles;
+    from;
+    kibbles: Kibble[];
+    lastdraw;
+    speed;
+    stream;
+    theBit;
+    to;
+
+    constructor(f, t, b) {
+      this.theBit = b;
+      this.kibbles = [];
+      this.from = f;
+      this.to = t;
+      this.stream = true;
+      this.lastdraw = p5.millis();
+      this.deadkibbles = 0;
+      this.speed = p5.int(p5.random(30, 500));
+    }
+
+    drawKibbles() {
+      for (let i = 0; i < this.kibbles.length; i++) {
+        const k = this.kibbles[i];
+
+        if (p5.millis() > k.endtime) {
+          this.kibbles.splice(i, 1);
+          this.deadkibbles++;
+        } else {
+          const diff = (p5.millis() - k.starttime) / (k.endtime - k.starttime);
+          const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
+          const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
+
+          p5.colorMode(p5.HSB);
+          p5.fill(this.theBit.bitHue, 255, 255);
+          p5.stroke(this.theBit.bitHue, 255, 255);
+          p5.strokeWeight(1);
+          // k.big);
+          p5.ellipse(xpos, ypos, k.big, k.big);
+        }
+      }
+    }
+
+    getIdxFrom() {
+      return this.from.index;
+    }
+
+    getIdxTo() {
+      return this.to.index;
+    }
+
+    manageKibbles() {
+      if (this.from.removing >= 1 || this.to.removing >= 1 || this.deadkibbles > 125) {
+        this.stream = false;
+      } else {
+        if (this.lastdraw < p5.millis() - this.speed) {
+          this.newKibble();
+        }
+      }
+    }
+
+    newKibble() {
+      const k = new Kibble();
+
+      k.starttime = p5.millis();
+      k.endtime = k.starttime + 5000;
+
+      this.kibbles.push(k);
+      this.lastdraw = p5.millis();
+    }
+  }
+
   class Kibble {
     big: number;
     endtime: number;
@@ -119,6 +191,28 @@ export const sketch = (p5: p5) => {
       }
     }
 
+    drawSelf() {
+      p5.fill(this.ccolor);
+      p5.stroke(this.myBits.length);
+      // strokeWeight(1);
+      p5.noStroke();
+      p5.ellipseMode(p5.CENTER);
+      p5.ellipse(this.cxpos, this.cypos, 50, 50);
+      p5.fill(0);
+
+      const w = testTorrent.bits.length - 1;
+
+      p5.rect(this.cxpos - w / 2, this.cypos - 5, w, 10);
+
+      for (let i = 0; i < this.myBits.length; i++) {
+        const k = this.myBits[i];
+
+        p5.colorMode(p5.HSB);
+        p5.stroke(k.bitHue, 255, 255);
+        p5.line(this.cxpos - w / 2 + 1 * k.id, this.cypos - 5, this.cxpos - w / 2 + 1 * k.id, this.cypos + 5);
+      }
+    }
+
     findPeer() {
       for (let i = 0; i < this.needBits.length; i++) {
         this.needBits = p5.shuffle(this.needBits);
@@ -139,6 +233,20 @@ export const sketch = (p5: p5) => {
             this.bitRequest(p, b);
           }
         }
+      }
+    }
+
+    moveSelf() {
+      if (p5.millis() > this.emovetime) {
+        this.cxpos = this.expos;
+        this.cypos = this.eypos;
+        this.chue = this.ehue;
+      } else {
+        const diff = (p5.millis() - this.smovetime) / (this.emovetime - this.smovetime);
+
+        this.cxpos = this.sxpos * (1 - diff) + this.expos * diff;
+        this.cypos = this.sypos * (1 - diff) + this.eypos * diff;
+        this.chue = this.shue * (1 - diff) + this.ehue * diff;
       }
     }
 
@@ -180,42 +288,6 @@ export const sketch = (p5: p5) => {
         if (!this.myBits.includes(testTorrent.bits[i])) {
           this.needBits.push(testTorrent.bits[i]);
         }
-      }
-    }
-
-    moveSelf() {
-      if (p5.millis() > this.emovetime) {
-        this.cxpos = this.expos;
-        this.cypos = this.eypos;
-        this.chue = this.ehue;
-      } else {
-        let diff = (p5.millis() - this.smovetime) / (this.emovetime - this.smovetime);
-
-        this.cxpos = this.sxpos * (1 - diff) + this.expos * diff;
-        this.cypos = this.sypos * (1 - diff) + this.eypos * diff;
-        this.chue = this.shue * (1 - diff) + this.ehue * diff;
-      }
-    }
-
-    drawSelf() {
-      p5.fill(this.ccolor);
-      p5.stroke(this.myBits.length);
-      // strokeWeight(1);
-      p5.noStroke();
-      p5.ellipseMode(p5.CENTER);
-      p5.ellipse(this.cxpos, this.cypos, 50, 50);
-      p5.fill(0);
-
-      let w = testTorrent.bits.length - 1;
-
-      p5.rect(this.cxpos - w / 2, this.cypos - 5, w, 10);
-
-      for (let i = 0; i < this.myBits.length; i++) {
-        let k = this.myBits[i];
-
-        p5.colorMode(p5.HSB);
-        p5.stroke(k.bitHue, 255, 255);
-        p5.line(this.cxpos - w / 2 + 1 * k.id, this.cypos - 5, this.cxpos - w / 2 + 1 * k.id, this.cypos + 5);
       }
     }
   }
