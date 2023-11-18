@@ -166,13 +166,13 @@ export const sketch = (p5: p5) => {
       this.setupBits();
     }
 
-    bitRequest(k: Peer, j) {
-      if (k.knex.length < 4) {
-        const mz = new Connection(k, this, j);
+    bitRequest(peer: Peer, needBit: Bit) {
+      if (peer.knex.length < 4) {
+        const mz = new Connection(peer, this, needBit);
 
-        k.knex.push(peers[this.index]);
+        peer.knex.push(this);
 
-        this.actBits.push(j);
+        this.actBits.push(needBit);
 
         connections.push(mz);
       }
