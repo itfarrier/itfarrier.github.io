@@ -43,6 +43,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/consistent-type-imports': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
+        'no-irregular-whitespace': ['error', { skipStrings: true, skipTemplates: true }],
       },
     },
 
@@ -63,6 +64,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/consistent-type-imports': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
+        'no-irregular-whitespace': ['error', { skipStrings: true, skipTemplates: true }],
       },
     },
 
