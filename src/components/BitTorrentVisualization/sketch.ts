@@ -239,7 +239,7 @@ export const sketch = (p5: p5) => {
       this.expos = (p5.width / 4) * p5.cos(p5.radians(angle)); // screenX(0, 180, 0);
       this.eypos = (p5.height / 4) * p5.sin(p5.radians(angle)); // screenY(0, 180, 0);
       this.smovetime = p5.millis();
-      this.emovetime = this.smovetime + 3000;
+      this.emovetime = this.smovetime + 1000;
 
       p5.pop();
 
