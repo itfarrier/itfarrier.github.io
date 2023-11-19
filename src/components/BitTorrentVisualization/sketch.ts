@@ -79,9 +79,9 @@ export const sketch = (p5: p5) => {
   class Torrent {
     bits: Bit[] = [];
 
-    constructor(totbits: number) {
-      for (let i = 0; i < totbits; i++) {
-        const ll = (255 / totbits) * i;
+    constructor(bitsAmount: number) {
+      for (let i = 0; i < bitsAmount; i++) {
+        const ll = (255 / bitsAmount) * i;
         const k = new Bit(i, ll);
 
         this.bits.push(k);
