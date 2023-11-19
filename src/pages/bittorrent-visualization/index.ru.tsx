@@ -1,12 +1,10 @@
-import { type FC } from 'react';
-
+import { BitTorrentVisualization } from 'cmpts/BitTorrentVisualization';
+import { Layout } from 'cmpts/Layout';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
-
-import { Layout } from 'cmpts/Layout';
 import { type BittorrentVisualizationRuQuery } from 'root/graphql-types';
 
-const BittorrentVisualization: FC = () => {
+const BittorrentVisualization = () => {
   const data = useStaticQuery<BittorrentVisualizationRuQuery>(graphql`
     query BittorrentVisualizationRu {
       site {
@@ -20,6 +18,7 @@ const BittorrentVisualization: FC = () => {
   return (
     <Layout>
       <Helmet title={`${data.site.siteMetadata.title} — Bittorrent Визуализация`} />
+      <BitTorrentVisualization fallback={<h1>{'BitTorrent не загрузилась, простите.'}</h1>} />
     </Layout>
   );
 };
