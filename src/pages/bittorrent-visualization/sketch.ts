@@ -100,14 +100,14 @@ export const sketch = (p5: p5) => {
     actBits: Bit[] = [];
     ccolor: p5.Color;
     chue = 0;
-    cxpos: number; // x of where peer should be
-    cypos: number; // y of where peer should be
+    cxpos = 0; // x of where peer should be
+    cypos = 0; // y of where peer should be
     ehue = 0;
     emovetime: number;
     expos: number;
     eypos: number;
-    index: number;
-    knex: unknown[] = [];
+    index = 0;
+    knex: (Bit | Peer)[] = [];
     lastcheck = p5.millis();
     myBits: Bit[] = [];
     needBits: Bit[] = [];
