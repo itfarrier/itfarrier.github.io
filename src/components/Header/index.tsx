@@ -3,10 +3,10 @@ import type { FC } from 'react';
 import type { HeaderQuery } from 'root/graphql-types';
 
 import { useLocation } from '@reach/router';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 import { HeaderView } from 'cmpts/Header/HeaderView';
 import cv from 'docs/podabed-cv.pdf';
 import { graphql, useStaticQuery } from 'gatsby';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { getCurrentLangKey } from 'ptz-i18n';
 import { siteMetadata } from 'src/data/siteMetadata';
@@ -39,6 +39,7 @@ export const Header: FC = () => {
     <HeaderView
       links={[
         { text: '/', to: homeUrl },
+        { text: '/bittorrent-visualization', to: `${homeUrl}bittorrent-visualization` },
         { text: '/blog', to: `${homeUrl}blog` },
         { text: '/books', to: `${homeUrl}books` },
         { text: '/cv', to: cv },

@@ -31,8 +31,8 @@ module.exports = {
       excludedFiles: ['**/*.tsx', '{.,}*.test.ts{,x}'],
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
@@ -41,8 +41,9 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
+        'no-irregular-whitespace': ['error', { skipStrings: true, skipTemplates: true }],
       },
     },
 
@@ -51,8 +52,8 @@ module.exports = {
       excludedFiles: ['**/*.ts', '{.,}*.test.ts{x,}'],
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
@@ -61,10 +62,9 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
-        'react/jsx-boolean-value': ['error', 'always'],
-        'react/jsx-curly-brace-presence': ['error', 'always'],
+        'no-irregular-whitespace': ['error', { skipStrings: true, skipTemplates: true }],
       },
     },
 
@@ -74,8 +74,8 @@ module.exports = {
       excludedFiles: '**/*.ts{,x}',
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
@@ -84,7 +84,7 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
       },
     },
@@ -95,8 +95,8 @@ module.exports = {
       excludedFiles: '**/*.ts{,x}',
       extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:@typescript-eslint/recommended-type-checked',
+        'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:@typescript-eslint/stylistic-type-checked',
         'plugin:perfectionist/recommended-alphabetical',
         'plugin:prettier/recommended',
       ],
@@ -105,7 +105,7 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
         'react/jsx-boolean-value': ['error', 'always'],
         'react/jsx-curly-brace-presence': ['error', 'always'],
