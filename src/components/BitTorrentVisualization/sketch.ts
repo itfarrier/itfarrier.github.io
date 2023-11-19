@@ -46,8 +46,8 @@ export const sketch = (p5: p5) => {
 
           p5.colorMode(p5.HSB);
           p5.fill(this.theBit.bitHue, 255, 255);
-          p5.stroke(this.theBit.bitHue, 255, 255);
-          p5.circle(xpos, ypos, kibble.big);
+          p5.noStroke();
+          p5.circle(xpos, ypos, kibble.size);
         }
       });
     }
@@ -64,8 +64,8 @@ export const sketch = (p5: p5) => {
   }
 
   class Kibble {
-    big = p5.random(0, 4);
     endTime: number;
+    size = p5.random(1, 5);
     startTime: number;
 
     constructor() {
@@ -161,7 +161,6 @@ export const sketch = (p5: p5) => {
 
     drawSelf() {
       p5.fill(this.ccolor);
-      p5.stroke(this.myBits.length);
       p5.noStroke();
       p5.ellipseMode(p5.CENTER);
       p5.circle(this.cxpos, this.cypos, 50);
