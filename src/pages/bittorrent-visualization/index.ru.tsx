@@ -17,8 +17,11 @@ const BittorrentVisualization = () => {
 
   return (
     <Layout>
-      <Helmet title={`${data.site.siteMetadata.title} — Bittorrent Визуализация`} />
-      <BitTorrentVisualization fallback={<h1>{'BitTorrent не загрузилась, простите.'}</h1>} />
+      <Helmet title={`${data.site.siteMetadata.title} — BitTorrent Визуализация`} />
+      <BitTorrentVisualization
+        fallback={<h1>{'BitTorrent не загрузилась, простите.'}</h1>}
+        footerText={'Утащил с https://newroman.net/bittorrent'}
+      />
     </Layout>
   );
 };

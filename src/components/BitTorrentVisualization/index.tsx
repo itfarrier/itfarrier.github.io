@@ -1,7 +1,10 @@
 import { type P5WrapperProps, ReactP5Wrapper } from '@p5-wrapper/react';
 import { sketch } from 'cmpts/BitTorrentVisualization/sketch';
 
-export const BitTorrentVisualization = (props: P5WrapperProps) => {
+export const BitTorrentVisualization = ({
+  fallback,
+  footerText,
+}: P5WrapperProps & { footerText: HTMLSpanElement['children'] }) => {
   return (
     <div
       style={{
@@ -16,7 +19,8 @@ export const BitTorrentVisualization = (props: P5WrapperProps) => {
         zIndex: -1,
       }}
     >
-      <ReactP5Wrapper fallback={props.fallback} sketch={sketch} />
+      <ReactP5Wrapper fallback={fallback} sketch={sketch} />
+      <span style={{ bottom: '1rem', position: 'absolute', right: '1rem' }}>{footerText}</span>
     </div>
   );
 };
