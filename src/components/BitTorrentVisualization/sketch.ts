@@ -294,6 +294,7 @@ export const sketch = (p5: p5) => {
   p5.setup = () => {
     const size = p5.windowWidth > p5.windowHeight ? p5.windowHeight : p5.windowWidth;
 
+    p5.smooth();
     p5.createCanvas(size, size, p5.WEBGL);
     p5.textAlign(p5.CENTER);
 
