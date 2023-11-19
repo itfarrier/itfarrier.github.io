@@ -41,7 +41,7 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
         'no-irregular-whitespace': ['error', { skipStrings: true, skipTemplates: true }],
       },
@@ -62,7 +62,7 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
         'no-irregular-whitespace': ['error', { skipStrings: true, skipTemplates: true }],
       },
@@ -84,7 +84,7 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
       },
     },
@@ -105,7 +105,7 @@ module.exports = {
       parserOptions: { project: true, tsconfigRootDir: __dirname },
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_*', varsIgnorePattern: '_*' }],
         'react/jsx-boolean-value': ['error', 'always'],
         'react/jsx-curly-brace-presence': ['error', 'always'],
