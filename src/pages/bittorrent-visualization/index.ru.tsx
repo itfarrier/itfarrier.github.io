@@ -1,5 +1,5 @@
-import { BitTorrentVisualization } from 'cmpts/BitTorrentVisualization';
 import { Layout } from 'cmpts/Layout';
+import { SSRGuardedBitTorrentVisualization } from 'cmpts/SSRGuardedBitTorrentVisualization';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { type BittorrentVisualizationRuQuery } from 'root/graphql-types';
@@ -18,8 +18,9 @@ const BittorrentVisualization = () => {
   return (
     <Layout>
       <Helmet title={`${data.site.siteMetadata.title} — BitTorrent Визуализация`} />
-      <BitTorrentVisualization
-        fallback={<h1>{'BitTorrent не загрузилась, простите.'}</h1>}
+      <SSRGuardedBitTorrentVisualization
+        fallbackBitTorrentVisualization={<h1>{'BitTorrent скетч не загрузился.'}</h1>}
+        fallbackSuspense={<h1>{'BitTorrent визуализация не загрузилась.'}</h1>}
         footerText={'Утащил с https://newroman.net/bittorrent'}
       />
     </Layout>

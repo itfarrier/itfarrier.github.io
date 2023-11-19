@@ -1,10 +1,13 @@
 import { type P5WrapperProps, ReactP5Wrapper } from '@p5-wrapper/react';
 import { sketch } from 'cmpts/BitTorrentVisualization/sketch';
+import { type DetailedHTMLProps, type HTMLAttributes } from 'react';
 
-export const BitTorrentVisualization = ({
-  fallback,
-  footerText,
-}: P5WrapperProps & { footerText: HTMLSpanElement['children'] }) => {
+export interface BitTorrentVisualizationProps {
+  fallback: P5WrapperProps['fallback'];
+  footerText: DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>['children'];
+}
+
+const BitTorrentVisualization = ({ fallback, footerText }: BitTorrentVisualizationProps) => {
   return (
     <div
       style={{
@@ -24,3 +27,5 @@ export const BitTorrentVisualization = ({
     </div>
   );
 };
+
+export default BitTorrentVisualization;
