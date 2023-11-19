@@ -21,7 +21,7 @@ const BittorrentVisualization = () => {
       <SSRGuardedBitTorrentVisualization
         fallbackBitTorrentVisualization={<h1>{'No BitTorrent sketch, sorry.'}</h1>}
         fallbackSuspense={<h1>{'No BitTorrent visualization, sorry.'}</h1>}
-        footerText={'Forked from https://newroman.net/bittorrent'}
+        footerText={'Forked from https://openprocessing.org/sketch/737873'}
       />
     </Layout>
   );
