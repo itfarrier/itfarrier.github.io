@@ -52,14 +52,6 @@ export const sketch = (p5: p5) => {
       });
     }
 
-    getIdxFrom() {
-      return this.from.index;
-    }
-
-    getIdxTo() {
-      return this.to.index;
-    }
-
     manageKibbles() {
       if (this.from.removing >= 1 || this.to.removing >= 1 || this.deadKibbles > 125) {
         this.stream = false;
