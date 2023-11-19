@@ -202,8 +202,8 @@ export const sketch = (p5: p5) => {
             peer.myBits.includes(needBit) &&
             !(peer.removing > 0) &&
             !(this.removing > 0) &&
-            !peer.knex.includes(peers[this.index]) &&
-            peer.index != this.index &&
+            !peer.knex.includes(this) &&
+            peer.index !== this.index &&
             !this.actBits.includes(needBit)
           ) {
             this.bitRequest(peer, needBit);
