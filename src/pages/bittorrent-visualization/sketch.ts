@@ -97,27 +97,27 @@ export const sketch = (p5: p5) => {
   let isRotatePeers = -1;
 
   class Peer {
-    actBits: Bit[];
+    actBits: Bit[] = [];
     ccolor: p5.Color;
-    chue: number;
+    chue = 0;
     cxpos: number; // x of where peer should be
     cypos: number; // y of where peer should be
-    ehue: number;
+    ehue = 0;
     emovetime: number;
     expos: number;
     eypos: number;
     index: number;
-    knex: unknown[];
-    lastcheck: number;
-    myBits: Bit[];
-    needBits: Bit[];
+    knex: unknown[] = [];
+    lastcheck = p5.millis();
+    myBits: Bit[] = [];
+    needBits: Bit[] = [];
     percent = p5.random(0, 1);
-    pwait: number;
-    removing: number;
-    shue: number;
-    smovetime: number;
-    sxpos: number; // x of peer
-    sypos: number; // y of peer
+    pwait = p5.random(1, 9) * 1000;
+    removing = 0;
+    shue = 0;
+    smovetime = p5.millis();
+    sxpos = 0; // x of peer
+    sypos = 0; // y of peer
 
     constructor() {
       let szv = peers.length;
@@ -125,12 +125,6 @@ export const sketch = (p5: p5) => {
       if (szv === 0) {
         szv++;
       }
-
-      this.pwait = p5.random(1, 9) * 1000;
-      this.myBits = [];
-      this.needBits = [];
-      this.knex = [];
-      this.actBits = [];
 
       p5.push();
       p5.translate(p5.width / 2, p5.height / 2);
@@ -140,17 +134,12 @@ export const sketch = (p5: p5) => {
 
       p5.rotate(p5.radians(angle));
 
-      this.expos = p5.width / 2 + 230 * p5.cos(p5.radians(angle)); // screenX(0, 230)
-      this.eypos = p5.height / 2 + 230 * p5.sin(p5.radians(angle)); // screenY(0, 230)
-      this.sxpos = 0;
-      this.sypos = 0;
-      this.smovetime = p5.millis();
+      this.expos = p5.width / 2 + 230 * p5.cos(p5.radians(angle));
+      this.eypos = p5.height / 2 + 230 * p5.sin(p5.radians(angle));
       this.emovetime = this.smovetime + 1250;
 
       p5.colorMode(p5.HSB);
 
-      this.lastcheck = p5.millis();
-      this.chue = 5;
       this.ccolor = p5.color(this.chue, p5.random(0, 255), p5.random(0, 255));
 
       p5.pop();
