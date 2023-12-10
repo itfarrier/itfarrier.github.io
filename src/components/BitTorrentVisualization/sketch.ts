@@ -16,7 +16,7 @@ export const sketch = (p5: p5) => {
     from: Peer;
     kibbles: Kibble[] = [];
     lastDraw = p5.millis();
-    speed = p5.random(0, 100);
+    speed = p5.randomGaussian(50, 50);
     stream = true;
     theBit: Bit;
     to: Peer;
