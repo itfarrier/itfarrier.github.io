@@ -13,7 +13,6 @@ type: page
 - Compound crossbow;
 - Curved clincher;
 - Dash cam 4K 120fps;
-- Driving courses;
 - Headlight;
 - Headphones;
 - Heavy blanket;
@@ -29,13 +28,14 @@ type: page
 - Resume investment;
 - Tattoos;
 - Vision correction;
-- Weekend car;
+- Weekend car (Mazda MX-5, Porsche Cayman, BMW Z4);
 - iPhone with 1TB storage;
 - ~~Apple Watch 7 45mm~~;
 - ~~Backpack~~;
 - ~~Charger~~;
 - ~~Classic suit~~;
 - ~~Decent salary at my favourite (at my beloved, not necessary) work~~;
+- ~~Driving courses~~;
 - ~~Grinder tool~~;
 - ~~Mat~~;
 - ~~PC~~;
