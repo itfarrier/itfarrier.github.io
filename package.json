@@ -67,6 +67,7 @@
     "ts-graphql-plugin": "^3.0.1",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
     "typescript": "^5.3.3"
   },
   "keywords": [
@@ -78,7 +79,7 @@
   "name": "itfarrier",
   "private": true,
   "scripts": {
-    "add-new-post": "git apply add-type-module-to-package-json.patch && ts-node-esm -P ./tsconfig.cli.json ./src/utilities/cli.ts",
+    "add-new-post": "tsx --tsconfig ./tsconfig.cli.json ./src/utilities/cli.ts",
     "build": "gatsby build --verbose",
     "check-useless-dependencies": "npx depcheck",
     "clean": "find . -name '*.log' -type f -delete && rm -rf .cache node_modules public",
