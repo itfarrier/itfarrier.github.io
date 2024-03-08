@@ -15,7 +15,6 @@ type: page
 - Dash cam 4K 120fps;
 - Headlight;
 - Headphones;
-- Heavy blanket;
 - Hoof knife loop;
 - Hoof knife;
 - Hoof stand;
@@ -42,4 +41,5 @@ type: page
 - ~~Power bank~~;
 - ~~Sleeping bag~~;
 - ~~Tent~~;
-- ~~iPhone 12 mini~~.
+- ~~iPhone 12 mini~~;
+- ~~Heavy blanket~~.
