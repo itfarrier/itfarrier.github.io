@@ -1,45 +1,42 @@
-name: Build and deploy
+name: Build And Deploy
 
 on:
   push:
     branches:
       - source
+run-name: Build And Deploy
 
 jobs:
   build-and-deploy:
+    name: Build And Deploy
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v4
+      - name: Import GPG Key
+        uses: crazy-max/ghaction-import-gpg@v6
         with:
           git_commit_gpgsign: true
           git_user_signingkey: true
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
 
-      - name: Install Yarn
-        run: npm i yarn -g
-
-      - name: Install dependencies
-        run: yarn
+      - name: Install Dependencies
+        run: npm ci
 
       - name: Build
-        run: yarn run build
-        env:
-          CI: true
+        run: npm run build
 
-      - name: GitHub Pages deploy
-        uses: crazy-max/ghaction-github-pages@v2
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        name: GitHub Pages Deploy
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          author: Dmitrij Podabed <iam@itfarrier.com>
+          author: Dzmitry Padabed <itfarrier@icloud.com>
           build_dir: public
           commit_message: Updates
-          committer: Dmitrij Podabed <iam@itfarrier.com>
-          fqdn: itfarrier.com
+          committer: Dzmitry Padabed <itfarrier@icloud.com>
+          fqdn: itfarrier.github.io
           keep_history: true
           target_branch: master
           verbose: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
