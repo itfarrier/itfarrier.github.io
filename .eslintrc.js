@@ -114,13 +114,21 @@ module.exports = {
 
     // Markdown files like "example.md"
     {
-      extends: ['plugin:prettier/recommended', 'plugin:md/recommended'],
+      extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:md/recommended'],
       files: ['*.md'],
       parser: 'markdown-eslint-parser',
       rules: {
         'md/remark': ['error', { plugins: [['lint-maximum-line-length', false]] }],
         'prettier/prettier': ['error', { parser: 'markdown' }],
       },
+    },
+
+    // YAML files like "example.yml" or "example.yaml"
+    {
+      extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:yml/standard'],
+      files: ['*.y{a,}ml'],
+      parser: 'yaml-eslint-parser',
+      plugins: ['plugin:yml/standard', 'plugin:yml/prettier'],
     },
   ],
   root: true,
