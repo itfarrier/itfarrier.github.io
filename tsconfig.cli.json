@@ -1,4 +1,8 @@
 {
-  "compilerOptions": { "module": "ESNext", "moduleResolution": "NodeNext" },
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext"
+  },
   "extends": "./tsconfig.json"
 }
