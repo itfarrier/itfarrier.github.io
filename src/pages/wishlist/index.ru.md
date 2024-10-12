@@ -27,7 +27,7 @@ type: page
 - Возобновить инвестирование;
 - Татуировки;
 - Коррекция зрения;
-- Машина выходного дня (Mazda MX-5, Porsche Cayman, BMW Z4);
+- Машина выходного дня (Mini Cooper JCW, Mazda MX-5, Porsche Cayman, BMW Z4);
 - iPhone на 1TB;
 - ~~Apple Watch 7 45mm~~;
 - ~~Рюкзак~~;
