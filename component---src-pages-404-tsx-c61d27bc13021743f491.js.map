@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-404-tsx-c61d27bc13021743f491.js","mappings":"iHAIA,UAJqBA,IACZ,G","sources":["webpack://itfarrier/./src/pages/404.tsx"],"sourcesContent":["const NotFoundPage = () => {\n  return 404;\n};\n\nexport default NotFoundPage;\n"],"names":["NotFoundPage"],"sourceRoot":""}
