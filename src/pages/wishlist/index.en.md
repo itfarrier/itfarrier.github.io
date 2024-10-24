@@ -27,7 +27,7 @@ type: page
 - Resume investment;
 - Tattoos;
 - Vision correction;
-- Weekend car (Mini Cooper JCW, Mazda MX-5, Porsche Cayman, BMW Z4);
+- ~~Weekend car (Mini Cooper JCW, Mazda MX-5, Porsche Cayman, BMW Z4)~~;
 - iPhone with 1TB storage;
 - ~~Apple Watch 7 45mm~~;
 - ~~Backpack~~;
