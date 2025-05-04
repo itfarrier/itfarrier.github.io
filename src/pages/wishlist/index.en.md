@@ -6,13 +6,13 @@ type: page
 
 - Apple Developer Account;
 - Apron;
-- Beautiful body;
+- ~~Beautiful body~~;
 - Better stereo;
 - Bite correction;
 - Compound bow;
 - Compound crossbow;
 - Curved clincher;
-- Dash cam 4K 120fps;
+- ~~Dash cam 4K 120fps~~;
 - Headlight;
 - Headphones;
 - Hoof knife loop;
@@ -42,4 +42,5 @@ type: page
 - ~~Sleeping bag~~;
 - ~~Tent~~;
 - ~~iPhone 12 mini~~;
-- ~~Heavy blanket~~.
+- ~~Heavy blanket~~;
+- BMW Z4 E89 ≥ 35i.
