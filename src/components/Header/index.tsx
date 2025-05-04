@@ -4,7 +4,7 @@ import type { HeaderQuery } from 'root/graphql-types';
 
 import { useLocation } from '@reach/router';
 import { HeaderView } from 'cmpts/Header/HeaderView';
-import cv from 'docs/podabed-cv.pdf';
+import cv from 'docs/padabed-senior-mobile-frontend-developer-cv.pdf';
 import { graphql, useStaticQuery } from 'gatsby';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
