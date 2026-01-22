@@ -4,31 +4,31 @@ title: Wishlist
 type: page
 ---
 
-- Apple Developer Account;
-- Apron;
+- ~~Apple Developer Account~~;
+- ~~Apron~~;
 - ~~Beautiful body~~;
-- Better stereo;
-- Bite correction;
-- Compound bow;
-- Compound crossbow;
-- Curved clincher;
+- ~~Better stereo~~;
+- ~~Bite correction~~;
+- ~~Compound bow~~;
+- ~~Compound crossbow~~;
+- ~~Curved clincher~~;
 - ~~Dash cam 4K 120fps~~;
-- Headlight;
-- Headphones;
-- Hoof knife loop;
-- Hoof knife;
-- Hoof stand;
-- Hookah like in Elementum;
-- House with a land;
-- NAS ≥ 4 disks;
-- Nippers;
-- Orthopedic mattress;
-- PC for games;
-- Resume investment;
-- Tattoos;
-- Vision correction;
+- ~~Headlight~~;
+- ~~Headphones~~;
+- ~~Hoof knife loop~~;
+- ~~Hoof knife~~;
+- ~~Hoof stand~~;
+- ~~Hookah like in Elementum~~;
+- Khutor with a land;
+- ~~NAS ≥ 4 disks;
+- ~~Nippers~~;
+- ~~Orthopedic mattress~~;
+- ~~PC for games~~;
+- ~~Resume investment~~;
+- ~~Tattoos~~;
+- ~~Vision correction~~;
 - ~~Weekend car (Mini Cooper JCW, Mazda MX-5, Porsche Cayman, BMW Z4)~~;
-- iPhone with 1TB storage;
+- iPhone black with >= 1TB storage;
 - ~~Apple Watch 7 45mm~~;
 - ~~Backpack~~;
 - ~~Charger~~;
@@ -43,4 +43,4 @@ type: page
 - ~~Tent~~;
 - ~~iPhone 12 mini~~;
 - ~~Heavy blanket~~;
-- BMW Z4 E89 ≥ 35i.
+- BMW Z4 E89 manual transmission ≥ 35i.
