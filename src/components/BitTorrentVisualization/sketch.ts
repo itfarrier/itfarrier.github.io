@@ -1,73 +1,71 @@
 import type p5 from 'p5';
 
 export const sketch = (p5: p5) => {
-  class Bit {
-    bitHue: number;
+  class Piece {
     id: number;
+    pieceHue: number;
 
-    constructor(id: number, bitHue: number) {
-      this.bitHue = bitHue;
+    constructor(id: number, pieceHue: number) {
       this.id = id;
+      this.pieceHue = pieceHue;
     }
   }
 
   class Connection {
-    deadKibbles = 0;
+    completedTransfers = 0;
     from: Peer;
-    kibbles: Kibble[] = [];
     lastDraw: number;
+    piece: Piece;
+    pieceTransfers: PieceTransfer[] = [];
     speed: number;
     stream = true;
-    theBit: Bit;
     to: Peer;
 
-    constructor(from: Connection['from'], to: Connection['to'], bit: Connection['theBit']) {
+    constructor(from: Connection['from'], to: Connection['to'], piece: Connection['piece']) {
       this.from = from;
       this.lastDraw = p5.millis();
+      this.piece = piece;
       this.speed = p5.floor(p5.random(30, 500));
-      this.theBit = bit;
       this.to = to;
     }
 
-    createKibble() {
-      const kibble = new Kibble();
-
-      this.kibbles.push(kibble);
+    createPieceTransfer() {
+      this.pieceTransfers.push(new PieceTransfer());
 
       this.lastDraw = p5.millis();
     }
 
-    drawKibbles() {
-      this.kibbles.forEach((kibble, index) => {
-        if (p5.millis() > kibble.endTime) {
-          this.kibbles.splice(index, 1);
-          this.deadKibbles++;
+    drawPieceTransfers() {
+      this.pieceTransfers.forEach((transfer, index) => {
+        if (p5.millis() > transfer.endTime) {
+          this.pieceTransfers.splice(index, 1);
+          this.completedTransfers++;
         } else {
-          const diff = (p5.millis() - kibble.startTime) / (kibble.endTime - kibble.startTime);
+          const diff = (p5.millis() - transfer.startTime) / (transfer.endTime - transfer.startTime);
           const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
           const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
 
           p5.colorMode(p5.HSB);
-          p5.fill(this.theBit.bitHue, 255, 255);
-          p5.stroke(this.theBit.bitHue, 255, 255);
-          p5.strokeWeight(kibble.big);
-          p5.circle(xpos, ypos, kibble.big);
+          p5.fill(this.piece.pieceHue, 255, 255);
+          p5.stroke(this.piece.pieceHue, 255, 255);
+          p5.strokeWeight(transfer.big);
+          p5.circle(xpos, ypos, transfer.big);
         }
       });
     }
 
-    manageKibbles() {
-      if (this.from.removing >= 1 || this.to.removing >= 1 || this.deadKibbles > 125) {
+    updateTransfers() {
+      if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedTransfers > 125) {
         this.stream = false;
       } else {
         if (this.lastDraw < p5.millis() - this.speed) {
-          this.createKibble();
+          this.createPieceTransfer();
         }
       }
     }
   }
 
-  class Kibble {
+  class PieceTransfer {
     big = p5.random(0, 4);
     endTime: number;
     startTime: number;
@@ -81,14 +79,13 @@ export const sketch = (p5: p5) => {
   }
 
   class Torrent {
-    bits: Bit[] = [];
+    pieces: Piece[] = [];
 
-    constructor(totbits: number) {
-      for (let i = 0; i < totbits; i++) {
-        const ll = (255 / totbits) * i;
-        const k = new Bit(i, ll);
+    constructor(pieceCount: number) {
+      for (let i = 0; i < pieceCount; i++) {
+        const hue = (255 / pieceCount) * i;
 
-        this.bits.push(k);
+        this.pieces.push(new Piece(i, hue));
       }
     }
   }
@@ -99,7 +96,7 @@ export const sketch = (p5: p5) => {
 
   const connections: Connection[] = [];
   const peers: Peer[] = [];
-  const testTorrent = new Torrent(30);
+  const torrent = new Torrent(30);
 
   let isRotatePeers = -1;
   let nextHueSlot = 0;
@@ -111,22 +108,22 @@ export const sketch = (p5: p5) => {
   }
 
   class Peer {
-    actBits: Bit[] = [];
     barBuffer: null | p5.Graphics = null;
     ccolor: p5.Color;
     chue = 5;
+    connectedPeers: (Peer | Piece)[] = [];
     cxpos = 0;
     cypos = 0;
     ehue = 0;
     emovetime: number;
     expos: number;
     eypos: number;
+    havePieces: Piece[] = [];
     hueSlot = 0;
     index = 0;
-    knex: (Bit | Peer)[] = [];
     lastcheck = p5.millis();
-    myBits: Bit[] = [];
-    needBits: Bit[] = [];
+    missingPieces: Piece[] = [];
+    pendingRequests: Piece[] = [];
     percent = p5.random(0, 1);
     pwait = p5.random(1, 9) * 1000;
     removing = 0;
@@ -159,17 +156,7 @@ export const sketch = (p5: p5) => {
       this.ccolor = p5.color(this.chue, 255, 255, 133);
 
       p5.pop();
-      this.setupBits();
-    }
-
-    bitRequest(peer: Peer, needBit: Bit) {
-      if (peer.knex.length < 4) {
-        const mz = new Connection(peer, this, needBit);
-
-        peer.knex.push(this);
-        this.actBits.push(needBit);
-        connections.push(mz);
-      }
+      this.initMissingPieces();
     }
 
     drawSelf() {
@@ -177,7 +164,8 @@ export const sketch = (p5: p5) => {
         return;
       }
 
-      const w = testTorrent.bits.length - 1;
+      const pieceCount = torrent.pieces.length;
+      const w = pieceCount - 1;
       const r = 25;
       const barH = 10;
       const cxR = Math.round(this.cxpos);
@@ -195,9 +183,9 @@ export const sketch = (p5: p5) => {
       buf.clear();
       buf.colorMode(p5.HSB);
 
-      this.myBits.forEach((myBit) => {
-        buf.stroke(myBit.bitHue, 255, 255);
-        buf.line(myBit.id, 0, myBit.id, barH);
+      this.havePieces.forEach((piece) => {
+        buf.stroke(piece.pieceHue, 255, 255);
+        buf.line(piece.id, 0, piece.id, barH);
       });
 
       buf.noStroke();
@@ -226,21 +214,29 @@ export const sketch = (p5: p5) => {
     }
 
     findPeer() {
-      const shuffled = p5.shuffle([...this.needBits]);
+      const shuffled = p5.shuffle([...this.missingPieces]);
 
-      shuffled.forEach((needBit) => {
+      shuffled.forEach((missingPiece) => {
         peers.forEach((peer) => {
           if (
-            peer.myBits.includes(needBit) &&
+            peer.havePieces.includes(missingPiece) &&
             !(peer.removing > 0) &&
             !(this.removing > 0) &&
-            !peer.knex.includes(this) &&
+            !peer.connectedPeers.includes(this) &&
             peer.index !== this.index &&
-            !this.actBits.includes(needBit)
+            !this.pendingRequests.includes(missingPiece)
           ) {
-            this.bitRequest(peer, needBit);
+            this.requestPiece(peer, missingPiece);
           }
         });
+      });
+    }
+
+    initMissingPieces() {
+      torrent.pieces.forEach((piece) => {
+        if (!this.havePieces.includes(piece)) {
+          this.missingPieces.push(piece);
+        }
       });
     }
 
@@ -279,6 +275,7 @@ export const sketch = (p5: p5) => {
 
       const cx = p5.width / 2;
       const cy = p5.height / 2;
+
       this.sxpos = this.cxpos;
       this.sypos = this.cypos;
       [this.expos, this.eypos] = modelToScreen(cx, cy, angle, 180);
@@ -292,12 +289,14 @@ export const sketch = (p5: p5) => {
       this.ccolor = p5.color(this.chue, 255, 255, 133);
     }
 
-    setupBits() {
-      testTorrent.bits.forEach((bit) => {
-        if (!this.myBits.includes(bit)) {
-          this.needBits.push(bit);
-        }
-      });
+    requestPiece(peer: Peer, missingPiece: Piece) {
+      if (peer.connectedPeers.length < 4) {
+        const conn = new Connection(peer, this, missingPiece);
+
+        peer.connectedPeers.push(this);
+        this.pendingRequests.push(missingPiece);
+        connections.push(conn);
+      }
     }
   }
 
@@ -310,14 +309,14 @@ export const sketch = (p5: p5) => {
 
     peers.push(peer);
 
-    testTorrent.bits.forEach((bit) => {
-      peer.myBits.push(bit);
+    torrent.pieces.forEach((piece) => {
+      peer.havePieces.push(piece);
     });
 
-    peer.needBits = [];
+    peer.missingPieces = [];
   }
 
-  function removeRandomPeer() {
+  function disconnectPeer() {
     p5.random(peers).removing = 1;
   }
 
@@ -331,7 +330,7 @@ export const sketch = (p5: p5) => {
     }
 
     if (p5.key === '-') {
-      removeRandomPeer();
+      disconnectPeer();
     }
   };
 
@@ -368,10 +367,10 @@ export const sketch = (p5: p5) => {
         continue;
       }
 
-      connection.manageKibbles();
-      connection.drawKibbles();
+      connection.updateTransfers();
+      connection.drawPieceTransfers();
 
-      if (!connection.kibbles.length && !connection.stream) {
+      if (!connection.pieceTransfers.length && !connection.stream) {
         if (connection.to.removing >= 1) {
           connection.to.removing++;
         }
@@ -380,15 +379,15 @@ export const sketch = (p5: p5) => {
           connection.from.removing++;
         }
 
-        connection.from.knex.splice(connection.from.knex.indexOf(connection.to), 1);
-        connection.to.myBits.push(connection.theBit);
+        connection.from.connectedPeers.splice(connection.from.connectedPeers.indexOf(connection.to), 1);
+        connection.to.havePieces.push(connection.piece);
 
-        if (connection.to.needBits.includes(connection.theBit)) {
-          connection.to.needBits.splice(connection.to.needBits.indexOf(connection.theBit), 1);
+        if (connection.to.missingPieces.includes(connection.piece)) {
+          connection.to.missingPieces.splice(connection.to.missingPieces.indexOf(connection.piece), 1);
         }
 
-        if (connection.to.knex.includes(connection.theBit)) {
-          connection.to.knex.splice(connection.to.knex.indexOf(connection.theBit), 1);
+        if (connection.to.connectedPeers.includes(connection.piece)) {
+          connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.piece), 1);
         }
 
         connections.splice(i, 1);
