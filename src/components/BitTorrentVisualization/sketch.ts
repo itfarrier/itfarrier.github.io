@@ -15,14 +15,16 @@ export const sketch = (p5: p5) => {
     deadKibbles = 0;
     from: Peer;
     kibbles: Kibble[] = [];
-    lastDraw = p5.millis();
-    speed = p5.random(0, 100);
+    lastDraw: number;
+    speed: number;
     stream = true;
     theBit: Bit;
     to: Peer;
 
     constructor(from: Connection['from'], to: Connection['to'], bit: Connection['theBit']) {
       this.from = from;
+      this.lastDraw = p5.millis();
+      this.speed = p5.floor(p5.random(30, 500));
       this.theBit = bit;
       this.to = to;
     }
@@ -31,6 +33,7 @@ export const sketch = (p5: p5) => {
       const kibble = new Kibble();
 
       this.kibbles.push(kibble);
+
       this.lastDraw = p5.millis();
     }
 
@@ -47,6 +50,7 @@ export const sketch = (p5: p5) => {
           p5.colorMode(p5.HSB);
           p5.fill(this.theBit.bitHue, 255, 255);
           p5.stroke(this.theBit.bitHue, 255, 255);
+          p5.strokeWeight(kibble.big);
           p5.circle(xpos, ypos, kibble.big);
         }
       });
@@ -89,23 +93,35 @@ export const sketch = (p5: p5) => {
     }
   }
 
-  const INITIAL_PEERS = 5;
-  const INITIAL_SEEDS = 1;
+  const HUE_SLOTS = 20;
+  const INITIAL_PEERS = 8;
+  const INITIAL_SEEDS = 2;
+
   const connections: Connection[] = [];
   const peers: Peer[] = [];
   const testTorrent = new Torrent(30);
+
   let isRotatePeers = -1;
+  let nextHueSlot = 0;
+
+  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
+    const r = p5.radians(angleDeg);
+
+    return [cx + radius * p5.cos(r), cy + radius * p5.sin(r)];
+  }
 
   class Peer {
     actBits: Bit[] = [];
+    barBuffer: null | p5.Graphics = null;
     ccolor: p5.Color;
-    chue = 0;
-    cxpos = 0; // x of where peer should be
-    cypos = 0; // y of where peer should be
+    chue = 5;
+    cxpos = 0;
+    cypos = 0;
     ehue = 0;
     emovetime: number;
     expos: number;
     eypos: number;
+    hueSlot = 0;
     index = 0;
     knex: (Bit | Peer)[] = [];
     lastcheck = p5.millis();
@@ -116,34 +132,33 @@ export const sketch = (p5: p5) => {
     removing = 0;
     shue = 0;
     smovetime = p5.millis();
-    sxpos = 0; // x of peer
-    sypos = 0; // y of peer
+    sxpos = 0;
+    sypos = 0;
 
     constructor() {
-      let szv = peers.length;
+      const cx = p5.width / 2;
+      const cy = p5.height / 2;
 
-      if (szv === 0) {
-        szv++;
-      }
+      this.sxpos = cx;
+      this.sypos = cy;
 
       p5.push();
-      p5.translate(p5.width / 2, p5.height / 2);
+      p5.translate(cx, cy);
       p5.ellipseMode(p5.CENTER);
 
       const angle = 3;
 
       p5.rotate(p5.radians(angle));
 
-      this.expos = p5.width / 2 + 230 * p5.cos(p5.radians(angle));
-      this.eypos = p5.height / 2 + 230 * p5.sin(p5.radians(angle));
+      [this.expos, this.eypos] = modelToScreen(cx, cy, angle, 230);
       this.emovetime = this.smovetime + 1250;
+      this.hueSlot = nextHueSlot++ % HUE_SLOTS;
 
       p5.colorMode(p5.HSB);
 
-      this.ccolor = p5.color(this.chue, p5.random(0, 255), p5.random(0, 255));
+      this.ccolor = p5.color(this.chue, 255, 255, 133);
 
       p5.pop();
-
       this.setupBits();
     }
 
@@ -152,40 +167,68 @@ export const sketch = (p5: p5) => {
         const mz = new Connection(peer, this, needBit);
 
         peer.knex.push(this);
-
         this.actBits.push(needBit);
-
         connections.push(mz);
       }
     }
 
     drawSelf() {
-      p5.fill(this.ccolor);
-      p5.stroke(this.myBits.length);
-      p5.noStroke();
-      p5.ellipseMode(p5.CENTER);
-      p5.circle(this.cxpos, this.cypos, 50);
-      p5.fill(0);
+      if (!Number.isFinite(this.cxpos) || !Number.isFinite(this.cypos)) {
+        return;
+      }
 
       const w = testTorrent.bits.length - 1;
+      const r = 25;
+      const barH = 10;
+      const cxR = Math.round(this.cxpos);
+      const cyR = Math.round(this.cypos);
+      const left = cxR - Math.floor(w / 2);
+      const top = cyR - 5;
 
-      p5.rect(this.cxpos - w / 2, this.cypos - 5, w, 10);
+      if (!this.barBuffer || this.barBuffer.width !== w) {
+        this.barBuffer = p5.createGraphics(w, barH);
+        this.barBuffer.pixelDensity(1);
+      }
+
+      const buf = this.barBuffer;
+
+      buf.clear();
+      buf.colorMode(p5.HSB);
 
       this.myBits.forEach((myBit) => {
-        p5.colorMode(p5.HSB);
-        p5.fill(myBit.bitHue, 255, 255);
-        p5.stroke(myBit.bitHue, 255, 255);
-
-        const someCoordinate = this.cxpos - w / 2 + myBit.id;
-
-        p5.line(someCoordinate, this.cypos - 5, someCoordinate, this.cypos + 5);
+        buf.stroke(myBit.bitHue, 255, 255);
+        buf.line(myBit.id, 0, myBit.id, barH);
       });
+
+      buf.noStroke();
+
+      p5.colorMode(p5.HSB);
+      p5.fill(this.ccolor);
+      p5.noStroke();
+      p5.ellipseMode(p5.CENTER);
+      p5.circle(cxR, cyR, 50);
+
+      const ctx = p5.drawingContext as CanvasRenderingContext2D;
+
+      ctx.save();
+
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = 'rgba(255,255,255,1)';
+
+      ctx.fillRect(left, top, w, barH);
+      ctx.restore();
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(cxR, cyR, r, 0, Math.PI * 2);
+      ctx.clip();
+      p5.image(buf, left, top);
+      ctx.restore();
     }
 
     findPeer() {
-      this.needBits.forEach((needBit) => {
-        this.needBits = p5.shuffle(this.needBits);
+      const shuffled = p5.shuffle([...this.needBits]);
 
+      shuffled.forEach((needBit) => {
         peers.forEach((peer) => {
           if (
             peer.myBits.includes(needBit) &&
@@ -203,9 +246,9 @@ export const sketch = (p5: p5) => {
 
     moveSelf() {
       if (p5.millis() > this.emovetime) {
+        this.chue = this.ehue;
         this.cxpos = this.expos;
         this.cypos = this.eypos;
-        this.chue = this.ehue;
       } else {
         const diff = (p5.millis() - this.smovetime) / (this.emovetime - this.smovetime);
 
@@ -234,17 +277,18 @@ export const sketch = (p5: p5) => {
 
       p5.rotate(p5.radians(angle));
 
+      const cx = p5.width / 2;
+      const cy = p5.height / 2;
       this.sxpos = this.cxpos;
       this.sypos = this.cypos;
-      this.expos = (p5.width / 4) * p5.cos(p5.radians(angle)); // screenX(0, 180, 0);
-      this.eypos = (p5.height / 4) * p5.sin(p5.radians(angle)); // screenY(0, 180, 0);
+      [this.expos, this.eypos] = modelToScreen(cx, cy, angle, 180);
       this.smovetime = p5.millis();
       this.emovetime = this.smovetime + 3000;
 
       p5.pop();
 
       this.shue = this.chue;
-      this.ehue = (255 / peers.length - 1) * i;
+      this.ehue = (255 * this.hueSlot) / HUE_SLOTS;
       this.ccolor = p5.color(this.chue, 255, 255, 133);
     }
 
@@ -278,7 +322,7 @@ export const sketch = (p5: p5) => {
   }
 
   p5.keyPressed = () => {
-    if (p5.key === 'p') {
+    if (p5.key === '+' || p5.key === '=') {
       addPeer();
     }
 
@@ -286,7 +330,7 @@ export const sketch = (p5: p5) => {
       addSeed();
     }
 
-    if (p5.key === 'r' || p5.keyCode === p5.DELETE || p5.keyCode === p5.BACKSPACE) {
+    if (p5.key === '-') {
       removeRandomPeer();
     }
   };
@@ -294,7 +338,7 @@ export const sketch = (p5: p5) => {
   p5.setup = () => {
     const size = p5.windowWidth > p5.windowHeight ? p5.windowHeight : p5.windowWidth;
 
-    p5.createCanvas(size, size, p5.WEBGL);
+    p5.createCanvas(size, size);
     p5.textAlign(p5.CENTER);
 
     for (let i = 0; i < INITIAL_SEEDS; i++) {
@@ -307,7 +351,7 @@ export const sketch = (p5: p5) => {
   };
 
   p5.draw = () => {
-    p5.background(0, 0);
+    p5.clear();
 
     if (isRotatePeers >= 0) {
       if (isRotatePeers < 360) {
@@ -317,7 +361,13 @@ export const sketch = (p5: p5) => {
       }
     }
 
-    connections.forEach((connection, index) => {
+    for (let i = connections.length - 1; i >= 0; i--) {
+      const connection = connections[i];
+
+      if (!connection) {
+        continue;
+      }
+
       connection.manageKibbles();
       connection.drawKibbles();
 
@@ -341,19 +391,25 @@ export const sketch = (p5: p5) => {
           connection.to.knex.splice(connection.to.knex.indexOf(connection.theBit), 1);
         }
 
-        connections.splice(index, 1);
+        connections.splice(i, 1);
       }
-    });
+    }
 
-    peers.forEach((peer, index) => {
+    for (let i = peers.length - 1; i >= 0; i--) {
+      const peer = peers[i];
+
+      if (!peer) {
+        continue;
+      }
+
       peer.moveSelf();
       peer.drawSelf();
-      peer.reConfigure(index);
+      peer.reConfigure(i);
 
       if (peer.removing > 1) {
-        peers.splice(index, 1);
+        peers.splice(i, 1);
       }
-    });
+    }
 
     p5.shuffle(peers).forEach((peer: Peer) => {
       if (peer.lastcheck < p5.millis() - peer.pwait) {
