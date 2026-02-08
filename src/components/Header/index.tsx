@@ -44,6 +44,7 @@ export const Header: FC = () => {
         { text: '/books', to: `${homeUrl}books` },
         { text: '/cv', to: cv },
         { text: '/games', to: `${homeUrl}games` },
+        { text: '/inscriptions', to: `${homeUrl}inscriptions` },
         { text: '/videos', to: `${homeUrl}videos` },
         { text: '/wishlist', to: `${homeUrl}wishlist` },
       ]}

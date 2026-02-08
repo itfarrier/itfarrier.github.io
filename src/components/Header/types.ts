@@ -1,5 +1,5 @@
 import type { HeaderLinkProps } from 'cmpts/HeaderLink/types';
 
-export type HeaderViewProps = {
+export interface HeaderViewProps {
   links: { text: HeaderLinkProps['text']; to: HeaderLinkProps['to'] }[];
-};
+}

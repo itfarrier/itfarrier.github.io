@@ -12,7 +12,10 @@ import 'sanitize.css/system-ui.css';
 import 'sanitize.css/typography.css';
 import 'sanitize.css/ui-monospace.css';
 
-export type RedirectorProps = { defaultLanguage: Language; languages: Language[] };
+export interface RedirectorProps {
+  defaultLanguage: Language;
+  languages: Language[];
+}
 
 class Redirector extends PureComponent<RedirectorProps> {
   constructor(props: RedirectorProps) {

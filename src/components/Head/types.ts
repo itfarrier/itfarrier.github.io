@@ -1,6 +1,6 @@
 import type { HTMLAttributes, LinkHTMLAttributes, MetaHTMLAttributes } from 'react';
 
-export type HeadViewProps = {
+export interface HeadViewProps {
   androidChromeIcons: JSX.Element[];
   appleTouchIcons: JSX.Element[][];
   description: MetaHTMLAttributes<HTMLMetaElement>['content'];
@@ -9,4 +9,4 @@ export type HeadViewProps = {
   keywords: MetaHTMLAttributes<HTMLMetaElement>['content'];
   language: HTMLAttributes<HTMLHtmlElement>['lang'];
   title: MetaHTMLAttributes<HTMLMetaElement>['content'];
-};
+}

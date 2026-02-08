@@ -20,9 +20,7 @@ export const groupByTypeAndLanguage: GroupByTypeAndLanguage = (accumulator, edge
             ...(langKey
               ? {
                   [langKey]: [
-                    ...(accumulator[type] && accumulator[type]?.[langKey]
-                      ? accumulator[type]?.[langKey] ?? EMPTY_ARRAY
-                      : EMPTY_ARRAY),
+                    ...(accumulator[type]?.[langKey] ? (accumulator[type]?.[langKey] ?? EMPTY_ARRAY) : EMPTY_ARRAY),
                     edge,
                   ],
                 }

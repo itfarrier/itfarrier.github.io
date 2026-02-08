@@ -16,7 +16,6 @@ export const onCreateBabelConfig: GatsbyNode['onCreateBabelConfig'] = (gatsbyNod
 };
 
 export const createPages: GatsbyNode['createPages'] = (args) => {
-  // eslint-disable-next-line @typescript-eslint/unbound-method
   const {
     actions: { createPage },
     graphql,
@@ -75,7 +74,7 @@ export const createPages: GatsbyNode['createPages'] = (args) => {
 
             const next = index === 0 ? null : groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.[index - 1]?.node;
             const previous =
-              index === groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.length ?? 0 - 1
+              (index === groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.length ?? 0 - 1)
                 ? null
                 : groupedByTypeAndLanguage?.[EDGE_TYPES.POST]?.[langKey]?.[index + 1]?.node;
 

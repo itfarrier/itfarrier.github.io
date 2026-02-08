@@ -184,7 +184,7 @@ export const sketch = (p5: p5) => {
 
     findPeer() {
       this.needBits.forEach((needBit) => {
-        this.needBits = p5.shuffle(this.needBits) as Bit[];
+        this.needBits = p5.shuffle(this.needBits);
 
         peers.forEach((peer) => {
           if (
@@ -274,7 +274,7 @@ export const sketch = (p5: p5) => {
   }
 
   function removeRandomPeer() {
-    (p5.random(peers) as Peer).removing = 1;
+    p5.random(peers).removing = 1;
   }
 
   p5.keyPressed = () => {

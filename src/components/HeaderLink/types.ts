@@ -1,5 +1,8 @@
 import type { GatsbyLinkProps } from 'gatsby';
 
-export type Link = GatsbyLinkProps<unknown>['to'];
+export interface HeaderLinkProps {
+  text: string;
+  to: Link;
+}
 
-export type HeaderLinkProps = { text: string; to: Link };
+export type Link = GatsbyLinkProps<unknown>['to'];
