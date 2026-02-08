@@ -320,6 +320,40 @@ export const sketch = (p5: p5) => {
     p5.random(peers).removing = 1;
   }
 
+  const PEER_CIRCLE_RADIUS = 25;
+
+  function isPointInPeer(peer: Peer, x: number, y: number): boolean {
+    const dx = x - peer.cxpos;
+    const dy = y - peer.cypos;
+
+    return dx * dx + dy * dy <= PEER_CIRCLE_RADIUS * PEER_CIRCLE_RADIUS;
+  }
+
+  p5.mousePressed = () => {
+    const mx = p5.mouseX;
+    const my = p5.mouseY;
+
+    let clickedPeer: null | Peer = null;
+
+    for (const peer of peers) {
+      if (isPointInPeer(peer, mx, my)) {
+        clickedPeer = peer;
+
+        break;
+      }
+    }
+
+    if (clickedPeer) {
+      clickedPeer.removing = 1;
+    } else {
+      if (p5.mouseButton.right) {
+        addSeed();
+      } else {
+        addPeer();
+      }
+    }
+  };
+
   p5.keyPressed = () => {
     if (p5.key === '+' || p5.key === '=') {
       addPeer();
