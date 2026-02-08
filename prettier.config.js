@@ -9,6 +9,7 @@ module.exports = {
   insertPragma: false,
   jsxBracketSameLine: false,
   jsxSingleQuote: true,
+  plugins: ['prettier-plugin-sh'],
   printWidth: 120,
   proseWrap: 'always',
   quoteProps: 'as-needed',
