@@ -7,7 +7,7 @@ export const sketch = (p5: p5) => {
   const HUE_SLOTS = 20;
   const INITIAL_PEERS = 8;
   const INITIAL_SEEDS = 2;
-  const MAX_CONNECTIONS_PER_PEER = 4;
+  const MAX_UNCHOKED_PEERS = 4;
   const MOVE_DURATION_INITIAL_MS = 1250;
   const MOVE_DURATION_RECONFIG_MS = 3000;
   const PEER_CIRCLE_RADIUS = 25;
@@ -25,16 +25,16 @@ export const sketch = (p5: p5) => {
   }
 
   class Piece {
-    id: number;
+    index: number;
     pieceHue: number;
 
-    constructor(id: number, pieceHue: number) {
-      this.id = id;
+    constructor(index: number, pieceHue: number) {
+      this.index = index;
       this.pieceHue = pieceHue;
     }
   }
 
-  class PieceTransfer {
+  class PieceMessage {
     big = p5.random(0, 4);
     endTime: number;
     startTime: number;
@@ -47,7 +47,7 @@ export const sketch = (p5: p5) => {
     }
   }
 
-  class Torrent {
+  class Info {
     pieces: Piece[];
 
     constructor(pieceCount: number) {
@@ -60,7 +60,7 @@ export const sketch = (p5: p5) => {
     from: Peer;
     lastDraw: number;
     piece: Piece;
-    pieceTransfers: PieceTransfer[] = [];
+    pieceMessages: PieceMessage[] = [];
     speed: number;
     stream = true;
     to: Peer;
@@ -73,17 +73,18 @@ export const sketch = (p5: p5) => {
       this.speed = p5.int(p5.random(30, 500));
     }
 
-    createPieceTransfer() {
-      this.pieceTransfers.push(new PieceTransfer());
+    createPieceMessage() {
+      this.pieceMessages.push(new PieceMessage());
+
       this.lastDraw = p5.millis();
     }
 
-    drawPieceTransfers() {
+    drawPieceMessages() {
       const now = p5.millis();
-      const completed = this.pieceTransfers.filter((t) => now > t.endTime);
+      const completed = this.pieceMessages.filter((t) => now > t.endTime);
 
       this.completedTransfers += completed.length;
-      this.pieceTransfers = this.pieceTransfers.filter((t) => now <= t.endTime);
+      this.pieceMessages = this.pieceMessages.filter((t) => now <= t.endTime);
 
       p5.fill(this.piece.pieceHue, HUE_MAX, HUE_MAX);
       p5.stroke(this.piece.pieceHue, HUE_MAX, HUE_MAX);
@@ -92,12 +93,12 @@ export const sketch = (p5: p5) => {
       const toPos = this.to.pos;
       const pos = lerpPos;
 
-      this.pieceTransfers.forEach((transfer) => {
-        const t = p5.constrain(p5.norm(now, transfer.startTime, transfer.endTime), 0, 1);
+      this.pieceMessages.forEach((msg) => {
+        const t = p5.constrain(p5.norm(now, msg.startTime, msg.endTime), 0, 1);
 
         pos.set(fromPos).lerp(toPos, t);
-        p5.strokeWeight(transfer.big);
-        p5.circle(pos.x, pos.y, transfer.big);
+        p5.strokeWeight(msg.big);
+        p5.circle(pos.x, pos.y, msg.big);
       });
     }
 
@@ -109,7 +110,7 @@ export const sketch = (p5: p5) => {
       ) {
         this.stream = false;
       } else if (this.lastDraw < p5.millis() - this.speed) {
-        this.createPieceTransfer();
+        this.createPieceMessage();
       }
     }
   }
@@ -118,7 +119,7 @@ export const sketch = (p5: p5) => {
     barBuffer: null | p5.Graphics = null;
     ccolor: p5.Color;
     chue = 5;
-    connectedPeers: (Peer | Piece)[] = [];
+    connectedPeers: Peer[] = [];
     ehue = 0;
     emovetime: number;
     endPos: p5.Vector;
@@ -158,7 +159,7 @@ export const sketch = (p5: p5) => {
         return;
       }
 
-      const pieceCount = torrent.pieces.length;
+      const pieceCount = info.pieces.length;
       const w = pieceCount - 1;
       const cxR = p5.round(this.pos.x);
       const cyR = p5.round(this.pos.y);
@@ -179,7 +180,7 @@ export const sketch = (p5: p5) => {
 
       this.havePieces.forEach((piece) => {
         buf.stroke(piece.pieceHue, HUE_MAX, HUE_MAX);
-        buf.line(piece.id, 0, piece.id, BAR_HEIGHT);
+        buf.line(piece.index, 0, piece.index, BAR_HEIGHT);
       });
 
       buf.noStroke();
@@ -222,7 +223,7 @@ export const sketch = (p5: p5) => {
     }
 
     initMissingPieces() {
-      torrent.pieces.forEach((piece) => {
+      info.pieces.forEach((piece) => {
         if (!this.havePieces.includes(piece)) {
           this.missingPieces.push(piece);
         }
@@ -231,6 +232,7 @@ export const sketch = (p5: p5) => {
 
     moveSelf() {
       const now = p5.millis();
+
       if (now > this.emovetime) {
         this.chue = this.ehue;
         this.ccolor = p5.color(this.ehue, HUE_MAX, HUE_MAX, PEER_HUE_ALPHA);
@@ -270,10 +272,11 @@ export const sketch = (p5: p5) => {
     }
 
     requestPiece(peer: Peer, missingPiece: Piece) {
-      if (peer.connectedPeers.length < MAX_CONNECTIONS_PER_PEER) {
+      if (peer.connectedPeers.length < MAX_UNCHOKED_PEERS) {
         const conn = new Connection(peer, this, missingPiece);
 
         peer.connectedPeers.push(this);
+        this.connectedPeers.push(peer);
         this.pendingRequests.push(missingPiece);
         connections.push(conn);
       }
@@ -283,7 +286,7 @@ export const sketch = (p5: p5) => {
   const lerpPos = p5.createVector(0, 0);
   const connections: Connection[] = [];
   const peers: Peer[] = [];
-  const torrent = new Torrent(30);
+  const info = new Info(30);
 
   let isRotatePeers = -1;
   let nextHueSlot = 0;
@@ -297,7 +300,7 @@ export const sketch = (p5: p5) => {
 
     peers.push(peer);
 
-    peer.havePieces = torrent.pieces.slice();
+    peer.havePieces = info.pieces.slice();
     peer.missingPieces = [];
   }
 
@@ -346,9 +349,9 @@ export const sketch = (p5: p5) => {
       }
 
       connection.updateTransfers();
-      connection.drawPieceTransfers();
+      connection.drawPieceMessages();
 
-      if (!connection.pieceTransfers.length && !connection.stream) {
+      if (!connection.pieceMessages.length && !connection.stream) {
         if (connection.to.removing >= 1) {
           connection.to.removing++;
         }
@@ -358,14 +361,11 @@ export const sketch = (p5: p5) => {
         }
 
         connection.from.connectedPeers.splice(connection.from.connectedPeers.indexOf(connection.to), 1);
+        connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.from), 1);
         connection.to.havePieces.push(connection.piece);
 
         if (connection.to.missingPieces.includes(connection.piece)) {
           connection.to.missingPieces.splice(connection.to.missingPieces.indexOf(connection.piece), 1);
-        }
-
-        if (connection.to.connectedPeers.includes(connection.piece)) {
-          connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.piece), 1);
         }
 
         connections.splice(i, 1);
