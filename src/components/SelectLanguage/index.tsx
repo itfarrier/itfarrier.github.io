@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 import type { Language } from 'cmpts/LanguageContext';
 import type { FC } from 'react';
 import type { SelectLanguageQuery } from 'root/graphql-types';
@@ -51,7 +50,7 @@ export const SelectLanguage: FC = () => {
 
         const onClick = () => {
           toggleLanguage(langKey);
-          void navigate(link);
+          navigate(link);
         };
 
         return (

@@ -5,10 +5,10 @@ import { LANGUAGE_CODES, LOCALSTORAGE_KEYS } from 'src/constants';
 
 export type Language = LANGUAGE_CODES | string;
 
-export type LanguageContextState = {
+export interface LanguageContextState {
   language: Language;
   toggleLanguage: (nextLanguage: Language) => void;
-};
+}
 
 const initialState: LanguageContextState = {
   language: LANGUAGE_CODES.EN,

@@ -1,69 +1,71 @@
 import type p5 from 'p5';
 
 export const sketch = (p5: p5) => {
-  class Bit {
-    bitHue: number;
+  class Piece {
     id: number;
+    pieceHue: number;
 
-    constructor(id: number, bitHue: number) {
-      this.bitHue = bitHue;
+    constructor(id: number, pieceHue: number) {
       this.id = id;
+      this.pieceHue = pieceHue;
     }
   }
 
   class Connection {
-    deadKibbles = 0;
+    completedTransfers = 0;
     from: Peer;
-    kibbles: Kibble[] = [];
-    lastDraw = p5.millis();
-    speed = p5.random(0, 100);
+    lastDraw: number;
+    piece: Piece;
+    pieceTransfers: PieceTransfer[] = [];
+    speed: number;
     stream = true;
-    theBit: Bit;
     to: Peer;
 
-    constructor(from: Connection['from'], to: Connection['to'], bit: Connection['theBit']) {
+    constructor(from: Connection['from'], to: Connection['to'], piece: Connection['piece']) {
       this.from = from;
-      this.theBit = bit;
+      this.lastDraw = p5.millis();
+      this.piece = piece;
+      this.speed = p5.floor(p5.random(30, 500));
       this.to = to;
     }
 
-    createKibble() {
-      const kibble = new Kibble();
+    createPieceTransfer() {
+      this.pieceTransfers.push(new PieceTransfer());
 
-      this.kibbles.push(kibble);
       this.lastDraw = p5.millis();
     }
 
-    drawKibbles() {
-      this.kibbles.forEach((kibble, index) => {
-        if (p5.millis() > kibble.endTime) {
-          this.kibbles.splice(index, 1);
-          this.deadKibbles++;
+    drawPieceTransfers() {
+      this.pieceTransfers.forEach((transfer, index) => {
+        if (p5.millis() > transfer.endTime) {
+          this.pieceTransfers.splice(index, 1);
+          this.completedTransfers++;
         } else {
-          const diff = (p5.millis() - kibble.startTime) / (kibble.endTime - kibble.startTime);
+          const diff = (p5.millis() - transfer.startTime) / (transfer.endTime - transfer.startTime);
           const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
           const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
 
           p5.colorMode(p5.HSB);
-          p5.fill(this.theBit.bitHue, 255, 255);
-          p5.stroke(this.theBit.bitHue, 255, 255);
-          p5.circle(xpos, ypos, kibble.big);
+          p5.fill(this.piece.pieceHue, 255, 255);
+          p5.stroke(this.piece.pieceHue, 255, 255);
+          p5.strokeWeight(transfer.big);
+          p5.circle(xpos, ypos, transfer.big);
         }
       });
     }
 
-    manageKibbles() {
-      if (this.from.removing >= 1 || this.to.removing >= 1 || this.deadKibbles > 125) {
+    updateTransfers() {
+      if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedTransfers > 125) {
         this.stream = false;
       } else {
         if (this.lastDraw < p5.millis() - this.speed) {
-          this.createKibble();
+          this.createPieceTransfer();
         }
       }
     }
   }
 
-  class Kibble {
+  class PieceTransfer {
     big = p5.random(0, 4);
     endTime: number;
     startTime: number;
@@ -77,135 +79,172 @@ export const sketch = (p5: p5) => {
   }
 
   class Torrent {
-    bits: Bit[] = [];
+    pieces: Piece[] = [];
 
-    constructor(totbits: number) {
-      for (let i = 0; i < totbits; i++) {
-        const ll = (255 / totbits) * i;
-        const k = new Bit(i, ll);
+    constructor(pieceCount: number) {
+      for (let i = 0; i < pieceCount; i++) {
+        const hue = (255 / pieceCount) * i;
 
-        this.bits.push(k);
+        this.pieces.push(new Piece(i, hue));
       }
     }
   }
 
-  const INITIAL_PEERS = 5;
-  const INITIAL_SEEDS = 1;
+  const HUE_SLOTS = 20;
+  const INITIAL_PEERS = 8;
+  const INITIAL_SEEDS = 2;
+
   const connections: Connection[] = [];
   const peers: Peer[] = [];
-  const testTorrent = new Torrent(30);
+  const torrent = new Torrent(30);
+
   let isRotatePeers = -1;
+  let nextHueSlot = 0;
+
+  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
+    const r = p5.radians(angleDeg);
+
+    return [cx + radius * p5.cos(r), cy + radius * p5.sin(r)];
+  }
 
   class Peer {
-    actBits: Bit[] = [];
+    barBuffer: null | p5.Graphics = null;
     ccolor: p5.Color;
-    chue = 0;
-    cxpos = 0; // x of where peer should be
-    cypos = 0; // y of where peer should be
+    chue = 5;
+    connectedPeers: (Peer | Piece)[] = [];
+    cxpos = 0;
+    cypos = 0;
     ehue = 0;
     emovetime: number;
     expos: number;
     eypos: number;
+    havePieces: Piece[] = [];
+    hueSlot = 0;
     index = 0;
-    knex: (Bit | Peer)[] = [];
     lastcheck = p5.millis();
-    myBits: Bit[] = [];
-    needBits: Bit[] = [];
+    missingPieces: Piece[] = [];
+    pendingRequests: Piece[] = [];
     percent = p5.random(0, 1);
     pwait = p5.random(1, 9) * 1000;
     removing = 0;
     shue = 0;
     smovetime = p5.millis();
-    sxpos = 0; // x of peer
-    sypos = 0; // y of peer
+    sxpos = 0;
+    sypos = 0;
 
     constructor() {
-      let szv = peers.length;
+      const cx = p5.width / 2;
+      const cy = p5.height / 2;
 
-      if (szv === 0) {
-        szv++;
-      }
+      this.sxpos = cx;
+      this.sypos = cy;
 
       p5.push();
-      p5.translate(p5.width / 2, p5.height / 2);
+      p5.translate(cx, cy);
       p5.ellipseMode(p5.CENTER);
 
       const angle = 3;
 
       p5.rotate(p5.radians(angle));
 
-      this.expos = p5.width / 2 + 230 * p5.cos(p5.radians(angle));
-      this.eypos = p5.height / 2 + 230 * p5.sin(p5.radians(angle));
+      [this.expos, this.eypos] = modelToScreen(cx, cy, angle, 230);
       this.emovetime = this.smovetime + 1250;
+      this.hueSlot = nextHueSlot++ % HUE_SLOTS;
 
       p5.colorMode(p5.HSB);
 
-      this.ccolor = p5.color(this.chue, p5.random(0, 255), p5.random(0, 255));
+      this.ccolor = p5.color(this.chue, 255, 255, 133);
 
       p5.pop();
-
-      this.setupBits();
-    }
-
-    bitRequest(peer: Peer, needBit: Bit) {
-      if (peer.knex.length < 4) {
-        const mz = new Connection(peer, this, needBit);
-
-        peer.knex.push(this);
-
-        this.actBits.push(needBit);
-
-        connections.push(mz);
-      }
+      this.initMissingPieces();
     }
 
     drawSelf() {
+      if (!Number.isFinite(this.cxpos) || !Number.isFinite(this.cypos)) {
+        return;
+      }
+
+      const pieceCount = torrent.pieces.length;
+      const w = pieceCount - 1;
+      const r = 25;
+      const barH = 10;
+      const cxR = Math.round(this.cxpos);
+      const cyR = Math.round(this.cypos);
+      const left = cxR - Math.floor(w / 2);
+      const top = cyR - 5;
+
+      if (!this.barBuffer || this.barBuffer.width !== w) {
+        this.barBuffer = p5.createGraphics(w, barH);
+        this.barBuffer.pixelDensity(1);
+      }
+
+      const buf = this.barBuffer;
+
+      buf.clear();
+      buf.colorMode(p5.HSB);
+
+      this.havePieces.forEach((piece) => {
+        buf.stroke(piece.pieceHue, 255, 255);
+        buf.line(piece.id, 0, piece.id, barH);
+      });
+
+      buf.noStroke();
+
+      p5.colorMode(p5.HSB);
       p5.fill(this.ccolor);
-      p5.stroke(this.myBits.length);
       p5.noStroke();
       p5.ellipseMode(p5.CENTER);
-      p5.circle(this.cxpos, this.cypos, 50);
-      p5.fill(0);
+      p5.circle(cxR, cyR, 50);
 
-      const w = testTorrent.bits.length - 1;
+      const ctx = p5.drawingContext as CanvasRenderingContext2D;
 
-      p5.rect(this.cxpos - w / 2, this.cypos - 5, w, 10);
+      ctx.save();
 
-      this.myBits.forEach((myBit) => {
-        p5.colorMode(p5.HSB);
-        p5.fill(myBit.bitHue, 255, 255);
-        p5.stroke(myBit.bitHue, 255, 255);
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = 'rgba(255,255,255,1)';
 
-        const someCoordinate = this.cxpos - w / 2 + myBit.id;
-
-        p5.line(someCoordinate, this.cypos - 5, someCoordinate, this.cypos + 5);
-      });
+      ctx.fillRect(left, top, w, barH);
+      ctx.restore();
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(cxR, cyR, r, 0, Math.PI * 2);
+      ctx.clip();
+      p5.image(buf, left, top);
+      ctx.restore();
     }
 
     findPeer() {
-      this.needBits.forEach((needBit) => {
-        this.needBits = p5.shuffle(this.needBits) as Bit[];
+      const shuffled = p5.shuffle([...this.missingPieces]);
 
+      shuffled.forEach((missingPiece) => {
         peers.forEach((peer) => {
           if (
-            peer.myBits.includes(needBit) &&
+            peer.havePieces.includes(missingPiece) &&
             !(peer.removing > 0) &&
             !(this.removing > 0) &&
-            !peer.knex.includes(this) &&
+            !peer.connectedPeers.includes(this) &&
             peer.index !== this.index &&
-            !this.actBits.includes(needBit)
+            !this.pendingRequests.includes(missingPiece)
           ) {
-            this.bitRequest(peer, needBit);
+            this.requestPiece(peer, missingPiece);
           }
         });
       });
     }
 
+    initMissingPieces() {
+      torrent.pieces.forEach((piece) => {
+        if (!this.havePieces.includes(piece)) {
+          this.missingPieces.push(piece);
+        }
+      });
+    }
+
     moveSelf() {
       if (p5.millis() > this.emovetime) {
+        this.chue = this.ehue;
         this.cxpos = this.expos;
         this.cypos = this.eypos;
-        this.chue = this.ehue;
       } else {
         const diff = (p5.millis() - this.smovetime) / (this.emovetime - this.smovetime);
 
@@ -234,26 +273,30 @@ export const sketch = (p5: p5) => {
 
       p5.rotate(p5.radians(angle));
 
+      const cx = p5.width / 2;
+      const cy = p5.height / 2;
+
       this.sxpos = this.cxpos;
       this.sypos = this.cypos;
-      this.expos = (p5.width / 4) * p5.cos(p5.radians(angle)); // screenX(0, 180, 0);
-      this.eypos = (p5.height / 4) * p5.sin(p5.radians(angle)); // screenY(0, 180, 0);
+      [this.expos, this.eypos] = modelToScreen(cx, cy, angle, 180);
       this.smovetime = p5.millis();
       this.emovetime = this.smovetime + 3000;
 
       p5.pop();
 
       this.shue = this.chue;
-      this.ehue = (255 / peers.length - 1) * i;
+      this.ehue = (255 * this.hueSlot) / HUE_SLOTS;
       this.ccolor = p5.color(this.chue, 255, 255, 133);
     }
 
-    setupBits() {
-      testTorrent.bits.forEach((bit) => {
-        if (!this.myBits.includes(bit)) {
-          this.needBits.push(bit);
-        }
-      });
+    requestPiece(peer: Peer, missingPiece: Piece) {
+      if (peer.connectedPeers.length < 4) {
+        const conn = new Connection(peer, this, missingPiece);
+
+        peer.connectedPeers.push(this);
+        this.pendingRequests.push(missingPiece);
+        connections.push(conn);
+      }
     }
   }
 
@@ -266,19 +309,53 @@ export const sketch = (p5: p5) => {
 
     peers.push(peer);
 
-    testTorrent.bits.forEach((bit) => {
-      peer.myBits.push(bit);
+    torrent.pieces.forEach((piece) => {
+      peer.havePieces.push(piece);
     });
 
-    peer.needBits = [];
+    peer.missingPieces = [];
   }
 
-  function removeRandomPeer() {
-    (p5.random(peers) as Peer).removing = 1;
+  function disconnectPeer() {
+    p5.random(peers).removing = 1;
   }
+
+  const PEER_CIRCLE_RADIUS = 25;
+
+  function isPointInPeer(peer: Peer, x: number, y: number): boolean {
+    const dx = x - peer.cxpos;
+    const dy = y - peer.cypos;
+
+    return dx * dx + dy * dy <= PEER_CIRCLE_RADIUS * PEER_CIRCLE_RADIUS;
+  }
+
+  p5.mousePressed = () => {
+    const mx = p5.mouseX;
+    const my = p5.mouseY;
+
+    let clickedPeer: null | Peer = null;
+
+    for (const peer of peers) {
+      if (isPointInPeer(peer, mx, my)) {
+        clickedPeer = peer;
+
+        break;
+      }
+    }
+
+    if (clickedPeer) {
+      clickedPeer.removing = 1;
+    } else {
+      if (p5.mouseButton.right) {
+        addSeed();
+      } else {
+        addPeer();
+      }
+    }
+  };
 
   p5.keyPressed = () => {
-    if (p5.key === 'p') {
+    if (p5.key === '+' || p5.key === '=') {
       addPeer();
     }
 
@@ -286,15 +363,15 @@ export const sketch = (p5: p5) => {
       addSeed();
     }
 
-    if (p5.key === 'r' || p5.keyCode === p5.DELETE || p5.keyCode === p5.BACKSPACE) {
-      removeRandomPeer();
+    if (p5.key === '-') {
+      disconnectPeer();
     }
   };
 
   p5.setup = () => {
     const size = p5.windowWidth > p5.windowHeight ? p5.windowHeight : p5.windowWidth;
 
-    p5.createCanvas(size, size, p5.WEBGL);
+    p5.createCanvas(size, size);
     p5.textAlign(p5.CENTER);
 
     for (let i = 0; i < INITIAL_SEEDS; i++) {
@@ -307,7 +384,7 @@ export const sketch = (p5: p5) => {
   };
 
   p5.draw = () => {
-    p5.background(0, 0);
+    p5.clear();
 
     if (isRotatePeers >= 0) {
       if (isRotatePeers < 360) {
@@ -317,11 +394,17 @@ export const sketch = (p5: p5) => {
       }
     }
 
-    connections.forEach((connection, index) => {
-      connection.manageKibbles();
-      connection.drawKibbles();
+    for (let i = connections.length - 1; i >= 0; i--) {
+      const connection = connections[i];
 
-      if (!connection.kibbles.length && !connection.stream) {
+      if (!connection) {
+        continue;
+      }
+
+      connection.updateTransfers();
+      connection.drawPieceTransfers();
+
+      if (!connection.pieceTransfers.length && !connection.stream) {
         if (connection.to.removing >= 1) {
           connection.to.removing++;
         }
@@ -330,30 +413,36 @@ export const sketch = (p5: p5) => {
           connection.from.removing++;
         }
 
-        connection.from.knex.splice(connection.from.knex.indexOf(connection.to), 1);
-        connection.to.myBits.push(connection.theBit);
+        connection.from.connectedPeers.splice(connection.from.connectedPeers.indexOf(connection.to), 1);
+        connection.to.havePieces.push(connection.piece);
 
-        if (connection.to.needBits.includes(connection.theBit)) {
-          connection.to.needBits.splice(connection.to.needBits.indexOf(connection.theBit), 1);
+        if (connection.to.missingPieces.includes(connection.piece)) {
+          connection.to.missingPieces.splice(connection.to.missingPieces.indexOf(connection.piece), 1);
         }
 
-        if (connection.to.knex.includes(connection.theBit)) {
-          connection.to.knex.splice(connection.to.knex.indexOf(connection.theBit), 1);
+        if (connection.to.connectedPeers.includes(connection.piece)) {
+          connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.piece), 1);
         }
 
-        connections.splice(index, 1);
+        connections.splice(i, 1);
       }
-    });
+    }
 
-    peers.forEach((peer, index) => {
+    for (let i = peers.length - 1; i >= 0; i--) {
+      const peer = peers[i];
+
+      if (!peer) {
+        continue;
+      }
+
       peer.moveSelf();
       peer.drawSelf();
-      peer.reConfigure(index);
+      peer.reConfigure(i);
 
       if (peer.removing > 1) {
-        peers.splice(index, 1);
+        peers.splice(i, 1);
       }
-    });
+    }
 
     p5.shuffle(peers).forEach((peer: Peer) => {
       if (peer.lastcheck < p5.millis() - peer.pwait) {

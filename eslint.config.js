@@ -11,14 +11,23 @@ module.exports = tseslint.config(
   ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
-      parserOptions: { projectService: { allowDefaultProject: ['*.js', '*.ts'] }, tsconfigRootDir: __dirname },
+      parserOptions: {
+        projectService: { allowDefaultProject: ['*.js'] },
+        tsconfigRootDir: __dirname,
+      },
     },
   },
   {
-    files: ['**/*.ts'],
-    languageOptions: { globals: { ...globals.browser, ...globals.builtin } },
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.builtin },
+    },
     name: 'TypeScript',
-    plugins: { perfectionist },
+    rules: {
+      // Off until context.parserOptions is reliably set by the parser (projectService)
+      '@typescript-eslint/consistent-generic-constructors': 'off',
+      '@typescript-eslint/no-deprecated': 'off',
+    },
   },
   {
     ...tseslint.configs.disableTypeChecked,
@@ -29,9 +38,16 @@ module.exports = tseslint.config(
   {
     ...tseslint.configs.disableTypeChecked,
     files: ['**/*.config.js'],
-    languageOptions: { globals: { ...globals.builtin, ...globals.node } },
+    languageOptions: {
+      globals: { ...globals.builtin, ...globals.node },
+      parserOptions: { program: null, project: false, projectService: false },
+    },
     name: 'JavaScript configs',
-    rules: { '@typescript-eslint/no-require-imports': 'off', '@typescript-eslint/no-unsafe-assignment': 'off' },
+    rules: {
+      ...tseslint.configs.disableTypeChecked.rules,
+      '@typescript-eslint/no-require-imports': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+    },
   },
   {
     ...tseslint.configs.disableTypeChecked,

@@ -16,9 +16,7 @@ describe('groupByTypeAndLanguage', () => {
   };
 
   it('returns initial structure for edge object with langKey only', () => {
-    expect(groupByTypeAndLanguage(EMPTY_OBJECT, edgeWithEXAMPLE_LANG_KEYLangKey)).toEqual(
-      EMPTY_OBJECT,
-    );
+    expect(groupByTypeAndLanguage(EMPTY_OBJECT, edgeWithEXAMPLE_LANG_KEYLangKey)).toEqual(EMPTY_OBJECT);
   });
 
   const edgeWithEXAMPLE_TYPEType: Edge = {
@@ -51,9 +49,7 @@ describe('groupByTypeAndLanguage', () => {
   };
 
   it('returns object with nested EXAMPLE_TYPE key with nested EXAMPLE_LANG_KEY key as the value for edge object with langKey and type', () => {
-    expect(
-      groupByTypeAndLanguage(EMPTY_OBJECT, edgeWithEXAMPLE_LANG_KEYLangKeyAndEXAMPLE_TYPEType),
-    ).toEqual({
+    expect(groupByTypeAndLanguage(EMPTY_OBJECT, edgeWithEXAMPLE_LANG_KEYLangKeyAndEXAMPLE_TYPEType)).toEqual({
       EXAMPLE_TYPE: { EXAMPLE_LANG_KEY: [edgeWithEXAMPLE_LANG_KEYLangKeyAndEXAMPLE_TYPEType] },
     });
   });

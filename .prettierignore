@@ -1,7 +1,1 @@
-/*
-!**/*.js*
-!**/*.json
-!**/*.ts*
-!**/*.yml
-!**/*.yaml
-!src
+package-lock.json

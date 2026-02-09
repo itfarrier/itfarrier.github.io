@@ -34,7 +34,7 @@ export const Head: FC = () => {
     }
   `);
 
-  const { description, keywords = [], title } = data.site?.siteMetadata ?? siteMetadata;
+  const { description, keywords, title } = data.site?.siteMetadata ?? siteMetadata;
 
   return (
     <HeadView

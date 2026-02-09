@@ -1,3 +1,5 @@
 import type { ILangObject } from 'src/interfaces';
 
-export type SelectLanguageProps = { langsMenu: ILangObject[] };
+export interface SelectLanguageProps {
+  langsMenu: ILangObject[];
+}
