@@ -1,10 +1,16 @@
 import type p5 from 'p5';
 
 export const sketch = (p5: p5) => {
+  const SIMULATED_PIECE_SIZE_BYTES = 262144;
+  const BYTES_PER_TRANSFER = SIMULATED_PIECE_SIZE_BYTES / 125;
   const HUE_SLOTS = 20;
   const INITIAL_PEERS = 8;
   const INITIAL_SEEDS = 2;
   const PEER_CIRCLE_RADIUS = 25;
+  const RECENT_TIMES_MAX_AGE_MS = 12000;
+  const SPEED_WINDOW_MS = 4000;
+  const TOOLTIP_LINE_HEIGHT = 16;
+  const TOOLTIP_PADDING = 8;
 
   class Piece {
     id: number;
@@ -63,11 +69,16 @@ export const sketch = (p5: p5) => {
     }
 
     drawPieceTransfers() {
+      const now = p5.millis();
+
       this.pieceTransfers.forEach((transfer, index) => {
-        if (p5.millis() > transfer.endTime) {
+        if (now > transfer.endTime) {
           this.pieceTransfers.splice(index, 1);
 
           this.completedTransfers++;
+
+          this.to.recentDownloadTimes.push(now);
+          this.from.recentUploadTimes.push(now);
         } else {
           const diff = (p5.millis() - transfer.startTime) / (transfer.endTime - transfer.startTime);
           const xpos = p5.lerp(this.from.cxpos, this.to.cxpos, diff);
@@ -110,11 +121,15 @@ export const sketch = (p5: p5) => {
     pendingRequests: Piece[] = [];
     percent = p5.random(0, 1);
     pwait = p5.random(1, 9) * 1000;
+    recentDownloadTimes: number[] = [];
+    recentUploadTimes: number[] = [];
     removing = 0;
     shue = 0;
     smovetime = p5.millis();
     sxpos = 0;
     sypos = 0;
+    totalDownloadedPieces = 0;
+    totalUploadedPieces = 0;
 
     constructor() {
       const cx = p5.width / 2;
@@ -294,6 +309,117 @@ export const sketch = (p5: p5) => {
     return p5.dist(x, y, peer.cxpos, peer.cypos) <= PEER_CIRCLE_RADIUS;
   }
 
+  function formatBytes(bytes: number): string {
+    if (bytes >= 1e9) {
+      return `${(bytes / 1e9).toFixed(2)} GB`;
+    }
+
+    if (bytes >= 1e6) {
+      return `${(bytes / 1e6).toFixed(2)} MB`;
+    }
+
+    if (bytes >= 1e3) {
+      return `${(bytes / 1e3).toFixed(2)} KB`;
+    }
+
+    return `${String(bytes)} B`;
+  }
+
+  function getCurrentSpeedBytesPerSec(timestamps: number[], pieceSizeBytes: number): number {
+    const now = p5.millis();
+    const cutoff = now - SPEED_WINDOW_MS;
+    const count = timestamps.filter((t) => t >= cutoff).length;
+
+    return (count * pieceSizeBytes) / (SPEED_WINDOW_MS / 1000);
+  }
+
+  function trimRecentTimes(timestamps: number[]): void {
+    const cutoff = p5.millis() - RECENT_TIMES_MAX_AGE_MS;
+
+    while (timestamps.length > 0 && (timestamps[0] ?? 0) < cutoff) {
+      timestamps.shift();
+    }
+  }
+
+  function getPeerUnderMouse(): null | Peer {
+    const mx = p5.mouseX;
+    const my = p5.mouseY;
+
+    for (const peer of peers) {
+      if (isPointInPeer(peer, mx, my)) {
+        return peer;
+      }
+    }
+
+    return null;
+  }
+
+  function drawTooltip(peer: Peer) {
+    trimRecentTimes(peer.recentDownloadTimes);
+    trimRecentTimes(peer.recentUploadTimes);
+
+    const downloadedBytes = peer.totalDownloadedPieces * SIMULATED_PIECE_SIZE_BYTES;
+    const downSpeed = getCurrentSpeedBytesPerSec(peer.recentDownloadTimes, BYTES_PER_TRANSFER);
+    const have = peer.havePieces.length;
+    const isSeed = peer.missingPieces.length === 0;
+    const total = torrent.pieces.length;
+    const pct = total > 0 ? p5.round((100 * have) / total) : 0;
+    const uploadedBytes = peer.totalUploadedPieces * SIMULATED_PIECE_SIZE_BYTES;
+    const upSpeed = getCurrentSpeedBytesPerSec(peer.recentUploadTimes, BYTES_PER_TRANSFER);
+
+    const lines: string[] = [
+      '— Transfer —',
+      `Down: ${formatBytes(downSpeed)}/s`,
+      `Downloaded: ${formatBytes(downloadedBytes)}`,
+      `Up: ${formatBytes(upSpeed)}/s`,
+      `Uploaded: ${formatBytes(uploadedBytes)}`,
+      '— Information —',
+      `Pieces: ${String(have)}/${String(total)}`,
+      `Progress: ${String(pct)}%`,
+      isSeed ? 'Type: Seed' : 'Type: Peer',
+    ];
+
+    p5.textSize(12);
+    p5.textAlign(p5.LEFT, p5.TOP);
+
+    let maxW = 0;
+
+    for (const line of lines) {
+      const w = p5.textWidth(line);
+
+      if (w > maxW) {
+        maxW = w;
+      }
+    }
+
+    const boxH = lines.length * TOOLTIP_LINE_HEIGHT + TOOLTIP_PADDING * 2;
+    const boxW = maxW + TOOLTIP_PADDING * 2;
+
+    let tx = peer.cxpos + PEER_CIRCLE_RADIUS + 10;
+    let ty = peer.cypos - boxH / 2;
+
+    if (tx + boxW > p5.width) {
+      tx = peer.cxpos - boxW - PEER_CIRCLE_RADIUS - 10;
+    }
+
+    if (ty < 0) {
+      ty = 10;
+    }
+
+    if (ty + boxH > p5.height) {
+      ty = p5.height - boxH - 10;
+    }
+
+    p5.noStroke();
+    p5.fill(0, 0, 0, 0.85);
+    p5.rect(tx, ty, boxW, boxH, 4);
+    p5.fill(255);
+
+    lines.forEach((line, i) => {
+      p5.text(line, tx + TOOLTIP_PADDING, ty + TOOLTIP_PADDING + i * TOOLTIP_LINE_HEIGHT);
+    });
+  }
+
   function addPeer() {
     peers.push(new Peer());
   }
@@ -396,6 +522,9 @@ export const sketch = (p5: p5) => {
           connection.from.removing++;
         }
 
+        connection.to.totalDownloadedPieces += 1;
+        connection.from.totalUploadedPieces += 1;
+
         connection.from.connectedPeers.splice(connection.from.connectedPeers.indexOf(connection.to), 1);
         connection.to.havePieces.push(connection.piece);
 
@@ -433,5 +562,11 @@ export const sketch = (p5: p5) => {
         peer.lastcheck = p5.millis();
       }
     });
+
+    const hoveredPeer = getPeerUnderMouse();
+
+    if (hoveredPeer) {
+      drawTooltip(hoveredPeer);
+    }
   };
 };
