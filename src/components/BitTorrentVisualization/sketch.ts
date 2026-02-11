@@ -1,11 +1,13 @@
 import type p5 from 'p5';
 
 export const sketch = (p5: p5) => {
+  const BLOCKS_PER_PIECE = 125;
   const SIMULATED_PIECE_SIZE_BYTES = 262144;
-  const BYTES_PER_TRANSFER = SIMULATED_PIECE_SIZE_BYTES / 125;
+  const BYTES_PER_TRANSFER = SIMULATED_PIECE_SIZE_BYTES / BLOCKS_PER_PIECE;
   const HUE_SLOTS = 20;
   const INITIAL_PEERS = 8;
   const INITIAL_SEEDS = 2;
+  const MAX_UNCHOKED_PEERS = 4;
   const PEER_CIRCLE_RADIUS = 25;
   const RECENT_TIMES_MAX_AGE_MS = 12000;
   const SPEED_WINDOW_MS = 4000;
@@ -22,7 +24,7 @@ export const sketch = (p5: p5) => {
     }
   }
 
-  class PieceTransfer {
+  class BlockTransfer {
     big: number;
     endTime: number;
     startTime: number;
@@ -45,11 +47,11 @@ export const sketch = (p5: p5) => {
   }
 
   class Connection {
-    completedTransfers = 0;
+    blockTransfers: BlockTransfer[] = [];
+    completedBlockTransfers = 0;
     from: Peer;
     lastDraw: number;
     piece: Piece;
-    pieceTransfers: PieceTransfer[] = [];
     speed: number;
     stream = true;
     to: Peer;
@@ -62,20 +64,20 @@ export const sketch = (p5: p5) => {
       this.to = to;
     }
 
-    createPieceTransfer() {
-      this.pieceTransfers.push(new PieceTransfer());
+    createBlockTransfer() {
+      this.blockTransfers.push(new BlockTransfer());
 
       this.lastDraw = p5.millis();
     }
 
-    drawPieceTransfers() {
+    drawBlockTransfers() {
       const now = p5.millis();
 
-      this.pieceTransfers.forEach((transfer, index) => {
+      this.blockTransfers.forEach((transfer, index) => {
         if (now > transfer.endTime) {
-          this.pieceTransfers.splice(index, 1);
+          this.blockTransfers.splice(index, 1);
 
-          this.completedTransfers++;
+          this.completedBlockTransfers++;
 
           this.to.recentDownloadTimes.push(now);
           this.from.recentUploadTimes.push(now);
@@ -93,11 +95,11 @@ export const sketch = (p5: p5) => {
       });
     }
 
-    updateTransfers() {
-      if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedTransfers > 125) {
+    updateBlockTransfers() {
+      if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedBlockTransfers > BLOCKS_PER_PIECE) {
         this.stream = false;
       } else if (this.lastDraw < p5.millis() - this.speed) {
-        this.createPieceTransfer();
+        this.createBlockTransfer();
       }
     }
   }
@@ -106,7 +108,7 @@ export const sketch = (p5: p5) => {
     barBuffer: null | p5.Graphics = null;
     ccolor: p5.Color;
     chue = 5;
-    connectedPeers: (Peer | Piece)[] = [];
+    connectedPeers: Peer[] = [];
     cxpos = 0;
     cypos = 0;
     ehue = 0;
@@ -118,8 +120,10 @@ export const sketch = (p5: p5) => {
     index = 0;
     lastcheck = p5.millis();
     missingPieces: Piece[] = [];
-    pendingRequests: Piece[] = [];
+    pendingPieceRequests: Piece[] = [];
     percent = p5.random(0, 1);
+    piecesDownloaded = 0;
+    piecesUploaded = 0;
     pwait = p5.random(1, 9) * 1000;
     recentDownloadTimes: number[] = [];
     recentUploadTimes: number[] = [];
@@ -128,8 +132,6 @@ export const sketch = (p5: p5) => {
     smovetime = p5.millis();
     sxpos = 0;
     sypos = 0;
-    totalDownloadedPieces = 0;
-    totalUploadedPieces = 0;
 
     constructor() {
       const cx = p5.width / 2;
@@ -222,7 +224,7 @@ export const sketch = (p5: p5) => {
             !(this.removing > 0) &&
             !peer.connectedPeers.includes(this) &&
             peer.index !== this.index &&
-            !this.pendingRequests.includes(missingPiece)
+            !this.pendingPieceRequests.includes(missingPiece)
           ) {
             this.requestPiece(peer, missingPiece);
           }
@@ -282,11 +284,11 @@ export const sketch = (p5: p5) => {
     }
 
     requestPiece(peer: Peer, missingPiece: Piece) {
-      if (peer.connectedPeers.length < 4) {
+      if (peer.connectedPeers.length < MAX_UNCHOKED_PEERS) {
         const conn = new Connection(peer, this, missingPiece);
 
         peer.connectedPeers.push(this);
-        this.pendingRequests.push(missingPiece);
+        this.pendingPieceRequests.push(missingPiece);
         connections.push(conn);
       }
     }
@@ -358,13 +360,13 @@ export const sketch = (p5: p5) => {
     trimRecentTimes(peer.recentDownloadTimes);
     trimRecentTimes(peer.recentUploadTimes);
 
-    const downloadedBytes = peer.totalDownloadedPieces * SIMULATED_PIECE_SIZE_BYTES;
+    const downloadedBytes = peer.piecesDownloaded * SIMULATED_PIECE_SIZE_BYTES;
     const downSpeed = getCurrentSpeedBytesPerSec(peer.recentDownloadTimes, BYTES_PER_TRANSFER);
     const have = peer.havePieces.length;
     const isSeed = peer.missingPieces.length === 0;
     const total = torrent.pieces.length;
     const pct = total > 0 ? p5.round((100 * have) / total) : 0;
-    const uploadedBytes = peer.totalUploadedPieces * SIMULATED_PIECE_SIZE_BYTES;
+    const uploadedBytes = peer.piecesUploaded * SIMULATED_PIECE_SIZE_BYTES;
     const upSpeed = getCurrentSpeedBytesPerSec(peer.recentUploadTimes, BYTES_PER_TRANSFER);
 
     const lines: string[] = [
@@ -376,7 +378,7 @@ export const sketch = (p5: p5) => {
       '— Information —',
       `Pieces: ${String(have)}/${String(total)}`,
       `Progress: ${String(pct)}%`,
-      isSeed ? 'Type: Seed' : 'Type: Peer',
+      isSeed ? 'Type: Seed' : 'Type: Downloader',
     ];
 
     p5.textSize(12);
@@ -510,10 +512,10 @@ export const sketch = (p5: p5) => {
         continue;
       }
 
-      connection.updateTransfers();
-      connection.drawPieceTransfers();
+      connection.updateBlockTransfers();
+      connection.drawBlockTransfers();
 
-      if (!connection.pieceTransfers.length && !connection.stream) {
+      if (!connection.blockTransfers.length && !connection.stream) {
         if (connection.to.removing >= 1) {
           connection.to.removing++;
         }
@@ -522,8 +524,8 @@ export const sketch = (p5: p5) => {
           connection.from.removing++;
         }
 
-        connection.to.totalDownloadedPieces += 1;
-        connection.from.totalUploadedPieces += 1;
+        connection.to.piecesDownloaded += 1;
+        connection.from.piecesUploaded += 1;
 
         connection.from.connectedPeers.splice(connection.from.connectedPeers.indexOf(connection.to), 1);
         connection.to.havePieces.push(connection.piece);
@@ -532,8 +534,8 @@ export const sketch = (p5: p5) => {
           connection.to.missingPieces.splice(connection.to.missingPieces.indexOf(connection.piece), 1);
         }
 
-        if (connection.to.connectedPeers.includes(connection.piece)) {
-          connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.piece), 1);
+        if (connection.to.connectedPeers.includes(connection.from)) {
+          connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.from), 1);
         }
 
         connections.splice(i, 1);
