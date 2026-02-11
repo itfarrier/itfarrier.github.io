@@ -11,6 +11,8 @@ export const sketch = (p5: p5) => {
   const PEER_CIRCLE_RADIUS = 25;
   const RECENT_TIMES_MAX_AGE_MS = 12000;
   const SPEED_WINDOW_MS = 4000;
+  const TOOLTIP_BUTTON_SIZE = 22;
+  const TOOLTIP_HIDE_DELAY_MS = 450;
   const TOOLTIP_LINE_HEIGHT = 16;
   const TOOLTIP_PADDING = 8;
 
@@ -96,6 +98,10 @@ export const sketch = (p5: p5) => {
     }
 
     updateBlockTransfers() {
+      if (this.from.paused || this.to.paused) {
+        return;
+      }
+
       if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedBlockTransfers > BLOCKS_PER_PIECE) {
         this.stream = false;
       } else if (this.lastDraw < p5.millis() - this.speed) {
@@ -120,6 +126,7 @@ export const sketch = (p5: p5) => {
     index = 0;
     lastcheck = p5.millis();
     missingPieces: Piece[] = [];
+    paused = false;
     pendingPieceRequests: Piece[] = [];
     percent = p5.random(0, 1);
     piecesDownloaded = 0;
@@ -284,13 +291,15 @@ export const sketch = (p5: p5) => {
     }
 
     requestPiece(peer: Peer, missingPiece: Piece) {
-      if (peer.connectedPeers.length < MAX_UNCHOKED_PEERS) {
-        const conn = new Connection(peer, this, missingPiece);
-
-        peer.connectedPeers.push(this);
-        this.pendingPieceRequests.push(missingPiece);
-        connections.push(conn);
+      if (this.paused || peer.paused || peer.connectedPeers.length >= MAX_UNCHOKED_PEERS) {
+        return;
       }
+
+      const conn = new Connection(peer, this, missingPiece);
+
+      peer.connectedPeers.push(this);
+      this.pendingPieceRequests.push(missingPiece);
+      connections.push(conn);
     }
   }
 
@@ -300,6 +309,10 @@ export const sketch = (p5: p5) => {
 
   let isRotatePeers = -1;
   let nextHueSlot = 0;
+  let showingTooltipForPeer: null | Peer = null;
+  let tooltipBoxRect: null | { h: number; w: number; x: number; y: number } = null;
+  let tooltipButtonRect: null | { h: number; w: number; x: number; y: number } = null;
+  let tooltipHideAt = 0;
 
   function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
     const r = p5.radians(angleDeg);
@@ -394,7 +407,8 @@ export const sketch = (p5: p5) => {
       }
     }
 
-    const boxH = lines.length * TOOLTIP_LINE_HEIGHT + TOOLTIP_PADDING * 2;
+    const buttonRowH = TOOLTIP_BUTTON_SIZE + TOOLTIP_PADDING;
+    const boxH = lines.length * TOOLTIP_LINE_HEIGHT + TOOLTIP_PADDING * 2 + buttonRowH;
     const boxW = maxW + TOOLTIP_PADDING * 2;
 
     let tx = peer.cxpos + PEER_CIRCLE_RADIUS + 10;
@@ -420,6 +434,39 @@ export const sketch = (p5: p5) => {
     lines.forEach((line, i) => {
       p5.text(line, tx + TOOLTIP_PADDING, ty + TOOLTIP_PADDING + i * TOOLTIP_LINE_HEIGHT);
     });
+
+    const btnY = ty + boxH - TOOLTIP_PADDING - TOOLTIP_BUTTON_SIZE;
+    const btnX = tx + TOOLTIP_PADDING;
+
+    p5.fill(60);
+    p5.rect(btnX, btnY, TOOLTIP_BUTTON_SIZE, TOOLTIP_BUTTON_SIZE, 4);
+    p5.fill(255);
+
+    if (peer.paused) {
+      const cx = btnX + TOOLTIP_BUTTON_SIZE / 2;
+      const cy = btnY + TOOLTIP_BUTTON_SIZE / 2;
+      const s = 6;
+
+      p5.triangle(cx - s * 0.6, cy - s, cx - s * 0.6, cy + s, cx + s * 0.8, cy);
+    } else {
+      const barW = 4;
+      const barH = 10;
+      const gap = 5;
+      const cx = btnX + TOOLTIP_BUTTON_SIZE / 2;
+      const cy = btnY + TOOLTIP_BUTTON_SIZE / 2;
+
+      p5.rect(cx - gap / 2 - barW, cy - barH / 2, barW, barH);
+      p5.rect(cx + gap / 2, cy - barH / 2, barW, barH);
+    }
+
+    tooltipBoxRect = { h: boxH, w: boxW, x: tx, y: ty };
+    tooltipButtonRect = { h: TOOLTIP_BUTTON_SIZE, w: TOOLTIP_BUTTON_SIZE, x: btnX, y: btnY };
+  }
+
+  function isPointInRect(mx: number, my: number, r: { h: number; w: number; x: number; y: number }): boolean {
+    const { h, w, x, y } = r;
+
+    return mx >= x && mx <= x + w && my >= y && my <= y + h;
   }
 
   function addPeer() {
@@ -445,6 +492,12 @@ export const sketch = (p5: p5) => {
   p5.mousePressed = () => {
     const mx = p5.mouseX;
     const my = p5.mouseY;
+
+    if (showingTooltipForPeer && isPointInTooltipButton(mx, my)) {
+      showingTooltipForPeer.paused = !showingTooltipForPeer.paused;
+
+      return;
+    }
 
     let clickedPeer: null | Peer = null;
 
@@ -559,16 +612,45 @@ export const sketch = (p5: p5) => {
     }
 
     p5.shuffle(peers).forEach((peer: Peer) => {
-      if (peer.lastcheck < p5.millis() - peer.pwait) {
+      if (!peer.paused && peer.lastcheck < p5.millis() - peer.pwait) {
         peer.findPeer();
         peer.lastcheck = p5.millis();
       }
     });
 
     const hoveredPeer = getPeerUnderMouse();
+    const mx = p5.mouseX;
+    const my = p5.mouseY;
+    const now = p5.millis();
 
     if (hoveredPeer) {
+      tooltipHideAt = 0;
+      showingTooltipForPeer = hoveredPeer;
+
       drawTooltip(hoveredPeer);
+    } else if (showingTooltipForPeer && tooltipBoxRect && isPointInRect(mx, my, tooltipBoxRect)) {
+      tooltipHideAt = 0;
+
+      drawTooltip(showingTooltipForPeer);
+    } else if (showingTooltipForPeer) {
+      if (tooltipHideAt === 0) {
+        tooltipHideAt = now + TOOLTIP_HIDE_DELAY_MS;
+      }
+
+      if (now >= tooltipHideAt) {
+        showingTooltipForPeer = null;
+        tooltipBoxRect = null;
+        tooltipButtonRect = null;
+        tooltipHideAt = 0;
+      } else {
+        drawTooltip(showingTooltipForPeer);
+      }
+    } else {
+      tooltipHideAt = 0;
     }
   };
+
+  function isPointInTooltipButton(mx: number, my: number): boolean {
+    return tooltipButtonRect !== null && isPointInRect(mx, my, tooltipButtonRect);
+  }
 };
