@@ -1,6 +1,11 @@
 import type p5 from 'p5';
 
 export const sketch = (p5: p5) => {
+  const HUE_SLOTS = 20;
+  const INITIAL_PEERS = 8;
+  const INITIAL_SEEDS = 2;
+  const PEER_CIRCLE_RADIUS = 25;
+
   class Piece {
     id: number;
     pieceHue: number;
@@ -8,6 +13,28 @@ export const sketch = (p5: p5) => {
     constructor(id: number, pieceHue: number) {
       this.id = id;
       this.pieceHue = pieceHue;
+    }
+  }
+
+  class PieceTransfer {
+    big: number;
+    endTime: number;
+    startTime: number;
+
+    constructor() {
+      this.big = p5.random(0, 4);
+      this.startTime = p5.millis();
+      this.endTime = this.startTime + 5000;
+    }
+  }
+
+  class Torrent {
+    pieces: Piece[] = [];
+
+    constructor(pieceCount: number) {
+      for (let i = 0; i < pieceCount; i++) {
+        this.pieces.push(new Piece(i, (255 / pieceCount) * i));
+      }
     }
   }
 
@@ -21,7 +48,7 @@ export const sketch = (p5: p5) => {
     stream = true;
     to: Peer;
 
-    constructor(from: Connection['from'], to: Connection['to'], piece: Connection['piece']) {
+    constructor(from: Peer, to: Peer, piece: Piece) {
       this.from = from;
       this.lastDraw = p5.millis();
       this.piece = piece;
@@ -39,11 +66,12 @@ export const sketch = (p5: p5) => {
       this.pieceTransfers.forEach((transfer, index) => {
         if (p5.millis() > transfer.endTime) {
           this.pieceTransfers.splice(index, 1);
+
           this.completedTransfers++;
         } else {
           const diff = (p5.millis() - transfer.startTime) / (transfer.endTime - transfer.startTime);
-          const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
-          const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
+          const xpos = p5.lerp(this.from.cxpos, this.to.cxpos, diff);
+          const ypos = p5.lerp(this.from.cypos, this.to.cypos, diff);
 
           p5.colorMode(p5.HSB);
           p5.fill(this.piece.pieceHue, 255, 255);
@@ -57,54 +85,10 @@ export const sketch = (p5: p5) => {
     updateTransfers() {
       if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedTransfers > 125) {
         this.stream = false;
-      } else {
-        if (this.lastDraw < p5.millis() - this.speed) {
-          this.createPieceTransfer();
-        }
+      } else if (this.lastDraw < p5.millis() - this.speed) {
+        this.createPieceTransfer();
       }
     }
-  }
-
-  class PieceTransfer {
-    big = p5.random(0, 4);
-    endTime: number;
-    startTime: number;
-
-    constructor() {
-      const startTime = p5.millis();
-
-      this.endTime = startTime + 5000;
-      this.startTime = startTime;
-    }
-  }
-
-  class Torrent {
-    pieces: Piece[] = [];
-
-    constructor(pieceCount: number) {
-      for (let i = 0; i < pieceCount; i++) {
-        const hue = (255 / pieceCount) * i;
-
-        this.pieces.push(new Piece(i, hue));
-      }
-    }
-  }
-
-  const HUE_SLOTS = 20;
-  const INITIAL_PEERS = 8;
-  const INITIAL_SEEDS = 2;
-
-  const connections: Connection[] = [];
-  const peers: Peer[] = [];
-  const torrent = new Torrent(30);
-
-  let isRotatePeers = -1;
-  let nextHueSlot = 0;
-
-  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
-    const r = p5.radians(angleDeg);
-
-    return [cx + radius * p5.cos(r), cy + radius * p5.sin(r)];
   }
 
   class Peer {
@@ -166,11 +150,11 @@ export const sketch = (p5: p5) => {
 
       const pieceCount = torrent.pieces.length;
       const w = pieceCount - 1;
-      const r = 25;
+      const r = PEER_CIRCLE_RADIUS;
       const barH = 10;
-      const cxR = Math.round(this.cxpos);
-      const cyR = Math.round(this.cypos);
-      const left = cxR - Math.floor(w / 2);
+      const cxR = p5.round(this.cxpos);
+      const cyR = p5.round(this.cypos);
+      const left = cxR - p5.floor(w / 2);
       const top = cyR - 5;
 
       if (!this.barBuffer || this.barBuffer.width !== w) {
@@ -189,7 +173,6 @@ export const sketch = (p5: p5) => {
       });
 
       buf.noStroke();
-
       p5.colorMode(p5.HSB);
       p5.fill(this.ccolor);
       p5.noStroke();
@@ -207,7 +190,7 @@ export const sketch = (p5: p5) => {
       ctx.restore();
       ctx.save();
       ctx.beginPath();
-      ctx.arc(cxR, cyR, r, 0, Math.PI * 2);
+      ctx.arc(cxR, cyR, r, 0, p5.TWO_PI);
       ctx.clip();
       p5.image(buf, left, top);
       ctx.restore();
@@ -248,24 +231,18 @@ export const sketch = (p5: p5) => {
       } else {
         const diff = (p5.millis() - this.smovetime) / (this.emovetime - this.smovetime);
 
-        this.cxpos = this.sxpos * (1 - diff) + this.expos * diff;
-        this.cypos = this.sypos * (1 - diff) + this.eypos * diff;
-        this.chue = this.shue * (1 - diff) + this.ehue * diff;
+        this.cxpos = p5.lerp(this.sxpos, this.expos, diff);
+        this.cypos = p5.lerp(this.sypos, this.eypos, diff);
+        this.chue = p5.lerp(this.shue, this.ehue, diff);
       }
     }
 
     reConfigure(i: number) {
-      let k;
-
       p5.push();
       p5.translate(p5.width / 2, p5.height / 2);
       p5.ellipseMode(p5.CENTER);
 
-      if (peers.length == 0) {
-        k = 1;
-      } else {
-        k = peers.length;
-      }
+      const k = peers.length === 0 ? 1 : peers.length;
 
       this.index = i;
 
@@ -300,6 +277,23 @@ export const sketch = (p5: p5) => {
     }
   }
 
+  const connections: Connection[] = [];
+  const peers: Peer[] = [];
+  const torrent = new Torrent(30);
+
+  let isRotatePeers = -1;
+  let nextHueSlot = 0;
+
+  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
+    const r = p5.radians(angleDeg);
+
+    return [cx + radius * p5.cos(r), cy + radius * p5.sin(r)];
+  }
+
+  function isPointInPeer(peer: Peer, x: number, y: number): boolean {
+    return p5.dist(x, y, peer.cxpos, peer.cypos) <= PEER_CIRCLE_RADIUS;
+  }
+
   function addPeer() {
     peers.push(new Peer());
   }
@@ -320,15 +314,6 @@ export const sketch = (p5: p5) => {
     p5.random(peers).removing = 1;
   }
 
-  const PEER_CIRCLE_RADIUS = 25;
-
-  function isPointInPeer(peer: Peer, x: number, y: number): boolean {
-    const dx = x - peer.cxpos;
-    const dy = y - peer.cypos;
-
-    return dx * dx + dy * dy <= PEER_CIRCLE_RADIUS * PEER_CIRCLE_RADIUS;
-  }
-
   p5.mousePressed = () => {
     const mx = p5.mouseX;
     const my = p5.mouseY;
@@ -345,12 +330,10 @@ export const sketch = (p5: p5) => {
 
     if (clickedPeer) {
       clickedPeer.removing = 1;
+    } else if (p5.mouseButton.right) {
+      addSeed();
     } else {
-      if (p5.mouseButton.right) {
-        addSeed();
-      } else {
-        addPeer();
-      }
+      addPeer();
     }
   };
 
@@ -369,7 +352,7 @@ export const sketch = (p5: p5) => {
   };
 
   p5.setup = () => {
-    const size = p5.windowWidth > p5.windowHeight ? p5.windowHeight : p5.windowWidth;
+    const size = p5.min(p5.windowWidth, p5.windowHeight);
 
     p5.createCanvas(size, size);
     p5.textAlign(p5.CENTER);
