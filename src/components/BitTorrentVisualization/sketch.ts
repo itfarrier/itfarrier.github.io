@@ -1,23 +1,6 @@
 import type p5 from 'p5';
 
 export const sketch = (p5: p5) => {
-  const BAR_HEIGHT = 10;
-  const FULL_CIRCLE_DEG = 360;
-  const HUE_MAX = 255;
-  const HUE_SLOTS = 20;
-  const INITIAL_PEERS = 8;
-  const INITIAL_SEEDS = 2;
-  const MAX_CONNECTIONS_PER_PEER = 4;
-  const MOVE_DURATION_INITIAL_MS = 1250;
-  const MOVE_DURATION_RECONFIG_MS = 3000;
-  const PEER_CIRCLE_RADIUS = 25;
-  const PEER_DIAMETER = 50;
-  const PEER_HUE_ALPHA = 133;
-  const PIECE_TRANSFER_MAX_BEFORE_STOP = 125;
-  const RADIUS_INITIAL = 230;
-  const RADIUS_RECONFIG = 180;
-  const TRANSFER_DURATION_MS = 5000;
-
   class Piece {
     id: number;
     pieceHue: number;
@@ -42,46 +25,42 @@ export const sketch = (p5: p5) => {
       this.from = from;
       this.lastDraw = p5.millis();
       this.piece = piece;
-      this.speed = p5.int(p5.random(30, 500));
+      this.speed = p5.floor(p5.random(30, 500));
       this.to = to;
     }
 
     createPieceTransfer() {
       this.pieceTransfers.push(new PieceTransfer());
+
       this.lastDraw = p5.millis();
     }
 
     drawPieceTransfers() {
-      const now = p5.millis();
-      const completed = this.pieceTransfers.filter((t) => now > t.endTime);
+      this.pieceTransfers.forEach((transfer, index) => {
+        if (p5.millis() > transfer.endTime) {
+          this.pieceTransfers.splice(index, 1);
+          this.completedTransfers++;
+        } else {
+          const diff = (p5.millis() - transfer.startTime) / (transfer.endTime - transfer.startTime);
+          const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
+          const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
 
-      this.completedTransfers += completed.length;
-      this.pieceTransfers = this.pieceTransfers.filter((t) => now <= t.endTime);
-
-      p5.fill(this.piece.pieceHue, HUE_MAX, HUE_MAX);
-      p5.stroke(this.piece.pieceHue, HUE_MAX, HUE_MAX);
-
-      const fromPos = p5.createVector(this.from.pos.x, this.from.pos.y);
-      const toPos = p5.createVector(this.to.pos.x, this.to.pos.y);
-
-      this.pieceTransfers.forEach((transfer) => {
-        const t = p5.constrain(p5.norm(now, transfer.startTime, transfer.endTime), 0, 1);
-        const pos = p5.createVector(p5.lerp(fromPos.x, toPos.x, t), p5.lerp(fromPos.y, toPos.y, t));
-
-        p5.strokeWeight(transfer.big);
-        p5.circle(pos.x, pos.y, transfer.big);
+          p5.colorMode(p5.HSB);
+          p5.fill(this.piece.pieceHue, 255, 255);
+          p5.stroke(this.piece.pieceHue, 255, 255);
+          p5.strokeWeight(transfer.big);
+          p5.circle(xpos, ypos, transfer.big);
+        }
       });
     }
 
     updateTransfers() {
-      if (
-        this.from.removing >= 1 ||
-        this.to.removing >= 1 ||
-        this.completedTransfers > PIECE_TRANSFER_MAX_BEFORE_STOP
-      ) {
+      if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedTransfers > 125) {
         this.stream = false;
-      } else if (this.lastDraw < p5.millis() - this.speed) {
-        this.createPieceTransfer();
+      } else {
+        if (this.lastDraw < p5.millis() - this.speed) {
+          this.createPieceTransfer();
+        }
       }
     }
   }
@@ -94,8 +73,8 @@ export const sketch = (p5: p5) => {
     constructor() {
       const startTime = p5.millis();
 
+      this.endTime = startTime + 5000;
       this.startTime = startTime;
-      this.endTime = startTime + TRANSFER_DURATION_MS;
     }
   }
 
@@ -104,12 +83,16 @@ export const sketch = (p5: p5) => {
 
     constructor(pieceCount: number) {
       for (let i = 0; i < pieceCount; i++) {
-        const hue = p5.map(i, 0, pieceCount, 0, HUE_MAX);
+        const hue = (255 / pieceCount) * i;
 
         this.pieces.push(new Piece(i, hue));
       }
     }
   }
+
+  const HUE_SLOTS = 20;
+  const INITIAL_PEERS = 8;
+  const INITIAL_SEEDS = 2;
 
   const connections: Connection[] = [];
   const peers: Peer[] = [];
@@ -118,12 +101,10 @@ export const sketch = (p5: p5) => {
   let isRotatePeers = -1;
   let nextHueSlot = 0;
 
-  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): p5.Vector {
-    const v = p5.createVector(radius, 0);
+  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
+    const r = p5.radians(angleDeg);
 
-    v.rotate(angleDeg);
-
-    return p5.createVector(cx + v.x, cy + v.y);
+    return [cx + radius * p5.cos(r), cy + radius * p5.sin(r)];
   }
 
   class Peer {
@@ -131,9 +112,12 @@ export const sketch = (p5: p5) => {
     ccolor: p5.Color;
     chue = 5;
     connectedPeers: (Peer | Piece)[] = [];
+    cxpos = 0;
+    cypos = 0;
     ehue = 0;
     emovetime: number;
-    endPos: p5.Vector;
+    expos: number;
+    eypos: number;
     havePieces: Piece[] = [];
     hueSlot = 0;
     index = 0;
@@ -141,81 +125,89 @@ export const sketch = (p5: p5) => {
     missingPieces: Piece[] = [];
     pendingRequests: Piece[] = [];
     percent = p5.random(0, 1);
-    pos: p5.Vector;
     pwait = p5.random(1, 9) * 1000;
     removing = 0;
     shue = 0;
     smovetime = p5.millis();
-    startPos: p5.Vector;
+    sxpos = 0;
+    sypos = 0;
 
     constructor() {
       const cx = p5.width / 2;
       const cy = p5.height / 2;
 
-      this.startPos = p5.createVector(cx, cy);
-      this.pos = p5.createVector(cx, cy);
+      this.sxpos = cx;
+      this.sypos = cy;
 
       p5.push();
       p5.translate(cx, cy);
+      p5.ellipseMode(p5.CENTER);
 
       const angle = 3;
 
-      p5.rotate(angle);
+      p5.rotate(p5.radians(angle));
 
-      this.endPos = modelToScreen(cx, cy, angle, RADIUS_INITIAL);
+      [this.expos, this.eypos] = modelToScreen(cx, cy, angle, 230);
+      this.emovetime = this.smovetime + 1250;
+      this.hueSlot = nextHueSlot++ % HUE_SLOTS;
+
+      p5.colorMode(p5.HSB);
+
+      this.ccolor = p5.color(this.chue, 255, 255, 133);
 
       p5.pop();
-
-      this.emovetime = this.smovetime + MOVE_DURATION_INITIAL_MS;
-      this.hueSlot = nextHueSlot++ % HUE_SLOTS;
-      this.ccolor = p5.color(this.chue, HUE_MAX, HUE_MAX, PEER_HUE_ALPHA);
-
       this.initMissingPieces();
     }
 
     drawSelf() {
-      if (!Number.isFinite(this.pos.x) || !Number.isFinite(this.pos.y)) {
+      if (!Number.isFinite(this.cxpos) || !Number.isFinite(this.cypos)) {
         return;
       }
 
       const pieceCount = torrent.pieces.length;
       const w = pieceCount - 1;
-      const cxR = p5.round(this.pos.x);
-      const cyR = p5.round(this.pos.y);
-      const left = cxR - p5.int(w / 2);
-      const top = cyR - p5.int(BAR_HEIGHT / 2);
+      const r = 25;
+      const barH = 10;
+      const cxR = Math.round(this.cxpos);
+      const cyR = Math.round(this.cypos);
+      const left = cxR - Math.floor(w / 2);
+      const top = cyR - 5;
 
       if (!this.barBuffer || this.barBuffer.width !== w) {
-        this.barBuffer = p5.createGraphics(w, BAR_HEIGHT);
-
+        this.barBuffer = p5.createGraphics(w, barH);
         this.barBuffer.pixelDensity(1);
       }
 
       const buf = this.barBuffer;
 
       buf.clear();
-      buf.colorMode(p5.HSB, HUE_MAX, HUE_MAX, HUE_MAX, HUE_MAX);
+      buf.colorMode(p5.HSB);
 
       this.havePieces.forEach((piece) => {
-        buf.stroke(piece.pieceHue, HUE_MAX, HUE_MAX);
-        buf.line(piece.id, 0, piece.id, BAR_HEIGHT);
+        buf.stroke(piece.pieceHue, 255, 255);
+        buf.line(piece.id, 0, piece.id, barH);
       });
 
       buf.noStroke();
+
+      p5.colorMode(p5.HSB);
       p5.fill(this.ccolor);
       p5.noStroke();
-      p5.circle(cxR, cyR, PEER_DIAMETER);
-      p5.push();
-      p5.erase(1, 1);
-      p5.rect(left, top, w, BAR_HEIGHT);
-      p5.noErase();
-      p5.pop();
+      p5.ellipseMode(p5.CENTER);
+      p5.circle(cxR, cyR, 50);
 
       const ctx = p5.drawingContext as CanvasRenderingContext2D;
 
       ctx.save();
+
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.fillStyle = 'rgba(255,255,255,1)';
+
+      ctx.fillRect(left, top, w, barH);
+      ctx.restore();
+      ctx.save();
       ctx.beginPath();
-      ctx.arc(cxR, cyR, PEER_CIRCLE_RADIUS, 0, p5.TWO_PI);
+      ctx.arc(cxR, cyR, r, 0, Math.PI * 2);
       ctx.clip();
       p5.image(buf, left, top);
       ctx.restore();
@@ -249,52 +241,56 @@ export const sketch = (p5: p5) => {
     }
 
     moveSelf() {
-      const now = p5.millis();
-      if (now > this.emovetime) {
+      if (p5.millis() > this.emovetime) {
         this.chue = this.ehue;
-        this.ccolor = p5.color(this.ehue, HUE_MAX, HUE_MAX, PEER_HUE_ALPHA);
-
-        this.pos.set(this.endPos);
+        this.cxpos = this.expos;
+        this.cypos = this.eypos;
       } else {
-        const diff = p5.constrain(p5.norm(now, this.smovetime, this.emovetime), 0, 1);
+        const diff = (p5.millis() - this.smovetime) / (this.emovetime - this.smovetime);
 
-        this.pos.x = p5.lerp(this.startPos.x, this.endPos.x, diff);
-        this.pos.y = p5.lerp(this.startPos.y, this.endPos.y, diff);
-        this.ccolor = p5.lerpColor(
-          p5.color(this.shue, HUE_MAX, HUE_MAX, PEER_HUE_ALPHA),
-          p5.color(this.ehue, HUE_MAX, HUE_MAX, PEER_HUE_ALPHA),
-          diff,
-        );
-        this.chue = p5.hue(this.ccolor);
+        this.cxpos = this.sxpos * (1 - diff) + this.expos * diff;
+        this.cypos = this.sypos * (1 - diff) + this.eypos * diff;
+        this.chue = this.shue * (1 - diff) + this.ehue * diff;
       }
     }
 
     reConfigure(i: number) {
-      const k = p5.max(peers.length, 1);
+      let k;
+
+      p5.push();
+      p5.translate(p5.width / 2, p5.height / 2);
+      p5.ellipseMode(p5.CENTER);
+
+      if (peers.length == 0) {
+        k = 1;
+      } else {
+        k = peers.length;
+      }
 
       this.index = i;
 
+      const angle = (360 / k) * i + isRotatePeers;
+
+      p5.rotate(p5.radians(angle));
+
       const cx = p5.width / 2;
       const cy = p5.height / 2;
-      const angle = (FULL_CIRCLE_DEG / k) * i + isRotatePeers;
 
-      p5.push();
-      p5.translate(cx, cy);
-      p5.rotate(angle);
+      this.sxpos = this.cxpos;
+      this.sypos = this.cypos;
+      [this.expos, this.eypos] = modelToScreen(cx, cy, angle, 180);
+      this.smovetime = p5.millis();
+      this.emovetime = this.smovetime + 3000;
+
       p5.pop();
 
-      this.startPos.set(this.pos);
-
-      this.endPos = modelToScreen(cx, cy, angle, RADIUS_RECONFIG);
-      this.smovetime = p5.millis();
-      this.emovetime = this.smovetime + MOVE_DURATION_RECONFIG_MS;
       this.shue = this.chue;
-      this.ehue = p5.map(this.hueSlot, 0, HUE_SLOTS, 0, HUE_MAX);
-      this.ccolor = p5.color(this.chue, HUE_MAX, HUE_MAX, PEER_HUE_ALPHA);
+      this.ehue = (255 * this.hueSlot) / HUE_SLOTS;
+      this.ccolor = p5.color(this.chue, 255, 255, 133);
     }
 
     requestPiece(peer: Peer, missingPiece: Piece) {
-      if (peer.connectedPeers.length < MAX_CONNECTIONS_PER_PEER) {
+      if (peer.connectedPeers.length < 4) {
         const conn = new Connection(peer, this, missingPiece);
 
         peer.connectedPeers.push(this);
@@ -321,13 +317,16 @@ export const sketch = (p5: p5) => {
   }
 
   function disconnectPeer() {
-    if (peers.length > 0) {
-      p5.random(peers).removing = 1;
-    }
+    p5.random(peers).removing = 1;
   }
 
+  const PEER_CIRCLE_RADIUS = 25;
+
   function isPointInPeer(peer: Peer, x: number, y: number): boolean {
-    return p5.dist(x, y, peer.pos.x, peer.pos.y) <= PEER_CIRCLE_RADIUS;
+    const dx = x - peer.cxpos;
+    const dy = y - peer.cypos;
+
+    return dx * dx + dy * dy <= PEER_CIRCLE_RADIUS * PEER_CIRCLE_RADIUS;
   }
 
   p5.mousePressed = () => {
@@ -347,7 +346,7 @@ export const sketch = (p5: p5) => {
     if (clickedPeer) {
       clickedPeer.removing = 1;
     } else {
-      if ((p5.mouseButton as unknown) === p5.RIGHT) {
+      if (p5.mouseButton.right) {
         addSeed();
       } else {
         addPeer();
@@ -370,14 +369,10 @@ export const sketch = (p5: p5) => {
   };
 
   p5.setup = () => {
-    const size = p5.min(p5.windowWidth, p5.windowHeight);
+    const size = p5.windowWidth > p5.windowHeight ? p5.windowHeight : p5.windowWidth;
 
     p5.createCanvas(size, size);
-    p5.angleMode(p5.DEGREES);
-    p5.colorMode(p5.HSB, HUE_MAX, HUE_MAX, HUE_MAX, HUE_MAX);
     p5.textAlign(p5.CENTER);
-    p5.ellipseMode(p5.CENTER);
-    p5.rectMode(p5.CORNER);
 
     for (let i = 0; i < INITIAL_SEEDS; i++) {
       addSeed();
@@ -392,7 +387,11 @@ export const sketch = (p5: p5) => {
     p5.clear();
 
     if (isRotatePeers >= 0) {
-      isRotatePeers = (isRotatePeers + 0.2) % FULL_CIRCLE_DEG;
+      if (isRotatePeers < 360) {
+        isRotatePeers += 0.2;
+      } else {
+        isRotatePeers = isRotatePeers - 360;
+      }
     }
 
     for (let i = connections.length - 1; i >= 0; i--) {
