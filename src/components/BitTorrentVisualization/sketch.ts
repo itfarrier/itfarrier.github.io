@@ -1,6 +1,21 @@
 import type p5 from 'p5';
 
 export const sketch = (p5: p5) => {
+  const BLOCKS_PER_PIECE = 125;
+  const SIMULATED_PIECE_SIZE_BYTES = 262144;
+  const BYTES_PER_TRANSFER = SIMULATED_PIECE_SIZE_BYTES / BLOCKS_PER_PIECE;
+  const HUE_SLOTS = 20;
+  const INITIAL_PEERS = 8;
+  const INITIAL_SEEDS = 2;
+  const MAX_UNCHOKED_PEERS = 4;
+  const PEER_CIRCLE_RADIUS = 25;
+  const RECENT_TIMES_MAX_AGE_MS = 12000;
+  const SPEED_WINDOW_MS = 4000;
+  const TOOLTIP_BUTTON_SIZE = 22;
+  const TOOLTIP_HIDE_DELAY_MS = 450;
+  const TOOLTIP_LINE_HEIGHT = 16;
+  const TOOLTIP_PADDING = 8;
+
   class Piece {
     id: number;
     pieceHue: number;
@@ -11,17 +26,39 @@ export const sketch = (p5: p5) => {
     }
   }
 
+  class BlockTransfer {
+    big: number;
+    endTime: number;
+    startTime: number;
+
+    constructor() {
+      this.big = p5.random(0, 4);
+      this.startTime = p5.millis();
+      this.endTime = this.startTime + 5000;
+    }
+  }
+
+  class Torrent {
+    pieces: Piece[] = [];
+
+    constructor(pieceCount: number) {
+      for (let i = 0; i < pieceCount; i++) {
+        this.pieces.push(new Piece(i, (255 / pieceCount) * i));
+      }
+    }
+  }
+
   class Connection {
-    completedTransfers = 0;
+    blockTransfers: BlockTransfer[] = [];
+    completedBlockTransfers = 0;
     from: Peer;
     lastDraw: number;
     piece: Piece;
-    pieceTransfers: PieceTransfer[] = [];
     speed: number;
     stream = true;
     to: Peer;
 
-    constructor(from: Connection['from'], to: Connection['to'], piece: Connection['piece']) {
+    constructor(from: Peer, to: Peer, piece: Piece) {
       this.from = from;
       this.lastDraw = p5.millis();
       this.piece = piece;
@@ -29,21 +66,27 @@ export const sketch = (p5: p5) => {
       this.to = to;
     }
 
-    createPieceTransfer() {
-      this.pieceTransfers.push(new PieceTransfer());
+    createBlockTransfer() {
+      this.blockTransfers.push(new BlockTransfer());
 
       this.lastDraw = p5.millis();
     }
 
-    drawPieceTransfers() {
-      this.pieceTransfers.forEach((transfer, index) => {
-        if (p5.millis() > transfer.endTime) {
-          this.pieceTransfers.splice(index, 1);
-          this.completedTransfers++;
+    drawBlockTransfers() {
+      const now = p5.millis();
+
+      this.blockTransfers.forEach((transfer, index) => {
+        if (now > transfer.endTime) {
+          this.blockTransfers.splice(index, 1);
+
+          this.completedBlockTransfers++;
+
+          this.to.recentDownloadTimes.push(now);
+          this.from.recentUploadTimes.push(now);
         } else {
           const diff = (p5.millis() - transfer.startTime) / (transfer.endTime - transfer.startTime);
-          const xpos = this.from.cxpos * (1 - diff) + this.to.cxpos * diff;
-          const ypos = this.from.cypos * (1 - diff) + this.to.cypos * diff;
+          const xpos = p5.lerp(this.from.cxpos, this.to.cxpos, diff);
+          const ypos = p5.lerp(this.from.cypos, this.to.cypos, diff);
 
           p5.colorMode(p5.HSB);
           p5.fill(this.piece.pieceHue, 255, 255);
@@ -54,64 +97,24 @@ export const sketch = (p5: p5) => {
       });
     }
 
-    updateTransfers() {
-      if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedTransfers > 125) {
+    updateBlockTransfers() {
+      if (this.from.paused || this.to.paused) {
+        return;
+      }
+
+      if (this.from.removing >= 1 || this.to.removing >= 1 || this.completedBlockTransfers > BLOCKS_PER_PIECE) {
         this.stream = false;
-      } else {
-        if (this.lastDraw < p5.millis() - this.speed) {
-          this.createPieceTransfer();
-        }
+      } else if (this.lastDraw < p5.millis() - this.speed) {
+        this.createBlockTransfer();
       }
     }
-  }
-
-  class PieceTransfer {
-    big = p5.random(0, 4);
-    endTime: number;
-    startTime: number;
-
-    constructor() {
-      const startTime = p5.millis();
-
-      this.endTime = startTime + 5000;
-      this.startTime = startTime;
-    }
-  }
-
-  class Torrent {
-    pieces: Piece[] = [];
-
-    constructor(pieceCount: number) {
-      for (let i = 0; i < pieceCount; i++) {
-        const hue = (255 / pieceCount) * i;
-
-        this.pieces.push(new Piece(i, hue));
-      }
-    }
-  }
-
-  const HUE_SLOTS = 20;
-  const INITIAL_PEERS = 8;
-  const INITIAL_SEEDS = 2;
-
-  const connections: Connection[] = [];
-  const peers: Peer[] = [];
-  const torrent = new Torrent(30);
-
-  let isRotatePeers = -1;
-  let nextHueSlot = 0;
-
-  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
-    const r = p5.radians(angleDeg);
-
-    return [cx + radius * p5.cos(r), cy + radius * p5.sin(r)];
   }
 
   class Peer {
     barBuffer: null | p5.Graphics = null;
     ccolor: p5.Color;
     chue = 5;
-    connectedPeers: (Peer | Piece)[] = [];
+    connectedPeers: Peer[] = [];
     cxpos = 0;
     cypos = 0;
     ehue = 0;
@@ -123,9 +126,14 @@ export const sketch = (p5: p5) => {
     index = 0;
     lastcheck = p5.millis();
     missingPieces: Piece[] = [];
-    pendingRequests: Piece[] = [];
+    paused = false;
+    pendingPieceRequests: Piece[] = [];
     percent = p5.random(0, 1);
+    piecesDownloaded = 0;
+    piecesUploaded = 0;
     pwait = p5.random(1, 9) * 1000;
+    recentDownloadTimes: number[] = [];
+    recentUploadTimes: number[] = [];
     removing = 0;
     shue = 0;
     smovetime = p5.millis();
@@ -166,11 +174,11 @@ export const sketch = (p5: p5) => {
 
       const pieceCount = torrent.pieces.length;
       const w = pieceCount - 1;
-      const r = 25;
+      const r = PEER_CIRCLE_RADIUS;
       const barH = 10;
-      const cxR = Math.round(this.cxpos);
-      const cyR = Math.round(this.cypos);
-      const left = cxR - Math.floor(w / 2);
+      const cxR = p5.round(this.cxpos);
+      const cyR = p5.round(this.cypos);
+      const left = cxR - p5.floor(w / 2);
       const top = cyR - 5;
 
       if (!this.barBuffer || this.barBuffer.width !== w) {
@@ -189,7 +197,6 @@ export const sketch = (p5: p5) => {
       });
 
       buf.noStroke();
-
       p5.colorMode(p5.HSB);
       p5.fill(this.ccolor);
       p5.noStroke();
@@ -207,7 +214,7 @@ export const sketch = (p5: p5) => {
       ctx.restore();
       ctx.save();
       ctx.beginPath();
-      ctx.arc(cxR, cyR, r, 0, Math.PI * 2);
+      ctx.arc(cxR, cyR, r, 0, p5.TWO_PI);
       ctx.clip();
       p5.image(buf, left, top);
       ctx.restore();
@@ -224,7 +231,7 @@ export const sketch = (p5: p5) => {
             !(this.removing > 0) &&
             !peer.connectedPeers.includes(this) &&
             peer.index !== this.index &&
-            !this.pendingRequests.includes(missingPiece)
+            !this.pendingPieceRequests.includes(missingPiece)
           ) {
             this.requestPiece(peer, missingPiece);
           }
@@ -248,24 +255,18 @@ export const sketch = (p5: p5) => {
       } else {
         const diff = (p5.millis() - this.smovetime) / (this.emovetime - this.smovetime);
 
-        this.cxpos = this.sxpos * (1 - diff) + this.expos * diff;
-        this.cypos = this.sypos * (1 - diff) + this.eypos * diff;
-        this.chue = this.shue * (1 - diff) + this.ehue * diff;
+        this.cxpos = p5.lerp(this.sxpos, this.expos, diff);
+        this.cypos = p5.lerp(this.sypos, this.eypos, diff);
+        this.chue = p5.lerp(this.shue, this.ehue, diff);
       }
     }
 
     reConfigure(i: number) {
-      let k;
-
       p5.push();
       p5.translate(p5.width / 2, p5.height / 2);
       p5.ellipseMode(p5.CENTER);
 
-      if (peers.length == 0) {
-        k = 1;
-      } else {
-        k = peers.length;
-      }
+      const k = peers.length === 0 ? 1 : peers.length;
 
       this.index = i;
 
@@ -290,14 +291,182 @@ export const sketch = (p5: p5) => {
     }
 
     requestPiece(peer: Peer, missingPiece: Piece) {
-      if (peer.connectedPeers.length < 4) {
-        const conn = new Connection(peer, this, missingPiece);
+      if (this.paused || peer.paused || peer.connectedPeers.length >= MAX_UNCHOKED_PEERS) {
+        return;
+      }
 
-        peer.connectedPeers.push(this);
-        this.pendingRequests.push(missingPiece);
-        connections.push(conn);
+      const conn = new Connection(peer, this, missingPiece);
+
+      peer.connectedPeers.push(this);
+      this.pendingPieceRequests.push(missingPiece);
+      connections.push(conn);
+    }
+  }
+
+  const connections: Connection[] = [];
+  const peers: Peer[] = [];
+  const torrent = new Torrent(30);
+
+  let isRotatePeers = -1;
+  let nextHueSlot = 0;
+  let showingTooltipForPeer: null | Peer = null;
+  let tooltipBoxRect: null | { h: number; w: number; x: number; y: number } = null;
+  let tooltipButtonRect: null | { h: number; w: number; x: number; y: number } = null;
+  let tooltipHideAt = 0;
+
+  function modelToScreen(cx: number, cy: number, angleDeg: number, radius: number): [number, number] {
+    const r = p5.radians(angleDeg);
+
+    return [cx + radius * p5.cos(r), cy + radius * p5.sin(r)];
+  }
+
+  function isPointInPeer(peer: Peer, x: number, y: number): boolean {
+    return p5.dist(x, y, peer.cxpos, peer.cypos) <= PEER_CIRCLE_RADIUS;
+  }
+
+  function formatBytes(bytes: number): string {
+    if (bytes >= 1e9) {
+      return `${(bytes / 1e9).toFixed(2)} GB`;
+    }
+
+    if (bytes >= 1e6) {
+      return `${(bytes / 1e6).toFixed(2)} MB`;
+    }
+
+    if (bytes >= 1e3) {
+      return `${(bytes / 1e3).toFixed(2)} KB`;
+    }
+
+    return `${String(bytes)} B`;
+  }
+
+  function getCurrentSpeedBytesPerSec(timestamps: number[], pieceSizeBytes: number): number {
+    const now = p5.millis();
+    const cutoff = now - SPEED_WINDOW_MS;
+    const count = timestamps.filter((t) => t >= cutoff).length;
+
+    return (count * pieceSizeBytes) / (SPEED_WINDOW_MS / 1000);
+  }
+
+  function trimRecentTimes(timestamps: number[]): void {
+    const cutoff = p5.millis() - RECENT_TIMES_MAX_AGE_MS;
+
+    while (timestamps.length > 0 && (timestamps[0] ?? 0) < cutoff) {
+      timestamps.shift();
+    }
+  }
+
+  function getPeerUnderMouse(): null | Peer {
+    const mx = p5.mouseX;
+    const my = p5.mouseY;
+
+    for (const peer of peers) {
+      if (isPointInPeer(peer, mx, my)) {
+        return peer;
       }
     }
+
+    return null;
+  }
+
+  function drawTooltip(peer: Peer) {
+    trimRecentTimes(peer.recentDownloadTimes);
+    trimRecentTimes(peer.recentUploadTimes);
+
+    const downloadedBytes = peer.piecesDownloaded * SIMULATED_PIECE_SIZE_BYTES;
+    const downSpeed = getCurrentSpeedBytesPerSec(peer.recentDownloadTimes, BYTES_PER_TRANSFER);
+    const have = peer.havePieces.length;
+    const isSeed = peer.missingPieces.length === 0;
+    const total = torrent.pieces.length;
+    const pct = total > 0 ? p5.round((100 * have) / total) : 0;
+    const uploadedBytes = peer.piecesUploaded * SIMULATED_PIECE_SIZE_BYTES;
+    const upSpeed = getCurrentSpeedBytesPerSec(peer.recentUploadTimes, BYTES_PER_TRANSFER);
+
+    const lines: string[] = [
+      '— Transfer —',
+      `Down: ${formatBytes(downSpeed)}/s`,
+      `Downloaded: ${formatBytes(downloadedBytes)}`,
+      `Up: ${formatBytes(upSpeed)}/s`,
+      `Uploaded: ${formatBytes(uploadedBytes)}`,
+      '— Information —',
+      `Pieces: ${String(have)}/${String(total)}`,
+      `Progress: ${String(pct)}%`,
+      isSeed ? 'Type: Seed' : 'Type: Downloader',
+    ];
+
+    p5.textSize(12);
+    p5.textAlign(p5.LEFT, p5.TOP);
+
+    let maxW = 0;
+
+    for (const line of lines) {
+      const w = p5.textWidth(line);
+
+      if (w > maxW) {
+        maxW = w;
+      }
+    }
+
+    const buttonRowH = TOOLTIP_BUTTON_SIZE + TOOLTIP_PADDING;
+    const boxH = lines.length * TOOLTIP_LINE_HEIGHT + TOOLTIP_PADDING * 2 + buttonRowH;
+    const boxW = maxW + TOOLTIP_PADDING * 2;
+
+    let tx = peer.cxpos + PEER_CIRCLE_RADIUS + 10;
+    let ty = peer.cypos - boxH / 2;
+
+    if (tx + boxW > p5.width) {
+      tx = peer.cxpos - boxW - PEER_CIRCLE_RADIUS - 10;
+    }
+
+    if (ty < 0) {
+      ty = 10;
+    }
+
+    if (ty + boxH > p5.height) {
+      ty = p5.height - boxH - 10;
+    }
+
+    p5.noStroke();
+    p5.fill(0, 0, 0, 0.85);
+    p5.rect(tx, ty, boxW, boxH, 4);
+    p5.fill(255);
+
+    lines.forEach((line, i) => {
+      p5.text(line, tx + TOOLTIP_PADDING, ty + TOOLTIP_PADDING + i * TOOLTIP_LINE_HEIGHT);
+    });
+
+    const btnY = ty + boxH - TOOLTIP_PADDING - TOOLTIP_BUTTON_SIZE;
+    const btnX = tx + TOOLTIP_PADDING;
+
+    p5.fill(60);
+    p5.rect(btnX, btnY, TOOLTIP_BUTTON_SIZE, TOOLTIP_BUTTON_SIZE, 4);
+    p5.fill(255);
+
+    if (peer.paused) {
+      const cx = btnX + TOOLTIP_BUTTON_SIZE / 2;
+      const cy = btnY + TOOLTIP_BUTTON_SIZE / 2;
+      const s = 6;
+
+      p5.triangle(cx - s * 0.6, cy - s, cx - s * 0.6, cy + s, cx + s * 0.8, cy);
+    } else {
+      const barW = 4;
+      const barH = 10;
+      const gap = 5;
+      const cx = btnX + TOOLTIP_BUTTON_SIZE / 2;
+      const cy = btnY + TOOLTIP_BUTTON_SIZE / 2;
+
+      p5.rect(cx - gap / 2 - barW, cy - barH / 2, barW, barH);
+      p5.rect(cx + gap / 2, cy - barH / 2, barW, barH);
+    }
+
+    tooltipBoxRect = { h: boxH, w: boxW, x: tx, y: ty };
+    tooltipButtonRect = { h: TOOLTIP_BUTTON_SIZE, w: TOOLTIP_BUTTON_SIZE, x: btnX, y: btnY };
+  }
+
+  function isPointInRect(mx: number, my: number, r: { h: number; w: number; x: number; y: number }): boolean {
+    const { h, w, x, y } = r;
+
+    return mx >= x && mx <= x + w && my >= y && my <= y + h;
   }
 
   function addPeer() {
@@ -320,18 +489,15 @@ export const sketch = (p5: p5) => {
     p5.random(peers).removing = 1;
   }
 
-  const PEER_CIRCLE_RADIUS = 25;
-
-  function isPointInPeer(peer: Peer, x: number, y: number): boolean {
-    const dx = x - peer.cxpos;
-    const dy = y - peer.cypos;
-
-    return dx * dx + dy * dy <= PEER_CIRCLE_RADIUS * PEER_CIRCLE_RADIUS;
-  }
-
   p5.mousePressed = () => {
     const mx = p5.mouseX;
     const my = p5.mouseY;
+
+    if (showingTooltipForPeer && isPointInTooltipButton(mx, my)) {
+      showingTooltipForPeer.paused = !showingTooltipForPeer.paused;
+
+      return;
+    }
 
     let clickedPeer: null | Peer = null;
 
@@ -345,12 +511,10 @@ export const sketch = (p5: p5) => {
 
     if (clickedPeer) {
       clickedPeer.removing = 1;
+    } else if (p5.mouseButton.right) {
+      addSeed();
     } else {
-      if (p5.mouseButton.right) {
-        addSeed();
-      } else {
-        addPeer();
-      }
+      addPeer();
     }
   };
 
@@ -369,7 +533,7 @@ export const sketch = (p5: p5) => {
   };
 
   p5.setup = () => {
-    const size = p5.windowWidth > p5.windowHeight ? p5.windowHeight : p5.windowWidth;
+    const size = p5.min(p5.windowWidth, p5.windowHeight);
 
     p5.createCanvas(size, size);
     p5.textAlign(p5.CENTER);
@@ -401,10 +565,10 @@ export const sketch = (p5: p5) => {
         continue;
       }
 
-      connection.updateTransfers();
-      connection.drawPieceTransfers();
+      connection.updateBlockTransfers();
+      connection.drawBlockTransfers();
 
-      if (!connection.pieceTransfers.length && !connection.stream) {
+      if (!connection.blockTransfers.length && !connection.stream) {
         if (connection.to.removing >= 1) {
           connection.to.removing++;
         }
@@ -413,6 +577,9 @@ export const sketch = (p5: p5) => {
           connection.from.removing++;
         }
 
+        connection.to.piecesDownloaded += 1;
+        connection.from.piecesUploaded += 1;
+
         connection.from.connectedPeers.splice(connection.from.connectedPeers.indexOf(connection.to), 1);
         connection.to.havePieces.push(connection.piece);
 
@@ -420,8 +587,8 @@ export const sketch = (p5: p5) => {
           connection.to.missingPieces.splice(connection.to.missingPieces.indexOf(connection.piece), 1);
         }
 
-        if (connection.to.connectedPeers.includes(connection.piece)) {
-          connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.piece), 1);
+        if (connection.to.connectedPeers.includes(connection.from)) {
+          connection.to.connectedPeers.splice(connection.to.connectedPeers.indexOf(connection.from), 1);
         }
 
         connections.splice(i, 1);
@@ -445,10 +612,45 @@ export const sketch = (p5: p5) => {
     }
 
     p5.shuffle(peers).forEach((peer: Peer) => {
-      if (peer.lastcheck < p5.millis() - peer.pwait) {
+      if (!peer.paused && peer.lastcheck < p5.millis() - peer.pwait) {
         peer.findPeer();
         peer.lastcheck = p5.millis();
       }
     });
+
+    const hoveredPeer = getPeerUnderMouse();
+    const mx = p5.mouseX;
+    const my = p5.mouseY;
+    const now = p5.millis();
+
+    if (hoveredPeer) {
+      tooltipHideAt = 0;
+      showingTooltipForPeer = hoveredPeer;
+
+      drawTooltip(hoveredPeer);
+    } else if (showingTooltipForPeer && tooltipBoxRect && isPointInRect(mx, my, tooltipBoxRect)) {
+      tooltipHideAt = 0;
+
+      drawTooltip(showingTooltipForPeer);
+    } else if (showingTooltipForPeer) {
+      if (tooltipHideAt === 0) {
+        tooltipHideAt = now + TOOLTIP_HIDE_DELAY_MS;
+      }
+
+      if (now >= tooltipHideAt) {
+        showingTooltipForPeer = null;
+        tooltipBoxRect = null;
+        tooltipButtonRect = null;
+        tooltipHideAt = 0;
+      } else {
+        drawTooltip(showingTooltipForPeer);
+      }
+    } else {
+      tooltipHideAt = 0;
+    }
   };
+
+  function isPointInTooltipButton(mx: number, my: number): boolean {
+    return tooltipButtonRect !== null && isPointInRect(mx, my, tooltipButtonRect);
+  }
 };
