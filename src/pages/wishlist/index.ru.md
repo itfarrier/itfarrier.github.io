@@ -28,7 +28,7 @@ type: page
 - ~~Татуировки~~;
 - ~~Коррекция зрения~~;
 - ~~Машина выходного дня (Mini Cooper JCW, Mazda MX-5, Porsche Cayman, BMW Z4)~~;
-- iPhone чёрный >= 1TB;
+- iPhone чёрный ≥ 1TB;
 - ~~Apple Watch 7 45mm~~;
 - ~~Рюкзак~~;
 - ~~Зарядка~~;

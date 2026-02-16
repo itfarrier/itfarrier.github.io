@@ -20,7 +20,7 @@ type: page
 - ~~Hoof stand~~;
 - ~~Hookah like in Elementum~~;
 - Khutor with a land;
-- ~~NAS ≥ 4 disks;
+- ~~NAS ≥ 4 disks~~;
 - ~~Nippers~~;
 - ~~Orthopedic mattress~~;
 - ~~PC for games~~;
@@ -28,7 +28,7 @@ type: page
 - ~~Tattoos~~;
 - ~~Vision correction~~;
 - ~~Weekend car (Mini Cooper JCW, Mazda MX-5, Porsche Cayman, BMW Z4)~~;
-- iPhone black with >= 1TB storage;
+- iPhone black with ≥ 1TB;
 - ~~Apple Watch 7 45mm~~;
 - ~~Backpack~~;
 - ~~Charger~~;
@@ -43,4 +43,4 @@ type: page
 - ~~Tent~~;
 - ~~iPhone 12 mini~~;
 - ~~Heavy blanket~~;
-- BMW Z4 E89 manual transmission ≥ 35i.
+- BMW Z4 E89 with a manual transmission ≥ 35i.
